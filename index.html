@@ -39,13 +39,64 @@ font-size:15px;
 }
 
 html{scroll-behavior:smooth;}
-
 img{max-width:100%;display:block;}
+
+/* ============ BARRA DE IDIOMAS ============ */
+#lang-bar{
+position:fixed;
+top:0;left:0;right:0;
+z-index:1100;
+background:#000;
+border-bottom:2px solid var(--gold);
+padding:8px 10px;
+display:flex;
+justify-content:center;
+gap:14px;
+box-shadow:0 2px 20px rgba(231,195,107,.35);
+}
+
+#lang-bar button{
+background:transparent;
+border:1px solid rgba(231,195,107,.4);
+border-radius:8px;
+color:var(--gold-bright);
+cursor:pointer;
+padding:5px 10px;
+display:flex;
+align-items:center;
+gap:6px;
+font-family:'Inter',sans-serif;
+font-size:.72rem;
+font-weight:600;
+letter-spacing:.5px;
+transition:all .3s ease;
+line-height:1;
+text-transform:uppercase;
+}
+#lang-bar button:hover{
+background:rgba(231,195,107,.15);
+border-color:var(--gold-bright);
+box-shadow:0 0 15px rgba(231,195,107,.5);
+transform:translateY(-1px);
+}
+#lang-bar button.active{
+background:linear-gradient(135deg,var(--gold),#b8941f);
+color:#111;
+border-color:var(--gold-bright);
+box-shadow:0 0 20px rgba(231,195,107,.7);
+}
+#lang-bar img{
+width:22px;height:16px;
+border-radius:3px;
+border:1px solid rgba(231,195,107,.4);
+object-fit:cover;
+}
+#lang-bar button.active img{border-color:#111;}
 
 /* ============ HEADER ============ */
 header{
 position:fixed;
-top:0;
+top:44px;
 width:100%;
 backdrop-filter:blur(20px);
 background:rgba(0,0,0,.85);
@@ -110,7 +161,6 @@ filter:
 transform:scale(1.04);
 }
 
-/* ============ BOTONES NAV ============ */
 nav ul{
 display:flex;
 gap:10px;
@@ -169,7 +219,7 @@ min-height:85vh;
 display:flex;
 align-items:center;
 justify-content:center;
-padding:150px 20px 30px;
+padding:200px 20px 30px;
 position:relative;
 overflow:hidden;
 }
@@ -177,30 +227,24 @@ overflow:hidden;
 .hero::before{
 content:"";
 position:absolute;
-width:700px;
-height:700px;
+width:700px;height:700px;
 background:radial-gradient(circle,var(--blue),transparent 70%);
 opacity:.12;
-top:-150px;
-right:-150px;
+top:-150px;right:-150px;
 pointer-events:none;
 }
-
 .hero::after{
 content:"";
 position:absolute;
-width:600px;
-height:600px;
+width:600px;height:600px;
 background:radial-gradient(circle,var(--gold),transparent 70%);
 opacity:.08;
-bottom:-200px;
-left:-200px;
+bottom:-200px;left:-200px;
 pointer-events:none;
 }
 
 .hero-content{
-max-width:1200px;
-width:100%;
+max-width:1200px;width:100%;
 display:grid;
 grid-template-columns:1.3fr 1fr;
 gap:50px;
@@ -215,16 +259,6 @@ font-size:3.4rem;
 line-height:1;
 margin-bottom:12px;
 }
-
-.hero h1 em{
-font-style:italic;
-color:var(--gold);
-font-weight:400;
-text-shadow:
-  0 0 20px rgba(231,195,107,.6),
-  0 0 40px rgba(231,195,107,.3);
-}
-
 .hero p{
 color:var(--muted);
 font-size:1rem;
@@ -232,11 +266,7 @@ margin-bottom:20px;
 line-height:1.05;
 }
 
-.buttons{
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;}
 
 .btn{
 padding:12px 24px;
@@ -256,45 +286,27 @@ text-align:center;
 .primary{
 background:var(--gold);
 color:#111;
-box-shadow:
-  0 0 20px rgba(231,195,107,.5),
-  0 0 40px rgba(231,195,107,.25);
+box-shadow:0 0 20px rgba(231,195,107,.5),0 0 40px rgba(231,195,107,.25);
 }
-
 .secondary{
 border:1px solid rgba(255,255,255,.18);
 color:white;
 background:transparent;
 }
-
 .primary:hover{
 transform:translateY(-3px);
-box-shadow:
-  0 10px 30px rgba(231,195,107,.7),
-  0 0 60px rgba(231,195,107,.5),
-  0 0 100px rgba(231,195,107,.3);
+box-shadow:0 10px 30px rgba(231,195,107,.7),0 0 60px rgba(231,195,107,.5),0 0 100px rgba(231,195,107,.3);
 }
-
-.secondary:hover{
-background:white;
-color:#111;
-}
+.secondary:hover{background:white;color:#111;}
 
 .hero-image{
 height:320px;
 border-radius:var(--radius);
 overflow:hidden;
-box-shadow:
-  0 25px 60px rgba(0,0,0,.5),
-  0 0 40px rgba(231,195,107,.15);
+box-shadow:0 25px 60px rgba(0,0,0,.5),0 0 40px rgba(231,195,107,.15);
 border:1px solid rgba(231,195,107,.2);
 }
-
-.hero-image img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
+.hero-image img{width:100%;height:100%;object-fit:cover;}
 
 /* ============ SECCIONES ============ */
 section{
@@ -305,23 +317,15 @@ padding:30px 20px;
 line-height:1.05;
 }
 
-.title{
-text-align:center;
-margin-bottom:20px;
-line-height:1;
-}
-
+.title{text-align:center;margin-bottom:20px;line-height:1;}
 .title h2{
 font-family:"Cormorant Garamond",serif;
 font-size:2.4rem;
 margin-bottom:6px;
 color:var(--gold);
 line-height:1;
-text-shadow:
-  0 0 20px rgba(231,195,107,.5),
-  0 0 40px rgba(231,195,107,.25);
+text-shadow:0 0 20px rgba(231,195,107,.5),0 0 40px rgba(231,195,107,.25);
 }
-
 .title p{
 color:var(--muted);
 max-width:700px;
@@ -330,7 +334,6 @@ font-size:.95rem;
 line-height:1.05;
 }
 
-/* ============ IMAGEN ÚNICA ============ */
 .servicios-imagen{
 width:100%;
 max-width:1200px;
@@ -338,14 +341,10 @@ margin:0 auto;
 border-radius:var(--radius);
 overflow:hidden;
 border:1.5px solid rgba(231,195,107,.25);
-box-shadow:
-  0 20px 60px rgba(0,0,0,.5),
-  0 0 60px rgba(231,195,107,.15),
-  inset 0 0 40px rgba(231,195,107,.05);
+box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 60px rgba(231,195,107,.15),inset 0 0 40px rgba(231,195,107,.05);
 transition:all .5s ease;
 position:relative;
 }
-
 .servicios-imagen::before{
 content:'';
 position:absolute;
@@ -356,21 +355,12 @@ opacity:.7;
 z-index:2;
 box-shadow:0 0 20px rgba(231,195,107,.6);
 }
-
 .servicios-imagen:hover{
 border-color:rgba(231,195,107,.6);
-box-shadow:
-  0 25px 80px rgba(0,0,0,.6),
-  0 0 100px rgba(231,195,107,.3),
-  inset 0 0 50px rgba(231,195,107,.08);
+box-shadow:0 25px 80px rgba(0,0,0,.6),0 0 100px rgba(231,195,107,.3),inset 0 0 50px rgba(231,195,107,.08);
 transform:translateY(-3px);
 }
-
-.servicios-imagen img{
-width:100%;
-height:auto;
-display:block;
-}
+.servicios-imagen img{width:100%;height:auto;display:block;}
 
 /* ============ CONVOCATORIA ============ */
 .convocatoria-hero{
@@ -383,7 +373,6 @@ margin-bottom:18px;
 position:relative;
 overflow:hidden;
 }
-
 .convocatoria-hero::before{
 content:'';
 position:absolute;
@@ -393,7 +382,6 @@ background:linear-gradient(90deg,transparent,var(--gold),transparent);
 opacity:.7;
 box-shadow:0 0 20px rgba(231,195,107,.6);
 }
-
 .convocatoria-hero .conv-badge{
 display:inline-block;
 font-size:.68rem;
@@ -409,7 +397,6 @@ line-height:1;
 background:rgba(231,195,107,.05);
 text-shadow:0 0 10px rgba(231,195,107,.5);
 }
-
 .convocatoria-hero h3{
 font-family:"Cormorant Garamond",serif;
 font-size:2.2rem;
@@ -418,7 +405,6 @@ line-height:1;
 margin-bottom:8px;
 text-shadow:0 0 20px rgba(231,195,107,.5);
 }
-
 .convocatoria-hero .conv-lema{
 font-family:"Cormorant Garamond",serif;
 font-style:italic;
@@ -429,7 +415,6 @@ margin-bottom:12px;
 line-height:1.05;
 text-shadow:0 0 12px rgba(231,195,107,.4);
 }
-
 .convocatoria-hero p{
 color:var(--muted);
 font-size:.95rem;
@@ -437,12 +422,9 @@ max-width:780px;
 margin:0 auto 8px;
 line-height:1.05;
 }
-
 .convocatoria-hero p:last-child{margin-bottom:0;}
-
 .convocatoria-hero p strong{color:var(--gold-bright);font-weight:600;}
 
-/* ============ GRID CONVOCATORIA 2 COLUMNAS ============ */
 .conv-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -450,13 +432,7 @@ gap:16px;
 margin-bottom:16px;
 align-items:start;
 }
-
-.conv-col{
-display:flex;
-flex-direction:column;
-gap:16px;
-}
-
+.conv-col{display:flex;flex-direction:column;gap:16px;}
 .conv-block{
 background:var(--card);
 backdrop-filter:blur(18px);
@@ -467,7 +443,6 @@ position:relative;
 overflow:hidden;
 line-height:1.05;
 }
-
 .conv-block::before{
 content:'';
 position:absolute;
@@ -476,7 +451,6 @@ height:2px;
 background:linear-gradient(90deg,transparent,var(--gold),transparent);
 opacity:.55;
 }
-
 .conv-block h3{
 font-family:"Cormorant Garamond",serif;
 font-size:1.4rem;
@@ -487,14 +461,12 @@ text-shadow:0 0 15px rgba(231,195,107,.35);
 padding-bottom:.4rem;
 border-bottom:1px solid rgba(231,195,107,.2);
 }
-
 .conv-block h3::before{
 content:'✦ ';
 color:var(--gold-bright);
 font-size:.9rem;
 text-shadow:0 0 12px rgba(231,195,107,.8);
 }
-
 .conv-block h4{
 font-family:"Cormorant Garamond",serif;
 font-size:1.05rem;
@@ -503,24 +475,16 @@ margin:.7rem 0 .4rem;
 line-height:1;
 text-shadow:0 0 10px rgba(231,195,107,.4);
 }
-
 .conv-block p{
 color:var(--muted);
 font-size:.86rem;
 line-height:1.05;
 margin-bottom:.5rem;
 }
-
 .conv-block p:last-child{margin-bottom:0;}
-
 .conv-block p strong{color:var(--gold-bright);font-weight:600;}
 
-.conv-list{
-list-style:none;
-padding:0;
-margin:0 0 .4rem;
-}
-
+.conv-list{list-style:none;padding:0;margin:0 0 .4rem;}
 .conv-list li{
 padding:.25rem 0;
 font-size:.84rem;
@@ -531,23 +495,19 @@ align-items:flex-start;
 border-bottom:1px solid rgba(255,255,255,.05);
 line-height:1.05;
 }
-
 .conv-list li:last-child{border-bottom:none;}
-
 .conv-list li::before{
 content:'—';
 color:var(--gold);
 flex-shrink:0;
 font-weight:700;
 }
-
 .conv-list.check li::before{
 content:'✓';
 color:var(--gold-bright);
 font-weight:700;
 text-shadow:0 0 8px rgba(231,195,107,.6);
 }
-
 .conv-list.cross li::before{
 content:'✕';
 color:#c98b8b;
@@ -562,30 +522,12 @@ padding:.65rem .8rem;
 margin-bottom:.5rem;
 line-height:1.05;
 }
-
 .conv-premio-item:last-child{margin-bottom:0;}
+.conv-premio-item h4{margin-top:0;font-size:.98rem;color:var(--gold);}
+.conv-premio-item p{font-size:.83rem;margin-bottom:.3rem;}
+.conv-premio-item .conv-list li{font-size:.82rem;}
 
-.conv-premio-item h4{
-margin-top:0;
-font-size:.98rem;
-color:var(--gold);
-}
-
-.conv-premio-item p{
-font-size:.83rem;
-margin-bottom:.3rem;
-}
-
-.conv-premio-item .conv-list li{
-font-size:.82rem;
-}
-
-.conv-cronograma{
-list-style:none;
-padding:0;
-margin:0;
-}
-
+.conv-cronograma{list-style:none;padding:0;margin:0;}
 .conv-cronograma li{
 display:grid;
 grid-template-columns:1fr auto;
@@ -596,18 +538,9 @@ border-bottom:1px solid rgba(255,255,255,.05);
 line-height:1.05;
 font-size:.85rem;
 }
-
 .conv-cronograma li:last-child{border-bottom:none;}
-
-.conv-cronograma li:nth-child(odd){
-background:rgba(231,195,107,.03);
-border-radius:8px;
-}
-
-.conv-cronograma .etapa{
-color:var(--text);
-}
-
+.conv-cronograma li:nth-child(odd){background:rgba(231,195,107,.03);border-radius:8px;}
+.conv-cronograma .etapa{color:var(--text);}
 .conv-cronograma .fecha{
 color:var(--gold-bright);
 font-weight:600;
@@ -628,22 +561,16 @@ align-items:flex-start;
 line-height:1.05;
 transition:.3s;
 }
-
 .conv-paso:last-child{margin-bottom:0;}
-
 .conv-paso:hover{
 border-color:rgba(231,195,107,.4);
 transform:translateY(-2px);
 box-shadow:0 8px 24px rgba(0,0,0,.35);
 }
-
 .conv-paso .paso-num{
-min-width:34px;
-height:34px;
+min-width:34px;height:34px;
 border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
+display:flex;align-items:center;justify-content:center;
 background:linear-gradient(135deg,var(--gold),#ffd98c);
 color:#111;
 font-weight:700;
@@ -652,12 +579,7 @@ flex-shrink:0;
 box-shadow:0 0 18px rgba(231,195,107,.5);
 line-height:1;
 }
-
-.conv-paso .paso-content{
-flex:1;
-min-width:0;
-}
-
+.conv-paso .paso-content{flex:1;min-width:0;}
 .conv-paso .paso-content h4{
 font-family:"Cormorant Garamond",serif;
 font-size:1rem;
@@ -666,15 +588,42 @@ margin-bottom:.3rem;
 line-height:1;
 text-shadow:0 0 10px rgba(231,195,107,.4);
 }
-
 .conv-paso .paso-content p{
 font-size:.82rem;
 color:var(--muted);
 line-height:1.05;
 margin-bottom:.4rem;
 }
-
 .conv-paso .paso-content p:last-child{margin-bottom:0;}
+
+.ia-paso{
+background:rgba(231,195,107,.08);
+border:1.5px solid rgba(231,195,107,.4);
+border-radius:12px;
+padding:10px 12px;
+margin-top:.5rem;
+line-height:1.05;
+}
+.ia-paso h5{
+font-family:"Cormorant Garamond",serif;
+font-size:.95rem;
+color:var(--gold-bright);
+margin-bottom:.35rem;
+line-height:1;
+text-shadow:0 0 10px rgba(231,195,107,.4);
+display:flex;
+align-items:center;
+gap:.35rem;
+}
+.ia-paso h5::before{content:'⚠';font-size:1rem;}
+.ia-paso p{
+font-size:.8rem;
+color:var(--text);
+line-height:1.05;
+margin-bottom:.3rem;
+}
+.ia-paso p:last-child{margin-bottom:0;}
+.ia-paso strong{color:var(--gold-bright);}
 
 .conv-archivo{
 background:rgba(0,0,0,.4);
@@ -684,7 +633,6 @@ padding:.65rem .85rem;
 margin-top:.4rem;
 line-height:1.05;
 }
-
 .conv-archivo .archivo-tag{
 display:inline-block;
 font-size:.62rem;
@@ -698,7 +646,6 @@ border-radius:50px;
 margin-bottom:.35rem;
 line-height:1;
 }
-
 .conv-archivo .archivo-nombre{
 display:block;
 font-family:'Courier New',monospace;
@@ -722,11 +669,7 @@ color:var(--muted);
 line-height:1.05;
 margin-top:10px;
 }
-
-.conv-aviso strong{
-color:var(--gold);
-text-shadow:0 0 10px rgba(231,195,107,.4);
-}
+.conv-aviso strong{color:var(--gold);text-shadow:0 0 10px rgba(231,195,107,.4);}
 
 .conv-cta{
 text-align:center;
@@ -737,7 +680,7 @@ flex-wrap:wrap;
 justify-content:center;
 }
 
-/* ============ TAMAÑOS DE LIBRO ============ */
+/* ============ TAMAÑOS ============ */
 .tamanos-tabla{
 width:100%;
 border-collapse:collapse;
@@ -748,11 +691,7 @@ border:1px solid rgba(231,195,107,.2);
 box-shadow:0 10px 40px rgba(0,0,0,.3);
 line-height:1.05;
 }
-
-.tamanos-tabla thead{
-background:linear-gradient(90deg,rgba(231,195,107,.15),rgba(231,195,107,.08));
-}
-
+.tamanos-tabla thead{background:linear-gradient(90deg,rgba(231,195,107,.15),rgba(231,195,107,.08));}
 .tamanos-tabla th{
 padding:.6rem .8rem;
 text-align:left;
@@ -765,7 +704,6 @@ border-bottom:1px solid rgba(231,195,107,.25);
 text-shadow:0 0 10px rgba(231,195,107,.4);
 line-height:1;
 }
-
 .tamanos-tabla td{
 padding:.55rem .8rem;
 font-size:.85rem;
@@ -774,11 +712,9 @@ border-bottom:1px solid rgba(255,255,255,.05);
 line-height:1.05;
 vertical-align:top;
 }
-
 .tamanos-tabla tbody tr{transition:background .3s ease;}
 .tamanos-tabla tbody tr:hover{background:rgba(231,195,107,.05);}
 .tamanos-tabla tbody tr:last-child td{border-bottom:none;}
-
 .tamanos-tabla .tipo{
 font-family:"Cormorant Garamond",serif;
 font-size:1rem;
@@ -788,11 +724,7 @@ text-shadow:0 0 12px rgba(231,195,107,.4);
 white-space:nowrap;
 line-height:1;
 }
-
-.tamanos-tabla .aplica-si{
-color:var(--gold-bright);
-font-weight:600;
-}
+.tamanos-tabla .aplica-si{color:var(--gold-bright);font-weight:600;}
 
 .nota-tamanos{
 background:rgba(231,195,107,.06);
@@ -804,11 +736,7 @@ color:var(--muted);
 line-height:1.05;
 margin-top:12px;
 }
-
-.nota-tamanos strong{
-color:var(--gold);
-text-shadow:0 0 10px rgba(231,195,107,.4);
-}
+.nota-tamanos strong{color:var(--gold);text-shadow:0 0 10px rgba(231,195,107,.4);}
 
 /* ============ PAQUETES ============ */
 .paquetes-grid{
@@ -818,7 +746,6 @@ gap:20px;
 max-width:1000px;
 margin:0 auto;
 }
-
 .paquete-card{
 background:var(--card);
 backdrop-filter:blur(18px);
@@ -832,7 +759,6 @@ display:flex;
 flex-direction:column;
 line-height:1.05;
 }
-
 .paquete-card::before{
 content:'';
 position:absolute;
@@ -841,18 +767,15 @@ height:2px;
 background:linear-gradient(90deg,transparent,var(--gold),transparent);
 opacity:.6;
 }
-
 .paquete-card:hover{
 transform:translateY(-8px);
 border-color:rgba(231,195,107,.4);
 box-shadow:0 20px 50px rgba(0,0,0,.4);
 }
-
 .paquete-card.destacado{
 border-color:rgba(231,195,107,.5);
 background:linear-gradient(160deg,rgba(231,195,107,.08),rgba(255,255,255,.04));
 }
-
 .paquete-tag{
 display:inline-block;
 font-size:.66rem;
@@ -867,7 +790,6 @@ margin-bottom:.6rem;
 align-self:flex-start;
 line-height:1;
 }
-
 .paquete-card h3{
 font-family:"Cormorant Garamond",serif;
 font-size:1.7rem;
@@ -876,7 +798,6 @@ color:var(--gold);
 line-height:1;
 text-shadow:0 0 15px rgba(231,195,107,.35);
 }
-
 .paquete-ideal{
 font-size:.83rem;
 color:var(--muted);
@@ -884,7 +805,6 @@ font-style:italic;
 margin-bottom:.8rem;
 line-height:1.05;
 }
-
 .paquete-card h4{
 font-size:.68rem;
 font-weight:600;
@@ -894,13 +814,7 @@ color:var(--gold);
 margin-bottom:.5rem;
 line-height:1;
 }
-
-.paquete-card ul{
-list-style:none;
-padding:0;
-margin:0 0 .9rem;
-}
-
+.paquete-card ul{list-style:none;padding:0;margin:0 0 .9rem;}
 .paquete-card ul li{
 padding:.28rem 0;
 font-size:.85rem;
@@ -911,15 +825,8 @@ align-items:flex-start;
 border-bottom:1px solid rgba(255,255,255,.05);
 line-height:1.05;
 }
-
 .paquete-card ul li:last-child{border-bottom:none;}
-
-.paquete-card ul li::before{
-content:'—';
-color:var(--gold);
-flex-shrink:0;
-}
-
+.paquete-card ul li::before{content:'—';color:var(--gold);flex-shrink:0;}
 .paquete-beneficio{
 background:rgba(231,195,107,.06);
 border:1px dashed rgba(231,195,107,.35);
@@ -930,16 +837,10 @@ color:var(--muted);
 line-height:1.05;
 margin-bottom:1rem;
 }
-
 .paquete-beneficio strong{color:var(--gold);}
+.paquete-card .btn{margin-top:auto;width:100%;text-align:center;}
 
-.paquete-card .btn{
-margin-top:auto;
-width:100%;
-text-align:center;
-}
-
-/* ============ CALCULADORA (compacta) ============ */
+/* ============ COTIZADOR ============ */
 .cotizador{
 max-width:600px;
 margin:0 auto;
@@ -947,13 +848,10 @@ background:linear-gradient(160deg,rgba(231,195,107,.08),rgba(255,255,255,.03));
 border:1.5px solid rgba(231,195,107,.35);
 border-radius:18px;
 padding:20px 18px;
-box-shadow:
-  0 20px 60px rgba(0,0,0,.5),
-  0 0 60px rgba(231,195,107,.1);
+box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 60px rgba(231,195,107,.1);
 position:relative;
 overflow:hidden;
 }
-
 .cotizador::before{
 content:'';
 position:absolute;
@@ -963,9 +861,7 @@ background:linear-gradient(90deg,transparent,var(--gold),transparent);
 opacity:.7;
 box-shadow:0 0 20px rgba(231,195,107,.6);
 }
-
 .cotizador-campo{margin-bottom:12px;}
-
 .cotizador-campo label{
 display:block;
 font-size:.72rem;
@@ -977,7 +873,6 @@ margin-bottom:6px;
 text-shadow:0 0 10px rgba(231,195,107,.4);
 line-height:1;
 }
-
 .cotizador-campo select{
 width:100%;
 padding:10px 14px;
@@ -997,19 +892,13 @@ background-size:16px;
 padding-right:38px;
 line-height:1.05;
 }
-
 .cotizador-campo select:hover,
 .cotizador-campo select:focus{
 border-color:var(--gold);
 box-shadow:0 0 20px rgba(231,195,107,.3);
 outline:none;
 }
-
-.cotizador-campo select option{
-background:#111;
-color:var(--text);
-padding:10px;
-}
+.cotizador-campo select option{background:#111;color:var(--text);padding:10px;}
 
 .cotizador-resultado{
 background:rgba(0,0,0,.7);
@@ -1020,14 +909,10 @@ text-align:center;
 margin-top:14px;
 transition:all .4s ease;
 }
-
 .cotizador-resultado.activo{
 border-color:var(--gold);
-box-shadow:
-  0 0 30px rgba(231,195,107,.3),
-  inset 0 0 30px rgba(231,195,107,.05);
+box-shadow:0 0 30px rgba(231,195,107,.3),inset 0 0 30px rgba(231,195,107,.05);
 }
-
 .cotizador-resultado .etiqueta{
 font-size:.68rem;
 font-weight:600;
@@ -1037,7 +922,6 @@ color:var(--muted);
 margin-bottom:.3rem;
 line-height:1;
 }
-
 .cotizador-resultado .precio{
 font-family:"Cormorant Garamond",serif;
 font-size:2rem;
@@ -1047,16 +931,13 @@ line-height:1;
 text-shadow:0 0 25px rgba(231,195,107,.5);
 margin-bottom:.3rem;
 }
-
 .cotizador-resultado .detalle{
 font-size:.8rem;
 color:var(--muted);
 line-height:1.05;
 margin-bottom:.7rem;
 }
-
 .cotizador-resultado .detalle strong{color:var(--gold-bright);}
-
 .cotizador-resultado .btn-wa{
 display:inline-flex;
 align-items:center;
@@ -1072,14 +953,11 @@ transition:all .3s;
 box-shadow:0 0 20px rgba(37,211,102,.4);
 line-height:1;
 }
-
 .cotizador-resultado .btn-wa:hover{
 transform:translateY(-3px);
 box-shadow:0 10px 30px rgba(37,211,102,.6),0 0 60px rgba(37,211,102,.3);
 }
-
 .cotizador-resultado .btn-wa svg{width:16px;height:16px;fill:white;}
-
 .cotizador-aviso{
 font-size:.75rem;
 color:var(--muted);
@@ -1097,7 +975,6 @@ gap:20px;
 max-width:1100px;
 margin:0 auto 26px;
 }
-
 .inclusion-card{
 background:var(--card);
 backdrop-filter:blur(18px);
@@ -1109,7 +986,6 @@ position:relative;
 overflow:hidden;
 line-height:1.05;
 }
-
 .inclusion-card::before{
 content:'';
 position:absolute;
@@ -1118,13 +994,11 @@ height:2px;
 background:linear-gradient(90deg,transparent,var(--gold),transparent);
 opacity:.6;
 }
-
 .inclusion-card:hover{
 transform:translateY(-8px);
 border-color:rgba(231,195,107,.4);
 box-shadow:0 20px 50px rgba(0,0,0,.4);
 }
-
 .inclusion-card h3{
 font-family:"Cormorant Garamond",serif;
 font-size:1.5rem;
@@ -1133,14 +1007,12 @@ margin-bottom:.5rem;
 line-height:1;
 text-shadow:0 0 15px rgba(231,195,107,.35);
 }
-
 .inclusion-card p{
 font-size:.88rem;
 color:var(--muted);
 margin-bottom:.8rem;
 line-height:1.05;
 }
-
 .estratos-tabla{
 width:100%;
 border-collapse:collapse;
@@ -1150,9 +1022,7 @@ overflow:hidden;
 border:1px solid rgba(231,195,107,.15);
 line-height:1.05;
 }
-
 .estratos-tabla thead{background:rgba(231,195,107,.12);}
-
 .estratos-tabla th{
 padding:.5rem .75rem;
 text-align:left;
@@ -1164,7 +1034,6 @@ color:var(--gold);
 border-bottom:1px solid rgba(231,195,107,.2);
 line-height:1;
 }
-
 .estratos-tabla td{
 padding:.45rem .75rem;
 font-size:.84rem;
@@ -1172,12 +1041,10 @@ color:var(--text);
 border-bottom:1px solid rgba(255,255,255,.05);
 line-height:1.05;
 }
-
 .estratos-tabla tr:last-child td{border-bottom:none;}
 .estratos-tabla .dcto{color:var(--gold);font-weight:600;}
 
 .lista-aplicar{list-style:none;padding:0;margin:0;}
-
 .lista-aplicar li{
 padding:.35rem 0;
 font-size:.85rem;
@@ -1188,14 +1055,8 @@ align-items:flex-start;
 border-bottom:1px solid rgba(255,255,255,.05);
 line-height:1.05;
 }
-
 .lista-aplicar li:last-child{border-bottom:none;}
-
-.lista-aplicar li::before{
-content:'—';
-color:var(--gold);
-flex-shrink:0;
-}
+.lista-aplicar li::before{content:'—';color:var(--gold);flex-shrink:0;}
 
 .nota-inclusion{
 background:rgba(231,195,107,.06);
@@ -1207,7 +1068,6 @@ color:var(--muted);
 line-height:1.05;
 margin-top:.85rem;
 }
-
 .nota-inclusion strong{color:var(--gold);}
 
 /* ============ PLATAFORMAS ============ */
@@ -1218,7 +1078,6 @@ gap:20px;
 max-width:1000px;
 margin:0 auto;
 }
-
 .revista-card{
 background:var(--card);
 backdrop-filter:blur(18px);
@@ -1232,7 +1091,6 @@ display:flex;
 flex-direction:column;
 line-height:1.05;
 }
-
 .revista-card::before{
 content:'';
 position:absolute;
@@ -1241,13 +1099,11 @@ height:2px;
 background:linear-gradient(90deg,transparent,var(--gold),transparent);
 opacity:.6;
 }
-
 .revista-card:hover{
 transform:translateY(-8px);
 border-color:rgba(231,195,107,.4);
 box-shadow:0 20px 50px rgba(0,0,0,.4);
 }
-
 .revista-card .r-tag{
 display:inline-block;
 font-size:.66rem;
@@ -1262,7 +1118,6 @@ margin-bottom:.6rem;
 align-self:flex-start;
 line-height:1;
 }
-
 .revista-card h3{
 font-family:"Cormorant Garamond",serif;
 font-size:1.6rem;
@@ -1271,20 +1126,13 @@ color:var(--gold);
 line-height:1;
 text-shadow:0 0 15px rgba(231,195,107,.35);
 }
-
 .revista-card p{
 font-size:.9rem;
 color:var(--muted);
 line-height:1.05;
 margin-bottom:1rem;
 }
-
-.revista-card ul{
-list-style:none;
-padding:0;
-margin:0 0 1.1rem;
-}
-
+.revista-card ul{list-style:none;padding:0;margin:0 0 1.1rem;}
 .revista-card ul li{
 padding:.25rem 0;
 font-size:.84rem;
@@ -1294,18 +1142,8 @@ gap:.5rem;
 align-items:flex-start;
 line-height:1.05;
 }
-
-.revista-card ul li::before{
-content:'—';
-color:var(--gold);
-flex-shrink:0;
-}
-
-.revista-card .btn{
-margin-top:auto;
-width:100%;
-text-align:center;
-}
+.revista-card ul li::before{content:'—';color:var(--gold);flex-shrink:0;}
+.revista-card .btn{margin-top:auto;width:100%;text-align:center;}
 
 /* ============ CTA ============ */
 .cta{
@@ -1318,7 +1156,6 @@ line-height:1.05;
 position:relative;
 overflow:hidden;
 }
-
 .cta::before{
 content:'';
 position:absolute;
@@ -1327,7 +1164,6 @@ height:2px;
 background:linear-gradient(90deg,transparent,var(--gold),transparent);
 opacity:.6;
 }
-
 .cta h2{
 font-family:"Cormorant Garamond",serif;
 font-size:2.3rem;
@@ -1336,18 +1172,6 @@ line-height:1;
 color:var(--gold);
 text-shadow:0 0 20px rgba(231,195,107,.4);
 }
-
-.cta .cta-sub{
-font-family:"Cormorant Garamond",serif;
-font-style:italic;
-font-size:1.15rem;
-color:var(--gold-bright);
-letter-spacing:.5px;
-margin-bottom:20px;
-text-shadow:0 0 12px rgba(231,195,107,.4);
-line-height:1.05;
-}
-
 .cta .cta-info{
 display:flex;
 flex-direction:column;
@@ -1358,15 +1182,12 @@ font-size:.95rem;
 color:var(--muted);
 line-height:1.05;
 }
-
 .cta .cta-info p{margin:0;}
-
 .cta .cta-info a{
 color:var(--gold-bright);
 text-decoration:none;
 transition:.3s;
 }
-
 .cta .cta-info a:hover{
 color:#fff4d8;
 text-shadow:0 0 12px rgba(231,195,107,.8);
@@ -1383,7 +1204,6 @@ position:relative;
 overflow:hidden;
 background:#000000;
 }
-
 footer::before{
 content:'';
 position:absolute;
@@ -1394,7 +1214,6 @@ background:radial-gradient(ellipse,rgba(231,195,107,.12) 0%,transparent 70%);
 pointer-events:none;
 filter:blur(40px);
 }
-
 .footer-logos{
 display:flex;
 justify-content:center;
@@ -1405,7 +1224,6 @@ position:relative;
 z-index:2;
 flex-wrap:wrap;
 }
-
 .footer-logo{
 height:110px;
 width:auto;
@@ -1419,7 +1237,6 @@ filter:
   drop-shadow(0 0 80px rgba(231,195,107,.25));
 transition:filter .4s, transform .4s;
 }
-
 .footer-logo:hover{
 filter:
   brightness(1.5)
@@ -1430,7 +1247,6 @@ filter:
   drop-shadow(0 0 100px rgba(231,195,107,.5));
 transform:scale(1.03);
 }
-
 .footer-divider{
 width:60%;
 max-width:400px;
@@ -1441,7 +1257,6 @@ position:relative;
 z-index:2;
 box-shadow:0 0 15px rgba(231,195,107,.4);
 }
-
 footer .footer-tagline{
 position:relative;
 z-index:2;
@@ -1455,7 +1270,6 @@ text-shadow:0 0 12px rgba(231,195,107,.4);
 text-align:center;
 line-height:1.05;
 }
-
 footer .footer-copy{
 position:relative;
 z-index:2;
@@ -1465,7 +1279,6 @@ text-align:center;
 line-height:1.05;
 }
 
-/* ============ FOOTER SOCIAL ============ */
 .footer-social{
 display:flex;
 justify-content:center;
@@ -1474,34 +1287,28 @@ margin:0 0 20px;
 position:relative;
 z-index:2;
 }
-
 .footer-social a{
 display:inline-flex;
 align-items:center;
 justify-content:center;
-width:44px;
-height:44px;
+width:44px;height:44px;
 border-radius:50%;
 border:1px solid rgba(231,195,107,.3);
 background:rgba(231,195,107,.05);
 transition:all .4s ease;
 }
-
 .footer-social a svg{
-width:20px;
-height:20px;
+width:20px;height:20px;
 fill:var(--gold);
 transition:all .4s ease;
 filter:drop-shadow(0 0 4px rgba(231,195,107,.4));
 }
-
 .footer-social a:hover{
 background:rgba(231,195,107,.2);
 border-color:var(--gold-bright);
 transform:translateY(-3px);
 box-shadow:0 0 25px rgba(231,195,107,.5);
 }
-
 .footer-social a:hover svg{
 fill:var(--gold-bright);
 filter:drop-shadow(0 0 8px rgba(231,195,107,.9));
@@ -1524,12 +1331,10 @@ box-shadow:0 0 20px rgba(37,211,102,.5),0 0 40px rgba(37,211,102,.25);
 transition:transform .3s;
 animation:waPulse 2.5s infinite;
 }
-
 .wa-float:hover{
 transform:scale(1.1);
 box-shadow:0 0 30px rgba(37,211,102,.8),0 0 60px rgba(37,211,102,.4);
 }
-
 .wa-float svg{width:28px;height:28px;fill:white;}
 
 @keyframes waPulse{
@@ -1545,239 +1350,159 @@ nav{max-width:1350px;}
 .hero h1{font-size:3.8rem;}
 .hero-image{height:360px;}
 }
-
 @media(max-width:1200px){
 .hero h1{font-size:3rem;}
 .hero-image{height:300px;}
 section{padding:26px 20px;}
 .title h2{font-size:2.2rem;}
 }
-
 @media(max-width:900px){
 nav{padding:8px 15px;gap:8px;}
 .logo-img{height:70px;}
 nav ul{gap:6px;}
 nav ul li a{padding:6px 11px;font-size:.7rem;}
-
-.hero{padding:130px 20px 25px;min-height:auto;}
+.hero{padding:180px 20px 25px;min-height:auto;}
 .hero-content{grid-template-columns:1fr;gap:35px;}
 .hero h1{font-size:2.5rem;}
 .hero-image{height:260px;}
-
 .paquetes-grid{grid-template-columns:1fr;}
 .revistas-grid{grid-template-columns:1fr;}
 .inclusion-grid{grid-template-columns:1fr;}
-
 .conv-grid{grid-template-columns:1fr;gap:14px;}
 .conv-col{gap:14px;}
-
 section{padding:24px 20px;}
 .title h2{font-size:2rem;}
-
 .convocatoria-hero h3{font-size:1.9rem;}
-
 .footer-logos{gap:35px;}
 .footer-logo{height:95px;}
 }
-
 @media(max-width:767px){
 body{font-size:14.5px;line-height:1;}
-
-.tamanos-tabla th,
-.tamanos-tabla td{
-padding:.55rem .55rem;
-font-size:.8rem;
-}
+.tamanos-tabla th,.tamanos-tabla td{padding:.55rem .55rem;font-size:.8rem;}
 .tamanos-tabla .tipo{font-size:.95rem;}
-
 .title h2{font-size:1.9rem;}
 .title p{font-size:.9rem;}
-
 .paquete-card{padding:20px 18px;}
 .revista-card{padding:22px 18px;}
 .inclusion-card{padding:20px 18px;}
-
 .cotizador{padding:18px 16px;}
 .cotizador-resultado .precio{font-size:1.8rem;}
-
 .cta{padding:30px 22px;}
 .cta h2{font-size:1.9rem;}
-.cta .cta-sub{font-size:1.05rem;}
 .cta .cta-info{font-size:.9rem;}
-
 .convocatoria-hero{padding:24px 20px;}
 .convocatoria-hero h3{font-size:1.7rem;}
 .convocatoria-hero .conv-lema{font-size:1.05rem;}
 .conv-block{padding:18px 16px;}
 .conv-block h3{font-size:1.3rem;}
-
-.conv-cronograma li{
-grid-template-columns:1fr;
-gap:2px;
-padding:.45rem .6rem;
-}
+.conv-cronograma li{grid-template-columns:1fr;gap:2px;padding:.45rem .6rem;}
 .conv-cronograma .fecha{text-align:left;}
-
 footer{padding:8px 18px 25px;}
 .footer-logo{height:80px;}
 .footer-logos{gap:25px;}
 }
-
 @media(max-width:600px){
 body{line-height:1;}
-
+#lang-bar{gap:8px;padding:6px 8px;}
+#lang-bar button{padding:4px 7px;font-size:.6rem;gap:4px;}
+#lang-bar img{width:18px;height:13px;}
+header{top:38px;}
 nav{padding:8px 12px;flex-wrap:wrap;justify-content:center;}
 .logo-img{height:60px;}
-nav ul{
-display:flex;
-flex-wrap:wrap;
-gap:5px;
-justify-content:center;
-width:100%;
-margin-top:6px;
-}
-nav ul li a{
-padding:5px 10px;
-font-size:.65rem;
-letter-spacing:.3px;
-}
-
-.hero{padding:130px 15px 20px;}
+nav ul{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;width:100%;margin-top:6px;}
+nav ul li a{padding:5px 10px;font-size:.65rem;letter-spacing:.3px;}
+.hero{padding:170px 15px 20px;}
 .hero h1{font-size:1.95rem;}
 .hero p{font-size:.92rem;margin-bottom:16px;}
 .hero-image{height:220px;}
-
 .btn{padding:10px 20px;font-size:.82rem;}
-
 section{padding:20px 15px;}
 .title{margin-bottom:16px;}
 .title h2{font-size:1.7rem;}
 .title p{font-size:.87rem;}
-
 .convocatoria-hero{padding:20px 16px;border-radius:18px;}
 .convocatoria-hero h3{font-size:1.5rem;}
 .convocatoria-hero .conv-lema{font-size:.95rem;}
 .convocatoria-hero p{font-size:.86rem;}
-.convocatoria-hero .conv-badge{font-size:.6rem;letter-spacing:2px;padding:.3rem .8rem;}
-
 .conv-block{padding:16px 14px;border-radius:16px;}
 .conv-block h3{font-size:1.2rem;}
 .conv-block h4{font-size:1rem;}
 .conv-block p{font-size:.83rem;}
 .conv-list li{font-size:.82rem;}
-
 .conv-premio-item{padding:.6rem .75rem;}
 .conv-premio-item h4{font-size:.95rem;}
 .conv-premio-item p{font-size:.8rem;}
 .conv-premio-item .conv-list li{font-size:.79rem;}
-
 .conv-paso{padding:10px 12px;gap:10px;}
 .conv-paso .paso-num{min-width:30px;height:30px;font-size:.82rem;}
 .conv-paso .paso-content h4{font-size:.98rem;}
 .conv-paso .paso-content p{font-size:.78rem;}
-
+.ia-paso{padding:8px 10px;}
+.ia-paso h5{font-size:.88rem;}
+.ia-paso p{font-size:.76rem;}
 .conv-cronograma li{font-size:.82rem;padding:.4rem .55rem;}
-
-.tamanos-tabla{
-display:block;
-overflow-x:auto;
--webkit-overflow-scrolling:touch;
-}
+.tamanos-tabla{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
 .tamanos-tabla th{padding:.45rem .45rem;font-size:.62rem;}
 .tamanos-tabla td{padding:.45rem .45rem;font-size:.76rem;}
 .tamanos-tabla .tipo{font-size:.85rem;}
-
 .nota-tamanos{font-size:.82rem;padding:.8rem .9rem;}
-
 .paquete-card{padding:18px 16px;}
 .paquete-card h3{font-size:1.5rem;}
-
 .inclusion-card{padding:18px 16px;}
 .inclusion-card h3{font-size:1.3rem;}
-
 .estratos-tabla th{padding:.45rem .55rem;font-size:.62rem;}
 .estratos-tabla td{padding:.4rem .55rem;font-size:.78rem;}
-
 .revista-card{padding:20px 16px;}
 .revista-card h3{font-size:1.4rem;}
-
 .cotizador{padding:16px 14px;}
 .cotizador-resultado .precio{font-size:1.6rem;}
-
 .cta{padding:26px 18px;border-radius:20px;}
 .cta h2{font-size:1.6rem;}
-.cta .cta-sub{font-size:.95rem;}
-
 footer{padding:6px 15px 22px;font-size:.8rem;}
 .footer-logo{height:65px;}
 .footer-logos{gap:20px;}
 footer .footer-tagline{font-size:.9rem;}
-
 .wa-float{width:50px;height:50px;bottom:16px;right:16px;}
 .wa-float svg{width:26px;height:26px;}
-
 .footer-social a{width:38px;height:38px;}
 .footer-social a svg{width:18px;height:18px;}
 }
-
 @media(max-width:400px){
 body{font-size:14px;line-height:1;}
-
+#lang-bar button{padding:3px 5px;font-size:.55rem;}
+#lang-bar img{width:16px;height:11px;}
 nav{padding:6px 10px;}
 .logo-img{height:52px;}
 nav ul li a{padding:4px 8px;font-size:.6rem;}
-
-.hero{padding:120px 12px 18px;}
+.hero{padding:160px 12px 18px;}
 .hero h1{font-size:1.7rem;}
 .hero p{font-size:.88rem;}
 .hero-image{height:190px;}
-
 section{padding:16px 12px;}
 .title h2{font-size:1.5rem;}
 .title p{font-size:.84rem;}
-
 .btn{padding:9px 18px;font-size:.78rem;}
 .buttons{flex-direction:column;width:100%;}
 .buttons .btn{width:100%;}
-
 .convocatoria-hero h3{font-size:1.3rem;}
-.convocatoria-hero .conv-lema{font-size:.88rem;}
-
 .conv-block h3{font-size:1.15rem;}
 .conv-block h4{font-size:.98rem;}
-
-.conv-paso{padding:10px 11px;gap:9px;}
-.conv-paso .paso-num{min-width:28px;height:28px;font-size:.78rem;}
-.conv-paso .paso-content h4{font-size:.95rem;}
-
 .tamanos-tabla th{font-size:.58rem;padding:.4rem .4rem;}
 .tamanos-tabla td{font-size:.72rem;padding:.4rem .4rem;}
 .tamanos-tabla .tipo{font-size:.8rem;}
-
 .paquete-card h3{font-size:1.35rem;}
-.paquete-card h4{font-size:.62rem;}
-
 .inclusion-card h3{font-size:1.2rem;}
-.estratos-tabla th{font-size:.58rem;padding:.4rem .45rem;}
-.estratos-tabla td{font-size:.72rem;padding:.4rem .45rem;}
-
 .revista-card h3{font-size:1.25rem;}
-
 .cotizador-resultado .precio{font-size:1.5rem;}
-
 .cta h2{font-size:1.4rem;}
-
 .footer-logo{height:55px;}
 footer .footer-tagline{font-size:.85rem;}
 footer .footer-copy{font-size:.75rem;}
-
 .wa-float{width:46px;height:46px;bottom:14px;right:14px;}
 .wa-float svg{width:24px;height:24px;}
-
 .footer-social a{width:34px;height:34px;}
 .footer-social a svg{width:16px;height:16px;}
 }
-
 @media(max-width:340px){
 body{font-size:13.5px;line-height:1;}
 .logo-img{height:46px;}
@@ -1787,22 +1512,35 @@ body{font-size:13.5px;line-height:1;}
 .convocatoria-hero h3{font-size:1.2rem;}
 .conv-block h3{font-size:1.05rem;}
 }
-
 @media(max-width:900px) and (orientation:landscape){
-.hero{min-height:auto;padding:120px 20px 25px;}
+.hero{min-height:auto;padding:170px 20px 25px;}
 .hero-content{grid-template-columns:1fr 1fr;gap:30px;}
 .hero-image{height:220px;}
 }
-
 @media print{
-header,footer,.wa-float,.btn{display:none;}
+header,footer,.wa-float,.btn,#lang-bar{display:none;}
 body{background:white;color:black;}
 section{padding:20px 0;}
 }
-
 </style>
 </head>
 <body>
+
+<!-- BARRA DE IDIOMAS -->
+<div id="lang-bar">
+  <button id="lang-es" class="active" onclick="setLang('es')">
+    <img src="https://flagcdn.com/w40/es.png" alt="ES"><span>Español</span>
+  </button>
+  <button id="lang-en" onclick="setLang('en')">
+    <img src="https://flagcdn.com/w40/gb.png" alt="EN"><span>English</span>
+  </button>
+  <button id="lang-fr" onclick="setLang('fr')">
+    <img src="https://flagcdn.com/w40/fr.png" alt="FR"><span>Français</span>
+  </button>
+  <button id="lang-pt" onclick="setLang('pt')">
+    <img src="https://flagcdn.com/w40/br.png" alt="PT"><span>Português</span>
+  </button>
+</div>
 
 <header>
 <nav>
@@ -1810,16 +1548,16 @@ section{padding:20px 0;}
 <img src="https://i.postimg.cc/KjNyqCH5/Chat-GPT-Image-16-sept-2026-12-21-49-p-m-removebg-preview.png" alt="Artes Multicap Editorial" class="logo-img">
 </a>
 <ul>
-<li><a href="#servicios">Servicios</a></li>
-<li><a href="#tamanos">Tamaños</a></li>
-<li><a href="#paquetes">Paquetes</a></li>
-<li><a href="#proceso">Proceso</a></li>
-<li><a href="#inclusion">Inclusión</a></li>
-<li><a href="#cotizador">Cotiza</a></li>
-<li><a href="#revistas">Plataformas</a></li>
-<li><a href="#convocatoria">Convocatorias</a></li>
-<li><a href="https://pol-ticaseditoriales.netlify.app/" target="_blank" rel="noopener">Políticas</a></li>
-<li><a href="#contacto">Contacto</a></li>
+<li><a href="#servicios" data-i18n="nav.servicios">Servicios</a></li>
+<li><a href="#tamanos" data-i18n="nav.tamanos">Tamaños</a></li>
+<li><a href="#paquetes" data-i18n="nav.paquetes">Paquetes</a></li>
+<li><a href="#proceso" data-i18n="nav.proceso">Proceso</a></li>
+<li><a href="#inclusion" data-i18n="nav.inclusion">Inclusión</a></li>
+<li><a href="#cotizador" data-i18n="nav.cotiza">Cotiza</a></li>
+<li><a href="#revistas" data-i18n="nav.plataformas">Plataformas</a></li>
+<li><a href="#convocatoria" data-i18n="nav.convocatorias">Convocatorias</a></li>
+<li><a href="https://pol-ticaseditoriales.netlify.app/" target="_blank" rel="noopener" data-i18n="nav.politicas">Políticas</a></li>
+<li><a href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
 </ul>
 </nav>
 </header>
@@ -1828,11 +1566,11 @@ section{padding:20px 0;}
 <section class="hero">
 <div class="hero-content">
 <div>
-<h1>Tu historia merece llegar al mundo.</h1>
-<p>Transformamos tu manuscrito en un libro profesional y te acompañamos desde la edición hasta la publicación internacional en español e inglés.</p>
+<h1 data-i18n="hero.title">Tu historia merece llegar al mundo.</h1>
+<p data-i18n="hero.desc">Transformamos tu manuscrito en un libro profesional y te acompañamos desde la edición hasta la publicación internacional en español e inglés.</p>
 <div class="buttons">
-<a href="#cotizador" class="btn primary">Cotizar mi libro</a>
-<a href="https://wa.me/573113555949?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20c%C3%B3mo%20publicar%20mi%20libro" class="btn secondary" target="_blank">Hablar por WhatsApp</a>
+<a href="#cotizador" class="btn primary" data-i18n="hero.btn.cotizar">Cotizar mi libro</a>
+<a href="https://wa.me/573113555949?text=Hola%2C%20quiero%20informaci%C3%B3n" class="btn secondary" target="_blank" data-i18n="hero.btn.whatsapp">Hablar por WhatsApp</a>
 </div>
 </div>
 <div class="hero-image">
@@ -1844,95 +1582,91 @@ section{padding:20px 0;}
 <!-- SERVICIOS -->
 <section id="servicios" class="fade">
 <div class="title">
-<h2>Nuestros servicios</h2>
-<p>Puedes contratar servicios individuales o un acompañamiento editorial completo.</p>
+<h2 data-i18n="serv.title">Nuestros servicios</h2>
+<p data-i18n="serv.desc">Puedes contratar servicios individuales o un acompañamiento editorial completo.</p>
 </div>
-
 <div class="servicios-imagen">
-<img src="https://i.postimg.cc/0Q8gMPnM/Gemini-Generated-Image-5yvolr5yvolr5yvo.jpg" alt="Servicios editoriales de Artes Multicap Editorial">
+<img src="https://i.postimg.cc/0Q8gMPnM/Gemini-Generated-Image-5yvolr5yvolr5yvo.jpg" alt="Servicios editoriales">
 </div>
-
 </section>
 
-<!-- TAMAÑOS DE LIBRO -->
+<!-- TAMAÑOS -->
 <section id="tamanos" class="fade">
 <div class="title">
-<h2>Tamaños de libro que manejamos</h2>
-<p>Antes de cotizar, definimos el tamaño de tu libro. Esto afecta el número de páginas, la maquetación y el costo de impresión.</p>
+<h2 data-i18n="tam.title">Tamaños de libro que manejamos</h2>
+<p data-i18n="tam.desc">Antes de cotizar, definimos el tamaño de tu libro. Esto afecta el número de páginas, la maquetación y el costo de impresión.</p>
 </div>
-
 <table class="tamanos-tabla">
 <thead>
 <tr>
-<th>Tipo</th>
-<th>¿Para qué sirve?</th>
-<th>¿Aplica paquete?</th>
+<th data-i18n="tam.th1">Tipo</th>
+<th data-i18n="tam.th2">¿Para qué sirve?</th>
+<th data-i18n="tam.th3">¿Aplica paquete?</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tipo">Bolsillo</td>
-<td>Novelas, poemarios, libros de viaje.</td>
-<td>No aplica paquete estándar. Se cotiza aparte.</td>
+<td class="tipo" data-i18n="tam.r1.t">Bolsillo</td>
+<td data-i18n="tam.r1.d">Novelas, poemarios, libros de viaje.</td>
+<td data-i18n="tam.r1.a">No aplica paquete estándar. Se cotiza aparte.</td>
 </tr>
 <tr>
-<td class="tipo">Comercial o Estándar</td>
-<td>Novelas, ensayos, tesis, textos profesionales, memorias, biografías.</td>
-<td class="aplica-si">Sí aplica. Es el formato base de nuestros paquetes.</td>
+<td class="tipo" data-i18n="tam.r2.t">Comercial o Estándar</td>
+<td data-i18n="tam.r2.d">Novelas, ensayos, tesis, textos profesionales, memorias, biografías.</td>
+<td class="aplica-si" data-i18n="tam.r2.a">Sí aplica. Es el formato base de nuestros paquetes.</td>
 </tr>
 <tr>
-<td class="tipo">Grande</td>
-<td>Recetarios, libros infantiles, libros de arte, journals.</td>
-<td>No aplica paquete estándar. Se cotiza aparte.</td>
+<td class="tipo" data-i18n="tam.r3.t">Grande</td>
+<td data-i18n="tam.r3.d">Recetarios, libros infantiles, libros de arte, journals.</td>
+<td data-i18n="tam.r3.a">No aplica paquete estándar. Se cotiza aparte.</td>
 </tr>
 <tr>
-<td class="tipo">Técnico o Ilustrado</td>
-<td>Libros con gráficas, tablas, imágenes a color, planos, ilustraciones.</td>
-<td>No aplica paquete estándar. Se cotiza aparte.</td>
+<td class="tipo" data-i18n="tam.r4.t">Técnico o Ilustrado</td>
+<td data-i18n="tam.r4.d">Libros con gráficas, tablas, imágenes a color, planos, ilustraciones.</td>
+<td data-i18n="tam.r4.a">No aplica paquete estándar. Se cotiza aparte.</td>
 </tr>
 </tbody>
 </table>
-
-<div class="nota-tamanos">
-<strong>Importante:</strong> Nuestros paquetes Plan Profesional y Plan Premium Global están diseñados para libros comerciales o estándar. Si tu libro es de bolsillo, grande, técnico o ilustrado, te enviamos una cotización personalizada porque el trabajo de maquetación, impresión y diseño cambia.
+<div class="nota-tamanos" data-i18n-html="tam.note">
+<strong>Importante:</strong> Nuestros paquetes Plan Profesional y Plan Premium Global están diseñados para libros comerciales o estándar. Si tu libro es de bolsillo, grande, técnico o ilustrado, te enviamos una cotización personalizada.
 </div>
 </section>
 
 <!-- PAQUETES -->
 <section id="paquetes" class="fade">
 <div class="title">
-<h2>Paquetes integrales</h2>
-<p>Ahorra tiempo y dinero contratando todo el proceso junto. Cada obra es única y merece una cotización personalizada.</p>
+<h2 data-i18n="paq.title">Paquetes integrales</h2>
+<p data-i18n="paq.desc">Ahorra tiempo y dinero contratando todo el proceso junto. Cada obra es única y merece una cotización personalizada.</p>
 </div>
 <div class="paquetes-grid">
 
 <div class="paquete-card">
-<span class="paquete-tag">Edición en español · 2 formatos</span>
-<h3>Plan Profesional</h3>
-<p class="paquete-ideal">Ideal para: novelas, tesis, ensayos, textos profesionales y journals.</p>
-<h4>Incluye</h4>
-<ul>
+<span class="paquete-tag" data-i18n="paq.p1.tag">Edición en español · 2 formatos</span>
+<h3 data-i18n="paq.p1.title">Plan Profesional</h3>
+<p class="paquete-ideal" data-i18n="paq.p1.ideal">Ideal para: novelas, tesis, ensayos, textos profesionales y journals.</p>
+<h4 data-i18n="paq.include">Incluye</h4>
+<ul data-i18n-list="paq.p1.list">
 <li>Corrección ortotipográfica y de estilo</li>
 <li>Maquetación interior profesional</li>
 <li>Diseño profesional de portada</li>
 <li>Gestión del ISBN correspondiente</li>
-<li>Publicación internacional bajo el sello Artes Multicap Editorial</li>
+<li>Publicación internacional</li>
 <li>eBook en español</li>
 <li>Tapa blanda en español</li>
-<li>Promoción y posicionamiento editorial inicial mediante la configuración y optimización de la presencia de la obra en Amazon y otros canales de distribución disponibles para el sello editorial, <strong>sin garantía de un número determinado de ventas o resultados económicos</strong></li>
+<li>Promoción inicial</li>
 </ul>
-<div class="paquete-beneficio">
-<strong>🎁 Beneficio exclusivo para nuestros autores.</strong> En Artes Multicap Editorial queremos que el primer encuentro con tu obra sea inolvidable. Por eso, te obsequiamos el primer ejemplar impreso de tu libro, para que puedas verlo, sostenerlo en tus manos y conocer cómo quedó la edición final antes de solicitar más copias. Después podrás pedir las cantidades que desees, desde un (1) ejemplar en adelante. Porque la primera persona que debe disfrutar tu libro eres tú.
+<div class="paquete-beneficio" data-i18n-html="paq.p1.benef">
+<strong>🎁 Beneficio exclusivo para nuestros autores.</strong> Te obsequiamos el primer ejemplar impreso de tu libro, para que puedas verlo antes de solicitar más copias.
 </div>
-<a href="#cotizador" class="btn primary" onclick="seleccionarPlan('profesional')">Cotizar este plan</a>
+<a href="#cotizador" class="btn primary" onclick="seleccionarPlan('profesional')" data-i18n="paq.p1.btn">Cotizar este plan</a>
 </div>
 
 <div class="paquete-card destacado">
-<span class="paquete-tag">Edición bilingüe · 6 formatos</span>
-<h3>Plan Premium Global</h3>
-<p class="paquete-ideal">Ideal para: autores que buscan alcance internacional.</p>
-<h4>Incluye</h4>
-<ul>
+<span class="paquete-tag" data-i18n="paq.p2.tag">Edición bilingüe · 6 formatos</span>
+<h3 data-i18n="paq.p2.title">Plan Premium Global</h3>
+<p class="paquete-ideal" data-i18n="paq.p2.ideal">Ideal para: autores que buscan alcance internacional.</p>
+<h4 data-i18n="paq.include">Incluye</h4>
+<ul data-i18n-list="paq.p2.list">
 <li>Todo lo del Plan Profesional</li>
 <li>Traducción completa al inglés</li>
 <li>eBook en español</li>
@@ -1941,13 +1675,13 @@ section{padding:20px 0;}
 <li>Tapa blanda en inglés</li>
 <li>Tapa dura en español</li>
 <li>Tapa dura en inglés</li>
-<li>Kit de comunicación y lanzamiento: EL AUTOR podrá escoger la plataforma y formato de destino para el material promocional entre Facebook, Instagram, TikTok, LinkedIn y YouTube</li>
-<li>Promoción y posicionamiento editorial ampliado mediante acciones de difusión y optimización de la presencia editorial de la obra en Amazon y otros canales de comercialización disponibles para Artes Multicap Editorial, incluyendo los metadatos y materiales promocionales contemplados en el plan, <strong>sin garantía de ventas ni de resultados económicos específicos</strong></li>
+<li>Kit de comunicación y lanzamiento</li>
+<li>Promoción ampliada</li>
 </ul>
-<div class="paquete-beneficio">
-<strong>🎁 Beneficio Premium.</strong> El Plan Premium Global incluye <strong>3 ejemplares impresos de cortesía en tapa blanda</strong>, para que conserves una copia personal y dispongas de ejemplares para presentación, regalo o promoción de tu obra.
+<div class="paquete-beneficio" data-i18n-html="paq.p2.benef">
+<strong>🎁 Beneficio Premium.</strong> El Plan Premium Global incluye <strong>3 ejemplares impresos de cortesía en tapa blanda</strong>.
 </div>
-<a href="#cotizador" class="btn primary" onclick="seleccionarPlan('premium')">Cotizar este plan</a>
+<a href="#cotizador" class="btn primary" onclick="seleccionarPlan('premium')" data-i18n="paq.p2.btn">Cotizar este plan</a>
 </div>
 
 </div>
@@ -1956,203 +1690,189 @@ section{padding:20px 0;}
 <!-- PROCESO -->
 <section id="proceso" class="fade">
 <div class="title">
-<h2>Cómo iniciamos tu proyecto</h2>
-<p>Un proceso claro, transparente y acompañado en cada etapa.</p>
+<h2 data-i18n="proc.title">Cómo iniciamos tu proyecto</h2>
+<p data-i18n="proc.desc">Un proceso claro, transparente y acompañado en cada etapa.</p>
 </div>
-
 <div class="servicios-imagen">
-<img src="https://i.postimg.cc/6q3PdLm2/Gemini-Generated-Image-76vhw876vhw876vh-%281%29.jpg" alt="Proceso editorial de Artes Multicap Editorial: cotización, formalización, producción editorial y publicación internacional">
+<img src="https://i.postimg.cc/6q3PdLm2/Gemini-Generated-Image-76vhw876vhw876vh-%281%29.jpg" alt="Proceso editorial">
 </div>
-
 <div style="text-align:center;margin-top:22px;">
-<a href="#cotizador" class="btn primary">Cotizar mi libro</a>
-<a href="https://wa.me/573113555949?text=Hola%2C%20quiero%20iniciar%20mi%20proyecto%20editorial%20con%20Artes%20Multicap%20Editorial" class="btn secondary" target="_blank" style="margin-left:10px;">Hablar por WhatsApp</a>
+<a href="#cotizador" class="btn primary" data-i18n="hero.btn.cotizar">Cotizar mi libro</a>
+<a href="https://wa.me/573113555949?text=Hola%2C%20quiero%20iniciar" class="btn secondary" target="_blank" style="margin-left:10px;" data-i18n="hero.btn.whatsapp">Hablar por WhatsApp</a>
 </div>
 </section>
 
 <!-- INCLUSIÓN -->
 <section id="inclusion" class="fade">
 <div class="title">
-<h2>Programa de Inclusión Editorial</h2>
-<p>En la Fundación Artes Multicap creemos que el dinero no debe ser una barrera para publicar. Por eso ofrecemos descuentos según tu estrato socioeconómico.</p>
+<h2 data-i18n="inc.title">Programa de Inclusión Editorial</h2>
+<p data-i18n="inc.desc">En la Fundación Artes Multicap creemos que el dinero no debe ser una barrera para publicar. Por eso ofrecemos descuentos según tu estrato socioeconómico.</p>
 </div>
 <div class="inclusion-grid">
 
 <div class="inclusion-card">
-<h3>Descuentos por estrato</h3>
-<p>Tu estrato socioeconómico determina el porcentaje del valor que pagas por los servicios técnicos editoriales.</p>
+<h3 data-i18n="inc.c1.title">Descuentos por estrato</h3>
+<p data-i18n="inc.c1.desc">Tu estrato socioeconómico determina el porcentaje del valor que pagas por los servicios técnicos editoriales.</p>
 <table class="estratos-tabla">
-<thead><tr><th>Estrato</th><th>Descuento</th><th>Tú pagas</th></tr></thead>
+<thead><tr><th data-i18n="inc.th.estrato">Estrato</th><th data-i18n="inc.th.dcto">Descuento</th><th data-i18n="inc.th.pagas">Tú pagas</th></tr></thead>
 <tbody>
-<tr><td>Estrato 1</td><td class="dcto">70%</td><td>30% del valor</td></tr>
-<tr><td>Estrato 2</td><td class="dcto">70%</td><td>30% del valor</td></tr>
-<tr><td>Estrato 3</td><td class="dcto">40%</td><td>60% del valor</td></tr>
-<tr><td>Estrato 4</td><td class="dcto">40%</td><td>60% del valor</td></tr>
-<tr><td>Estrato 5</td><td>Sin descuento</td><td>100%</td></tr>
-<tr><td>Estrato 6</td><td>Sin descuento</td><td>100%</td></tr>
+<tr><td data-i18n="inc.e1">Estrato 1</td><td class="dcto">70%</td><td data-i18n="inc.p30">30% del valor</td></tr>
+<tr><td data-i18n="inc.e2">Estrato 2</td><td class="dcto">70%</td><td data-i18n="inc.p30">30% del valor</td></tr>
+<tr><td data-i18n="inc.e3">Estrato 3</td><td class="dcto">40%</td><td data-i18n="inc.p60">60% del valor</td></tr>
+<tr><td data-i18n="inc.e4">Estrato 4</td><td class="dcto">40%</td><td data-i18n="inc.p60">60% del valor</td></tr>
+<tr><td data-i18n="inc.e5">Estrato 5</td><td data-i18n="inc.nodcto">Sin descuento</td><td>100%</td></tr>
+<tr><td data-i18n="inc.e6">Estrato 6</td><td data-i18n="inc.nodcto">Sin descuento</td><td>100%</td></tr>
 </tbody>
 </table>
 </div>
 
 <div class="inclusion-card">
-<h3>¿Cómo aplicar al descuento?</h3>
-<p>Al firmar el contrato, adjunta los siguientes documentos:</p>
-<ul class="lista-aplicar">
+<h3 data-i18n="inc.c2.title">¿Cómo aplicar al descuento?</h3>
+<p data-i18n="inc.c2.desc">Al firmar el contrato, adjunta los siguientes documentos:</p>
+<ul class="lista-aplicar" data-i18n-list="inc.c2.list">
 <li>Formulario de Registro del Autor obligatorio.</li>
-<li>Copia digital de tu último recibo de servicios públicos (agua, luz o gas). El recibo debe mostrar claramente tu estrato y la dirección debe coincidir con la registrada en el formulario.</li>
+<li>Copia digital de tu último recibo de servicios públicos.</li>
 <li>Copia de tu cédula de ciudadanía.</li>
 </ul>
-<div class="nota-inclusion">
+<div class="nota-inclusion" data-i18n-html="inc.c2.note">
 <strong>Importante:</strong> El descuento aplica únicamente sobre los servicios técnicos editoriales.
 </div>
 </div>
 
 </div>
 <div style="text-align:center;">
-<a href="#cotizador" class="btn primary">Cotizar mi libro</a>
-<a href="https://wa.me/573113555949?text=Hola%2C%20quiero%20aplicar%20al%20Programa%20de%20Inclusi%C3%B3n%20Editorial%20de%20Artes%20Multicap%20Editorial" class="btn secondary" target="_blank" style="margin-left:10px;">Hablar por WhatsApp</a>
+<a href="#cotizador" class="btn primary" data-i18n="hero.btn.cotizar">Cotizar mi libro</a>
+<a href="https://wa.me/573113555949?text=Hola%2C%20quiero%20aplicar" class="btn secondary" target="_blank" style="margin-left:10px;" data-i18n="hero.btn.whatsapp">Hablar por WhatsApp</a>
 </div>
 </section>
 
-<!-- CALCULADORA DE COTIZACIÓN -->
+<!-- COTIZADOR -->
 <section id="cotizador" class="fade">
 <div class="title">
-<h2>Cotiza tu libro en segundos</h2>
-<p>Selecciona el plan que te interesa y tu estrato socioeconómico. Te mostraremos el valor de tu cotización al instante.</p>
+<h2 data-i18n="cot.title">Cotiza tu libro en segundos</h2>
+<p data-i18n="cot.desc">Selecciona el plan que te interesa y tu estrato socioeconómico. Te mostraremos el valor de tu cotización al instante.</p>
 </div>
-
 <div class="cotizador">
 <div class="cotizador-campo">
-<label for="selectPlan">1. Elige tu plan</label>
+<label for="selectPlan" data-i18n="cot.lbl1">1. Elige tu plan</label>
 <select id="selectPlan">
-<option value="">— Selecciona un plan —</option>
-<option value="profesional">Plan Profesional · Edición en español</option>
-<option value="premium">Plan Premium Global · Edición bilingüe</option>
+<option value="" data-i18n="cot.sel0">— Selecciona un plan —</option>
+<option value="profesional" data-i18n="cot.opt1">Plan Profesional · Edición en español</option>
+<option value="premium" data-i18n="cot.opt2">Plan Premium Global · Edición bilingüe</option>
 </select>
 </div>
-
 <div class="cotizador-campo">
-<label for="selectEstrato">2. Selecciona tu estrato socioeconómico</label>
+<label for="selectEstrato" data-i18n="cot.lbl2">2. Selecciona tu estrato socioeconómico</label>
 <select id="selectEstrato">
-<option value="">— Selecciona tu estrato —</option>
-<option value="1">Estrato 1</option>
-<option value="2">Estrato 2</option>
-<option value="3">Estrato 3</option>
-<option value="4">Estrato 4</option>
-<option value="5">Estrato 5</option>
-<option value="6">Estrato 6</option>
+<option value="" data-i18n="cot.sel1">— Selecciona tu estrato —</option>
+<option value="1" data-i18n="cot.e1">Estrato 1</option>
+<option value="2" data-i18n="cot.e2">Estrato 2</option>
+<option value="3" data-i18n="cot.e3">Estrato 3</option>
+<option value="4" data-i18n="cot.e4">Estrato 4</option>
+<option value="5" data-i18n="cot.e5">Estrato 5</option>
+<option value="6" data-i18n="cot.e6">Estrato 6</option>
 </select>
 </div>
-
 <div class="cotizador-resultado" id="resultado">
-<div class="etiqueta">Tu cotización estimada</div>
+<div class="etiqueta" data-i18n="cot.res.etq">Tu cotización estimada</div>
 <div class="precio" id="precioResultado">—</div>
-<div class="detalle" id="detalleResultado">
-Selecciona un plan y tu estrato para ver el valor.
-</div>
-<a href="https://wa.me/573113555949?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20mi%20cotizaci%C3%B3n%20de%20Artes%20Multicap%20Editorial" class="btn-wa" target="_blank" id="btnWhatsApp">
+<div class="detalle" id="detalleResultado" data-i18n="cot.res.det">Selecciona un plan y tu estrato para ver el valor.</div>
+<a href="https://wa.me/573113555949?text=Hola" class="btn-wa" target="_blank" id="btnWhatsApp">
 <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-Escribir por WhatsApp
+<span data-i18n="cot.res.wa">Escribir por WhatsApp</span>
 </a>
 </div>
-
-<p class="cotizador-aviso">
-El valor mostrado es una estimación para un libro de 100 páginas en formato comercial (15 × 23 cm). El valor final puede ajustarse según el número real de páginas, la complejidad del manuscrito y el tamaño editorial. El descuento por estrato aplica únicamente sobre servicios técnicos editoriales.
-</p>
+<p class="cotizador-aviso" data-i18n="cot.aviso">El valor mostrado es una estimación para un libro de 100 páginas en formato comercial (15 × 23 cm). El valor final puede ajustarse según el número real de páginas, la complejidad del manuscrito y el tamaño editorial.</p>
 </div>
 </section>
 
 <!-- PLATAFORMAS -->
 <section id="revistas" class="fade">
 <div class="title">
-<h2>Nuestras plataformas</h2>
-<p>La Fundación Artes Multicap también publica revistas digitales de arte, cultura y creación juvenil con alcance internacional.</p>
+<h2 data-i18n="plat.title">Nuestras plataformas</h2>
+<p data-i18n="plat.desc">La Fundación Artes Multicap también publica revistas digitales de arte, cultura y creación juvenil con alcance internacional.</p>
 </div>
 <div class="revistas-grid">
 
 <div class="revista-card">
-<span class="r-tag">Plataforma Cultural</span>
-<h3>Explorando Museos y Arte Latinoamericano</h3>
-<p>Una plataforma digital gratuita que integra tres revistas digitales enfocadas en el arte nacional colombiano, latinoamericano y la creación juvenil. Un puente digital entre cultura, educación y emoción.</p>
-<ul>
+<span class="r-tag" data-i18n="plat.c1.tag">Plataforma Cultural</span>
+<h3 data-i18n="plat.c1.title">Explorando Museos y Arte Latinoamericano</h3>
+<p data-i18n="plat.c1.desc">Una plataforma digital gratuita que integra tres revistas digitales enfocadas en el arte nacional colombiano, latinoamericano y la creación juvenil.</p>
+<ul data-i18n-list="plat.c1.list">
 <li>Revista Explorando Arte y Cultura de Latinoamérica</li>
 <li>Revista Jóvenes Creadores de Latinoamérica</li>
 <li>Acceso abierto y gratuito</li>
 <li>Convocatorias internacionales para artistas</li>
 </ul>
-<a href="https://explorandomuseosyartelatinoamericano.netlify.app/" class="btn primary" target="_blank">Visitar la plataforma</a>
+<a href="https://explorandomuseosyartelatinoamericano.netlify.app/" class="btn primary" target="_blank" data-i18n="plat.c1.btn">Visitar la plataforma</a>
 </div>
 
 <div class="revista-card">
-<span class="r-tag">Fundación</span>
-<h3>Fundación Artes Multicap</h3>
-<p>Conoce nuestra misión, visión y proyectos de transformación social a través del arte, la cultura, la literatura y la educación emocional. Talleres gratuitos y formaciones para todas las edades.</p>
-<ul>
+<span class="r-tag" data-i18n="plat.c2.tag">Fundación</span>
+<h3 data-i18n="plat.c2.title">Fundación Artes Multicap</h3>
+<p data-i18n="plat.c2.desc">Conoce nuestra misión, visión y proyectos de transformación social a través del arte, la cultura, la literatura y la educación emocional.</p>
+<ul data-i18n-list="plat.c2.list">
 <li>Talleres básicos gratuitos</li>
 <li>Talleres intermedios y avanzados</li>
 <li>Proyectos editoriales y culturales</li>
 <li>Impacto social en Latinoamérica</li>
 </ul>
-<a href="https://fundacion-artes-multicap.netlify.app/" class="btn primary" target="_blank">Visitar la Fundación</a>
+<a href="https://fundacion-artes-multicap.netlify.app/" class="btn primary" target="_blank" data-i18n="plat.c2.btn">Visitar la Fundación</a>
 </div>
 
 </div>
 </section>
 
-<!-- CONVOCATORIA OFICIAL -->
+<!-- CONVOCATORIA -->
 <section id="convocatoria" class="fade">
-
 <div class="title">
-<h2>Convocatoria Oficial</h2>
-<p>Concurso Internacional de Creación Literaria y Publicación "Latinoamérica Escribe"</p>
+<h2 data-i18n="conv.title">Convocatoria Oficial</h2>
+<p data-i18n="conv.desc">Concurso Internacional de Creación Literaria y Publicación "Latinoamérica Escribe"</p>
 </div>
-
 <div class="convocatoria-hero">
-<span class="conv-badge">Convocatoria abierta 2026</span>
-<h3>LATINOAMÉRICA ESCRIBE</h3>
-<p class="conv-lema">Una obra. Un ganador. Un libro para el mundo.</p>
-<p><em>Una historia. Dos idiomas. Una oportunidad para publicar y llevar tu voz más allá de las fronteras.</em></p>
+<span class="conv-badge" data-i18n="conv.badge">Convocatoria abierta 2026</span>
+<h3 data-i18n="conv.h3">LATINOAMÉRICA ESCRIBE</h3>
+<p class="conv-lema" data-i18n="conv.lema">Una obra. Un ganador. Un libro para el mundo.</p>
+<p data-i18n-html="conv.sub"><em>Una historia. Dos idiomas. Una oportunidad para publicar y llevar tu voz más allá de las fronteras.</em></p>
 </div>
 
-<!-- GRID CONVOCATORIA EN DOS COLUMNAS -->
 <div class="conv-grid">
 
 <!-- COLUMNA 1 -->
 <div class="conv-col">
 
 <div class="conv-block">
-<h3>¿Qué es "Latinoamérica Escribe"?</h3>
-<p>Es un concurso internacional de creación literaria y publicación organizado por la <strong>Fundación Artes Multicap (Colombia)</strong>, dirigido a autores de toda Latinoamérica que tengan una obra original, inédita y de su autoría y quieran llevarla a un proceso editorial bilingüe con proyección internacional.</p>
-<p>Se seleccionará <strong>una única obra ganadora</strong>, de <strong>tema y género libres</strong>. El autor ganador recibirá gratuitamente el <strong>Plan Premium Global</strong> de Artes Multicap Editorial, valorado referencialmente en <strong>$4.100.000 COP</strong>, además de las condiciones de publicación, promoción y regalías establecidas en las bases.</p>
-<p><strong>Participar es completamente GRATIS.</strong></p>
+<h3 data-i18n="conv.c1.h">¿Qué es "Latinoamérica Escribe"?</h3>
+<p data-i18n-html="conv.c1.p1">Es un concurso internacional de creación literaria y publicación organizado por la <strong>Fundación Artes Multicap (Colombia)</strong>.</p>
+<p data-i18n-html="conv.c1.p2">Se seleccionará <strong>una única obra ganadora</strong>, de <strong>tema y género libres</strong>. El ganador recibirá gratuitamente el <strong>Plan Premium Global</strong>, valorado en <strong>$4.100.000 COP</strong>.</p>
+<p data-i18n-html="conv.c1.p3"><strong>Participar es completamente GRATIS.</strong></p>
 </div>
 
 <div class="conv-block">
-<h3>¿Quién puede participar?</h3>
-<ul class="conv-list check">
+<h3 data-i18n="conv.c2.h">¿Quién puede participar?</h3>
+<ul class="conv-list check" data-i18n-list="conv.c2.list1">
 <li>Personas naturales mayores de 18 años.</li>
 <li>Autores de cualquier país de Latinoamérica.</li>
 <li>Personas de cualquier nacionalidad que residan en un país latinoamericano.</li>
 <li>Autores que presenten una obra original, inédita y de su autoría.</li>
 <li>Participantes que presenten su obra en idioma español.</li>
 </ul>
-<p><strong>Países convocados:</strong> Colombia, México, Argentina, Chile, Perú, Ecuador, Bolivia, Paraguay, Uruguay, Brasil, Venezuela, Costa Rica, Panamá, Nicaragua, Honduras, Guatemala, El Salvador, República Dominicana, Cuba y Puerto Rico.</p>
-
-<h4>No podrán participar</h4>
-<ul class="conv-list cross">
+<p data-i18n-html="conv.c2.paises"><strong>Países convocados:</strong> Colombia, México, Argentina, Chile, Perú, Ecuador, Bolivia, Paraguay, Uruguay, Brasil, Venezuela, Costa Rica, Panamá, Nicaragua, Honduras, Guatemala, El Salvador, República Dominicana, Cuba y Puerto Rico.</p>
+<h4 data-i18n="conv.c2.np">No podrán participar</h4>
+<ul class="conv-list cross" data-i18n-list="conv.c2.list2">
 <li>Obras publicadas comercialmente con anterioridad.</li>
-<li>Obras que hayan resultado ganadoras de otro concurso, cuando las condiciones de ese concurso comprometan los derechos necesarios para participar.</li>
-<li>Personas vinculadas directamente con la organización del concurso cuando puedan afectar la imparcialidad del proceso.</li>
+<li>Obras ganadoras de otro concurso cuando comprometan derechos necesarios.</li>
+<li>Personas vinculadas directamente con la organización.</li>
 <li>Integrantes del jurado.</li>
-<li>Personas que intervengan directamente en la evaluación de las obras.</li>
+<li>Personas que intervengan directamente en la evaluación.</li>
 </ul>
 </div>
 
 <div class="conv-block">
-<h3>Tema y género: libres</h3>
-<p>La convocatoria no establece un tema específico. La obra puede pertenecer a cualquier género literario, narrativo, artístico, cultural, académico o de no ficción, siempre que pueda constituirse editorialmente como un proyecto de libro.</p>
-<p>Entre otros, podrán presentarse:</p>
-<ul class="conv-list">
+<h3 data-i18n="conv.c3.h">Tema y género: libres</h3>
+<p data-i18n="conv.c3.p1">La convocatoria no establece un tema específico. La obra puede pertenecer a cualquier género literario, narrativo, artístico, cultural, académico o de no ficción, siempre que pueda constituirse editorialmente como un proyecto de libro.</p>
+<p data-i18n="conv.c3.p2">Entre otros, podrán presentarse:</p>
+<ul class="conv-list" data-i18n-list="conv.c3.list">
 <li>Novela, novela corta, cuento y relatos</li>
 <li>Poesía</li>
 <li>Ensayo, investigación y crónica</li>
@@ -2161,42 +1881,40 @@ El valor mostrado es una estimación para un libro de 100 páginas en formato co
 <li>Obras de carácter cultural, artístico, académico o científico</li>
 <li>Otros géneros narrativos, literarios o expositivos</li>
 </ul>
-<p><strong>La única condición temática</strong> es que la obra cumpla con los requisitos establecidos en las bases.</p>
-<p>La obra deberá ser <strong>original, inédita y de autoría del participante</strong>.</p>
+<p data-i18n-html="conv.c3.p4">La obra deberá ser <strong>original, inédita y de autoría del participante</strong>.</p>
 </div>
 
 <div class="conv-block">
-<h3>Requisitos de formato</h3>
-<ul class="conv-list check">
+<h3 data-i18n="conv.c4.h">Requisitos de formato</h3>
+<ul class="conv-list check" data-i18n-list="conv.c4.list">
 <li>Tamaño carta, con márgenes de 2,5 cm por los cuatro lados</li>
 <li>Times New Roman 12, interlineado 1,5</li>
 <li>Título en Times New Roman 14</li>
-<li><strong>Tabla de contenido obligatoria</strong></li>
-<li><strong>Extensión: 20.000 a 30.000 palabras</strong></li>
+<li>Tabla de contenido obligatoria</li>
+<li>Extensión: 20.000 a 30.000 palabras</li>
 <li>Idioma: español</li>
 <li>Formato de envío: Word (.docx) únicamente</li>
-<li>Seudónimo obligatorio para preservar la imparcialidad del jurado</li>
+<li>Seudónimo obligatorio</li>
 </ul>
 </div>
 
 <div class="conv-block">
-<h3>Valor referencial del premio</h3>
-<p>El Plan Premium Global otorgado a la obra ganadora representa una inversión editorial estimada de <strong>$4.100.000 COP</strong> (aproximadamente €950 EUR, según la tasa de cambio vigente).</p>
-<p>Este valor es referencial y corresponde al conjunto de servicios editoriales que recibe gratuitamente la persona ganadora. No constituye un valor que deba ser pagado por el participante ni una obligación de compra de servicios editoriales.</p>
-<p>El ganador <strong>no recibe este valor en dinero</strong>. Recibe gratuitamente los servicios editoriales descritos en las bases, más el 50% de las regalías netas por ventas.</p>
-<p>El alcance concreto del premio será el establecido en las bases y posteriormente formalizado mediante el correspondiente <strong>Acuerdo Editorial</strong> con el ganador.</p>
+<h3 data-i18n="conv.c5.h">Valor referencial del premio</h3>
+<p data-i18n-html="conv.c5.p1">El Plan Premium Global otorgado a la obra ganadora representa una inversión editorial estimada de <strong>$4.100.000 COP</strong>.</p>
+<p data-i18n="conv.c5.p2">Este valor es referencial y corresponde al conjunto de servicios editoriales que recibe gratuitamente la persona ganadora.</p>
+<p data-i18n-html="conv.c5.p3">El ganador <strong>no recibe este valor en dinero</strong>. Recibe gratuitamente los servicios editoriales descritos en las bases, más el 50% de las regalías netas por ventas.</p>
 </div>
 
 <div class="conv-block">
-<h3>Lo que conservas como autor</h3>
-<p><strong>TÚ SIGUES SIENDO EL DUEÑO DE TU OBRA.</strong></p>
-<p>El contrato de edición no transfiere en ningún momento el derecho de autor, conforme al <strong>artículo 119 de la Ley 23 de 1982</strong>: «Por el solo contrato de edición no se transfiere en ningún momento el derecho de autor». Esto significa que conservas todos tus derechos morales y patrimoniales. La Fundación solo recibe una autorización temporal para publicar tu obra, no la propiedad de ella.</p>
-<p>Además, en caso de cualquier duda o conflicto sobre la interpretación de las cláusulas, se aplicará el principio <strong>«in dubio pro auctore»</strong>, que ordena interpretar siempre a favor del autor.</p>
+<h3 data-i18n="conv.c6.h">Lo que conservas como autor</h3>
+<p data-i18n-html="conv.c6.p1"><strong>TÚ SIGUES SIENDO EL DUEÑO DE TU OBRA.</strong></p>
+<p data-i18n-html="conv.c6.p2">El contrato de edición no transfiere en ningún momento el derecho de autor, conforme al <strong>artículo 119 de la Ley 23 de 1982</strong>. Conservas todos tus derechos morales y patrimoniales.</p>
+<p data-i18n-html="conv.c6.p3">En caso de cualquier duda, se aplicará el principio <strong>«in dubio pro auctore»</strong>, que ordena interpretar siempre a favor del autor.</p>
 </div>
 
 <div class="conv-block">
-<h3>Cronograma</h3>
-<ul class="conv-cronograma">
+<h3 data-i18n="conv.c7.h">Cronograma</h3>
+<ul class="conv-cronograma" data-i18n-cron="conv.c7.list">
 <li><span class="etapa">Lanzamiento de la convocatoria</span><span class="fecha">25 de septiembre de 2026</span></li>
 <li><span class="etapa">Recepción de obras</span><span class="fecha">25 sep — 26 oct 2026</span></li>
 <li><span class="etapa">Verificación de requisitos formales</span><span class="fecha">27 oct — 5 nov 2026</span></li>
@@ -2206,14 +1924,14 @@ El valor mostrado es una estimación para un libro de 100 páginas en formato co
 <li><span class="etapa">Proceso editorial y traducción</span><span class="fecha">Dic 2026 — Ene 2027</span></li>
 <li><span class="etapa">Publicación oficial del libro</span><span class="fecha">Enero de 2027</span></li>
 </ul>
-<div class="conv-aviso">
-<strong>Nota de transparencia:</strong> El proceso editorial bilingüe completo (corrección, diseño, traducción, ISBN y publicación en múltiples formatos) requiere entre 3 y 4 meses por obra para garantizar la calidad que un libro publicado merece. Preferimos tomarnos el tiempo necesario para entregar un producto editorial impecable antes que apresurar una publicación por cumplir una fecha.
+<div class="conv-aviso" data-i18n-html="conv.c7.nota">
+<strong>Nota de transparencia:</strong> El proceso editorial bilingüe completo requiere entre 3 y 4 meses por obra para garantizar la calidad.
 </div>
 </div>
 
 <div class="conv-block">
-<h3>Compromiso del ganador</h3>
-<p>Una vez seleccionado el ganador, la organización le solicitará los documentos necesarios para el proceso editorial. El ganador tendrá un plazo de <strong>3 días calendario</strong> para entregar la documentación solicitada. Si no cumple con el plazo, será descalificado y se seleccionará al siguiente participante en orden de mérito.</p>
+<h3 data-i18n="conv.c8.h">Compromiso del ganador</h3>
+<p data-i18n-html="conv.c8.p">El ganador tendrá un plazo de <strong>3 días calendario</strong> para entregar la documentación solicitada. Si no cumple, será descalificado y se seleccionará al siguiente participante.</p>
 </div>
 
 </div>
@@ -2223,119 +1941,126 @@ El valor mostrado es una estimación para un libro de 100 páginas en formato co
 <div class="conv-col">
 
 <div class="conv-block">
-<h3>El gran premio: Plan Premium Global</h3>
-<p>El ganador recibirá el <strong>Plan Premium Global</strong>, el paquete editorial integral bilingüe de mayor alcance de Artes Multicap Editorial, <strong>sin pagar absolutamente nada por estos servicios</strong>.</p>
+<h3 data-i18n="conv.d1.h">El gran premio: Plan Premium Global</h3>
+<p data-i18n-html="conv.d1.p">El ganador recibirá el <strong>Plan Premium Global</strong>, <strong>sin pagar absolutamente nada por estos servicios</strong>.</p>
 
 <div class="conv-premio-item">
-<h4>Proceso editorial completo</h4>
-<ul class="conv-list">
-<li>Lectura y valoración editorial del manuscrito</li>
+<h4 data-i18n="conv.d1.i1.h">Proceso editorial completo</h4>
+<ul class="conv-list" data-i18n-list="conv.d1.i1.list">
+<li>Lectura y valoración editorial</li>
 <li>Corrección ortotipográfica y de estilo</li>
-<li>Preparación y adecuación del manuscrito</li>
-<li>Diagramación y maquetación interior profesional</li>
-<li>Diseño profesional de portada (eBook, tapa blanda y tapa dura)</li>
-<li>Diseño de contraportada y mockups promocionales</li>
+<li>Preparación del manuscrito</li>
+<li>Diagramación y maquetación interior</li>
+<li>Diseño profesional de portada</li>
+<li>Diseño de contraportada y mockups</li>
 </ul>
 </div>
 
 <div class="conv-premio-item">
-<h4>Ilustraciones</h4>
-<p>Si la obra lo requiere (por ejemplo, literatura infantil o álbum ilustrado), la organización diseña las ilustraciones como parte del premio.</p>
+<h4 data-i18n="conv.d1.i2.h">Ilustraciones</h4>
+<p data-i18n="conv.d1.i2.p">Si la obra lo requiere, la organización diseña las ilustraciones como parte del premio.</p>
 </div>
 
 <div class="conv-premio-item">
-<h4>Traducción al inglés</h4>
-<p>Traducción profesional de la obra completa al inglés.</p>
+<h4 data-i18n="conv.d1.i3.h">Traducción al inglés</h4>
+<p data-i18n="conv.d1.i3.p">Traducción profesional de la obra completa al inglés.</p>
 </div>
 
 <div class="conv-premio-item">
-<h4>Publicación en seis formatos bilingües</h4>
-<ul class="conv-list">
+<h4 data-i18n="conv.d1.i4.h">Publicación en seis formatos bilingües</h4>
+<ul class="conv-list" data-i18n-list="conv.d1.i4.list">
 <li>eBook en español</li>
 <li>eBook en inglés</li>
 <li>Tapa blanda en español</li>
 <li>Tapa blanda en inglés</li>
-<li>Tapa dura en español (sujeto a disponibilidad técnica)</li>
-<li>Tapa dura en inglés (sujeto a disponibilidad técnica)</li>
+<li>Tapa dura en español</li>
+<li>Tapa dura en inglés</li>
 </ul>
 </div>
 
 <div class="conv-premio-item">
-<h4>Gestión de ISBN</h4>
-<p>Solicitud y gestión de los ISBN correspondientes a cada formato impreso.</p>
+<h4 data-i18n="conv.d1.i5.h">Gestión de ISBN</h4>
+<p data-i18n="conv.d1.i5.p">Solicitud y gestión de los ISBN correspondientes a cada formato.</p>
 </div>
 
 <div class="conv-premio-item">
-<h4>Distribución internacional</h4>
-<p>Disponible a nivel mundial.</p>
+<h4 data-i18n="conv.d1.i6.h">Distribución internacional</h4>
+<p data-i18n="conv.d1.i6.p">Disponible a nivel mundial.</p>
 </div>
 
 <div class="conv-premio-item">
-<h4>Ejemplares del autor</h4>
-<p><strong>3 ejemplares impresos de cortesía en tapa blanda.</strong></p>
+<h4 data-i18n="conv.d1.i7.h">Ejemplares del autor</h4>
+<p data-i18n-html="conv.d1.i7.p"><strong>3 ejemplares impresos de cortesía en tapa blanda.</strong></p>
 </div>
 
 <div class="conv-premio-item">
-<h4>Promoción y difusión ampliada</h4>
-<ul class="conv-list">
-<li>Publicaciones en redes sociales, piezas gráficas, reels y videos</li>
+<h4 data-i18n="conv.d1.i8.h">Promoción y difusión ampliada</h4>
+<ul class="conv-list" data-i18n-list="conv.d1.i8.list">
+<li>Publicaciones en redes sociales</li>
 <li>Presentación del autor</li>
-<li>Entrevista publicada en nuestras redes sociales</li>
+<li>Entrevista publicada</li>
 <li>Difusión nacional e internacional</li>
-<li>Enlaces de venta y promoción de la obra</li>
-<li>Kit de comunicación y lanzamiento: el autor podrá escoger la plataforma y formato de destino para el material promocional entre Facebook, Instagram, TikTok, LinkedIn y YouTube</li>
-<li>Posicionamiento editorial ampliado mediante acciones de difusión y optimización de la presencia de la obra en Amazon y otros canales de comercialización</li>
+<li>Enlaces de venta y promoción</li>
+<li>Kit de comunicación y lanzamiento</li>
+<li>Posicionamiento en Amazon</li>
 </ul>
 </div>
 
 <div class="conv-premio-item">
-<h4>Regalías por ventas</h4>
-<ul class="conv-list">
-<li><strong>50% de las regalías netas</strong> generadas por las ventas de la obra</li>
-<li>Reporte semestral detallado de ventas por formato y territorio</li>
+<h4 data-i18n="conv.d1.i9.h">Regalías por ventas</h4>
+<ul class="conv-list" data-i18n-list="conv.d1.i9.list">
+<li>50% de las regalías netas</li>
+<li>Reporte semestral de ventas</li>
 </ul>
 </div>
 
 <div class="conv-premio-item">
-<h4>Diploma digital</h4>
-<p>Diploma digital oficial de ganador con el nombre del autor y la obra premiada.</p>
+<h4 data-i18n="conv.d1.i10.h">Diploma digital</h4>
+<p data-i18n="conv.d1.i10.p">Diploma digital oficial de ganador.</p>
 </div>
 </div>
 
 <div class="conv-block">
-<h3>Cómo participar</h3>
+<h3 data-i18n="conv.pasos.h">Cómo participar</h3>
 
 <div class="conv-paso">
 <div class="paso-num">1</div>
 <div class="paso-content">
-<h4>Prepara tu obra</h4>
-<p>Debe ser original, inédita y de tu autoría. Debes presentarla <strong>bajo seudónimo</strong> (obligatorio para garantizar la imparcialidad del jurado).</p>
+<h4 data-i18n="conv.p1.h">Prepara tu obra</h4>
+<p data-i18n-html="conv.p1.p">Debe ser <strong>original, inédita y de tu autoría</strong>. Debes presentarla <strong>bajo seudónimo</strong> (obligatorio para garantizar la imparcialidad del jurado).</p>
+
+<div class="ia-paso">
+<h5 data-i18n="conv.ia.h">Uso de Inteligencia Artificial</h5>
+<p data-i18n-html="conv.ia.p1">Es <strong>obligatorio declarar</strong> cualquier uso de IA. Se permite como herramienta de apoyo con revisión del autor. No se aceptan obras generadas íntegramente por IA.</p>
+<p data-i18n-html="conv.ia.p4">El incumplimiento implica <strong>descalificación automática</strong>.</p>
+</div>
 </div>
 </div>
 
 <div class="conv-paso">
 <div class="paso-num">2</div>
 <div class="paso-content">
-<h4>Prepara tus dos archivos Word</h4>
+<h4 data-i18n="conv.p2.h">Prepara tus dos archivos Word</h4>
 
 <div class="conv-archivo">
-<span class="archivo-tag">Archivo 1</span>
-<strong style="color:var(--gold-bright);font-size:.85rem;">Manuscrito</strong>
-<ul class="conv-list" style="margin-top:.4rem;">
+<span class="archivo-tag" data-i18n="conv.p2.a1.tag">Archivo 1</span>
+<strong style="color:var(--gold-bright);font-size:.85rem;" data-i18n="conv.p2.a1.n">Manuscrito</strong>
+<ul class="conv-list" style="margin-top:.4rem;" data-i18n-list="conv.p2.a1.list">
 <li>Formato: Word (.docx) únicamente</li>
 <li>Bajo seudónimo, sin datos personales</li>
-<li>Tamaño carta, márgenes de 2,5 cm por los cuatro lados</li>
+<li>Tamaño carta, márgenes de 2,5 cm</li>
 <li>Tabla de contenido obligatoria</li>
 </ul>
 <span class="archivo-nombre">MANUSCRITO_SEUDONIMO_TITULO.docx</span>
 </div>
 
 <div class="conv-archivo" style="margin-top:.5rem;">
-<span class="archivo-tag">Archivo 2</span>
-<strong style="color:var(--gold-bright);font-size:.85rem;">Presentación</strong>
-<ul class="conv-list" style="margin-top:.4rem;">
+<span class="archivo-tag" data-i18n="conv.p2.a2.tag">Archivo 2</span>
+<strong style="color:var(--gold-bright);font-size:.85rem;" data-i18n="conv.p2.a2.n">Presentación</strong>
+<ul class="conv-list" style="margin-top:.4rem;" data-i18n-list="conv.p2.a2.list">
 <li>Formato: Word (.docx) únicamente</li>
 <li>Con tus datos personales completos</li>
+<li>Declaración expresa de uso de IA</li>
 </ul>
 <span class="archivo-nombre">PRESENTACION_SEUDONIMO.docx</span>
 </div>
@@ -2345,15 +2070,15 @@ El valor mostrado es una estimación para un libro de 100 páginas en formato co
 <div class="conv-paso">
 <div class="paso-num">3</div>
 <div class="paso-content">
-<h4>Envía tus archivos</h4>
-<p><strong>Correo:</strong> artesmulticap2024@gmail.com</p>
-<p><strong>Asunto del correo:</strong></p>
+<h4 data-i18n="conv.p3.h">Envía tus archivos</h4>
+<p data-i18n-html="conv.p3.p1"><strong>Correo:</strong> artesmulticap2024@gmail.com</p>
+<p data-i18n-html="conv.p3.p2"><strong>Asunto del correo:</strong></p>
 <span class="archivo-nombre">CONCURSO LATINOAMÉRICA ESCRIBE - SEUDONIMO</span>
 </div>
 </div>
 
-<div class="conv-aviso">
-<strong>Importante:</strong> No se aceptan archivos PDF. Solo Word (.docx). El manuscrito y la presentación deben ir en dos archivos separados.
+<div class="conv-aviso" data-i18n-html="conv.p3.aviso">
+<strong>Importante:</strong> No se aceptan archivos PDF. Solo Word (.docx). <strong>Toda obra que use IA debe declararlo expresamente</strong>. Obras sin declaración podrán ser descalificadas.
 </div>
 </div>
 
@@ -2361,20 +2086,18 @@ El valor mostrado es una estimación para un libro de 100 páginas en formato co
 <!-- FIN COLUMNA 2 -->
 
 </div>
-<!-- FIN GRID CONVOCATORIA -->
 
 <div class="conv-cta">
-<a href="https://wa.me/573113555949?text=Hola%2C%20quiero%20participar%20en%20el%20concurso%20Latinoam%C3%A9rica%20Escribe" class="btn primary" target="_blank">Participar por WhatsApp</a>
-<a href="mailto:artesmulticap2024@gmail.com?subject=CONCURSO LATINOAMÉRICA ESCRIBE - SEUDONIMO" class="btn secondary">Enviar mi obra por correo</a>
+<a href="https://wa.me/573113555949?text=Hola%2C%20quiero%20participar" class="btn primary" target="_blank" data-i18n="conv.cta1">Participar por WhatsApp</a>
+<a href="mailto:artesmulticap2024@gmail.com?subject=CONCURSO" class="btn secondary" data-i18n="conv.cta2">Enviar mi obra por correo</a>
 </div>
-
 </section>
 
 <!-- CONTACTO -->
 <section id="contacto" class="fade">
 <div class="title">
-<h2>¿Listo para publicar tu libro?</h2>
-<p>Estamos listos para acompañarte en cada página de tu proyecto.</p>
+<h2 data-i18n="cont.title">¿Listo para publicar tu libro?</h2>
+<p data-i18n="cont.desc">Estamos listos para acompañarte en cada página de tu proyecto.</p>
 </div>
 <div class="cta">
 <div class="footer-logos">
@@ -2383,80 +2106,599 @@ El valor mostrado es una estimación para un libro de 100 páginas en formato co
 </div>
 
 <div class="footer-social">
-<a href="https://www.facebook.com/ArtesMulticap/?locale=es_LA" target="_blank" rel="noopener" aria-label="Facebook">
+<a href="https://www.facebook.com/ArtesMulticap/" target="_blank" rel="noopener" aria-label="Facebook">
 <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
 </a>
 <a href="https://www.instagram.com/artesmulticap/" target="_blank" rel="noopener" aria-label="Instagram">
 <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
 </a>
-<a href="https://www.tiktok.com/@fundacionartesmulticap?_r=1&_t=ZS-92sY8bo4onA" target="_blank" rel="noopener" aria-label="TikTok">
+<a href="https://www.tiktok.com/@fundacionartesmulticap" target="_blank" rel="noopener" aria-label="TikTok">
 <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
 </a>
 </div>
-  <div class="cta-info">
+<div class="cta-info">
 <p><a href="mailto:artesmulticap2024@gmail.com">artesmulticap2024@gmail.com</a></p>
-<p>WhatsApp: <a href="https://wa.me/573113555949" target="_blank">311 355 5949</a></p>
-<p>Colombia</p>
+<p data-i18n-html="cont.wa">WhatsApp: <a href="https://wa.me/573113555949" target="_blank">311 355 5949</a></p>
+<p data-i18n="cont.country">Colombia</p>
 </div>
-
 <div class="buttons" style="justify-content:center;margin-top:20px;">
-<a href="https://wa.me/573113555949?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20personalizada%20para%20publicar%20mi%20libro" class="btn primary" target="_blank">Escríbenos por WhatsApp</a>
-<a href="mailto:artesmulticap2024@gmail.com?subject=Solicitud de cotización editorial" class="btn secondary">Enviar correo</a>
+<a href="https://wa.me/573113555949?text=Hola" class="btn primary" target="_blank" data-i18n="cont.btn1">Escríbenos por WhatsApp</a>
+<a href="mailto:artesmulticap2024@gmail.com" class="btn secondary" data-i18n="cont.btn2">Enviar correo</a>
 </div>
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
 <div class="footer-divider"></div>
-
-<p class="footer-tagline">Publicación editorial • Coedición • Distribución Internacional</p>
-<p class="footer-copy">© 2026 Fundación Artes Multicap. Todos los derechos reservados.</p>
+<p class="footer-tagline" data-i18n="foot.tag">Publicación editorial • Coedición • Distribución Internacional</p>
+<p class="footer-copy" data-i18n="foot.copy">© 2026 Fundación Artes Multicap. Todos los derechos reservados.</p>
 </footer>
 
-<a href="https://wa.me/573113555949?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20personalizada%20para%20publicar%20mi%20libro" class="wa-float" target="_blank" aria-label="WhatsApp">
+<a href="https://wa.me/573113555949" class="wa-float" target="_blank" aria-label="WhatsApp">
 <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script>
-// Animación fade
-const observer=new IntersectionObserver((entries)=>{
-entries.forEach((entry)=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-observer.unobserve(entry.target);
-}
-});
-},{threshold:0, rootMargin:"0px 0px -40px 0px"});
-document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
+/* ============ TRADUCCIONES ============ */
+const i18n = {
+  es: {
+    "nav.servicios":"Servicios","nav.tamanos":"Tamaños","nav.paquetes":"Paquetes","nav.proceso":"Proceso",
+    "nav.inclusion":"Inclusión","nav.cotiza":"Cotiza","nav.plataformas":"Plataformas","nav.convocatorias":"Convocatorias",
+    "nav.politicas":"Políticas","nav.contacto":"Contacto",
+    "hero.title":"Tu historia merece llegar al mundo.",
+    "hero.desc":"Transformamos tu manuscrito en un libro profesional y te acompañamos desde la edición hasta la publicación internacional en español e inglés.",
+    "hero.btn.cotizar":"Cotizar mi libro","hero.btn.whatsapp":"Hablar por WhatsApp",
+    "serv.title":"Nuestros servicios","serv.desc":"Puedes contratar servicios individuales o un acompañamiento editorial completo.",
+    "tam.title":"Tamaños de libro que manejamos",
+    "tam.desc":"Antes de cotizar, definimos el tamaño de tu libro. Esto afecta el número de páginas, la maquetación y el costo de impresión.",
+    "tam.th1":"Tipo","tam.th2":"¿Para qué sirve?","tam.th3":"¿Aplica paquete?",
+    "tam.r1.t":"Bolsillo","tam.r1.d":"Novelas, poemarios, libros de viaje.","tam.r1.a":"No aplica paquete estándar. Se cotiza aparte.",
+    "tam.r2.t":"Comercial o Estándar","tam.r2.d":"Novelas, ensayos, tesis, textos profesionales, memorias, biografías.","tam.r2.a":"Sí aplica. Es el formato base de nuestros paquetes.",
+    "tam.r3.t":"Grande","tam.r3.d":"Recetarios, libros infantiles, libros de arte, journals.","tam.r3.a":"No aplica paquete estándar. Se cotiza aparte.",
+    "tam.r4.t":"Técnico o Ilustrado","tam.r4.d":"Libros con gráficas, tablas, imágenes a color, planos, ilustraciones.","tam.r4.a":"No aplica paquete estándar. Se cotiza aparte.",
+    "tam.note":"<strong>Importante:</strong> Nuestros paquetes Plan Profesional y Plan Premium Global están diseñados para libros comerciales o estándar. Si tu libro es de bolsillo, grande, técnico o ilustrado, te enviamos una cotización personalizada.",
+    "paq.title":"Paquetes integrales","paq.desc":"Ahorra tiempo y dinero contratando todo el proceso junto. Cada obra es única y merece una cotización personalizada.","paq.include":"Incluye",
+    "paq.p1.tag":"Edición en español · 2 formatos","paq.p1.title":"Plan Profesional","paq.p1.ideal":"Ideal para: novelas, tesis, ensayos, textos profesionales y journals.",
+    "paq.p1.list":["Corrección ortotipográfica y de estilo","Maquetación interior profesional","Diseño profesional de portada","Gestión del ISBN correspondiente","Publicación internacional","eBook en español","Tapa blanda en español","Promoción inicial"],
+    "paq.p1.benef":"<strong>🎁 Beneficio exclusivo para nuestros autores.</strong> Te obsequiamos el primer ejemplar impreso de tu libro, para que puedas verlo antes de solicitar más copias.",
+    "paq.p1.btn":"Cotizar este plan",
+    "paq.p2.tag":"Edición bilingüe · 6 formatos","paq.p2.title":"Plan Premium Global","paq.p2.ideal":"Ideal para: autores que buscan alcance internacional.",
+    "paq.p2.list":["Todo lo del Plan Profesional","Traducción completa al inglés","eBook en español","eBook en inglés","Tapa blanda en español","Tapa blanda en inglés","Tapa dura en español","Tapa dura en inglés","Kit de comunicación y lanzamiento","Promoción ampliada"],
+    "paq.p2.benef":"<strong>🎁 Beneficio Premium.</strong> El Plan Premium Global incluye <strong>3 ejemplares impresos de cortesía en tapa blanda</strong>.",
+    "paq.p2.btn":"Cotizar este plan",
+    "proc.title":"Cómo iniciamos tu proyecto","proc.desc":"Un proceso claro, transparente y acompañado en cada etapa.",
+    "inc.title":"Programa de Inclusión Editorial","inc.desc":"En la Fundación Artes Multicap creemos que el dinero no debe ser una barrera para publicar. Por eso ofrecemos descuentos según tu estrato socioeconómico.",
+    "inc.c1.title":"Descuentos por estrato","inc.c1.desc":"Tu estrato socioeconómico determina el porcentaje del valor que pagas por los servicios técnicos editoriales.",
+    "inc.th.estrato":"Estrato","inc.th.dcto":"Descuento","inc.th.pagas":"Tú pagas",
+    "inc.e1":"Estrato 1","inc.e2":"Estrato 2","inc.e3":"Estrato 3","inc.e4":"Estrato 4","inc.e5":"Estrato 5","inc.e6":"Estrato 6",
+    "inc.p30":"30% del valor","inc.p60":"60% del valor","inc.nodcto":"Sin descuento",
+    "inc.c2.title":"¿Cómo aplicar al descuento?","inc.c2.desc":"Al firmar el contrato, adjunta los siguientes documentos:",
+    "inc.c2.list":["Formulario de Registro del Autor obligatorio.","Copia digital de tu último recibo de servicios públicos.","Copia de tu cédula de ciudadanía."],
+    "inc.c2.note":"<strong>Importante:</strong> El descuento aplica únicamente sobre los servicios técnicos editoriales.",
+    "cot.title":"Cotiza tu libro en segundos","cot.desc":"Selecciona el plan que te interesa y tu estrato socioeconómico. Te mostraremos el valor de tu cotización al instante.",
+    "cot.lbl1":"1. Elige tu plan","cot.lbl2":"2. Selecciona tu estrato socioeconómico",
+    "cot.sel0":"— Selecciona un plan —","cot.sel1":"— Selecciona tu estrato —",
+    "cot.opt1":"Plan Profesional · Edición en español","cot.opt2":"Plan Premium Global · Edición bilingüe",
+    "cot.e1":"Estrato 1","cot.e2":"Estrato 2","cot.e3":"Estrato 3","cot.e4":"Estrato 4","cot.e5":"Estrato 5","cot.e6":"Estrato 6",
+    "cot.res.etq":"Tu cotización estimada","cot.res.det":"Selecciona un plan y tu estrato para ver el valor.","cot.res.wa":"Escribir por WhatsApp",
+    "cot.aviso":"El valor mostrado es una estimación para un libro de 100 páginas en formato comercial (15 × 23 cm). El valor final puede ajustarse según el número real de páginas, la complejidad del manuscrito y el tamaño editorial.",
+    "plat.title":"Nuestras plataformas","plat.desc":"La Fundación Artes Multicap también publica revistas digitales de arte, cultura y creación juvenil con alcance internacional.",
+    "plat.c1.tag":"Plataforma Cultural","plat.c1.title":"Explorando Museos y Arte Latinoamericano",
+    "plat.c1.desc":"Una plataforma digital gratuita que integra tres revistas digitales enfocadas en el arte nacional colombiano, latinoamericano y la creación juvenil.",
+    "plat.c1.list":["Revista Explorando Arte y Cultura de Latinoamérica","Revista Jóvenes Creadores de Latinoamérica","Acceso abierto y gratuito","Convocatorias internacionales para artistas"],
+    "plat.c1.btn":"Visitar la plataforma",
+    "plat.c2.tag":"Fundación","plat.c2.title":"Fundación Artes Multicap",
+    "plat.c2.desc":"Conoce nuestra misión, visión y proyectos de transformación social a través del arte, la cultura, la literatura y la educación emocional.",
+    "plat.c2.list":["Talleres básicos gratuitos","Talleres intermedios y avanzados","Proyectos editoriales y culturales","Impacto social en Latinoamérica"],
+    "plat.c2.btn":"Visitar la Fundación",
+    "conv.title":"Convocatoria Oficial","conv.desc":"Concurso Internacional de Creación Literaria y Publicación \"Latinoamérica Escribe\"",
+    "conv.badge":"Convocatoria abierta 2026","conv.h3":"LATINOAMÉRICA ESCRIBE","conv.lema":"Una obra. Un ganador. Un libro para el mundo.",
+    "conv.sub":"<em>Una historia. Dos idiomas. Una oportunidad para publicar y llevar tu voz más allá de las fronteras.</em>",
+    "conv.c1.h":"¿Qué es \"Latinoamérica Escribe\"?",
+    "conv.c1.p1":"Es un concurso internacional de creación literaria y publicación organizado por la <strong>Fundación Artes Multicap (Colombia)</strong>.",
+    "conv.c1.p2":"Se seleccionará <strong>una única obra ganadora</strong>, de <strong>tema y género libres</strong>. El ganador recibirá gratuitamente el <strong>Plan Premium Global</strong>, valorado en <strong>$4.100.000 COP</strong>.",
+    "conv.c1.p3":"<strong>Participar es completamente GRATIS.</strong>",
+    "conv.c2.h":"¿Quién puede participar?",
+    "conv.c2.list1":["Personas naturales mayores de 18 años.","Autores de cualquier país de Latinoamérica.","Personas de cualquier nacionalidad que residan en un país latinoamericano.","Autores que presenten una obra original, inédita y de su autoría.","Participantes que presenten su obra en idioma español."],
+    "conv.c2.paises":"<strong>Países convocados:</strong> Colombia, México, Argentina, Chile, Perú, Ecuador, Bolivia, Paraguay, Uruguay, Brasil, Venezuela, Costa Rica, Panamá, Nicaragua, Honduras, Guatemala, El Salvador, República Dominicana, Cuba y Puerto Rico.",
+    "conv.c2.np":"No podrán participar",
+    "conv.c2.list2":["Obras publicadas comercialmente con anterioridad.","Obras ganadoras de otro concurso cuando comprometan derechos necesarios.","Personas vinculadas directamente con la organización.","Integrantes del jurado.","Personas que intervengan directamente en la evaluación."],
+    "conv.c3.h":"Tema y género: libres",
+    "conv.c3.p1":"La convocatoria no establece un tema específico. La obra puede pertenecer a cualquier género literario, narrativo, artístico, cultural, académico o de no ficción, siempre que pueda constituirse editorialmente como un proyecto de libro.",
+    "conv.c3.p2":"Entre otros, podrán presentarse:",
+    "conv.c3.list":["Novela, novela corta, cuento y relatos","Poesía","Ensayo, investigación y crónica","Memorias, biografía y testimonio","Literatura infantil, juvenil o para adultos","Obras de carácter cultural, artístico, académico o científico","Otros géneros narrativos, literarios o expositivos"],
+    "conv.c3.p4":"La obra deberá ser <strong>original, inédita y de autoría del participante</strong>.",
+    "conv.c4.h":"Requisitos de formato",
+    "conv.c4.list":["Tamaño carta, con márgenes de 2,5 cm por los cuatro lados","Times New Roman 12, interlineado 1,5","Título en Times New Roman 14","Tabla de contenido obligatoria","Extensión: 20.000 a 30.000 palabras","Idioma: español","Formato de envío: Word (.docx) únicamente","Seudónimo obligatorio"],
+    "conv.c5.h":"Valor referencial del premio",
+    "conv.c5.p1":"El Plan Premium Global otorgado a la obra ganadora representa una inversión editorial estimada de <strong>$4.100.000 COP</strong>.",
+    "conv.c5.p2":"Este valor es referencial y corresponde al conjunto de servicios editoriales que recibe gratuitamente la persona ganadora.",
+    "conv.c5.p3":"El ganador <strong>no recibe este valor en dinero</strong>. Recibe gratuitamente los servicios editoriales descritos en las bases, más el 50% de las regalías netas por ventas.",
+    "conv.c6.h":"Lo que conservas como autor",
+    "conv.c6.p1":"<strong>TÚ SIGUES SIENDO EL DUEÑO DE TU OBRA.</strong>",
+    "conv.c6.p2":"El contrato de edición no transfiere en ningún momento el derecho de autor, conforme al <strong>artículo 119 de la Ley 23 de 1982</strong>. Conservas todos tus derechos morales y patrimoniales.",
+    "conv.c6.p3":"En caso de cualquier duda, se aplicará el principio <strong>«in dubio pro auctore»</strong>, que ordena interpretar siempre a favor del autor.",
+    "conv.c7.h":"Cronograma",
+    "conv.c7.list":[["Lanzamiento de la convocatoria","25 de septiembre de 2026"],["Recepción de obras","25 sep — 26 oct 2026"],["Verificación de requisitos formales","27 oct — 5 nov 2026"],["Evaluación del jurado","6 — 20 nov 2026"],["Anuncio del ganador","27 de noviembre de 2026"],["Firma del acuerdo editorial","30 nov — 10 dic 2026"],["Proceso editorial y traducción","Dic 2026 — Ene 2027"],["Publicación oficial del libro","Enero de 2027"]],
+    "conv.c7.nota":"<strong>Nota de transparencia:</strong> El proceso editorial bilingüe completo requiere entre 3 y 4 meses por obra para garantizar la calidad.",
+    "conv.c8.h":"Compromiso del ganador",
+    "conv.c8.p":"El ganador tendrá un plazo de <strong>3 días calendario</strong> para entregar la documentación solicitada. Si no cumple, será descalificado y se seleccionará al siguiente participante.",
+    "conv.d1.h":"El gran premio: Plan Premium Global",
+    "conv.d1.p":"El ganador recibirá el <strong>Plan Premium Global</strong>, <strong>sin pagar absolutamente nada por estos servicios</strong>.",
+    "conv.d1.i1.h":"Proceso editorial completo",
+    "conv.d1.i1.list":["Lectura y valoración editorial","Corrección ortotipográfica y de estilo","Preparación del manuscrito","Diagramación y maquetación interior","Diseño profesional de portada","Diseño de contraportada y mockups"],
+    "conv.d1.i2.h":"Ilustraciones","conv.d1.i2.p":"Si la obra lo requiere, la organización diseña las ilustraciones como parte del premio.",
+    "conv.d1.i3.h":"Traducción al inglés","conv.d1.i3.p":"Traducción profesional de la obra completa al inglés.",
+    "conv.d1.i4.h":"Publicación en seis formatos bilingües",
+    "conv.d1.i4.list":["eBook en español","eBook en inglés","Tapa blanda en español","Tapa blanda en inglés","Tapa dura en español","Tapa dura en inglés"],
+    "conv.d1.i5.h":"Gestión de ISBN","conv.d1.i5.p":"Solicitud y gestión de los ISBN correspondientes a cada formato.",
+    "conv.d1.i6.h":"Distribución internacional","conv.d1.i6.p":"Disponible a nivel mundial.",
+    "conv.d1.i7.h":"Ejemplares del autor","conv.d1.i7.p":"<strong>3 ejemplares impresos de cortesía en tapa blanda.</strong>",
+    "conv.d1.i8.h":"Promoción y difusión ampliada",
+    "conv.d1.i8.list":["Publicaciones en redes sociales","Presentación del autor","Entrevista publicada","Difusión nacional e internacional","Enlaces de venta y promoción","Kit de comunicación y lanzamiento","Posicionamiento en Amazon"],
+    "conv.d1.i9.h":"Regalías por ventas",
+    "conv.d1.i9.list":["50% de las regalías netas","Reporte semestral de ventas"],
+    "conv.d1.i10.h":"Diploma digital","conv.d1.i10.p":"Diploma digital oficial de ganador.",
+    "conv.pasos.h":"Cómo participar",
+    "conv.p1.h":"Prepara tu obra",
+    "conv.p1.p":"Debe ser <strong>original, inédita y de tu autoría</strong>. Debes presentarla <strong>bajo seudónimo</strong> (obligatorio para garantizar la imparcialidad del jurado).",
+    "conv.ia.h":"Uso de Inteligencia Artificial",
+    "conv.ia.p1":"Es <strong>obligatorio declarar</strong> cualquier uso de IA. Se permite como herramienta de apoyo con revisión del autor. No se aceptan obras generadas íntegramente por IA.",
+    "conv.ia.p4":"El incumplimiento implica <strong>descalificación automática</strong>.",
+    "conv.p2.h":"Prepara tus dos archivos Word",
+    "conv.p2.a1.tag":"Archivo 1","conv.p2.a1.n":"Manuscrito",
+    "conv.p2.a1.list":["Formato: Word (.docx) únicamente","Bajo seudónimo, sin datos personales","Tamaño carta, márgenes de 2,5 cm","Tabla de contenido obligatoria"],
+    "conv.p2.a2.tag":"Archivo 2","conv.p2.a2.n":"Presentación",
+    "conv.p2.a2.list":["Formato: Word (.docx) únicamente","Con tus datos personales completos","Declaración expresa de uso de IA"],
+    "conv.p3.h":"Envía tus archivos","conv.p3.p1":"<strong>Correo:</strong> artesmulticap2024@gmail.com","conv.p3.p2":"<strong>Asunto del correo:</strong>",
+    "conv.p3.aviso":"<strong>Importante:</strong> No se aceptan archivos PDF. Solo Word (.docx). <strong>Toda obra que use IA debe declararlo expresamente</strong>. Obras sin declaración podrán ser descalificadas.",
+    "conv.cta1":"Participar por WhatsApp","conv.cta2":"Enviar mi obra por correo",
+    "cont.title":"¿Listo para publicar tu libro?","cont.desc":"Estamos listos para acompañarte en cada página de tu proyecto.",
+    "cont.wa":"WhatsApp: <a href=\"https://wa.me/573113555949\" target=\"_blank\">311 355 5949</a>","cont.country":"Colombia",
+    "cont.btn1":"Escríbenos por WhatsApp","cont.btn2":"Enviar correo",
+    "foot.tag":"Publicación editorial • Coedición • Distribución Internacional","foot.copy":"© 2026 Fundación Artes Multicap. Todos los derechos reservados."
+  },
+  en: {
+    "nav.servicios":"Services","nav.tamanos":"Sizes","nav.paquetes":"Packages","nav.proceso":"Process",
+    "nav.inclusion":"Inclusion","nav.cotiza":"Quote","nav.plataformas":"Platforms","nav.convocatorias":"Calls",
+    "nav.politicas":"Policies","nav.contacto":"Contact",
+    "hero.title":"Your story deserves to reach the world.",
+    "hero.desc":"We transform your manuscript into a professional book and support you from editing to international publication in Spanish and English.",
+    "hero.btn.cotizar":"Quote my book","hero.btn.whatsapp":"Chat on WhatsApp",
+    "serv.title":"Our services","serv.desc":"You can hire individual services or full editorial support.",
+    "tam.title":"Book sizes we handle",
+    "tam.desc":"Before quoting, we define the size of your book. This affects page count, layout, and printing cost.",
+    "tam.th1":"Type","tam.th2":"What is it for?","tam.th3":"Does the package apply?",
+    "tam.r1.t":"Pocket","tam.r1.d":"Novels, poetry books, travel books.","tam.r1.a":"Standard package does not apply. Quoted separately.",
+    "tam.r2.t":"Commercial or Standard","tam.r2.d":"Novels, essays, theses, professional texts, memoirs, biographies.","tam.r2.a":"Yes, it applies. It is the base format of our packages.",
+    "tam.r3.t":"Large","tam.r3.d":"Recipe books, children's books, art books, journals.","tam.r3.a":"Standard package does not apply. Quoted separately.",
+    "tam.r4.t":"Technical or Illustrated","tam.r4.d":"Books with charts, tables, color images, blueprints, illustrations.","tam.r4.a":"Standard package does not apply. Quoted separately.",
+    "tam.note":"<strong>Important:</strong> Our Professional Plan and Global Premium Plan packages are designed for commercial or standard books. If your book is pocket, large, technical or illustrated, we send you a personalized quote.",
+    "paq.title":"Comprehensive packages","paq.desc":"Save time and money by hiring the entire process together. Every work is unique and deserves a personalized quote.","paq.include":"Includes",
+    "paq.p1.tag":"Spanish edition · 2 formats","paq.p1.title":"Professional Plan","paq.p1.ideal":"Ideal for: novels, theses, essays, professional texts and journals.",
+    "paq.p1.list":["Orthotypographic and style correction","Professional interior layout","Professional cover design","ISBN management","International publication","eBook in Spanish","Paperback in Spanish","Initial promotion"],
+    "paq.p1.benef":"<strong>🎁 Exclusive benefit for our authors.</strong> We gift you the first printed copy of your book, so you can see it before requesting more copies.",
+    "paq.p1.btn":"Quote this plan",
+    "paq.p2.tag":"Bilingual edition · 6 formats","paq.p2.title":"Global Premium Plan","paq.p2.ideal":"Ideal for: authors seeking international reach.",
+    "paq.p2.list":["Everything from the Professional Plan","Complete translation to English","eBook in Spanish","eBook in English","Paperback in Spanish","Paperback in English","Hardcover in Spanish","Hardcover in English","Communication and launch kit","Expanded promotion"],
+    "paq.p2.benef":"<strong>🎁 Premium Benefit.</strong> The Global Premium Plan includes <strong>3 complimentary printed paperback copies</strong>.",
+    "paq.p2.btn":"Quote this plan",
+    "proc.title":"How we start your project","proc.desc":"A clear, transparent process, supported at every stage.",
+    "inc.title":"Editorial Inclusion Program","inc.desc":"At Fundación Artes Multicap we believe money should not be a barrier to publishing. That is why we offer discounts based on your socioeconomic stratum.",
+    "inc.c1.title":"Discounts by stratum","inc.c1.desc":"Your socioeconomic stratum determines the percentage of the value you pay for technical editorial services.",
+    "inc.th.estrato":"Stratum","inc.th.dcto":"Discount","inc.th.pagas":"You pay",
+    "inc.e1":"Stratum 1","inc.e2":"Stratum 2","inc.e3":"Stratum 3","inc.e4":"Stratum 4","inc.e5":"Stratum 5","inc.e6":"Stratum 6",
+    "inc.p30":"30% of the value","inc.p60":"60% of the value","inc.nodcto":"No discount",
+    "inc.c2.title":"How to apply for the discount?","inc.c2.desc":"When signing the contract, attach the following documents:",
+    "inc.c2.list":["Mandatory Author Registration Form.","Digital copy of your last utility bill.","Copy of your ID."],
+    "inc.c2.note":"<strong>Important:</strong> The discount applies only to technical editorial services.",
+    "cot.title":"Quote your book in seconds","cot.desc":"Select the plan that interests you and your socioeconomic stratum. We will show you the value of your quote instantly.",
+    "cot.lbl1":"1. Choose your plan","cot.lbl2":"2. Select your socioeconomic stratum",
+    "cot.sel0":"— Select a plan —","cot.sel1":"— Select your stratum —",
+    "cot.opt1":"Professional Plan · Spanish edition","cot.opt2":"Global Premium Plan · Bilingual edition",
+    "cot.e1":"Stratum 1","cot.e2":"Stratum 2","cot.e3":"Stratum 3","cot.e4":"Stratum 4","cot.e5":"Stratum 5","cot.e6":"Stratum 6",
+    "cot.res.etq":"Your estimated quote","cot.res.det":"Select a plan and your stratum to see the value.","cot.res.wa":"Write on WhatsApp",
+    "cot.aviso":"The value shown is an estimate for a 100-page book in commercial format (15 × 23 cm). The final value may be adjusted according to the actual number of pages, complexity of the manuscript and editorial size.",
+    "plat.title":"Our platforms","plat.desc":"Fundación Artes Multicap also publishes digital magazines on art, culture and youth creation with international reach.",
+    "plat.c1.tag":"Cultural Platform","plat.c1.title":"Exploring Museums and Latin American Art",
+    "plat.c1.desc":"A free digital platform that integrates three digital magazines focused on Colombian national art, Latin American art and youth creation.",
+    "plat.c1.list":["Journal Exploring Art and Culture of Latin America","Journal Young Creators of Latin America","Open and free access","International calls for artists"],
+    "plat.c1.btn":"Visit the platform",
+    "plat.c2.tag":"Foundation","plat.c2.title":"Artes Multicap Foundation",
+    "plat.c2.desc":"Discover our mission, vision and social transformation projects through art, culture, literature and emotional education.",
+    "plat.c2.list":["Free basic workshops","Intermediate and advanced workshops","Editorial and cultural projects","Social impact in Latin America"],
+    "plat.c2.btn":"Visit the Foundation",
+    "conv.title":"Official Call","conv.desc":"International Literary Creation and Publication Contest \"Latin America Writes\"",
+    "conv.badge":"Open call 2026","conv.h3":"LATIN AMERICA WRITES","conv.lema":"One work. One winner. One book for the world.",
+    "conv.sub":"<em>One story. Two languages. An opportunity to publish and take your voice beyond borders.</em>",
+    "conv.c1.h":"What is \"Latin America Writes\"?",
+    "conv.c1.p1":"It is an international literary creation and publication contest organized by the <strong>Artes Multicap Foundation (Colombia)</strong>.",
+    "conv.c1.p2":"<strong>One single winning work</strong> will be selected, with <strong>free theme and genre</strong>. The winning author will receive free of charge the <strong>Global Premium Plan</strong>, valued at <strong>$4,100,000 COP</strong>.",
+    "conv.c1.p3":"<strong>Participation is completely FREE.</strong>",
+    "conv.c2.h":"Who can participate?",
+    "conv.c2.list1":["Natural persons over 18 years of age.","Authors from any Latin American country.","People of any nationality residing in a Latin American country.","Authors presenting an original, unpublished work of their authorship.","Participants presenting their work in Spanish."],
+    "conv.c2.paises":"<strong>Invited countries:</strong> Colombia, Mexico, Argentina, Chile, Peru, Ecuador, Bolivia, Paraguay, Uruguay, Brazil, Venezuela, Costa Rica, Panama, Nicaragua, Honduras, Guatemala, El Salvador, Dominican Republic, Cuba and Puerto Rico.",
+    "conv.c2.np":"Cannot participate",
+    "conv.c2.list2":["Works previously published commercially.","Works that have won another contest when the conditions of that contest compromise the rights necessary to participate.","Persons directly linked to the organization of the contest.","Members of the jury.","Persons directly involved in the evaluation of the works."],
+    "conv.c3.h":"Theme and genre: free",
+    "conv.c3.p1":"The call does not establish a specific theme. The work may belong to any literary, narrative, artistic, cultural, academic or non-fiction genre, as long as it can be editorially constituted as a book project.",
+    "conv.c3.p2":"Among others, the following may be submitted:",
+    "conv.c3.list":["Novel, short novel, short story and tales","Poetry","Essay, research and chronicle","Memoirs, biography and testimony","Children's, youth or adult literature","Works of cultural, artistic, academic or scientific nature","Other narrative, literary or expository genres"],
+    "conv.c3.p4":"The work must be <strong>original, unpublished and of the participant's authorship</strong>.",
+    "conv.c4.h":"Format requirements",
+    "conv.c4.list":["Letter size, with 2.5 cm margins on all four sides","Times New Roman 12, line spacing 1.5","Title in Times New Roman 14","Mandatory table of contents","Length: 20,000 to 30,000 words","Language: Spanish","Submission format: Word (.docx) only","Mandatory pseudonym"],
+    "conv.c5.h":"Referential value of the prize",
+    "conv.c5.p1":"The Global Premium Plan awarded to the winning work represents an estimated editorial investment of <strong>$4,100,000 COP</strong>.",
+    "conv.c5.p2":"This value is referential and corresponds to the set of editorial services that the winning person receives free of charge.",
+    "conv.c5.p3":"The winner <strong>does not receive this value in money</strong>. They receive free of charge the editorial services described in the rules, plus 50% of net royalties from sales.",
+    "conv.c6.h":"What you keep as an author",
+    "conv.c6.p1":"<strong>YOU REMAIN THE OWNER OF YOUR WORK.</strong>",
+    "conv.c6.p2":"The publishing contract does not transfer copyright at any time, in accordance with <strong>article 119 of Law 23 of 1982</strong>. You keep all your moral and economic rights.",
+    "conv.c6.p3":"In case of any doubt, the principle <strong>«in dubio pro auctore»</strong> will apply, which orders to always interpret in favor of the author.",
+    "conv.c7.h":"Schedule",
+    "conv.c7.list":[["Call launch","September 25, 2026"],["Submission of works","Sep 25 — Oct 26, 2026"],["Verification of formal requirements","Oct 27 — Nov 5, 2026"],["Jury evaluation","Nov 6 — 20, 2026"],["Winner announcement","November 27, 2026"],["Editorial agreement signing","Nov 30 — Dec 10, 2026"],["Editorial process and translation","Dec 2026 — Jan 2027"],["Official book publication","January 2027"]],
+    "conv.c7.nota":"<strong>Transparency note:</strong> The complete bilingual editorial process requires between 3 and 4 months per work to guarantee quality.",
+    "conv.c8.h":"Winner's commitment",
+    "conv.c8.p":"The winner will have a period of <strong>3 calendar days</strong> to deliver the requested documentation. If they do not meet the deadline, they will be disqualified and the next participant will be selected.",
+    "conv.d1.h":"The grand prize: Global Premium Plan",
+    "conv.d1.p":"The winner will receive the <strong>Global Premium Plan</strong>, <strong>without paying absolutely anything for these services</strong>.",
+    "conv.d1.i1.h":"Complete editorial process",
+    "conv.d1.i1.list":["Editorial reading and evaluation","Orthotypographic and style correction","Manuscript preparation","Interior layout and design","Professional cover design","Back cover design and mockups"],
+    "conv.d1.i2.h":"Illustrations","conv.d1.i2.p":"If the work requires it, the organization designs the illustrations as part of the prize.",
+    "conv.d1.i3.h":"English translation","conv.d1.i3.p":"Professional translation of the entire work into English.",
+    "conv.d1.i4.h":"Publication in six bilingual formats",
+    "conv.d1.i4.list":["eBook in Spanish","eBook in English","Paperback in Spanish","Paperback in English","Hardcover in Spanish","Hardcover in English"],
+    "conv.d1.i5.h":"ISBN management","conv.d1.i5.p":"Application and management of the ISBNs corresponding to each format.",
+    "conv.d1.i6.h":"International distribution","conv.d1.i6.p":"Available worldwide.",
+    "conv.d1.i7.h":"Author copies","conv.d1.i7.p":"<strong>3 complimentary printed paperback copies.</strong>",
+    "conv.d1.i8.h":"Expanded promotion and dissemination",
+    "conv.d1.i8.list":["Publications on social media","Author presentation","Published interview","National and international dissemination","Sales links and promotion","Communication and launch kit","Amazon positioning"],
+    "conv.d1.i9.h":"Sales royalties",
+    "conv.d1.i9.list":["50% of net royalties","Semi-annual sales report"],
+    "conv.d1.i10.h":"Digital diploma","conv.d1.i10.p":"Official digital diploma of winner.",
+    "conv.pasos.h":"How to participate",
+    "conv.p1.h":"Prepare your work",
+    "conv.p1.p":"It must be <strong>original, unpublished and of your authorship</strong>. You must present it <strong>under a pseudonym</strong> (mandatory to guarantee the jury's impartiality).",
+    "conv.ia.h":"Use of Artificial Intelligence",
+    "conv.ia.p1":"It is <strong>mandatory to declare</strong> any use of AI. It is allowed as a support tool with the author's review. Works generated entirely by AI are not accepted.",
+    "conv.ia.p4":"Failure to comply implies <strong>automatic disqualification</strong>.",
+    "conv.p2.h":"Prepare your two Word files",
+    "conv.p2.a1.tag":"File 1","conv.p2.a1.n":"Manuscript",
+    "conv.p2.a1.list":["Format: Word (.docx) only","Under pseudonym, without personal data","Letter size, 2.5 cm margins","Mandatory table of contents"],
+    "conv.p2.a2.tag":"File 2","conv.p2.a2.n":"Presentation",
+    "conv.p2.a2.list":["Format: Word (.docx) only","With your complete personal data","Express declaration of AI use"],
+    "conv.p3.h":"Send your files","conv.p3.p1":"<strong>Email:</strong> artesmulticap2024@gmail.com","conv.p3.p2":"<strong>Email subject:</strong>",
+    "conv.p3.aviso":"<strong>Important:</strong> PDF files are not accepted. Only Word (.docx). <strong>Any work that uses AI must expressly declare it</strong>. Works without declaration may be disqualified.",
+    "conv.cta1":"Participate via WhatsApp","conv.cta2":"Send my work by email",
+    "cont.title":"Ready to publish your book?","cont.desc":"We are ready to accompany you on every page of your project.",
+    "cont.wa":"WhatsApp: <a href=\"https://wa.me/573113555949\" target=\"_blank\">311 355 5949</a>","cont.country":"Colombia",
+    "cont.btn1":"Write to us on WhatsApp","cont.btn2":"Send email",
+    "foot.tag":"Editorial publishing • Co-edition • International distribution","foot.copy":"© 2026 Artes Multicap Foundation. All rights reserved."
+  },
+  fr: {
+    "nav.servicios":"Services","nav.tamanos":"Formats","nav.paquetes":"Forfaits","nav.proceso":"Processus",
+    "nav.inclusion":"Inclusion","nav.cotiza":"Devis","nav.plataformas":"Plateformes","nav.convocatorias":"Appels",
+    "nav.politicas":"Politiques","nav.contacto":"Contact",
+    "hero.title":"Votre histoire mérite d'atteindre le monde.",
+    "hero.desc":"Nous transformons votre manuscrit en un livre professionnel et vous accompagnons de l'édition à la publication internationale en espagnol et en anglais.",
+    "hero.btn.cotizar":"Devis pour mon livre","hero.btn.whatsapp":"Parler sur WhatsApp",
+    "serv.title":"Nos services","serv.desc":"Vous pouvez souscrire des services individuels ou un accompagnement éditorial complet.",
+    "tam.title":"Formats de livre que nous gérons",
+    "tam.desc":"Avant de faire un devis, nous définissons le format de votre livre. Cela affecte le nombre de pages, la mise en page et le coût d'impression.",
+    "tam.th1":"Type","tam.th2":"À quoi sert-il ?","tam.th3":"Le forfait s'applique-t-il ?",
+    "tam.r1.t":"Poche","tam.r1.d":"Romans, recueils de poésie, livres de voyage.","tam.r1.a":"Le forfait standard ne s'applique pas. Devis séparé.",
+    "tam.r2.t":"Commercial ou Standard","tam.r2.d":"Romans, essais, thèses, textes professionnels, mémoires, biographies.","tam.r2.a":"Oui, il s'applique. C'est le format de base de nos forfaits.",
+    "tam.r3.t":"Grand","tam.r3.d":"Livres de recettes, livres pour enfants, livres d'art, journaux.","tam.r3.a":"Le forfait standard ne s'applique pas. Devis séparé.",
+    "tam.r4.t":"Technique ou Illustré","tam.r4.d":"Livres avec graphiques, tableaux, images en couleur, plans, illustrations.","tam.r4.a":"Le forfait standard ne s'applique pas. Devis séparé.",
+    "tam.note":"<strong>Important :</strong> Nos forfaits Plan Professionnel et Plan Premium Global sont conçus pour des livres commerciaux ou standard. Si votre livre est de poche, grand, technique ou illustré, nous vous envoyons un devis personnalisé.",
+    "paq.title":"Forfaits complets","paq.desc":"Économisez du temps et de l'argent en souscrivant tout le processus ensemble. Chaque œuvre est unique et mérite un devis personnalisé.","paq.include":"Comprend",
+    "paq.p1.tag":"Édition en espagnol · 2 formats","paq.p1.title":"Plan Professionnel","paq.p1.ideal":"Idéal pour : romans, thèses, essais, textes professionnels et journaux.",
+    "paq.p1.list":["Correction orthotypographique et stylistique","Mise en page intérieure professionnelle","Conception professionnelle de la couverture","Gestion de l'ISBN","Publication internationale","eBook en espagnol","Livre broché en espagnol","Promotion initiale"],
+    "paq.p1.benef":"<strong>🎁 Bénéfice exclusif pour nos auteurs.</strong> Nous vous offrons le premier exemplaire imprimé de votre livre, pour que vous puissiez le voir avant de demander plus d'exemplaires.",
+    "paq.p1.btn":"Devis pour ce plan",
+    "paq.p2.tag":"Édition bilingue · 6 formats","paq.p2.title":"Plan Premium Global","paq.p2.ideal":"Idéal pour : les auteurs en quête de portée internationale.",
+    "paq.p2.list":["Tout le Plan Professionnel","Traduction complète en anglais","eBook en espagnol","eBook en anglais","Livre broché en espagnol","Livre broché en anglais","Livre relié en espagnol","Livre relié en anglais","Kit de communication et de lancement","Promotion élargie"],
+    "paq.p2.benef":"<strong>🎁 Bénéfice Premium.</strong> Le Plan Premium Global comprend <strong>3 exemplaires imprimés offerts en livre broché</strong>.",
+    "paq.p2.btn":"Devis pour ce plan",
+    "proc.title":"Comment nous démarrons votre projet","proc.desc":"Un processus clair, transparent et accompagné à chaque étape.",
+    "inc.title":"Programme d'Inclusion Éditoriale","inc.desc":"À la Fondation Artes Multicap, nous croyons que l'argent ne doit pas être une barrière pour publier. C'est pourquoi nous offrons des réductions selon votre strate socio-économique.",
+    "inc.c1.title":"Réductions par strate","inc.c1.desc":"Votre strate socio-économique détermine le pourcentage de la valeur que vous payez pour les services éditoriaux techniques.",
+    "inc.th.estrato":"Strate","inc.th.dcto":"Réduction","inc.th.pagas":"Vous payez",
+    "inc.e1":"Strate 1","inc.e2":"Strate 2","inc.e3":"Strate 3","inc.e4":"Strate 4","inc.e5":"Strate 5","inc.e6":"Strate 6",
+    "inc.p30":"30% de la valeur","inc.p60":"60% de la valeur","inc.nodcto":"Sans réduction",
+    "inc.c2.title":"Comment demander la réduction ?","inc.c2.desc":"Lors de la signature du contrat, joignez les documents suivants :",
+    "inc.c2.list":["Formulaire d'Enregistrement de l'Auteur obligatoire.","Copie numérique de votre dernière facture de services publics.","Copie de votre pièce d'identité."],
+    "inc.c2.note":"<strong>Important :</strong> La réduction s'applique uniquement aux services éditoriaux techniques.",
+    "cot.title":"Devis pour votre livre en quelques secondes","cot.desc":"Sélectionnez le forfait qui vous intéresse et votre strate socio-économique. Nous vous montrerons la valeur de votre devis instantanément.",
+    "cot.lbl1":"1. Choisissez votre forfait","cot.lbl2":"2. Sélectionnez votre strate socio-économique",
+    "cot.sel0":"— Sélectionnez un forfait —","cot.sel1":"— Sélectionnez votre strate —",
+    "cot.opt1":"Plan Professionnel · Édition en espagnol","cot.opt2":"Plan Premium Global · Édition bilingue",
+    "cot.e1":"Strate 1","cot.e2":"Strate 2","cot.e3":"Strate 3","cot.e4":"Strate 4","cot.e5":"Strate 5","cot.e6":"Strate 6",
+    "cot.res.etq":"Votre devis estimé","cot.res.det":"Sélectionnez un forfait et votre strate pour voir la valeur.","cot.res.wa":"Écrire sur WhatsApp",
+    "cot.aviso":"La valeur affichée est une estimation pour un livre de 100 pages au format commercial (15 × 23 cm). La valeur finale peut être ajustée selon le nombre réel de pages, la complexité du manuscrit et le format éditorial.",
+    "plat.title":"Nos plateformes","plat.desc":"La Fondation Artes Multicap publie également des magazines numériques sur l'art, la culture et la création des jeunes, avec une portée internationale.",
+    "plat.c1.tag":"Plateforme Culturelle","plat.c1.title":"Explorant les Musées et l'Art Latino-américain",
+    "plat.c1.desc":"Une plateforme numérique gratuite qui intègre trois magazines numériques axés sur l'art national colombien, l'art latino-américain et la création des jeunes.",
+    "plat.c1.list":["Revue Explorant l'Art et la Culture d'Amérique Latine","Revue Jeunes Créateurs d'Amérique Latine","Accès libre et gratuit","Appels internationaux pour artistes"],
+    "plat.c1.btn":"Visiter la plateforme",
+    "plat.c2.tag":"Fondation","plat.c2.title":"Fondation Artes Multicap",
+    "plat.c2.desc":"Découvrez notre mission, notre vision et nos projets de transformation sociale à travers l'art, la culture, la littérature et l'éducation émotionnelle.",
+    "plat.c2.list":["Ateliers de base gratuits","Ateliers intermédiaires et avancés","Projets éditoriaux et culturels","Impact social en Amérique latine"],
+    "plat.c2.btn":"Visiter la Fondation",
+    "conv.title":"Appel Officiel","conv.desc":"Concours International de Création Littéraire et de Publication \"L'Amérique Latine Écrit\"",
+    "conv.badge":"Appel ouvert 2026","conv.h3":"L'AMÉRIQUE LATINE ÉCRIT","conv.lema":"Une œuvre. Un gagnant. Un livre pour le monde.",
+    "conv.sub":"<em>Une histoire. Deux langues. Une opportunité de publier et de porter votre voix au-delà des frontières.</em>",
+    "conv.c1.h":"Qu'est-ce que \"L'Amérique Latine Écrit\" ?",
+    "conv.c1.p1":"C'est un concours international de création littéraire et de publication organisé par la <strong>Fondation Artes Multicap (Colombie)</strong>.",
+    "conv.c1.p2":"<strong>Une seule œuvre gagnante</strong> sera sélectionnée, avec <strong>thème et genre libres</strong>. L'auteur gagnant recevra gratuitement le <strong>Plan Premium Global</strong>, évalué à <strong>4 100 000 COP</strong>.",
+    "conv.c1.p3":"<strong>La participation est totalement GRATUITE.</strong>",
+    "conv.c2.h":"Qui peut participer ?",
+    "conv.c2.list1":["Personnes physiques âgées de plus de 18 ans.","Auteurs de tout pays d'Amérique latine.","Personnes de toute nationalité résidant dans un pays d'Amérique latine.","Auteurs présentant une œuvre originale, inédite et de leur paternité.","Participants présentant leur œuvre en espagnol."],
+    "conv.c2.paises":"<strong>Pays invités :</strong> Colombie, Mexique, Argentine, Chili, Pérou, Équateur, Bolivie, Paraguay, Uruguay, Brésil, Venezuela, Costa Rica, Panama, Nicaragua, Honduras, Guatemala, El Salvador, République Dominicaine, Cuba et Porto Rico.",
+    "conv.c2.np":"Ne peuvent pas participer",
+    "conv.c2.list2":["Œuvres publiées commercialement auparavant.","Œuvres ayant remporté un autre concours lorsque les conditions de ce concours compromettent les droits nécessaires pour participer.","Personnes directement liées à l'organisation du concours.","Membres du jury.","Personnes intervenant directement dans l'évaluation des œuvres."],
+    "conv.c3.h":"Thème et genre : libres",
+    "conv.c3.p1":"L'appel ne fixe pas de thème spécifique. L'œuvre peut appartenir à n'importe quel genre littéraire, narratif, artistique, culturel, académique ou non-fictionnel, dès lors qu'elle peut être constituée éditorialement comme un projet de livre.",
+    "conv.c3.p2":"Entre autres, pourront être présentés :",
+    "conv.c3.list":["Roman, roman court, nouvelle et récits","Poésie","Essai, recherche et chronique","Mémoires, biographie et témoignage","Littérature pour enfants, jeunes ou adultes","Œuvres de nature culturelle, artistique, académique ou scientifique","Autres genres narratifs, littéraires ou exposatifs"],
+    "conv.c3.p4":"L'œuvre devra être <strong>originale, inédite et de la paternité du participant</strong>.",
+    "conv.c4.h":"Exigences de format",
+    "conv.c4.list":["Format lettre, avec des marges de 2,5 cm sur les quatre côtés","Times New Roman 12, interligne 1,5","Titre en Times New Roman 14","Table des matières obligatoire","Longueur : 20 000 à 30 000 mots","Langue : espagnol","Format d'envoi : Word (.docx) uniquement","Pseudonyme obligatoire"],
+    "conv.c5.h":"Valeur référentielle du prix",
+    "conv.c5.p1":"Le Plan Premium Global attribué à l'œuvre gagnante représente un investissement éditorial estimé à <strong>4 100 000 COP</strong>.",
+    "conv.c5.p2":"Cette valeur est référentielle et correspond à l'ensemble des services éditoriaux que la personne gagnante reçoit gratuitement.",
+    "conv.c5.p3":"Le gagnant <strong>ne reçoit pas cette valeur en argent</strong>. Il reçoit gratuitement les services éditoriaux décrits dans les règles, plus 50 % des redevances nettes sur les ventes.",
+    "conv.c6.h":"Ce que vous conservez en tant qu'auteur",
+    "conv.c6.p1":"<strong>VOUS RESTEZ LE PROPRIÉTAIRE DE VOTRE ŒUVRE.</strong>",
+    "conv.c6.p2":"Le contrat d'édition ne transfère à aucun moment le droit d'auteur, conformément à l'<strong>article 119 de la loi 23 de 1982</strong>. Vous conservez tous vos droits moraux et patrimoniaux.",
+    "conv.c6.p3":"En cas de doute, le principe <strong>« in dubio pro auctore »</strong> s'appliquera, qui ordonne d'interpréter toujours en faveur de l'auteur.",
+    "conv.c7.h":"Calendrier",
+    "conv.c7.list":[["Lancement de l'appel","25 septembre 2026"],["Réception des œuvres","25 sept — 26 oct 2026"],["Vérification des exigences formelles","27 oct — 5 nov 2026"],["Évaluation du jury","6 — 20 nov 2026"],["Annonce du gagnant","27 novembre 2026"],["Signature du contrat éditorial","30 nov — 10 déc 2026"],["Processus éditorial et traduction","Déc 2026 — Jan 2027"],["Publication officielle du livre","Janvier 2027"]],
+    "conv.c7.nota":"<strong>Note de transparence :</strong> Le processus éditorial bilingue complet nécessite entre 3 et 4 mois par œuvre pour garantir la qualité.",
+    "conv.c8.h":"Engagement du gagnant",
+    "conv.c8.p":"Le gagnant disposera d'un délai de <strong>3 jours calendaires</strong> pour remettre la documentation demandée. S'il ne respecte pas le délai, il sera disqualifié.",
+    "conv.d1.h":"Le grand prix : Plan Premium Global",
+    "conv.d1.p":"Le gagnant recevra le <strong>Plan Premium Global</strong>, <strong>sans payer absolument rien pour ces services</strong>.",
+    "conv.d1.i1.h":"Processus éditorial complet",
+    "conv.d1.i1.list":["Lecture et évaluation éditoriale","Correction orthotypographique et stylistique","Préparation du manuscrit","Mise en page et maquette intérieure","Conception professionnelle de couverture","Conception de la quatrième de couverture et maquettes"],
+    "conv.d1.i2.h":"Illustrations","conv.d1.i2.p":"Si l'œuvre le nécessite, l'organisation conçoit les illustrations dans le cadre du prix.",
+    "conv.d1.i3.h":"Traduction en anglais","conv.d1.i3.p":"Traduction professionnelle de toute l'œuvre en anglais.",
+    "conv.d1.i4.h":"Publication en six formats bilingues",
+    "conv.d1.i4.list":["eBook en espagnol","eBook en anglais","Livre broché en espagnol","Livre broché en anglais","Livre relié en espagnol","Livre relié en anglais"],
+    "conv.d1.i5.h":"Gestion de l'ISBN","conv.d1.i5.p":"Demande et gestion des ISBN correspondant à chaque format.",
+    "conv.d1.i6.h":"Distribution internationale","conv.d1.i6.p":"Disponible dans le monde entier.",
+    "conv.d1.i7.h":"Exemplaires de l'auteur","conv.d1.i7.p":"<strong>3 exemplaires imprimés offerts en livre broché.</strong>",
+    "conv.d1.i8.h":"Promotion et diffusion élargies",
+    "conv.d1.i8.list":["Publications sur les réseaux sociaux","Présentation de l'auteur","Interview publiée","Diffusion nationale et internationale","Liens de vente et promotion","Kit de communication et de lancement","Positionnement sur Amazon"],
+    "conv.d1.i9.h":"Redevances sur les ventes",
+    "conv.d1.i9.list":["50 % des redevances nettes","Rapport semestriel des ventes"],
+    "conv.d1.i10.h":"Diplôme numérique","conv.d1.i10.p":"Diplôme numérique officiel de gagnant.",
+    "conv.pasos.h":"Comment participer",
+    "conv.p1.h":"Préparez votre œuvre",
+    "conv.p1.p":"Elle doit être <strong>originale, inédite et de votre paternité</strong>. Vous devez la présenter <strong>sous pseudonyme</strong> (obligatoire pour garantir l'impartialité du jury).",
+    "conv.ia.h":"Utilisation de l'Intelligence Artificielle",
+    "conv.ia.p1":"Il est <strong>obligatoire de déclarer</strong> toute utilisation d'IA. Elle est autorisée comme outil d'appui avec révision de l'auteur. Les œuvres générées entièrement par IA ne sont pas acceptées.",
+    "conv.ia.p4":"Le non-respect implique une <strong>disqualification automatique</strong>.",
+    "conv.p2.h":"Préparez vos deux fichiers Word",
+    "conv.p2.a1.tag":"Fichier 1","conv.p2.a1.n":"Manuscrit",
+    "conv.p2.a1.list":["Format : Word (.docx) uniquement","Sous pseudonyme, sans données personnelles","Format lettre, marges de 2,5 cm","Table des matières obligatoire"],
+    "conv.p2.a2.tag":"Fichier 2","conv.p2.a2.n":"Présentation",
+    "conv.p2.a2.list":["Format : Word (.docx) uniquement","Avec vos données personnelles complètes","Déclaration expresse d'utilisation de l'IA"],
+    "conv.p3.h":"Envoyez vos fichiers","conv.p3.p1":"<strong>E-mail :</strong> artesmulticap2024@gmail.com","conv.p3.p2":"<strong>Objet de l'e-mail :</strong>",
+    "conv.p3.aviso":"<strong>Important :</strong> Les fichiers PDF ne sont pas acceptés. Uniquement Word (.docx). <strong>Toute œuvre utilisant l'IA doit le déclarer expressément</strong>. Les œuvres sans déclaration pourront être disqualifiées.",
+    "conv.cta1":"Participer via WhatsApp","conv.cta2":"Envoyer mon œuvre par e-mail",
+    "cont.title":"Prêt à publier votre livre ?","cont.desc":"Nous sommes prêts à vous accompagner à chaque page de votre projet.",
+    "cont.wa":"WhatsApp : <a href=\"https://wa.me/573113555949\" target=\"_blank\">311 355 5949</a>","cont.country":"Colombie",
+    "cont.btn1":"Écrivez-nous sur WhatsApp","cont.btn2":"Envoyer un e-mail",
+    "foot.tag":"Édition éditoriale • Co-édition • Distribution internationale","foot.copy":"© 2026 Fondation Artes Multicap. Tous droits réservés."
+  },
+  pt: {
+    "nav.servicios":"Serviços","nav.tamanos":"Formatos","nav.paquetes":"Pacotes","nav.proceso":"Processo",
+    "nav.inclusion":"Inclusão","nav.cotiza":"Cotação","nav.plataformas":"Plataformas","nav.convocatorias":"Convocações",
+    "nav.politicas":"Políticas","nav.contacto":"Contato",
+    "hero.title":"Sua história merece alcançar o mundo.",
+    "hero.desc":"Transformamos seu manuscrito em um livro profissional e acompanhamos você da edição à publicação internacional em espanhol e inglês.",
+    "hero.btn.cotizar":"Cotar meu livro","hero.btn.whatsapp":"Falar no WhatsApp",
+    "serv.title":"Nossos serviços","serv.desc":"Você pode contratar serviços individuais ou um acompanhamento editorial completo.",
+    "tam.title":"Formatos de livro que trabalhamos",
+    "tam.desc":"Antes de cotar, definimos o formato do seu livro. Isso afeta o número de páginas, a diagramação e o custo de impressão.",
+    "tam.th1":"Tipo","tam.th2":"Para que serve?","tam.th3":"Aplica pacote?",
+    "tam.r1.t":"Bolso","tam.r1.d":"Romances, livros de poesia, livros de viagem.","tam.r1.a":"Pacote padrão não se aplica. Cotado separadamente.",
+    "tam.r2.t":"Comercial ou Padrão","tam.r2.d":"Romances, ensaios, teses, textos profissionais, memórias, biografias.","tam.r2.a":"Sim, aplica-se. É o formato base dos nossos pacotes.",
+    "tam.r3.t":"Grande","tam.r3.d":"Livros de receitas, livros infantis, livros de arte, journals.","tam.r3.a":"Pacote padrão não se aplica. Cotado separadamente.",
+    "tam.r4.t":"Técnico ou Ilustrado","tam.r4.d":"Livros com gráficos, tabelas, imagens coloridas, plantas, ilustrações.","tam.r4.a":"Pacote padrão não se aplica. Cotado separadamente.",
+    "tam.note":"<strong>Importante:</strong> Nossos pacotes Plano Profissional e Plano Premium Global são projetados para livros comerciais ou padrão. Se seu livro for de bolso, grande, técnico ou ilustrado, enviamos uma cotação personalizada.",
+    "paq.title":"Pacotes completos","paq.desc":"Economize tempo e dinheiro contratando todo o processo junto. Cada obra é única e merece uma cotação personalizada.","paq.include":"Inclui",
+    "paq.p1.tag":"Edição em espanhol · 2 formatos","paq.p1.title":"Plano Profissional","paq.p1.ideal":"Ideal para: romances, teses, ensaios, textos profissionais e journals.",
+    "paq.p1.list":["Correção ortotipográfica e de estilo","Diagramação interior profissional","Design profissional de capa","Gestão do ISBN","Publicação internacional","eBook em espanhol","Capa brochura em espanhol","Promoção inicial"],
+    "paq.p1.benef":"<strong>🎁 Benefício exclusivo para nossos autores.</strong> Presenteamos você com o primeiro exemplar impresso do seu livro, para que possa vê-lo antes de solicitar mais cópias.",
+    "paq.p1.btn":"Cotar este plano",
+    "paq.p2.tag":"Edição bilíngue · 6 formatos","paq.p2.title":"Plano Premium Global","paq.p2.ideal":"Ideal para: autores que buscam alcance internacional.",
+    "paq.p2.list":["Tudo do Plano Profissional","Tradução completa para o inglês","eBook em espanhol","eBook em inglês","Capa brochura em espanhol","Capa brochura em inglês","Capa dura em espanhol","Capa dura em inglês","Kit de comunicação e lançamento","Promoção ampliada"],
+    "paq.p2.benef":"<strong>🎁 Benefício Premium.</strong> O Plano Premium Global inclui <strong>3 exemplares impressos de cortesia em capa brochura</strong>.",
+    "paq.p2.btn":"Cotar este plano",
+    "proc.title":"Como iniciamos seu projeto","proc.desc":"Um processo claro, transparente e acompanhado em cada etapa.",
+    "inc.title":"Programa de Inclusão Editorial","inc.desc":"Na Fundação Artes Multicap acreditamos que o dinheiro não deve ser uma barreira para publicar. Por isso oferecemos descontos conforme seu estrato socioeconômico.",
+    "inc.c1.title":"Descontos por estrato","inc.c1.desc":"Seu estrato socioeconômico determina a porcentagem do valor que você paga pelos serviços técnicos editoriais.",
+    "inc.th.estrato":"Estrato","inc.th.dcto":"Desconto","inc.th.pagas":"Você paga",
+    "inc.e1":"Estrato 1","inc.e2":"Estrato 2","inc.e3":"Estrato 3","inc.e4":"Estrato 4","inc.e5":"Estrato 5","inc.e6":"Estrato 6",
+    "inc.p30":"30% do valor","inc.p60":"60% do valor","inc.nodcto":"Sem desconto",
+    "inc.c2.title":"Como solicitar o desconto?","inc.c2.desc":"Ao assinar o contrato, anexe os seguintes documentos:",
+    "inc.c2.list":["Formulário de Registro do Autor obrigatório.","Cópia digital da sua última conta de serviços públicos.","Cópia do seu documento de identidade."],
+    "inc.c2.note":"<strong>Importante:</strong> O desconto aplica-se apenas aos serviços técnicos editoriais.",
+    "cot.title":"Cote seu livro em segundos","cot.desc":"Selecione o plano que lhe interessa e seu estrato socioeconômico. Mostraremos o valor da sua cotação instantaneamente.",
+    "cot.lbl1":"1. Escolha seu plano","cot.lbl2":"2. Selecione seu estrato socioeconômico",
+    "cot.sel0":"— Selecione um plano —","cot.sel1":"— Selecione seu estrato —",
+    "cot.opt1":"Plano Profissional · Edição em espanhol","cot.opt2":"Plano Premium Global · Edição bilíngue",
+    "cot.e1":"Estrato 1","cot.e2":"Estrato 2","cot.e3":"Estrato 3","cot.e4":"Estrato 4","cot.e5":"Estrato 5","cot.e6":"Estrato 6",
+    "cot.res.etq":"Sua cotação estimada","cot.res.det":"Selecione um plano e seu estrato para ver o valor.","cot.res.wa":"Escrever no WhatsApp",
+    "cot.aviso":"O valor exibido é uma estimativa para um livro de 100 páginas em formato comercial (15 × 23 cm). O valor final pode ser ajustado conforme o número real de páginas, a complexidade do manuscrito e o formato editorial.",
+    "plat.title":"Nossas plataformas","plat.desc":"A Fundação Artes Multicap também publica revistas digitais de arte, cultura e criação juvenil com alcance internacional.",
+    "plat.c1.tag":"Plataforma Cultural","plat.c1.title":"Explorando Museus e Arte Latino-americana",
+    "plat.c1.desc":"Uma plataforma digital gratuita que integra três revistas digitais focadas na arte nacional colombiana, na arte latino-americana e na criação juvenil.",
+    "plat.c1.list":["Revista Explorando Arte e Cultura da América Latina","Revista Jovens Criadores da América Latina","Acesso aberto e gratuito","Convocações internacionais para artistas"],
+    "plat.c1.btn":"Visitar a plataforma",
+    "plat.c2.tag":"Fundação","plat.c2.title":"Fundação Artes Multicap",
+    "plat.c2.desc":"Conheça nossa missão, visão e projetos de transformação social por meio da arte, cultura, literatura e educação emocional.",
+    "plat.c2.list":["Oficinas básicas gratuitas","Oficinas intermediárias e avançadas","Projetos editoriais e culturais","Impacto social na América Latina"],
+    "plat.c2.btn":"Visitar a Fundação",
+    "conv.title":"Convocação Oficial","conv.desc":"Concurso Internacional de Criação Literária e Publicação \"A América Latina Escreve\"",
+    "conv.badge":"Convocação aberta 2026","conv.h3":"A AMÉRICA LATINA ESCREVE","conv.lema":"Uma obra. Um vencedor. Um livro para o mundo.",
+    "conv.sub":"<em>Uma história. Dois idiomas. Uma oportunidade de publicar e levar sua voz além das fronteiras.</em>",
+    "conv.c1.h":"O que é \"A América Latina Escreve\"?",
+    "conv.c1.p1":"É um concurso internacional de criação literária e publicação organizado pela <strong>Fundação Artes Multicap (Colômbia)</strong>.",
+    "conv.c1.p2":"Será selecionada <strong>uma única obra vencedora</strong>, de <strong>tema e gênero livres</strong>. O autor vencedor receberá gratuitamente o <strong>Plano Premium Global</strong>, avaliado em <strong>$4.100.000 COP</strong>.",
+    "conv.c1.p3":"<strong>A participação é completamente GRÁTIS.</strong>",
+    "conv.c2.h":"Quem pode participar?",
+    "conv.c2.list1":["Pessoas naturais maiores de 18 anos.","Autores de qualquer país da América Latina.","Pessoas de qualquer nacionalidade que residam em um país latino-americano.","Autores que apresentem uma obra original, inédita e de sua autoria.","Participantes que apresentem sua obra em espanhol."],
+    "conv.c2.paises":"<strong>Países convidados:</strong> Colômbia, México, Argentina, Chile, Peru, Equador, Bolívia, Paraguai, Uruguai, Brasil, Venezuela, Costa Rica, Panamá, Nicarágua, Honduras, Guatemala, El Salvador, República Dominicana, Cuba e Porto Rico.",
+    "conv.c2.np":"Não poderão participar",
+    "conv.c2.list2":["Obras publicadas comercialmente anteriormente.","Obras que tenham vencido outro concurso quando as condições desse concurso comprometerem os direitos necessários para participar.","Pessoas vinculadas diretamente à organização do concurso.","Integrantes do júri.","Pessoas que intervenham diretamente na avaliação das obras."],
+    "conv.c3.h":"Tema e gênero: livres",
+    "conv.c3.p1":"A convocação não estabelece um tema específico. A obra pode pertencer a qualquer gênero literário, narrativo, artístico, cultural, acadêmico ou de não ficção, desde que possa se constituir editorialmente como um projeto de livro.",
+    "conv.c3.p2":"Entre outros, poderão ser apresentados:",
+    "conv.c3.list":["Romance, novela curta, conto e relatos","Poesia","Ensaio, pesquisa e crônica","Memórias, biografia e testemunho","Literatura infantil, juvenil ou para adultos","Obras de caráter cultural, artístico, acadêmico ou científico","Outros gêneros narrativos, literários ou expositivos"],
+    "conv.c3.p4":"A obra deverá ser <strong>original, inédita e de autoria do participante</strong>.",
+    "conv.c4.h":"Requisitos de formato",
+    "conv.c4.list":["Tamanho carta, com margens de 2,5 cm nos quatro lados","Times New Roman 12, espaçamento 1,5","Título em Times New Roman 14","Sumário obrigatório","Extensão: 20.000 a 30.000 palavras","Idioma: espanhol","Formato de envio: Word (.docx) apenas","Pseudônimo obrigatório"],
+    "conv.c5.h":"Valor referencial do prêmio",
+    "conv.c5.p1":"O Plano Premium Global concedido à obra vencedora representa um investimento editorial estimado de <strong>$4.100.000 COP</strong>.",
+    "conv.c5.p2":"Este valor é referencial e corresponde ao conjunto de serviços editoriais que a pessoa vencedora recebe gratuitamente.",
+    "conv.c5.p3":"O vencedor <strong>não recebe este valor em dinheiro</strong>. Recebe gratuitamente os serviços editoriais descritos nas bases, mais 50% dos royalties líquidos pelas vendas.",
+    "conv.c6.h":"O que você mantém como autor",
+    "conv.c6.p1":"<strong>VOCÊ CONTINUA SENDO O DONO DA SUA OBRA.</strong>",
+    "conv.c6.p2":"O contrato de edição não transfere em nenhum momento o direito autoral, conforme o <strong>artigo 119 da Lei 23 de 1982</strong>. Você mantém todos os seus direitos morais e patrimoniais.",
+    "conv.c6.p3":"Em caso de dúvida, será aplicado o princípio <strong>«in dubio pro auctore»</strong>, que ordena interpretar sempre em favor do autor.",
+    "conv.c7.h":"Cronograma",
+    "conv.c7.list":[["Lançamento da convocação","25 de setembro de 2026"],["Recepção das obras","25 set — 26 out 2026"],["Verificação dos requisitos formais","27 out — 5 nov 2026"],["Avaliação do júri","6 — 20 nov 2026"],["Anúncio do vencedor","27 de novembro de 2026"],["Assinatura do acordo editorial","30 nov — 10 dez 2026"],["Processo editorial e tradução","Dez 2026 — Jan 2027"],["Publicação oficial do livro","Janeiro de 2027"]],
+    "conv.c7.nota":"<strong>Nota de transparência:</strong> O processo editorial bilíngue completo requer entre 3 e 4 meses por obra para garantir a qualidade.",
+    "conv.c8.h":"Compromisso do vencedor",
+    "conv.c8.p":"O vencedor terá um prazo de <strong>3 dias corridos</strong> para entregar a documentação solicitada. Se não cumprir o prazo, será desclassificado.",
+    "conv.d1.h":"O grande prêmio: Plano Premium Global",
+    "conv.d1.p":"O vencedor receberá o <strong>Plano Premium Global</strong>, <strong>sem pagar absolutamente nada por esses serviços</strong>.",
+    "conv.d1.i1.h":"Processo editorial completo",
+    "conv.d1.i1.list":["Leitura e avaliação editorial","Correção ortotipográfica e de estilo","Preparação do manuscrito","Diagramação e montagem interior","Design profissional de capa","Design de contracapa e mockups"],
+    "conv.d1.i2.h":"Ilustrações","conv.d1.i2.p":"Se a obra exigir, a organização elabora as ilustrações como parte do prêmio.",
+    "conv.d1.i3.h":"Tradução para o inglês","conv.d1.i3.p":"Tradução profissional da obra completa para o inglês.",
+    "conv.d1.i4.h":"Publicação em seis formatos bilíngues",
+    "conv.d1.i4.list":["eBook em espanhol","eBook em inglês","Capa brochura em espanhol","Capa brochura em inglês","Capa dura em espanhol","Capa dura em inglês"],
+    "conv.d1.i5.h":"Gestão do ISBN","conv.d1.i5.p":"Solicitação e gestão dos ISBN correspondentes a cada formato.",
+    "conv.d1.i6.h":"Distribuição internacional","conv.d1.i6.p":"Disponível em todo o mundo.",
+    "conv.d1.i7.h":"Exemplares do autor","conv.d1.i7.p":"<strong>3 exemplares impressos de cortesia em capa brochura.</strong>",
+    "conv.d1.i8.h":"Promoção e divulgação ampliadas",
+    "conv.d1.i8.list":["Publicações em redes sociais","Apresentação do autor","Entrevista publicada","Divulgação nacional e internacional","Links de venda e promoção","Kit de comunicação e lançamento","Posicionamento na Amazon"],
+    "conv.d1.i9.h":"Royalties por vendas",
+    "conv.d1.i9.list":["50% dos royalties líquidos","Relatório semestral de vendas"],
+    "conv.d1.i10.h":"Diploma digital","conv.d1.i10.p":"Diploma digital oficial de vencedor.",
+    "conv.pasos.h":"Como participar",
+    "conv.p1.h":"Prepare sua obra",
+    "conv.p1.p":"Deve ser <strong>original, inédita e de sua autoria</strong>. Você deve apresentá-la <strong>sob pseudônimo</strong> (obrigatório para garantir a imparcialidade do júri).",
+    "conv.ia.h":"Uso de Inteligência Artificial",
+    "conv.ia.p1":"É <strong>obrigatório declarar</strong> qualquer uso de IA. É permitida como ferramenta de apoio com revisão do autor. Não são aceitas obras geradas integralmente por IA.",
+    "conv.ia.p4":"O descumprimento implica <strong>desclassificação automática</strong>.",
+    "conv.p2.h":"Prepare seus dois arquivos Word",
+    "conv.p2.a1.tag":"Arquivo 1","conv.p2.a1.n":"Manuscrito",
+    "conv.p2.a1.list":["Formato: Word (.docx) apenas","Sob pseudônimo, sem dados pessoais","Tamanho carta, margens de 2,5 cm","Sumário obrigatório"],
+    "conv.p2.a2.tag":"Arquivo 2","conv.p2.a2.n":"Apresentação",
+    "conv.p2.a2.list":["Formato: Word (.docx) apenas","Com seus dados pessoais completos","Declaração expressa de uso de IA"],
+    "conv.p3.h":"Envie seus arquivos","conv.p3.p1":"<strong>E-mail:</strong> artesmulticap2024@gmail.com","conv.p3.p2":"<strong>Assunto do e-mail:</strong>",
+    "conv.p3.aviso":"<strong>Importante:</strong> Não são aceitos arquivos PDF. Apenas Word (.docx). <strong>Toda obra que use IA deve declará-lo expressamente</strong>. Obras sem declaração poderão ser desclassificadas.",
+    "conv.cta1":"Participar pelo WhatsApp","conv.cta2":"Enviar minha obra por e-mail",
+    "cont.title":"Pronto para publicar seu livro?","cont.desc":"Estamos prontos para acompanhar você em cada página do seu projeto.",
+    "cont.wa":"WhatsApp: <a href=\"https://wa.me/573113555949\" target=\"_blank\">311 355 5949</a>","cont.country":"Colômbia",
+    "cont.btn1":"Escreva-nos no WhatsApp","cont.btn2":"Enviar e-mail",
+    "foot.tag":"Publicação editorial • Coedição • Distribuição internacional","foot.copy":"© 2026 Fundação Artes Multicap. Todos os direitos reservados."
+  }
+};
 
-window.addEventListener("load",function(){
-if(location.hash){
-const target=document.querySelector(location.hash);
-if(target && target.classList.contains("fade")){
-target.classList.add("show");
+/* ============ FUNCIÓN DE TRADUCCIÓN ============ */
+function setLang(lang){
+  const t = i18n[lang];
+  if(!t) return;
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.getAttribute("data-i18n");
+    if(t[key] !== undefined) el.textContent = t[key];
+  });
+
+  document.querySelectorAll("[data-i18n-html]").forEach(el=>{
+    const key = el.getAttribute("data-i18n-html");
+    if(t[key] !== undefined) el.innerHTML = t[key];
+  });
+
+  document.querySelectorAll("[data-i18n-list]").forEach(ul=>{
+    const key = ul.getAttribute("data-i18n-list");
+    const items = t[key];
+    if(Array.isArray(items)){
+      const lis = ul.querySelectorAll("li");
+      lis.forEach((li,i)=>{ if(items[i]!==undefined) li.textContent = items[i]; });
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-cron]").forEach(ul=>{
+    const key = ul.getAttribute("data-i18n-cron");
+    const items = t[key];
+    if(Array.isArray(items)){
+      const lis = ul.querySelectorAll("li");
+      lis.forEach((li,i)=>{
+        if(items[i]){
+          const e = li.querySelector(".etapa");
+          const f = li.querySelector(".fecha");
+          if(e) e.textContent = items[i][0];
+          if(f) f.textContent = items[i][1];
+        }
+      });
+    }
+  });
+
+  document.querySelectorAll("#lang-bar button").forEach(b=>b.classList.remove("active"));
+  const btn = document.getElementById("lang-"+lang);
+  if(btn) btn.classList.add("active");
+
+  try{ localStorage.setItem("preferred-lang", lang); }catch(e){}
+  actualizarResultado();
 }
-}
+
+/* ============ INICIALIZACIÓN ============ */
+document.addEventListener("DOMContentLoaded", ()=>{
+  let saved = "es";
+  try{ saved = localStorage.getItem("preferred-lang") || "es"; }catch(e){}
+  setLang(saved);
+
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:0, rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
+
+  const sp = document.getElementById("selectPlan");
+  const se = document.getElementById("selectEstrato");
+  if(sp) sp.addEventListener("change", actualizarResultado);
+  if(se) se.addEventListener("change", actualizarResultado);
 });
 
-// Precios por plan y estrato
+/* ============ COTIZADOR ============ */
 const precios = {
   profesional: { 1: 540000, 2: 540000, 3: 1080000, 4: 1080000, 5: 1800000, 6: 1800000 },
   premium:     { 1: 1230000, 2: 1230000, 3: 2460000, 4: 2460000, 5: 4100000, 6: 4100000 }
 };
-
 const nombresPlanes = {
-  profesional: "Plan Profesional",
-  premium: "Plan Premium Global"
+  es: { profesional: "Plan Profesional", premium: "Plan Premium Global" },
+  en: { profesional: "Professional Plan", premium: "Global Premium Plan" },
+  fr: { profesional: "Plan Professionnel", premium: "Plan Premium Global" },
+  pt: { profesional: "Plano Profissional", premium: "Plano Premium Global" }
 };
+const descuentos = { 1:"70%", 2:"70%", 3:"40%", 4:"40%", 5:"0%", 6:"0%" };
 
-const descuentos = {
-  1: "70%", 2: "70%", 3: "40%", 4: "40%", 5: "0%", 6: "0%"
-};
-
-function formatearPrecio(valor){
-  return "$" + valor.toLocaleString("es-CO") + " COP";
+function currentLang(){
+  try{ return localStorage.getItem("preferred-lang") || "es"; }catch(e){ return "es"; }
 }
+function formatearPrecio(v){ return "$" + v.toLocaleString("es-CO") + " COP"; }
 
 function actualizarResultado(){
   const plan = document.getElementById("selectPlan").value;
@@ -2465,45 +2707,34 @@ function actualizarResultado(){
   const detalleEl = document.getElementById("detalleResultado");
   const resultado = document.getElementById("resultado");
   const btnWa = document.getElementById("btnWhatsApp");
+  const lang = currentLang();
 
-  if (!plan || !estrato){
+  if(!plan || !estrato){
     precioEl.textContent = "—";
-    detalleEl.textContent = "Selecciona un plan y tu estrato para ver el valor.";
+    detalleEl.textContent = i18n[lang]["cot.res.det"];
     resultado.classList.remove("activo");
     btnWa.style.display = "none";
     return;
   }
-
   const valor = precios[plan][estrato];
-  const nombrePlan = nombresPlanes[plan];
+  const nombrePlan = nombresPlanes[lang][plan];
   const dcto = descuentos[estrato];
-
+  const labelEstrato = lang==="en"?"Stratum":lang==="fr"?"Strate":lang==="pt"?"Estrato":"Estrato";
+  const labelDcto = lang==="en"?"Discount applied":lang==="fr"?"Réduction appliquée":lang==="pt"?"Desconto aplicado":"Descuento aplicado";
   precioEl.textContent = formatearPrecio(valor);
-  detalleEl.innerHTML = "<strong>" + nombrePlan + "</strong> · Estrato " + estrato + " · Descuento aplicado: <strong>" + dcto + "</strong>";
+  detalleEl.innerHTML = "<strong>"+nombrePlan+"</strong> · " + labelEstrato + " " + estrato + " · " + labelDcto + ": <strong>"+dcto+"</strong>";
   resultado.classList.add("activo");
   btnWa.style.display = "inline-flex";
-
-  const mensaje = encodeURIComponent(
-    "Hola, quiero más información sobre mi cotización:\n" +
-    "Plan: " + nombrePlan + "\n" +
-    "Estrato: " + estrato + "\n" +
-    "Valor estimado: " + formatearPrecio(valor) + "\n" +
-    "Mi nombre es: "
-  );
+  const mensaje = encodeURIComponent("Hola, quiero más información sobre mi cotización:\nPlan: "+nombrePlan+"\nEstrato: "+estrato+"\nValor estimado: "+formatearPrecio(valor));
   btnWa.href = "https://wa.me/573113555949?text=" + mensaje;
 }
-
-document.getElementById("selectPlan").addEventListener("change", actualizarResultado);
-document.getElementById("selectEstrato").addEventListener("change", actualizarResultado);
 
 function seleccionarPlan(plan){
   document.getElementById("selectPlan").value = plan;
   actualizarResultado();
-  setTimeout(() => {
+  setTimeout(()=>{
     const cotizador = document.getElementById("cotizador");
-    if (cotizador) {
-      window.scrollTo({ top: cotizador.offsetTop - 80, behavior: "smooth" });
-    }
+    if(cotizador) window.scrollTo({ top: cotizador.offsetTop - 100, behavior:"smooth" });
   }, 100);
 }
 </script>
