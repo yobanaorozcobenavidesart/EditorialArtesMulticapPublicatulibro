@@ -32,7 +32,7 @@ body{
 font-family:'Inter',sans-serif;
 background:#000000;
 color:var(--text);
-line-height:1.15;
+line-height:1.05;
 overflow-x:hidden;
 font-size:15px;
 -webkit-font-smoothing:antialiased;
@@ -133,7 +133,7 @@ background:rgba(231,195,107,.05);
 transition:all .4s ease;
 display:inline-block;
 position:relative;
-line-height:1.05;
+line-height:1;
 white-space:nowrap;
 filter:
   brightness(1.2)
@@ -229,7 +229,7 @@ text-shadow:
 color:var(--muted);
 font-size:1rem;
 margin-bottom:20px;
-line-height:1.2;
+line-height:1.05;
 }
 
 .buttons{
@@ -249,7 +249,7 @@ font-size:.88rem;
 border:none;
 cursor:pointer;
 font-family:'Inter',sans-serif;
-line-height:1.05;
+line-height:1;
 text-align:center;
 }
 
@@ -302,13 +302,13 @@ max-width:1200px;
 width:100%;
 margin:auto;
 padding:30px 20px;
-line-height:1.15;
+line-height:1.05;
 }
 
 .title{
 text-align:center;
 margin-bottom:20px;
-line-height:1.1;
+line-height:1;
 }
 
 .title h2{
@@ -327,7 +327,7 @@ color:var(--muted);
 max-width:700px;
 margin:auto;
 font-size:.95rem;
-line-height:1.2;
+line-height:1.05;
 }
 
 /* ============ IMAGEN ÚNICA ============ */
@@ -379,7 +379,7 @@ border:1.5px solid rgba(231,195,107,.35);
 border-radius:var(--radius);
 padding:30px 26px;
 text-align:center;
-margin-bottom:22px;
+margin-bottom:18px;
 position:relative;
 overflow:hidden;
 }
@@ -425,8 +425,8 @@ font-style:italic;
 font-size:1.15rem;
 color:var(--gold-bright);
 letter-spacing:.5px;
-margin-bottom:14px;
-line-height:1.15;
+margin-bottom:12px;
+line-height:1.05;
 text-shadow:0 0 12px rgba(231,195,107,.4);
 }
 
@@ -434,24 +434,38 @@ text-shadow:0 0 12px rgba(231,195,107,.4);
 color:var(--muted);
 font-size:.95rem;
 max-width:780px;
-margin:0 auto 10px;
-line-height:1.35;
+margin:0 auto 8px;
+line-height:1.05;
 }
 
 .convocatoria-hero p:last-child{margin-bottom:0;}
 
 .convocatoria-hero p strong{color:var(--gold-bright);font-weight:600;}
 
+/* ============ GRID CONVOCATORIA 2 COLUMNAS ============ */
+.conv-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+margin-bottom:16px;
+align-items:start;
+}
+
+.conv-col{
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
 .conv-block{
 background:var(--card);
 backdrop-filter:blur(18px);
 border:1px solid rgba(255,255,255,.08);
 border-radius:var(--radius);
-padding:24px 22px;
-margin-bottom:18px;
+padding:20px 18px;
 position:relative;
 overflow:hidden;
-line-height:1.2;
+line-height:1.05;
 }
 
 .conv-block::before{
@@ -465,36 +479,36 @@ opacity:.55;
 
 .conv-block h3{
 font-family:"Cormorant Garamond",serif;
-font-size:1.55rem;
+font-size:1.4rem;
 color:var(--gold);
-margin-bottom:12px;
+margin-bottom:10px;
 line-height:1;
 text-shadow:0 0 15px rgba(231,195,107,.35);
-padding-bottom:.5rem;
+padding-bottom:.4rem;
 border-bottom:1px solid rgba(231,195,107,.2);
 }
 
 .conv-block h3::before{
 content:'✦ ';
 color:var(--gold-bright);
-font-size:1rem;
+font-size:.9rem;
 text-shadow:0 0 12px rgba(231,195,107,.8);
 }
 
 .conv-block h4{
 font-family:"Cormorant Garamond",serif;
-font-size:1.15rem;
+font-size:1.05rem;
 color:var(--gold-bright);
-margin:.9rem 0 .5rem;
-line-height:1.1;
+margin:.7rem 0 .4rem;
+line-height:1;
 text-shadow:0 0 10px rgba(231,195,107,.4);
 }
 
 .conv-block p{
 color:var(--muted);
-font-size:.9rem;
-line-height:1.3;
-margin-bottom:.7rem;
+font-size:.86rem;
+line-height:1.05;
+margin-bottom:.5rem;
 }
 
 .conv-block p:last-child{margin-bottom:0;}
@@ -504,18 +518,18 @@ margin-bottom:.7rem;
 .conv-list{
 list-style:none;
 padding:0;
-margin:0 0 .5rem;
+margin:0 0 .4rem;
 }
 
 .conv-list li{
-padding:.32rem 0;
-font-size:.88rem;
+padding:.25rem 0;
+font-size:.84rem;
 color:var(--text);
 display:flex;
-gap:.55rem;
+gap:.5rem;
 align-items:flex-start;
 border-bottom:1px solid rgba(255,255,255,.05);
-line-height:1.25;
+line-height:1.05;
 }
 
 .conv-list li:last-child{border-bottom:none;}
@@ -544,26 +558,26 @@ font-weight:700;
 background:rgba(231,195,107,.05);
 border-left:2px solid var(--gold);
 border-radius:10px;
-padding:.85rem 1rem;
-margin-bottom:.7rem;
-line-height:1.25;
+padding:.65rem .8rem;
+margin-bottom:.5rem;
+line-height:1.05;
 }
 
 .conv-premio-item:last-child{margin-bottom:0;}
 
 .conv-premio-item h4{
 margin-top:0;
-font-size:1.05rem;
+font-size:.98rem;
 color:var(--gold);
 }
 
 .conv-premio-item p{
-font-size:.86rem;
-margin-bottom:.4rem;
+font-size:.83rem;
+margin-bottom:.3rem;
 }
 
 .conv-premio-item .conv-list li{
-font-size:.85rem;
+font-size:.82rem;
 }
 
 .conv-cronograma{
@@ -575,12 +589,12 @@ margin:0;
 .conv-cronograma li{
 display:grid;
 grid-template-columns:1fr auto;
-gap:12px;
+gap:10px;
 align-items:baseline;
-padding:.55rem .8rem;
+padding:.45rem .65rem;
 border-bottom:1px solid rgba(255,255,255,.05);
-line-height:1.25;
-font-size:.88rem;
+line-height:1.05;
+font-size:.85rem;
 }
 
 .conv-cronograma li:last-child{border-bottom:none;}
@@ -604,16 +618,18 @@ text-shadow:0 0 8px rgba(231,195,107,.4);
 
 .conv-paso{
 display:flex;
-gap:14px;
+gap:12px;
 background:rgba(231,195,107,.04);
 border:1px solid rgba(231,195,107,.18);
 border-radius:14px;
-padding:14px 16px;
-margin-bottom:12px;
+padding:12px 13px;
+margin-bottom:10px;
 align-items:flex-start;
-line-height:1.25;
+line-height:1.05;
 transition:.3s;
 }
+
+.conv-paso:last-child{margin-bottom:0;}
 
 .conv-paso:hover{
 border-color:rgba(231,195,107,.4);
@@ -622,8 +638,8 @@ box-shadow:0 8px 24px rgba(0,0,0,.35);
 }
 
 .conv-paso .paso-num{
-min-width:38px;
-height:38px;
+min-width:34px;
+height:34px;
 border-radius:50%;
 display:flex;
 align-items:center;
@@ -631,7 +647,7 @@ justify-content:center;
 background:linear-gradient(135deg,var(--gold),#ffd98c);
 color:#111;
 font-weight:700;
-font-size:.95rem;
+font-size:.88rem;
 flex-shrink:0;
 box-shadow:0 0 18px rgba(231,195,107,.5);
 line-height:1;
@@ -644,18 +660,18 @@ min-width:0;
 
 .conv-paso .paso-content h4{
 font-family:"Cormorant Garamond",serif;
-font-size:1.15rem;
+font-size:1rem;
 color:var(--gold-bright);
-margin-bottom:.35rem;
-line-height:1.1;
+margin-bottom:.3rem;
+line-height:1;
 text-shadow:0 0 10px rgba(231,195,107,.4);
 }
 
 .conv-paso .paso-content p{
-font-size:.85rem;
+font-size:.82rem;
 color:var(--muted);
-line-height:1.3;
-margin-bottom:.5rem;
+line-height:1.05;
+margin-bottom:.4rem;
 }
 
 .conv-paso .paso-content p:last-child{margin-bottom:0;}
@@ -664,47 +680,47 @@ margin-bottom:.5rem;
 background:rgba(0,0,0,.4);
 border:1px dashed rgba(231,195,107,.35);
 border-radius:12px;
-padding:.8rem 1rem;
-margin-top:.5rem;
-line-height:1.25;
+padding:.65rem .85rem;
+margin-top:.4rem;
+line-height:1.05;
 }
 
 .conv-archivo .archivo-tag{
 display:inline-block;
-font-size:.65rem;
+font-size:.62rem;
 font-weight:600;
 letter-spacing:1.5px;
 text-transform:uppercase;
 color:var(--gold);
 border:1px solid rgba(231,195,107,.4);
-padding:.15rem .6rem;
+padding:.15rem .55rem;
 border-radius:50px;
-margin-bottom:.4rem;
+margin-bottom:.35rem;
 line-height:1;
 }
 
 .conv-archivo .archivo-nombre{
 display:block;
 font-family:'Courier New',monospace;
-font-size:.82rem;
+font-size:.76rem;
 color:var(--gold-bright);
 background:rgba(231,195,107,.08);
-padding:.35rem .7rem;
+padding:.3rem .6rem;
 border-radius:8px;
-margin-top:.5rem;
+margin-top:.4rem;
 word-break:break-all;
-line-height:1.2;
+line-height:1.05;
 }
 
 .conv-aviso{
 background:rgba(231,195,107,.06);
 border-left:3px solid var(--gold);
 border-radius:12px;
-padding:.9rem 1.1rem;
-font-size:.85rem;
+padding:.75rem .9rem;
+font-size:.82rem;
 color:var(--muted);
-line-height:1.3;
-margin-top:12px;
+line-height:1.05;
+margin-top:10px;
 }
 
 .conv-aviso strong{
@@ -714,7 +730,7 @@ text-shadow:0 0 10px rgba(231,195,107,.4);
 
 .conv-cta{
 text-align:center;
-margin-top:24px;
+margin-top:20px;
 display:flex;
 gap:12px;
 flex-wrap:wrap;
@@ -730,7 +746,7 @@ border-radius:14px;
 overflow:hidden;
 border:1px solid rgba(231,195,107,.2);
 box-shadow:0 10px 40px rgba(0,0,0,.3);
-line-height:1.15;
+line-height:1.05;
 }
 
 .tamanos-tabla thead{
@@ -738,7 +754,7 @@ background:linear-gradient(90deg,rgba(231,195,107,.15),rgba(231,195,107,.08));
 }
 
 .tamanos-tabla th{
-padding:.7rem .9rem;
+padding:.6rem .8rem;
 text-align:left;
 font-size:.7rem;
 font-weight:600;
@@ -747,15 +763,15 @@ text-transform:uppercase;
 color:var(--gold-bright);
 border-bottom:1px solid rgba(231,195,107,.25);
 text-shadow:0 0 10px rgba(231,195,107,.4);
-line-height:1.1;
+line-height:1;
 }
 
 .tamanos-tabla td{
-padding:.65rem .9rem;
-font-size:.86rem;
+padding:.55rem .8rem;
+font-size:.85rem;
 color:var(--text);
 border-bottom:1px solid rgba(255,255,255,.05);
-line-height:1.15;
+line-height:1.05;
 vertical-align:top;
 }
 
@@ -765,12 +781,12 @@ vertical-align:top;
 
 .tamanos-tabla .tipo{
 font-family:"Cormorant Garamond",serif;
-font-size:1.05rem;
+font-size:1rem;
 font-weight:700;
 color:var(--gold);
 text-shadow:0 0 12px rgba(231,195,107,.4);
 white-space:nowrap;
-line-height:1.05;
+line-height:1;
 }
 
 .tamanos-tabla .aplica-si{
@@ -782,11 +798,11 @@ font-weight:600;
 background:rgba(231,195,107,.06);
 border-left:3px solid var(--gold);
 border-radius:12px;
-padding:.9rem 1.1rem;
-font-size:.86rem;
+padding:.85rem 1rem;
+font-size:.85rem;
 color:var(--muted);
-line-height:1.2;
-margin-top:14px;
+line-height:1.05;
+margin-top:12px;
 }
 
 .nota-tamanos strong{
@@ -814,7 +830,7 @@ position:relative;
 overflow:hidden;
 display:flex;
 flex-direction:column;
-line-height:1.15;
+line-height:1.05;
 }
 
 .paquete-card::before{
@@ -866,7 +882,7 @@ font-size:.83rem;
 color:var(--muted);
 font-style:italic;
 margin-bottom:.8rem;
-line-height:1.15;
+line-height:1.05;
 }
 
 .paquete-card h4{
@@ -886,14 +902,14 @@ margin:0 0 .9rem;
 }
 
 .paquete-card ul li{
-padding:.3rem 0;
-font-size:.86rem;
+padding:.28rem 0;
+font-size:.85rem;
 color:var(--text);
 display:flex;
 gap:.5rem;
 align-items:flex-start;
 border-bottom:1px solid rgba(255,255,255,.05);
-line-height:1.15;
+line-height:1.05;
 }
 
 .paquete-card ul li:last-child{border-bottom:none;}
@@ -908,10 +924,10 @@ flex-shrink:0;
 background:rgba(231,195,107,.06);
 border:1px dashed rgba(231,195,107,.35);
 border-radius:12px;
-padding:.75rem .9rem;
-font-size:.81rem;
+padding:.7rem .85rem;
+font-size:.8rem;
 color:var(--muted);
-line-height:1.15;
+line-height:1.05;
 margin-bottom:1rem;
 }
 
@@ -923,14 +939,14 @@ width:100%;
 text-align:center;
 }
 
-/* ============ CALCULADORA ============ */
+/* ============ CALCULADORA (compacta) ============ */
 .cotizador{
-max-width:700px;
+max-width:600px;
 margin:0 auto;
 background:linear-gradient(160deg,rgba(231,195,107,.08),rgba(255,255,255,.03));
 border:1.5px solid rgba(231,195,107,.35);
-border-radius:var(--radius);
-padding:32px 28px;
+border-radius:18px;
+padding:20px 18px;
 box-shadow:
   0 20px 60px rgba(0,0,0,.5),
   0 0 60px rgba(231,195,107,.1);
@@ -948,38 +964,38 @@ opacity:.7;
 box-shadow:0 0 20px rgba(231,195,107,.6);
 }
 
-.cotizador-campo{margin-bottom:18px;}
+.cotizador-campo{margin-bottom:12px;}
 
 .cotizador-campo label{
 display:block;
-font-size:.78rem;
+font-size:.72rem;
 font-weight:600;
-letter-spacing:1.5px;
+letter-spacing:1.2px;
 text-transform:uppercase;
 color:var(--gold);
-margin-bottom:8px;
+margin-bottom:6px;
 text-shadow:0 0 10px rgba(231,195,107,.4);
-line-height:1.1;
+line-height:1;
 }
 
 .cotizador-campo select{
 width:100%;
-padding:13px 18px;
+padding:10px 14px;
 background:rgba(0,0,0,.6);
 border:1px solid rgba(231,195,107,.35);
-border-radius:12px;
+border-radius:10px;
 color:var(--text);
 font-family:'Inter',sans-serif;
-font-size:.95rem;
+font-size:.88rem;
 cursor:pointer;
 transition:all .3s;
 appearance:none;
 background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e7c36b' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e");
 background-repeat:no-repeat;
-background-position:right 15px center;
-background-size:18px;
-padding-right:45px;
-line-height:1.15;
+background-position:right 12px center;
+background-size:16px;
+padding-right:38px;
+line-height:1.05;
 }
 
 .cotizador-campo select:hover,
@@ -998,10 +1014,10 @@ padding:10px;
 .cotizador-resultado{
 background:rgba(0,0,0,.7);
 border:1px solid rgba(231,195,107,.3);
-border-radius:16px;
-padding:22px 22px;
+border-radius:14px;
+padding:16px 16px;
 text-align:center;
-margin-top:20px;
+margin-top:14px;
 transition:all .4s ease;
 }
 
@@ -1013,18 +1029,18 @@ box-shadow:
 }
 
 .cotizador-resultado .etiqueta{
-font-size:.72rem;
+font-size:.68rem;
 font-weight:600;
-letter-spacing:2px;
+letter-spacing:1.8px;
 text-transform:uppercase;
 color:var(--muted);
-margin-bottom:.4rem;
-line-height:1.1;
+margin-bottom:.3rem;
+line-height:1;
 }
 
 .cotizador-resultado .precio{
 font-family:"Cormorant Garamond",serif;
-font-size:2.6rem;
+font-size:2rem;
 font-weight:700;
 color:var(--gold);
 line-height:1;
@@ -1033,10 +1049,10 @@ margin-bottom:.3rem;
 }
 
 .cotizador-resultado .detalle{
-font-size:.85rem;
+font-size:.8rem;
 color:var(--muted);
-line-height:1.25;
-margin-bottom:.9rem;
+line-height:1.05;
+margin-bottom:.7rem;
 }
 
 .cotizador-resultado .detalle strong{color:var(--gold-bright);}
@@ -1044,17 +1060,17 @@ margin-bottom:.9rem;
 .cotizador-resultado .btn-wa{
 display:inline-flex;
 align-items:center;
-gap:.6rem;
+gap:.5rem;
 background:var(--wa);
 color:white;
-padding:12px 22px;
+padding:10px 18px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
-font-size:.88rem;
+font-size:.82rem;
 transition:all .3s;
 box-shadow:0 0 20px rgba(37,211,102,.4);
-line-height:1.05;
+line-height:1;
 }
 
 .cotizador-resultado .btn-wa:hover{
@@ -1062,14 +1078,14 @@ transform:translateY(-3px);
 box-shadow:0 10px 30px rgba(37,211,102,.6),0 0 60px rgba(37,211,102,.3);
 }
 
-.cotizador-resultado .btn-wa svg{width:20px;height:20px;fill:white;}
+.cotizador-resultado .btn-wa svg{width:16px;height:16px;fill:white;}
 
 .cotizador-aviso{
-font-size:.8rem;
+font-size:.75rem;
 color:var(--muted);
 text-align:center;
-margin-top:14px;
-line-height:1.25;
+margin-top:12px;
+line-height:1.05;
 font-style:italic;
 }
 
@@ -1091,7 +1107,7 @@ padding:24px 22px;
 transition:.35s;
 position:relative;
 overflow:hidden;
-line-height:1.15;
+line-height:1.05;
 }
 
 .inclusion-card::before{
@@ -1122,7 +1138,7 @@ text-shadow:0 0 15px rgba(231,195,107,.35);
 font-size:.88rem;
 color:var(--muted);
 margin-bottom:.8rem;
-line-height:1.15;
+line-height:1.05;
 }
 
 .estratos-tabla{
@@ -1132,13 +1148,13 @@ background:rgba(255,255,255,.02);
 border-radius:12px;
 overflow:hidden;
 border:1px solid rgba(231,195,107,.15);
-line-height:1.15;
+line-height:1.05;
 }
 
 .estratos-tabla thead{background:rgba(231,195,107,.12);}
 
 .estratos-tabla th{
-padding:.55rem .8rem;
+padding:.5rem .75rem;
 text-align:left;
 font-size:.68rem;
 font-weight:600;
@@ -1146,15 +1162,15 @@ letter-spacing:1.5px;
 text-transform:uppercase;
 color:var(--gold);
 border-bottom:1px solid rgba(231,195,107,.2);
-line-height:1.1;
+line-height:1;
 }
 
 .estratos-tabla td{
-padding:.5rem .8rem;
+padding:.45rem .75rem;
 font-size:.84rem;
 color:var(--text);
 border-bottom:1px solid rgba(255,255,255,.05);
-line-height:1.15;
+line-height:1.05;
 }
 
 .estratos-tabla tr:last-child td{border-bottom:none;}
@@ -1163,14 +1179,14 @@ line-height:1.15;
 .lista-aplicar{list-style:none;padding:0;margin:0;}
 
 .lista-aplicar li{
-padding:.4rem 0;
-font-size:.86rem;
+padding:.35rem 0;
+font-size:.85rem;
 color:var(--text);
 display:flex;
 gap:.5rem;
 align-items:flex-start;
 border-bottom:1px solid rgba(255,255,255,.05);
-line-height:1.15;
+line-height:1.05;
 }
 
 .lista-aplicar li:last-child{border-bottom:none;}
@@ -1185,16 +1201,16 @@ flex-shrink:0;
 background:rgba(231,195,107,.06);
 border-left:2px solid var(--gold);
 border-radius:10px;
-padding:.75rem .9rem;
-font-size:.83rem;
+padding:.7rem .85rem;
+font-size:.82rem;
 color:var(--muted);
-line-height:1.15;
-margin-top:.9rem;
+line-height:1.05;
+margin-top:.85rem;
 }
 
 .nota-inclusion strong{color:var(--gold);}
 
-/* ============ REVISTAS ============ */
+/* ============ PLATAFORMAS ============ */
 .revistas-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -1214,7 +1230,7 @@ position:relative;
 overflow:hidden;
 display:flex;
 flex-direction:column;
-line-height:1.15;
+line-height:1.05;
 }
 
 .revista-card::before{
@@ -1259,7 +1275,7 @@ text-shadow:0 0 15px rgba(231,195,107,.35);
 .revista-card p{
 font-size:.9rem;
 color:var(--muted);
-line-height:1.15;
+line-height:1.05;
 margin-bottom:1rem;
 }
 
@@ -1270,13 +1286,13 @@ margin:0 0 1.1rem;
 }
 
 .revista-card ul li{
-padding:.28rem 0;
+padding:.25rem 0;
 font-size:.84rem;
 color:var(--text);
 display:flex;
 gap:.5rem;
 align-items:flex-start;
-line-height:1.15;
+line-height:1.05;
 }
 
 .revista-card ul li::before{
@@ -1298,7 +1314,7 @@ border-radius:26px;
 padding:40px 26px;
 text-align:center;
 border:1px solid rgba(231,195,107,.25);
-line-height:1.15;
+line-height:1.05;
 position:relative;
 overflow:hidden;
 }
@@ -1329,18 +1345,18 @@ color:var(--gold-bright);
 letter-spacing:.5px;
 margin-bottom:20px;
 text-shadow:0 0 12px rgba(231,195,107,.4);
-line-height:1.1;
+line-height:1.05;
 }
 
 .cta .cta-info{
 display:flex;
 flex-direction:column;
-gap:6px;
+gap:5px;
 align-items:center;
 margin-bottom:6px;
 font-size:.95rem;
 color:var(--muted);
-line-height:1.2;
+line-height:1.05;
 }
 
 .cta .cta-info p{margin:0;}
@@ -1362,7 +1378,7 @@ padding:10px 20px 30px;
 text-align:center;
 color:var(--muted);
 font-size:.85rem;
-line-height:1.25;
+line-height:1.05;
 position:relative;
 overflow:hidden;
 background:#000000;
@@ -1437,7 +1453,7 @@ letter-spacing:.5px;
 margin-bottom:6px;
 text-shadow:0 0 12px rgba(231,195,107,.4);
 text-align:center;
-line-height:1.15;
+line-height:1.05;
 }
 
 footer .footer-copy{
@@ -1446,7 +1462,7 @@ z-index:2;
 font-size:.8rem;
 color:rgba(185,193,217,.8);
 text-align:center;
-line-height:1.15;
+line-height:1.05;
 }
 
 /* ============ FOOTER SOCIAL ============ */
@@ -1552,22 +1568,24 @@ nav ul li a{padding:6px 11px;font-size:.7rem;}
 .revistas-grid{grid-template-columns:1fr;}
 .inclusion-grid{grid-template-columns:1fr;}
 
+.conv-grid{grid-template-columns:1fr;gap:14px;}
+.conv-col{gap:14px;}
+
 section{padding:24px 20px;}
 .title h2{font-size:2rem;}
 
 .convocatoria-hero h3{font-size:1.9rem;}
-.conv-block{padding:22px 20px;}
 
 .footer-logos{gap:35px;}
 .footer-logo{height:95px;}
 }
 
 @media(max-width:767px){
-body{font-size:14.5px;line-height:1.1;}
+body{font-size:14.5px;line-height:1;}
 
 .tamanos-tabla th,
 .tamanos-tabla td{
-padding:.6rem .6rem;
+padding:.55rem .55rem;
 font-size:.8rem;
 }
 .tamanos-tabla .tipo{font-size:.95rem;}
@@ -1579,8 +1597,8 @@ font-size:.8rem;
 .revista-card{padding:22px 18px;}
 .inclusion-card{padding:20px 18px;}
 
-.cotizador{padding:22px 18px;}
-.cotizador-resultado .precio{font-size:2rem;}
+.cotizador{padding:18px 16px;}
+.cotizador-resultado .precio{font-size:1.8rem;}
 
 .cta{padding:30px 22px;}
 .cta h2{font-size:1.9rem;}
@@ -1590,13 +1608,13 @@ font-size:.8rem;
 .convocatoria-hero{padding:24px 20px;}
 .convocatoria-hero h3{font-size:1.7rem;}
 .convocatoria-hero .conv-lema{font-size:1.05rem;}
-.conv-block{padding:20px 18px;}
-.conv-block h3{font-size:1.4rem;}
+.conv-block{padding:18px 16px;}
+.conv-block h3{font-size:1.3rem;}
 
 .conv-cronograma li{
 grid-template-columns:1fr;
 gap:2px;
-padding:.55rem .7rem;
+padding:.45rem .6rem;
 }
 .conv-cronograma .fecha{text-align:left;}
 
@@ -1606,7 +1624,7 @@ footer{padding:8px 18px 25px;}
 }
 
 @media(max-width:600px){
-body{line-height:1.1;}
+body{line-height:1;}
 
 nav{padding:8px 12px;flex-wrap:wrap;justify-content:center;}
 .logo-img{height:60px;}
@@ -1642,34 +1660,34 @@ section{padding:20px 15px;}
 .convocatoria-hero p{font-size:.86rem;}
 .convocatoria-hero .conv-badge{font-size:.6rem;letter-spacing:2px;padding:.3rem .8rem;}
 
-.conv-block{padding:18px 15px;border-radius:18px;margin-bottom:14px;}
-.conv-block h3{font-size:1.3rem;}
-.conv-block h4{font-size:1.05rem;}
-.conv-block p{font-size:.85rem;}
-.conv-list li{font-size:.83rem;}
+.conv-block{padding:16px 14px;border-radius:16px;}
+.conv-block h3{font-size:1.2rem;}
+.conv-block h4{font-size:1rem;}
+.conv-block p{font-size:.83rem;}
+.conv-list li{font-size:.82rem;}
 
-.conv-premio-item{padding:.75rem .85rem;}
-.conv-premio-item h4{font-size:1rem;}
-.conv-premio-item p{font-size:.82rem;}
-.conv-premio-item .conv-list li{font-size:.8rem;}
+.conv-premio-item{padding:.6rem .75rem;}
+.conv-premio-item h4{font-size:.95rem;}
+.conv-premio-item p{font-size:.8rem;}
+.conv-premio-item .conv-list li{font-size:.79rem;}
 
-.conv-paso{padding:12px 13px;gap:12px;}
-.conv-paso .paso-num{min-width:34px;height:34px;font-size:.85rem;}
-.conv-paso .paso-content h4{font-size:1.05rem;}
-.conv-paso .paso-content p{font-size:.8rem;}
+.conv-paso{padding:10px 12px;gap:10px;}
+.conv-paso .paso-num{min-width:30px;height:30px;font-size:.82rem;}
+.conv-paso .paso-content h4{font-size:.98rem;}
+.conv-paso .paso-content p{font-size:.78rem;}
 
-.conv-cronograma li{font-size:.83rem;padding:.5rem .6rem;}
+.conv-cronograma li{font-size:.82rem;padding:.4rem .55rem;}
 
 .tamanos-tabla{
 display:block;
 overflow-x:auto;
 -webkit-overflow-scrolling:touch;
 }
-.tamanos-tabla th{padding:.5rem .5rem;font-size:.62rem;}
-.tamanos-tabla td{padding:.5rem .5rem;font-size:.76rem;}
+.tamanos-tabla th{padding:.45rem .45rem;font-size:.62rem;}
+.tamanos-tabla td{padding:.45rem .45rem;font-size:.76rem;}
 .tamanos-tabla .tipo{font-size:.85rem;}
 
-.nota-tamanos{font-size:.82rem;padding:.85rem .95rem;}
+.nota-tamanos{font-size:.82rem;padding:.8rem .9rem;}
 
 .paquete-card{padding:18px 16px;}
 .paquete-card h3{font-size:1.5rem;}
@@ -1677,14 +1695,14 @@ overflow-x:auto;
 .inclusion-card{padding:18px 16px;}
 .inclusion-card h3{font-size:1.3rem;}
 
-.estratos-tabla th{padding:.5rem .6rem;font-size:.62rem;}
-.estratos-tabla td{padding:.45rem .6rem;font-size:.78rem;}
+.estratos-tabla th{padding:.45rem .55rem;font-size:.62rem;}
+.estratos-tabla td{padding:.4rem .55rem;font-size:.78rem;}
 
 .revista-card{padding:20px 16px;}
 .revista-card h3{font-size:1.4rem;}
 
-.cotizador{padding:20px 15px;}
-.cotizador-resultado .precio{font-size:1.8rem;}
+.cotizador{padding:16px 14px;}
+.cotizador-resultado .precio{font-size:1.6rem;}
 
 .cta{padding:26px 18px;border-radius:20px;}
 .cta h2{font-size:1.6rem;}
@@ -1703,7 +1721,7 @@ footer .footer-tagline{font-size:.9rem;}
 }
 
 @media(max-width:400px){
-body{font-size:14px;line-height:1.05;}
+body{font-size:14px;line-height:1;}
 
 nav{padding:6px 10px;}
 .logo-img{height:52px;}
@@ -1725,12 +1743,12 @@ section{padding:16px 12px;}
 .convocatoria-hero h3{font-size:1.3rem;}
 .convocatoria-hero .conv-lema{font-size:.88rem;}
 
-.conv-block h3{font-size:1.2rem;}
-.conv-block h4{font-size:1rem;}
+.conv-block h3{font-size:1.15rem;}
+.conv-block h4{font-size:.98rem;}
 
-.conv-paso{padding:11px 12px;gap:10px;}
-.conv-paso .paso-num{min-width:30px;height:30px;font-size:.8rem;}
-.conv-paso .paso-content h4{font-size:1rem;}
+.conv-paso{padding:10px 11px;gap:9px;}
+.conv-paso .paso-num{min-width:28px;height:28px;font-size:.78rem;}
+.conv-paso .paso-content h4{font-size:.95rem;}
 
 .tamanos-tabla th{font-size:.58rem;padding:.4rem .4rem;}
 .tamanos-tabla td{font-size:.72rem;padding:.4rem .4rem;}
@@ -1745,7 +1763,7 @@ section{padding:16px 12px;}
 
 .revista-card h3{font-size:1.25rem;}
 
-.cotizador-resultado .precio{font-size:1.6rem;}
+.cotizador-resultado .precio{font-size:1.5rem;}
 
 .cta h2{font-size:1.4rem;}
 
@@ -1767,7 +1785,7 @@ body{font-size:13.5px;line-height:1;}
 .hero-image{height:170px;}
 .title h2{font-size:1.4rem;}
 .convocatoria-hero h3{font-size:1.2rem;}
-.conv-block h3{font-size:1.1rem;}
+.conv-block h3{font-size:1.05rem;}
 }
 
 @media(max-width:900px) and (orientation:landscape){
@@ -1798,7 +1816,7 @@ section{padding:20px 0;}
 <li><a href="#proceso">Proceso</a></li>
 <li><a href="#inclusion">Inclusión</a></li>
 <li><a href="#cotizador">Cotiza</a></li>
-<li><a href="#revistas">Revistas</a></li>
+<li><a href="#revistas">Plataformas</a></li>
 <li><a href="#convocatoria">Convocatorias</a></li>
 <li><a href="#contacto">Contacto</a></li>
 </ul>
@@ -2043,10 +2061,10 @@ El valor mostrado es una estimación para un libro de 100 páginas en formato co
 </div>
 </section>
 
-<!-- REVISTAS -->
+<!-- PLATAFORMAS (antes Revistas) -->
 <section id="revistas" class="fade">
 <div class="title">
-<h2>Nuestras revistas</h2>
+<h2>Nuestras plataformas</h2>
 <p>La Fundación Artes Multicap también publica revistas digitales de arte, cultura y creación juvenil con alcance internacional.</p>
 </div>
 <div class="revistas-grid">
@@ -2094,6 +2112,12 @@ El valor mostrado es una estimación para un libro de 100 páginas en formato co
 <p class="conv-lema">Una obra. Un ganador. Un libro para el mundo.</p>
 <p><em>Una historia. Dos idiomas. Una oportunidad para publicar y llevar tu voz más allá de las fronteras.</em></p>
 </div>
+
+<!-- GRID CONVOCATORIA EN DOS COLUMNAS -->
+<div class="conv-grid">
+
+<!-- COLUMNA 1 -->
+<div class="conv-col">
 
 <div class="conv-block">
 <h3>¿Qué es "Latinoamérica Escribe"?</h3>
@@ -2153,6 +2177,49 @@ El valor mostrado es una estimación para un libro de 100 páginas en formato co
 <li>Seudónimo obligatorio para preservar la imparcialidad del jurado</li>
 </ul>
 </div>
+
+<div class="conv-block">
+<h3>Valor referencial del premio</h3>
+<p>El Plan Premium Global otorgado a la obra ganadora representa una inversión editorial estimada de <strong>$4.100.000 COP</strong> (aproximadamente €950 EUR, según la tasa de cambio vigente).</p>
+<p>Este valor es referencial y corresponde al conjunto de servicios editoriales que recibe gratuitamente la persona ganadora. No constituye un valor que deba ser pagado por el participante ni una obligación de compra de servicios editoriales.</p>
+<p>El ganador <strong>no recibe este valor en dinero</strong>. Recibe gratuitamente los servicios editoriales descritos en las bases, más el 50% de las regalías netas por ventas.</p>
+<p>El alcance concreto del premio será el establecido en las bases y posteriormente formalizado mediante el correspondiente <strong>Acuerdo Editorial</strong> con el ganador.</p>
+</div>
+
+<div class="conv-block">
+<h3>Lo que conservas como autor</h3>
+<p><strong>TÚ SIGUES SIENDO EL DUEÑO DE TU OBRA.</strong></p>
+<p>El contrato de edición no transfiere en ningún momento el derecho de autor, conforme al <strong>artículo 119 de la Ley 23 de 1982</strong>: «Por el solo contrato de edición no se transfiere en ningún momento el derecho de autor». Esto significa que conservas todos tus derechos morales y patrimoniales. La Fundación solo recibe una autorización temporal para publicar tu obra, no la propiedad de ella.</p>
+<p>Además, en caso de cualquier duda o conflicto sobre la interpretación de las cláusulas, se aplicará el principio <strong>«in dubio pro auctore»</strong>, que ordena interpretar siempre a favor del autor.</p>
+</div>
+
+<div class="conv-block">
+<h3>Cronograma</h3>
+<ul class="conv-cronograma">
+<li><span class="etapa">Lanzamiento de la convocatoria</span><span class="fecha">25 de septiembre de 2026</span></li>
+<li><span class="etapa">Recepción de obras</span><span class="fecha">25 sep — 26 oct 2026</span></li>
+<li><span class="etapa">Verificación de requisitos formales</span><span class="fecha">27 oct — 5 nov 2026</span></li>
+<li><span class="etapa">Evaluación del jurado</span><span class="fecha">6 — 20 nov 2026</span></li>
+<li><span class="etapa">Anuncio del ganador</span><span class="fecha">27 de noviembre de 2026</span></li>
+<li><span class="etapa">Firma del acuerdo editorial</span><span class="fecha">30 nov — 10 dic 2026</span></li>
+<li><span class="etapa">Proceso editorial y traducción</span><span class="fecha">Dic 2026 — Ene 2027</span></li>
+<li><span class="etapa">Publicación oficial del libro</span><span class="fecha">Enero de 2027</span></li>
+</ul>
+<div class="conv-aviso">
+<strong>Nota de transparencia:</strong> El proceso editorial bilingüe completo (corrección, diseño, traducción, ISBN y publicación en múltiples formatos) requiere entre 3 y 4 meses por obra para garantizar la calidad que un libro publicado merece. Preferimos tomarnos el tiempo necesario para entregar un producto editorial impecable antes que apresurar una publicación por cumplir una fecha.
+</div>
+</div>
+
+<div class="conv-block">
+<h3>Compromiso del ganador</h3>
+<p>Una vez seleccionado el ganador, la organización le solicitará los documentos necesarios para el proceso editorial. El ganador tendrá un plazo de <strong>3 días calendario</strong> para entregar la documentación solicitada. Si no cumple con el plazo, será descalificado y se seleccionará al siguiente participante en orden de mérito.</p>
+</div>
+
+</div>
+<!-- FIN COLUMNA 1 -->
+
+<!-- COLUMNA 2 -->
+<div class="conv-col">
 
 <div class="conv-block">
 <h3>El gran premio: Plan Premium Global</h3>
@@ -2223,47 +2290,14 @@ El valor mostrado es una estimación para un libro de 100 páginas en formato co
 <div class="conv-premio-item">
 <h4>Regalías por ventas</h4>
 <ul class="conv-list">
-<li><strong>30% de las regalías netas</strong> generadas por las ventas de la obra </li>
+<li><strong>50% de las regalías netas</strong> generadas por las ventas de la obra</li>
 <li>Reporte semestral detallado de ventas por formato y territorio</li>
-
 </ul>
 </div>
 
 <div class="conv-premio-item">
 <h4>Diploma digital</h4>
 <p>Diploma digital oficial de ganador con el nombre del autor y la obra premiada.</p>
-</div>
-</div>
-
-<div class="conv-block">
-<h3>Valor referencial del premio</h3>
-<p>El Plan Premium Global otorgado a la obra ganadora representa una inversión editorial estimada de <strong>$4.100.000 COP</strong> (aproximadamente €950 EUR, según la tasa de cambio vigente).</p>
-<p>Este valor es referencial y corresponde al conjunto de servicios editoriales que recibe gratuitamente la persona ganadora. No constituye un valor que deba ser pagado por el participante ni una obligación de compra de servicios editoriales.</p>
-<p>El ganador <strong>no recibe este valor en dinero</strong>. Recibe gratuitamente los servicios editoriales descritos en las bases, más el 30% de las regalías netas por ventas.</p>
-<p>El alcance concreto del premio será el establecido en las bases y posteriormente formalizado mediante el correspondiente <strong>Acuerdo Editorial</strong> con el ganador.</p>
-</div>
-
-<div class="conv-block">
-<h3>Lo que conservas como autor</h3>
-<p><strong>TÚ SIGUES SIENDO EL DUEÑO DE TU OBRA.</strong></p>
-<p>El contrato de edición no transfiere en ningún momento el derecho de autor, conforme al <strong>artículo 119 de la Ley 23 de 1982</strong>: «Por el solo contrato de edición no se transfiere en ningún momento el derecho de autor». Esto significa que conservas todos tus derechos morales y patrimoniales. La Fundación solo recibe una autorización temporal para publicar tu obra, no la propiedad de ella.</p>
-<p>Además, en caso de cualquier duda o conflicto sobre la interpretación de las cláusulas, se aplicará el principio <strong>«in dubio pro auctore»</strong>, que ordena interpretar siempre a favor del autor.</p>
-</div>
-
-<div class="conv-block">
-<h3>Cronograma</h3>
-<ul class="conv-cronograma">
-<li><span class="etapa">Lanzamiento de la convocatoria</span><span class="fecha">25 de septiembre de 2026</span></li>
-<li><span class="etapa">Recepción de obras</span><span class="fecha">25 sep — 26 oct 2026</span></li>
-<li><span class="etapa">Verificación de requisitos formales</span><span class="fecha">27 oct — 5 nov 2026</span></li>
-<li><span class="etapa">Evaluación del jurado</span><span class="fecha">6 — 20 nov 2026</span></li>
-<li><span class="etapa">Anuncio del ganador</span><span class="fecha">27 de noviembre de 2026</span></li>
-<li><span class="etapa">Firma del acuerdo editorial</span><span class="fecha">30 nov — 10 dic 2026</span></li>
-<li><span class="etapa">Proceso editorial y traducción</span><span class="fecha">Dic 2026 — Ene 2027</span></li>
-<li><span class="etapa">Publicación oficial del libro</span><span class="fecha">Enero de 2027</span></li>
-</ul>
-<div class="conv-aviso">
-<strong>Nota de transparencia:</strong> El proceso editorial bilingüe completo (corrección, diseño, traducción, ISBN y publicación en múltiples formatos) requiere entre 3 y 4 meses por obra para garantizar la calidad que un libro publicado merece. Preferimos tomarnos el tiempo necesario para entregar un producto editorial impecable antes que apresurar una publicación por cumplir una fecha.
 </div>
 </div>
 
@@ -2285,8 +2319,8 @@ El valor mostrado es una estimación para un libro de 100 páginas en formato co
 
 <div class="conv-archivo">
 <span class="archivo-tag">Archivo 1</span>
-<strong style="color:var(--gold-bright);font-size:.88rem;">Manuscrito</strong>
-<ul class="conv-list" style="margin-top:.5rem;">
+<strong style="color:var(--gold-bright);font-size:.85rem;">Manuscrito</strong>
+<ul class="conv-list" style="margin-top:.4rem;">
 <li>Formato: Word (.docx) únicamente</li>
 <li>Bajo seudónimo, sin datos personales</li>
 <li>Tamaño carta, márgenes de 2,5 cm por los cuatro lados</li>
@@ -2295,10 +2329,10 @@ El valor mostrado es una estimación para un libro de 100 páginas en formato co
 <span class="archivo-nombre">MANUSCRITO_SEUDONIMO_TITULO.docx</span>
 </div>
 
-<div class="conv-archivo" style="margin-top:.7rem;">
+<div class="conv-archivo" style="margin-top:.5rem;">
 <span class="archivo-tag">Archivo 2</span>
-<strong style="color:var(--gold-bright);font-size:.88rem;">Presentación</strong>
-<ul class="conv-list" style="margin-top:.5rem;">
+<strong style="color:var(--gold-bright);font-size:.85rem;">Presentación</strong>
+<ul class="conv-list" style="margin-top:.4rem;">
 <li>Formato: Word (.docx) únicamente</li>
 <li>Con tus datos personales completos</li>
 </ul>
@@ -2322,10 +2356,11 @@ El valor mostrado es una estimación para un libro de 100 páginas en formato co
 </div>
 </div>
 
-<div class="conv-block">
-<h3>Compromiso del ganador</h3>
-<p>Una vez seleccionado el ganador, la organización le solicitará los documentos necesarios para el proceso editorial. El ganador tendrá un plazo de <strong>3 días calendario</strong> para entregar la documentación solicitada. Si no cumple con el plazo, será descalificado y se seleccionará al siguiente participante en orden de mérito.</p>
 </div>
+<!-- FIN COLUMNA 2 -->
+
+</div>
+<!-- FIN GRID CONVOCATORIA -->
 
 <div class="conv-cta">
 <a href="https://wa.me/573113555949?text=Hola%2C%20quiero%20participar%20en%20el%20concurso%20Latinoam%C3%A9rica%20Escribe" class="btn primary" target="_blank">Participar por WhatsApp</a>
@@ -2358,9 +2393,9 @@ El valor mostrado es una estimación para un libro de 100 páginas en formato co
 </a>
 </div>
   <div class="cta-info">
-<p>📧 <a href="mailto:artesmulticap2024@gmail.com">artesmulticap2024@gmail.com</a></p>
-<p>📱 WhatsApp: <a href="https://wa.me/573113555949" target="_blank">311 355 5949</a></p>
-<p>🌎 Colombia</p>
+<p><a href="mailto:artesmulticap2024@gmail.com">artesmulticap2024@gmail.com</a></p>
+<p>WhatsApp: <a href="https://wa.me/573113555949" target="_blank">311 355 5949</a></p>
+<p>Colombia</p>
 </div>
 
 <div class="buttons" style="justify-content:center;margin-top:20px;">
@@ -2384,8 +2419,6 @@ El valor mostrado es una estimación para un libro de 100 páginas en formato co
 
 <script>
 // Animación fade — CON FIX para secciones altas (convocatoria)
-// threshold: 0 → dispara con solo 1px visible
-// rootMargin: dispara un poco antes de que entre al viewport
 const observer=new IntersectionObserver((entries)=>{
 entries.forEach((entry)=>{
 if(entry.isIntersecting){
@@ -2396,7 +2429,6 @@ observer.unobserve(entry.target);
 },{threshold:0, rootMargin:"0px 0px -40px 0px"});
 document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
 
-// Si la página carga con un hash (#convocatoria), mostrar esa sección de inmediato
 window.addEventListener("load",function(){
 if(location.hash){
 const target=document.querySelector(location.hash);
