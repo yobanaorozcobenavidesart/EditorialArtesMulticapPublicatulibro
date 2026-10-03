@@ -19,7 +19,7 @@
 --glass:rgba(255,255,255,.08);
 --gold:#e7c36b;
 --gold-bright:#ffd98c;
---blue:#6aa6ff;
+--blue:#66a6ff;
 --text:#f4f4f4;
 --muted:#b9c1d9;
 --radius:22px;
@@ -38,1495 +38,483 @@ font-size:15px;
 -webkit-font-smoothing:antialiased;
 }
 
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;scroll-padding-top:170px;}
 img{max-width:100%;display:block;}
 
-/* ============ BARRA DE IDIOMAS ============ */
 #lang-bar{
-position:fixed;
-top:0;left:0;right:0;
-z-index:1100;
-background:#000;
-border-bottom:2px solid var(--gold);
-padding:8px 10px;
-display:flex;
-justify-content:center;
-gap:14px;
+position:fixed;top:0;left:0;right:0;z-index:1100;
+background:#000;border-bottom:2px solid var(--gold);
+padding:8px 10px;display:flex;justify-content:center;gap:14px;
 box-shadow:0 2px 20px rgba(231,195,107,.35);
 }
-
 #lang-bar button{
-background:transparent;
-border:1px solid rgba(231,195,107,.4);
-border-radius:8px;
-color:var(--gold-bright);
-cursor:pointer;
-padding:5px 10px;
-display:flex;
-align-items:center;
-gap:6px;
-font-family:'Inter',sans-serif;
-font-size:.72rem;
-font-weight:600;
-letter-spacing:.5px;
-transition:all .3s ease;
-line-height:1;
-text-transform:uppercase;
+background:transparent;border:1px solid rgba(231,195,107,.4);
+border-radius:8px;color:var(--gold-bright);cursor:pointer;
+padding:5px 10px;display:flex;align-items:center;gap:6px;
+font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;
+letter-spacing:.5px;transition:all .3s ease;line-height:1;text-transform:uppercase;
 }
 #lang-bar button:hover{
-background:rgba(231,195,107,.15);
-border-color:var(--gold-bright);
-box-shadow:0 0 15px rgba(231,195,107,.5);
-transform:translateY(-1px);
+background:rgba(231,195,107,.15);border-color:var(--gold-bright);
+box-shadow:0 0 15px rgba(231,195,107,.5);transform:translateY(-1px);
 }
 #lang-bar button.active{
 background:linear-gradient(135deg,var(--gold),#b8941f);
-color:#111;
-border-color:var(--gold-bright);
+color:#111;border-color:var(--gold-bright);
 box-shadow:0 0 20px rgba(231,195,107,.7);
 }
-#lang-bar img{
-width:22px;height:16px;
-border-radius:3px;
-border:1px solid rgba(231,195,107,.4);
-object-fit:cover;
-}
+#lang-bar img{width:22px;height:16px;border-radius:3px;border:1px solid rgba(231,195,107,.4);object-fit:cover;}
 #lang-bar button.active img{border-color:#111;}
 
-/* ============ HEADER ============ */
 header{
-position:fixed;
-top:44px;
-width:100%;
-backdrop-filter:blur(20px);
-background:rgba(0,0,0,.85);
-border-bottom:1px solid rgba(231,195,107,.15);
-z-index:1000;
-box-shadow:0 4px 30px rgba(0,0,0,.6);
+position:fixed;top:44px;width:100%;backdrop-filter:blur(20px);
+background:rgba(0,0,0,.85);border-bottom:1px solid rgba(231,195,107,.15);
+z-index:1000;box-shadow:0 4px 30px rgba(0,0,0,.6);
 }
-
-nav{
-max-width:1250px;
-margin:auto;
-padding:10px 22px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:18px;
-}
-
-.logo-wrap{
-display:flex;
-align-items:center;
-gap:10px;
-flex-shrink:0;
-position:relative;
-}
-
+nav{max-width:1250px;margin:auto;padding:10px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;}
+.logo-wrap{display:flex;align-items:center;gap:10px;flex-shrink:0;position:relative;}
 .logo-wrap::before{
-content:'';
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-width:120%;
-height:120%;
+content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+width:120%;height:120%;
 background:radial-gradient(ellipse,rgba(231,195,107,.25) 0%,transparent 70%);
-pointer-events:none;
-z-index:-1;
-filter:blur(20px);
+pointer-events:none;z-index:-1;filter:blur(20px);
 }
-
 .logo-img{
-height:90px;
-width:auto;
-filter:
-  brightness(1.35)
-  contrast(1.15)
-  saturate(1.4)
+height:90px;width:auto;
+filter:brightness(1.35) contrast(1.15) saturate(1.4)
   drop-shadow(0 0 15px rgba(231,195,107,.8))
   drop-shadow(0 0 35px rgba(231,195,107,.5))
   drop-shadow(0 0 60px rgba(231,195,107,.25));
 transition:filter .4s, transform .4s;
 }
-
 .logo-img:hover{
-filter:
-  brightness(1.5)
-  contrast(1.2)
-  saturate(1.5)
+filter:brightness(1.5) contrast(1.2) saturate(1.5)
   drop-shadow(0 0 20px rgba(231,195,107,1))
   drop-shadow(0 0 45px rgba(231,195,107,.8))
   drop-shadow(0 0 80px rgba(231,195,107,.5));
 transform:scale(1.04);
 }
-
-nav ul{
-display:flex;
-gap:10px;
-list-style:none;
-align-items:center;
-flex-wrap:wrap;
-justify-content:flex-end;
-}
-
+nav ul{display:flex;gap:10px;list-style:none;align-items:center;flex-wrap:wrap;justify-content:flex-end;}
 nav ul li a{
-color:var(--gold-bright);
-text-decoration:none;
-font-size:.78rem;
-font-weight:600;
-letter-spacing:.5px;
-padding:8px 15px;
-border-radius:50px;
-border:1px solid rgba(231,195,107,.4);
-background:rgba(231,195,107,.05);
-transition:all .4s ease;
-display:inline-block;
-position:relative;
-line-height:1;
-white-space:nowrap;
-filter:
-  brightness(1.2)
-  drop-shadow(0 0 6px rgba(231,195,107,.6))
-  drop-shadow(0 0 12px rgba(231,195,107,.35));
-text-shadow:
-  0 0 6px rgba(231,195,107,.5),
-  0 0 12px rgba(231,195,107,.3);
+color:var(--gold-bright);text-decoration:none;font-size:.78rem;font-weight:600;
+letter-spacing:.5px;padding:8px 15px;border-radius:50px;
+border:1px solid rgba(231,195,107,.4);background:rgba(231,195,107,.05);
+transition:all .4s ease;display:inline-block;position:relative;line-height:1;white-space:nowrap;
+filter:brightness(1.2) drop-shadow(0 0 6px rgba(231,195,107,.6)) drop-shadow(0 0 12px rgba(231,195,107,.35));
+text-shadow:0 0 6px rgba(231,195,107,.5),0 0 12px rgba(231,195,107,.3);
 }
-
 nav ul li a:hover{
-color:#fff4d8;
-border-color:var(--gold-bright);
-background:rgba(231,195,107,.18);
-transform:translateY(-2px);
-filter:
-  brightness(1.5)
-  drop-shadow(0 0 10px rgba(231,195,107,1))
-  drop-shadow(0 0 22px rgba(231,195,107,.8))
-  drop-shadow(0 0 40px rgba(231,195,107,.5));
-text-shadow:
-  0 0 10px rgba(255,217,140,1),
-  0 0 22px rgba(231,195,107,.8),
-  0 0 40px rgba(231,195,107,.5);
-box-shadow:
-  0 0 20px rgba(231,195,107,.5),
-  inset 0 0 15px rgba(231,195,107,.15);
+color:#fff4d8;border-color:var(--gold-bright);background:rgba(231,195,107,.18);transform:translateY(-2px);
+filter:brightness(1.5) drop-shadow(0 0 10px rgba(231,195,107,1))
+  drop-shadow(0 0 22px rgba(231,195,107,.8)) drop-shadow(0 0 40px rgba(231,195,107,.5));
+text-shadow:0 0 10px rgba(255,217,140,1),0 0 22px rgba(231,195,107,.8),0 0 40px rgba(231,195,107,.5);
+box-shadow:0 0 20px rgba(231,195,107,.5),inset 0 0 15px rgba(231,195,107,.15);
 }
 
-/* ============ HERO ============ */
-.hero{
-min-height:85vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:200px 20px 30px;
-position:relative;
-overflow:hidden;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-width:700px;height:700px;
-background:radial-gradient(circle,var(--blue),transparent 70%);
-opacity:.12;
-top:-150px;right:-150px;
-pointer-events:none;
-}
-.hero::after{
-content:"";
-position:absolute;
-width:600px;height:600px;
-background:radial-gradient(circle,var(--gold),transparent 70%);
-opacity:.08;
-bottom:-200px;left:-200px;
-pointer-events:none;
-}
-
-.hero-content{
-max-width:1200px;width:100%;
-display:grid;
-grid-template-columns:1.3fr 1fr;
-gap:50px;
-align-items:center;
-position:relative;
-z-index:2;
-}
-
+.hero{min-height:85vh;display:flex;align-items:center;justify-content:center;padding:250px 20px 40px;position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;width:700px;height:700px;background:radial-gradient(circle,var(--blue),transparent 70%);opacity:.12;top:-150px;right:-150px;pointer-events:none;}
+.hero::after{content:"";position:absolute;width:600px;height:600px;background:radial-gradient(circle,var(--gold),transparent 70%);opacity:.08;bottom:-200px;left:-200px;pointer-events:none;}
+.hero-content{max-width:1200px;width:100%;display:grid;grid-template-columns:1.3fr 1fr;gap:50px;align-items:center;position:relative;z-index:2;}
 .hero h1{
 font-family:"Cormorant Garamond",serif;
-font-size:3.4rem;
-line-height:1;
-margin-bottom:12px;
+font-size:2.8rem;
+line-height:1.1;
+margin-bottom:22px;
+color:var(--text);
+text-shadow:0 0 30px rgba(231,195,107,.25);
+font-weight:600;
+letter-spacing:.2px;
 }
 .hero p{
 color:var(--muted);
 font-size:1rem;
 margin-bottom:20px;
-line-height:1.05;
+line-height:1.7;
+text-align:justify;
 }
 
 .buttons{display:flex;gap:12px;flex-wrap:wrap;}
-
-.btn{
-padding:12px 24px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
-display:inline-block;
-font-size:.88rem;
-border:none;
-cursor:pointer;
-font-family:'Inter',sans-serif;
-line-height:1;
-text-align:center;
-}
-
-.primary{
-background:var(--gold);
-color:#111;
-box-shadow:0 0 20px rgba(231,195,107,.5),0 0 40px rgba(231,195,107,.25);
-}
-.secondary{
-border:1px solid rgba(255,255,255,.18);
-color:white;
-background:transparent;
-}
-.primary:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(231,195,107,.7),0 0 60px rgba(231,195,107,.5),0 0 100px rgba(231,195,107,.3);
-}
+.btn{padding:12px 24px;border-radius:50px;text-decoration:none;font-weight:600;transition:.3s;display:inline-block;font-size:.88rem;border:none;cursor:pointer;font-family:'Inter',sans-serif;line-height:1;text-align:center;}
+.primary{background:var(--gold);color:#111;box-shadow:0 0 20px rgba(231,195,107,.5),0 0 40px rgba(231,195,107,.25);}
+.secondary{border:1px solid rgba(255,255,255,.18);color:white;background:transparent;}
+.primary:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(231,195,107,.7),0 0 60px rgba(231,195,107,.5),0 0 100px rgba(231,195,107,.3);}
 .secondary:hover{background:white;color:#111;}
-
-.hero-image{
-height:320px;
-border-radius:var(--radius);
-overflow:hidden;
-box-shadow:0 25px 60px rgba(0,0,0,.5),0 0 40px rgba(231,195,107,.15);
-border:1px solid rgba(231,195,107,.2);
-}
+.hero-image{height:320px;border-radius:var(--radius);overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.5),0 0 40px rgba(231,195,107,.15);border:1px solid rgba(231,195,107,.2);}
 .hero-image img{width:100%;height:100%;object-fit:cover;}
 
-/* ============ SECCIONES ============ */
-section{
-max-width:1200px;
-width:100%;
-margin:auto;
-padding:30px 20px;
-line-height:1.05;
-}
-
+section{max-width:1200px;width:100%;margin:auto;padding:30px 20px;line-height:1.05;}
 .title{text-align:center;margin-bottom:20px;line-height:1;}
-.title h2{
-font-family:"Cormorant Garamond",serif;
-font-size:2.4rem;
-margin-bottom:6px;
-color:var(--gold);
-line-height:1;
-text-shadow:0 0 20px rgba(231,195,107,.5),0 0 40px rgba(231,195,107,.25);
-}
-.title p{
-color:var(--muted);
-max-width:700px;
-margin:auto;
-font-size:.95rem;
-line-height:1.05;
-}
+.title h2{font-family:"Cormorant Garamond",serif;font-size:2.4rem;margin-bottom:6px;color:var(--gold);line-height:1;text-shadow:0 0 20px rgba(231,195,107,.5),0 0 40px rgba(231,195,107,.25);}
+.title p{color:var(--muted);max-width:700px;margin:auto;font-size:.95rem;line-height:1.05;}
 
-.servicios-imagen{
-width:100%;
-max-width:1200px;
-margin:0 auto;
-border-radius:var(--radius);
-overflow:hidden;
-border:1.5px solid rgba(231,195,107,.25);
-box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 60px rgba(231,195,107,.15),inset 0 0 40px rgba(231,195,107,.05);
-transition:all .5s ease;
-position:relative;
-}
-.servicios-imagen::before{
-content:'';
-position:absolute;
-top:0;left:0;right:0;
-height:2px;
-background:linear-gradient(90deg,transparent,var(--gold),transparent);
-opacity:.7;
-z-index:2;
-box-shadow:0 0 20px rgba(231,195,107,.6);
-}
-.servicios-imagen:hover{
-border-color:rgba(231,195,107,.6);
-box-shadow:0 25px 80px rgba(0,0,0,.6),0 0 100px rgba(231,195,107,.3),inset 0 0 50px rgba(231,195,107,.08);
-transform:translateY(-3px);
-}
+.servicios-imagen{width:100%;max-width:1200px;margin:0 auto;border-radius:var(--radius);overflow:hidden;border:1.5px solid rgba(231,195,107,.25);box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 60px rgba(231,195,107,.15),inset 0 0 40px rgba(231,195,107,.05);transition:all .5s ease;position:relative;}
+.servicios-imagen::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.7;z-index:2;box-shadow:0 0 20px rgba(231,195,107,.6);}
+.servicios-imagen:hover{border-color:rgba(231,195,107,.6);box-shadow:0 25px 80px rgba(0,0,0,.6),0 0 100px rgba(231,195,107,.3),inset 0 0 50px rgba(231,195,107,.08);transform:translateY(-3px);}
 .servicios-imagen img{width:100%;height:auto;display:block;}
 
-/* ============ CONVOCATORIA ============ */
-.convocatoria-hero{
-background:linear-gradient(160deg,rgba(231,195,107,.08),rgba(255,255,255,.03));
-border:1.5px solid rgba(231,195,107,.35);
-border-radius:var(--radius);
-padding:30px 26px;
-text-align:center;
-margin-bottom:18px;
-position:relative;
-overflow:hidden;
-}
-.convocatoria-hero::before{
-content:'';
-position:absolute;
-top:0;left:0;right:0;
-height:2px;
-background:linear-gradient(90deg,transparent,var(--gold),transparent);
-opacity:.7;
-box-shadow:0 0 20px rgba(231,195,107,.6);
-}
-.convocatoria-hero .conv-badge{
-display:inline-block;
-font-size:.68rem;
-font-weight:600;
-letter-spacing:3px;
-text-transform:uppercase;
-color:var(--gold);
-border:1px solid rgba(231,195,107,.45);
-padding:.35rem 1rem;
-border-radius:50px;
-margin-bottom:.9rem;
-line-height:1;
-background:rgba(231,195,107,.05);
-text-shadow:0 0 10px rgba(231,195,107,.5);
-}
-.convocatoria-hero h3{
-font-family:"Cormorant Garamond",serif;
-font-size:2.2rem;
-color:var(--gold);
-line-height:1;
-margin-bottom:8px;
-text-shadow:0 0 20px rgba(231,195,107,.5);
-}
-.convocatoria-hero .conv-lema{
-font-family:"Cormorant Garamond",serif;
-font-style:italic;
-font-size:1.15rem;
-color:var(--gold-bright);
-letter-spacing:.5px;
-margin-bottom:12px;
-line-height:1.05;
-text-shadow:0 0 12px rgba(231,195,107,.4);
-}
-.convocatoria-hero p{
-color:var(--muted);
-font-size:.95rem;
-max-width:780px;
-margin:0 auto 8px;
-line-height:1.05;
-}
+.convocatoria-hero{background:linear-gradient(160deg,rgba(231,195,107,.08),rgba(255,255,255,.03));border:1.5px solid rgba(231,195,107,.35);border-radius:var(--radius);padding:30px 26px;text-align:center;margin-bottom:18px;position:relative;overflow:hidden;}
+.convocatoria-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.7;box-shadow:0 0 20px rgba(231,195,107,.6);}
+.convocatoria-hero .conv-badge{display:inline-block;font-size:.68rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(231,195,107,.45);padding:.35rem 1rem;border-radius:50px;margin-bottom:.9rem;line-height:1;background:rgba(231,195,107,.05);text-shadow:0 0 10px rgba(231,195,107,.5);}
+.convocatoria-hero h3{font-family:"Cormorant Garamond",serif;font-size:2.2rem;color:var(--gold);line-height:1;margin-bottom:8px;text-shadow:0 0 20px rgba(231,195,107,.5);}
+.convocatoria-hero .conv-lema{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.15rem;color:var(--gold-bright);letter-spacing:.5px;margin-bottom:12px;line-height:1.05;text-shadow:0 0 12px rgba(231,195,107,.4);}
+.convocatoria-hero p{color:var(--muted);font-size:.95rem;max-width:780px;margin:0 auto 8px;line-height:1.05;}
 .convocatoria-hero p:last-child{margin-bottom:0;}
 .convocatoria-hero p strong{color:var(--gold-bright);font-weight:600;}
 
-.conv-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:16px;
-margin-bottom:16px;
-align-items:start;
-}
+.conv-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;align-items:start;}
 .conv-col{display:flex;flex-direction:column;gap:16px;}
-.conv-block{
-background:var(--card);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.08);
-border-radius:var(--radius);
-padding:20px 18px;
-position:relative;
-overflow:hidden;
-line-height:1.05;
-}
-.conv-block::before{
-content:'';
-position:absolute;
-top:0;left:0;right:0;
-height:2px;
-background:linear-gradient(90deg,transparent,var(--gold),transparent);
-opacity:.55;
-}
-.conv-block h3{
-font-family:"Cormorant Garamond",serif;
-font-size:1.4rem;
-color:var(--gold);
-margin-bottom:10px;
-line-height:1;
-text-shadow:0 0 15px rgba(231,195,107,.35);
-padding-bottom:.4rem;
-border-bottom:1px solid rgba(231,195,107,.2);
-}
-.conv-block h3::before{
-content:'✦ ';
-color:var(--gold-bright);
-font-size:.9rem;
-text-shadow:0 0 12px rgba(231,195,107,.8);
-}
-.conv-block h4{
-font-family:"Cormorant Garamond",serif;
-font-size:1.05rem;
-color:var(--gold-bright);
-margin:.7rem 0 .4rem;
-line-height:1;
-text-shadow:0 0 10px rgba(231,195,107,.4);
-}
-.conv-block p{
-color:var(--muted);
-font-size:.86rem;
-line-height:1.05;
-margin-bottom:.5rem;
-}
+.conv-block{background:var(--card);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:20px 18px;position:relative;overflow:hidden;line-height:1.05;}
+.conv-block::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.55;}
+.conv-block h3{font-family:"Cormorant Garamond",serif;font-size:1.4rem;color:var(--gold);margin-bottom:10px;line-height:1;text-shadow:0 0 15px rgba(231,195,107,.35);padding-bottom:.4rem;border-bottom:1px solid rgba(231,195,107,.2);}
+.conv-block h3::before{content:'✦ ';color:var(--gold-bright);font-size:.9rem;text-shadow:0 0 12px rgba(231,195,107,.8);}
+.conv-block h4{font-family:"Cormorant Garamond",serif;font-size:1.05rem;color:var(--gold-bright);margin:.7rem 0 .4rem;line-height:1;text-shadow:0 0 10px rgba(231,195,107,.4);}
+.conv-block p{color:var(--muted);font-size:.86rem;line-height:1.05;margin-bottom:.5rem;}
 .conv-block p:last-child{margin-bottom:0;}
 .conv-block p strong{color:var(--gold-bright);font-weight:600;}
 
 .conv-list{list-style:none;padding:0;margin:0 0 .4rem;}
-.conv-list li{
-padding:.25rem 0;
-font-size:.84rem;
-color:var(--text);
-display:flex;
-gap:.5rem;
-align-items:flex-start;
-border-bottom:1px solid rgba(255,255,255,.05);
-line-height:1.05;
-}
+.conv-list li{padding:.25rem 0;font-size:.84rem;color:var(--text);display:flex;gap:.5rem;align-items:flex-start;border-bottom:1px solid rgba(255,255,255,.05);line-height:1.05;}
 .conv-list li:last-child{border-bottom:none;}
-.conv-list li::before{
-content:'—';
-color:var(--gold);
-flex-shrink:0;
-font-weight:700;
-}
-.conv-list.check li::before{
-content:'✓';
-color:var(--gold-bright);
-font-weight:700;
-text-shadow:0 0 8px rgba(231,195,107,.6);
-}
-.conv-list.cross li::before{
-content:'✕';
-color:#c98b8b;
-font-weight:700;
-}
+.conv-list li::before{content:'—';color:var(--gold);flex-shrink:0;font-weight:700;}
+.conv-list.check li::before{content:'✓';color:var(--gold-bright);font-weight:700;text-shadow:0 0 8px rgba(231,195,107,.6);}
+.conv-list.cross li::before{content:'✕';color:#c98b8b;font-weight:700;}
 
-.conv-premio-item{
-background:rgba(231,195,107,.05);
-border-left:2px solid var(--gold);
-border-radius:10px;
-padding:.65rem .8rem;
-margin-bottom:.5rem;
-line-height:1.05;
-}
+.conv-premio-item{background:rgba(231,195,107,.05);border-left:2px solid var(--gold);border-radius:10px;padding:.65rem .8rem;margin-bottom:.5rem;line-height:1.05;}
 .conv-premio-item:last-child{margin-bottom:0;}
 .conv-premio-item h4{margin-top:0;font-size:.98rem;color:var(--gold);}
 .conv-premio-item p{font-size:.83rem;margin-bottom:.3rem;}
 .conv-premio-item .conv-list li{font-size:.82rem;}
 
 .conv-cronograma{list-style:none;padding:0;margin:0;}
-.conv-cronograma li{
-display:grid;
-grid-template-columns:1fr auto;
-gap:10px;
-align-items:baseline;
-padding:.45rem .65rem;
-border-bottom:1px solid rgba(255,255,255,.05);
-line-height:1.05;
-font-size:.85rem;
-}
+.conv-cronograma li{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:baseline;padding:.45rem .65rem;border-bottom:1px solid rgba(255,255,255,.05);line-height:1.05;font-size:.85rem;}
 .conv-cronograma li:last-child{border-bottom:none;}
 .conv-cronograma li:nth-child(odd){background:rgba(231,195,107,.03);border-radius:8px;}
 .conv-cronograma .etapa{color:var(--text);}
-.conv-cronograma .fecha{
-color:var(--gold-bright);
-font-weight:600;
-text-align:right;
-white-space:nowrap;
-text-shadow:0 0 8px rgba(231,195,107,.4);
-}
+.conv-cronograma .fecha{color:var(--gold-bright);font-weight:600;text-align:right;white-space:nowrap;text-shadow:0 0 8px rgba(231,195,107,.4);}
 
-.conv-paso{
-display:flex;
-gap:12px;
-background:rgba(231,195,107,.04);
-border:1px solid rgba(231,195,107,.18);
-border-radius:14px;
-padding:12px 13px;
-margin-bottom:10px;
-align-items:flex-start;
-line-height:1.05;
-transition:.3s;
-}
+.conv-paso{display:flex;gap:12px;background:rgba(231,195,107,.04);border:1px solid rgba(231,195,107,.18);border-radius:14px;padding:12px 13px;margin-bottom:10px;align-items:flex-start;line-height:1.05;transition:.3s;}
 .conv-paso:last-child{margin-bottom:0;}
-.conv-paso:hover{
-border-color:rgba(231,195,107,.4);
-transform:translateY(-2px);
-box-shadow:0 8px 24px rgba(0,0,0,.35);
-}
-.conv-paso .paso-num{
-min-width:34px;height:34px;
-border-radius:50%;
-display:flex;align-items:center;justify-content:center;
-background:linear-gradient(135deg,var(--gold),#ffd98c);
-color:#111;
-font-weight:700;
-font-size:.88rem;
-flex-shrink:0;
-box-shadow:0 0 18px rgba(231,195,107,.5);
-line-height:1;
-}
+.conv-paso:hover{border-color:rgba(231,195,107,.4);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.35);}
+.conv-paso .paso-num{min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--gold),#ffd98c);color:#111;font-weight:700;font-size:.88rem;flex-shrink:0;box-shadow:0 0 18px rgba(231,195,107,.5);line-height:1;}
 .conv-paso .paso-content{flex:1;min-width:0;}
-.conv-paso .paso-content h4{
-font-family:"Cormorant Garamond",serif;
-font-size:1rem;
-color:var(--gold-bright);
-margin-bottom:.3rem;
-line-height:1;
-text-shadow:0 0 10px rgba(231,195,107,.4);
-}
-.conv-paso .paso-content p{
-font-size:.82rem;
-color:var(--muted);
-line-height:1.05;
-margin-bottom:.4rem;
-}
+.conv-paso .paso-content h4{font-family:"Cormorant Garamond",serif;font-size:1rem;color:var(--gold-bright);margin-bottom:.3rem;line-height:1;text-shadow:0 0 10px rgba(231,195,107,.4);}
+.conv-paso .paso-content p{font-size:.82rem;color:var(--muted);line-height:1.05;margin-bottom:.4rem;}
 .conv-paso .paso-content p:last-child{margin-bottom:0;}
 
-.ia-paso{
-background:rgba(231,195,107,.08);
-border:1.5px solid rgba(231,195,107,.4);
-border-radius:12px;
-padding:10px 12px;
-margin-top:.5rem;
-line-height:1.05;
-}
-.ia-paso h5{
-font-family:"Cormorant Garamond",serif;
-font-size:.95rem;
-color:var(--gold-bright);
-margin-bottom:.35rem;
-line-height:1;
-text-shadow:0 0 10px rgba(231,195,107,.4);
-display:flex;
-align-items:center;
-gap:.35rem;
-}
+.ia-paso{background:rgba(231,195,107,.08);border:1.5px solid rgba(231,195,107,.4);border-radius:12px;padding:10px 12px;margin-top:.5rem;line-height:1.05;}
+.ia-paso h5{font-family:"Cormorant Garamond",serif;font-size:.95rem;color:var(--gold-bright);margin-bottom:.35rem;line-height:1;text-shadow:0 0 10px rgba(231,195,107,.4);display:flex;align-items:center;gap:.35rem;}
 .ia-paso h5::before{content:'⚠';font-size:1rem;}
-.ia-paso p{
-font-size:.8rem;
-color:var(--text);
-line-height:1.05;
-margin-bottom:.3rem;
-}
+.ia-paso p{font-size:.8rem;color:var(--text);line-height:1.05;margin-bottom:.3rem;}
 .ia-paso p:last-child{margin-bottom:0;}
 .ia-paso strong{color:var(--gold-bright);}
 
-.conv-archivo{
-background:rgba(0,0,0,.4);
-border:1px dashed rgba(231,195,107,.35);
-border-radius:12px;
-padding:.65rem .85rem;
-margin-top:.4rem;
-line-height:1.05;
-}
-.conv-archivo .archivo-tag{
-display:inline-block;
-font-size:.62rem;
-font-weight:600;
-letter-spacing:1.5px;
-text-transform:uppercase;
-color:var(--gold);
-border:1px solid rgba(231,195,107,.4);
-padding:.15rem .55rem;
-border-radius:50px;
-margin-bottom:.35rem;
-line-height:1;
-}
-.conv-archivo .archivo-nombre{
-display:block;
-font-family:'Courier New',monospace;
-font-size:.76rem;
-color:var(--gold-bright);
-background:rgba(231,195,107,.08);
-padding:.3rem .6rem;
-border-radius:8px;
-margin-top:.4rem;
-word-break:break-all;
-line-height:1.05;
-}
+.conv-archivo{background:rgba(0,0,0,.4);border:1px dashed rgba(231,195,107,.35);border-radius:12px;padding:.65rem .85rem;margin-top:.4rem;line-height:1.05;}
+.conv-archivo .archivo-tag{display:inline-block;font-size:.62rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(231,195,107,.4);padding:.15rem .55rem;border-radius:50px;margin-bottom:.35rem;line-height:1;}
+.conv-archivo .archivo-nombre{display:block;font-family:'Courier New',monospace;font-size:.76rem;color:var(--gold-bright);background:rgba(231,195,107,.08);padding:.3rem .6rem;border-radius:8px;margin-top:.4rem;word-break:break-all;line-height:1.05;}
 
-.conv-aviso{
-background:rgba(231,195,107,.06);
-border-left:3px solid var(--gold);
-border-radius:12px;
-padding:.75rem .9rem;
-font-size:.82rem;
-color:var(--muted);
-line-height:1.05;
-margin-top:10px;
-}
+.conv-aviso{background:rgba(231,195,107,.06);border-left:3px solid var(--gold);border-radius:12px;padding:.75rem .9rem;font-size:.82rem;color:var(--muted);line-height:1.05;margin-top:10px;}
 .conv-aviso strong{color:var(--gold);text-shadow:0 0 10px rgba(231,195,107,.4);}
 
-.conv-cta{
-text-align:center;
-margin-top:20px;
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-justify-content:center;
-}
+.conv-cta{text-align:center;margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
 
-/* ============ TAMAÑOS ============ */
-.tamanos-tabla{
-width:100%;
-border-collapse:collapse;
-background:rgba(255,255,255,.02);
-border-radius:14px;
-overflow:hidden;
-border:1px solid rgba(231,195,107,.2);
-box-shadow:0 10px 40px rgba(0,0,0,.3);
-line-height:1.05;
-}
+.tamanos-tabla{width:100%;border-collapse:collapse;background:rgba(255,255,255,.02);border-radius:14px;overflow:hidden;border:1px solid rgba(231,195,107,.2);box-shadow:0 10px 40px rgba(0,0,0,.3);line-height:1.05;}
 .tamanos-tabla thead{background:linear-gradient(90deg,rgba(231,195,107,.15),rgba(231,195,107,.08));}
-.tamanos-tabla th{
-padding:.6rem .8rem;
-text-align:left;
-font-size:.7rem;
-font-weight:600;
-letter-spacing:1.5px;
-text-transform:uppercase;
-color:var(--gold-bright);
-border-bottom:1px solid rgba(231,195,107,.25);
-text-shadow:0 0 10px rgba(231,195,107,.4);
-line-height:1;
-}
-.tamanos-tabla td{
-padding:.55rem .8rem;
-font-size:.85rem;
-color:var(--text);
-border-bottom:1px solid rgba(255,255,255,.05);
-line-height:1.05;
-vertical-align:top;
-}
+.tamanos-tabla th{padding:.6rem .8rem;text-align:left;font-size:.7rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-bright);border-bottom:1px solid rgba(231,195,107,.25);text-shadow:0 0 10px rgba(231,195,107,.4);line-height:1;}
+.tamanos-tabla td{padding:.55rem .8rem;font-size:.85rem;color:var(--text);border-bottom:1px solid rgba(255,255,255,.05);line-height:1.05;vertical-align:top;}
 .tamanos-tabla tbody tr{transition:background .3s ease;}
 .tamanos-tabla tbody tr:hover{background:rgba(231,195,107,.05);}
 .tamanos-tabla tbody tr:last-child td{border-bottom:none;}
-.tamanos-tabla .tipo{
-font-family:"Cormorant Garamond",serif;
-font-size:1rem;
-font-weight:700;
-color:var(--gold);
-text-shadow:0 0 12px rgba(231,195,107,.4);
-white-space:nowrap;
-line-height:1;
-}
+.tamanos-tabla .tipo{font-family:"Cormorant Garamond",serif;font-size:1rem;font-weight:700;color:var(--gold);text-shadow:0 0 12px rgba(231,195,107,.4);white-space:nowrap;line-height:1;}
 .tamanos-tabla .aplica-si{color:var(--gold-bright);font-weight:600;}
 
-.nota-tamanos{
-background:rgba(231,195,107,.06);
-border-left:3px solid var(--gold);
-border-radius:12px;
-padding:.85rem 1rem;
-font-size:.85rem;
-color:var(--muted);
-line-height:1.05;
-margin-top:12px;
-}
+.nota-tamanos{background:rgba(231,195,107,.06);border-left:3px solid var(--gold);border-radius:12px;padding:.85rem 1rem;font-size:.85rem;color:var(--muted);line-height:1.05;margin-top:12px;}
 .nota-tamanos strong{color:var(--gold);text-shadow:0 0 10px rgba(231,195,107,.4);}
 
-/* ============ PAQUETES ============ */
-.paquetes-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-max-width:1000px;
-margin:0 auto;
-}
-.paquete-card{
-background:var(--card);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.08);
-border-radius:var(--radius);
-padding:24px 22px;
-transition:.35s;
-position:relative;
-overflow:hidden;
-display:flex;
-flex-direction:column;
-line-height:1.05;
-}
-.paquete-card::before{
-content:'';
-position:absolute;
-top:0;left:0;right:0;
-height:2px;
-background:linear-gradient(90deg,transparent,var(--gold),transparent);
-opacity:.6;
-}
-.paquete-card:hover{
-transform:translateY(-8px);
-border-color:rgba(231,195,107,.4);
-box-shadow:0 20px 50px rgba(0,0,0,.4);
-}
-.paquete-card.destacado{
-border-color:rgba(231,195,107,.5);
-background:linear-gradient(160deg,rgba(231,195,107,.08),rgba(255,255,255,.04));
-}
-.paquete-tag{
-display:inline-block;
-font-size:.66rem;
-font-weight:600;
-letter-spacing:2px;
-text-transform:uppercase;
-color:var(--gold);
-border:1px solid rgba(231,195,107,.35);
-padding:.25rem .75rem;
-border-radius:50px;
-margin-bottom:.6rem;
-align-self:flex-start;
-line-height:1;
-}
-.paquete-card h3{
-font-family:"Cormorant Garamond",serif;
-font-size:1.7rem;
-margin-bottom:.2rem;
-color:var(--gold);
-line-height:1;
-text-shadow:0 0 15px rgba(231,195,107,.35);
-}
-.paquete-ideal{
-font-size:.83rem;
-color:var(--muted);
-font-style:italic;
-margin-bottom:.8rem;
-line-height:1.05;
-}
-.paquete-card h4{
-font-size:.68rem;
-font-weight:600;
-letter-spacing:2.5px;
-text-transform:uppercase;
-color:var(--gold);
-margin-bottom:.5rem;
-line-height:1;
-}
+.paquetes-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1000px;margin:0 auto;}
+.paquete-card{background:var(--card);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:24px 22px;transition:.35s;position:relative;overflow:hidden;display:flex;flex-direction:column;line-height:1.05;}
+.paquete-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.6;}
+.paquete-card:hover{transform:translateY(-8px);border-color:rgba(231,195,107,.4);box-shadow:0 20px 50px rgba(0,0,0,.4);}
+.paquete-card.destacado{border-color:rgba(231,195,107,.5);background:linear-gradient(160deg,rgba(231,195,107,.08),rgba(255,255,255,.04));}
+.paquete-tag{display:inline-block;font-size:.66rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(231,195,107,.35);padding:.25rem .75rem;border-radius:50px;margin-bottom:.6rem;align-self:flex-start;line-height:1;}
+.paquete-card h3{font-family:"Cormorant Garamond",serif;font-size:1.7rem;margin-bottom:.2rem;color:var(--gold);line-height:1;text-shadow:0 0 15px rgba(231,195,107,.35);}
+.paquete-ideal{font-size:.83rem;color:var(--muted);font-style:italic;margin-bottom:.8rem;line-height:1.05;}
+.paquete-card h4{font-size:.68rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;line-height:1;}
 .paquete-card ul{list-style:none;padding:0;margin:0 0 .9rem;}
-.paquete-card ul li{
-padding:.28rem 0;
-font-size:.85rem;
-color:var(--text);
-display:flex;
-gap:.5rem;
-align-items:flex-start;
-border-bottom:1px solid rgba(255,255,255,.05);
-line-height:1.05;
-}
+.paquete-card ul li{padding:.28rem 0;font-size:.85rem;color:var(--text);display:flex;gap:.5rem;align-items:flex-start;border-bottom:1px solid rgba(255,255,255,.05);line-height:1.05;}
 .paquete-card ul li:last-child{border-bottom:none;}
 .paquete-card ul li::before{content:'—';color:var(--gold);flex-shrink:0;}
-.paquete-beneficio{
-background:rgba(231,195,107,.06);
-border:1px dashed rgba(231,195,107,.35);
-border-radius:12px;
-padding:.7rem .85rem;
-font-size:.8rem;
-color:var(--muted);
-line-height:1.05;
-margin-bottom:1rem;
-}
+.paquete-beneficio{background:rgba(231,195,107,.06);border:1px dashed rgba(231,195,107,.35);border-radius:12px;padding:.7rem .85rem;font-size:.8rem;color:var(--muted);line-height:1.05;margin-bottom:1rem;}
 .paquete-beneficio strong{color:var(--gold);}
 .paquete-card .btn{margin-top:auto;width:100%;text-align:center;}
 
-/* ============ COTIZADOR ============ */
-.cotizador{
-max-width:600px;
-margin:0 auto;
-background:linear-gradient(160deg,rgba(231,195,107,.08),rgba(255,255,255,.03));
-border:1.5px solid rgba(231,195,107,.35);
-border-radius:18px;
-padding:20px 18px;
-box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 60px rgba(231,195,107,.1);
-position:relative;
-overflow:hidden;
-}
-.cotizador::before{
-content:'';
-position:absolute;
-top:0;left:0;right:0;
-height:2px;
-background:linear-gradient(90deg,transparent,var(--gold),transparent);
-opacity:.7;
-box-shadow:0 0 20px rgba(231,195,107,.6);
-}
+.cotizador{max-width:600px;margin:0 auto;background:linear-gradient(160deg,rgba(231,195,107,.08),rgba(255,255,255,.03));border:1.5px solid rgba(231,195,107,.35);border-radius:18px;padding:20px 18px;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 60px rgba(231,195,107,.1);position:relative;overflow:hidden;}
+.cotizador::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.7;box-shadow:0 0 20px rgba(231,195,107,.6);}
 .cotizador-campo{margin-bottom:12px;}
-.cotizador-campo label{
-display:block;
-font-size:.72rem;
-font-weight:600;
-letter-spacing:1.2px;
-text-transform:uppercase;
-color:var(--gold);
-margin-bottom:6px;
-text-shadow:0 0 10px rgba(231,195,107,.4);
-line-height:1;
-}
-.cotizador-campo select{
-width:100%;
-padding:10px 14px;
-background:rgba(0,0,0,.6);
-border:1px solid rgba(231,195,107,.35);
-border-radius:10px;
-color:var(--text);
-font-family:'Inter',sans-serif;
-font-size:.88rem;
-cursor:pointer;
-transition:all .3s;
-appearance:none;
-background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e7c36b' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e");
-background-repeat:no-repeat;
-background-position:right 12px center;
-background-size:16px;
-padding-right:38px;
-line-height:1.05;
-}
-.cotizador-campo select:hover,
-.cotizador-campo select:focus{
-border-color:var(--gold);
-box-shadow:0 0 20px rgba(231,195,107,.3);
-outline:none;
-}
+.cotizador-campo label{display:block;font-size:.72rem;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;text-shadow:0 0 10px rgba(231,195,107,.4);line-height:1;}
+.cotizador-campo select{width:100%;padding:10px 14px;background:rgba(0,0,0,.6);border:1px solid rgba(231,195,107,.35);border-radius:10px;color:var(--text);font-family:'Inter',sans-serif;font-size:.88rem;cursor:pointer;transition:all .3s;appearance:none;background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e7c36b' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right 12px center;background-size:16px;padding-right:38px;line-height:1.05;}
+.cotizador-campo select:hover,.cotizador-campo select:focus{border-color:var(--gold);box-shadow:0 0 20px rgba(231,195,107,.3);outline:none;}
 .cotizador-campo select option{background:#111;color:var(--text);padding:10px;}
 
-.cotizador-resultado{
-background:rgba(0,0,0,.7);
-border:1px solid rgba(231,195,107,.3);
-border-radius:14px;
-padding:16px 16px;
-text-align:center;
-margin-top:14px;
-transition:all .4s ease;
-}
-.cotizador-resultado.activo{
-border-color:var(--gold);
-box-shadow:0 0 30px rgba(231,195,107,.3),inset 0 0 30px rgba(231,195,107,.05);
-}
-.cotizador-resultado .etiqueta{
-font-size:.68rem;
-font-weight:600;
-letter-spacing:1.8px;
-text-transform:uppercase;
-color:var(--muted);
-margin-bottom:.3rem;
-line-height:1;
-}
-.cotizador-resultado .precio{
-font-family:"Cormorant Garamond",serif;
-font-size:2rem;
-font-weight:700;
-color:var(--gold);
-line-height:1;
-text-shadow:0 0 25px rgba(231,195,107,.5);
-margin-bottom:.3rem;
-}
-.cotizador-resultado .detalle{
-font-size:.8rem;
-color:var(--muted);
-line-height:1.05;
-margin-bottom:.7rem;
-}
+.cotizador-resultado{background:rgba(0,0,0,.7);border:1px solid rgba(231,195,107,.3);border-radius:14px;padding:16px 16px;text-align:center;margin-top:14px;transition:all .4s ease;}
+.cotizador-resultado.activo{border-color:var(--gold);box-shadow:0 0 30px rgba(231,195,107,.3),inset 0 0 30px rgba(231,195,107,.05);}
+.cotizador-resultado .etiqueta{font-size:.68rem;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem;line-height:1;}
+.cotizador-resultado .precio{font-family:"Cormorant Garamond",serif;font-size:2rem;font-weight:700;color:var(--gold);line-height:1;text-shadow:0 0 25px rgba(231,195,107,.5);margin-bottom:.3rem;}
+.cotizador-resultado .detalle{font-size:.8rem;color:var(--muted);line-height:1.05;margin-bottom:.7rem;}
 .cotizador-resultado .detalle strong{color:var(--gold-bright);}
-.cotizador-resultado .btn-wa{
-display:inline-flex;
-align-items:center;
-gap:.5rem;
-background:var(--wa);
-color:white;
-padding:10px 18px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-font-size:.82rem;
-transition:all .3s;
-box-shadow:0 0 20px rgba(37,211,102,.4);
-line-height:1;
-}
-.cotizador-resultado .btn-wa:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(37,211,102,.6),0 0 60px rgba(37,211,102,.3);
-}
+.cotizador-resultado .btn-wa{display:inline-flex;align-items:center;gap:.5rem;background:var(--wa);color:white;padding:10px 18px;border-radius:50px;text-decoration:none;font-weight:600;font-size:.82rem;transition:all .3s;box-shadow:0 0 20px rgba(37,211,102,.4);line-height:1;}
+.cotizador-resultado .btn-wa:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(37,211,102,.6),0 0 60px rgba(37,211,102,.3);}
 .cotizador-resultado .btn-wa svg{width:16px;height:16px;fill:white;}
-.cotizador-aviso{
-font-size:.75rem;
-color:var(--muted);
-text-align:center;
-margin-top:12px;
-line-height:1.05;
-font-style:italic;
-}
+.cotizador-aviso{font-size:.75rem;color:var(--muted);text-align:center;margin-top:12px;line-height:1.05;font-style:italic;}
 
-/* ============ INCLUSIÓN ============ */
-.inclusion-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-max-width:1100px;
-margin:0 auto 26px;
-}
-.inclusion-card{
-background:var(--card);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.08);
-border-radius:var(--radius);
-padding:24px 22px;
-transition:.35s;
-position:relative;
-overflow:hidden;
-line-height:1.05;
-}
-.inclusion-card::before{
-content:'';
-position:absolute;
-top:0;left:0;right:0;
-height:2px;
-background:linear-gradient(90deg,transparent,var(--gold),transparent);
-opacity:.6;
-}
-.inclusion-card:hover{
-transform:translateY(-8px);
-border-color:rgba(231,195,107,.4);
-box-shadow:0 20px 50px rgba(0,0,0,.4);
-}
-.inclusion-card h3{
-font-family:"Cormorant Garamond",serif;
-font-size:1.5rem;
-color:var(--gold);
-margin-bottom:.5rem;
-line-height:1;
-text-shadow:0 0 15px rgba(231,195,107,.35);
-}
-.inclusion-card p{
-font-size:.88rem;
-color:var(--muted);
-margin-bottom:.8rem;
-line-height:1.05;
-}
-.estratos-tabla{
-width:100%;
-border-collapse:collapse;
-background:rgba(255,255,255,.02);
-border-radius:12px;
-overflow:hidden;
-border:1px solid rgba(231,195,107,.15);
-line-height:1.05;
-}
+.inclusion-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1100px;margin:0 auto 26px;}
+.inclusion-card{background:var(--card);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:24px 22px;transition:.35s;position:relative;overflow:hidden;line-height:1.05;}
+.inclusion-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.6;}
+.inclusion-card:hover{transform:translateY(-8px);border-color:rgba(231,195,107,.4);box-shadow:0 20px 50px rgba(0,0,0,.4);}
+.inclusion-card h3{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--gold);margin-bottom:.5rem;line-height:1;text-shadow:0 0 15px rgba(231,195,107,.35);}
+.inclusion-card p{font-size:.88rem;color:var(--muted);margin-bottom:.8rem;line-height:1.05;}
+.estratos-tabla{width:100%;border-collapse:collapse;background:rgba(255,255,255,.02);border-radius:12px;overflow:hidden;border:1px solid rgba(231,195,107,.15);line-height:1.05;}
 .estratos-tabla thead{background:rgba(231,195,107,.12);}
-.estratos-tabla th{
-padding:.5rem .75rem;
-text-align:left;
-font-size:.68rem;
-font-weight:600;
-letter-spacing:1.5px;
-text-transform:uppercase;
-color:var(--gold);
-border-bottom:1px solid rgba(231,195,107,.2);
-line-height:1;
-}
-.estratos-tabla td{
-padding:.45rem .75rem;
-font-size:.84rem;
-color:var(--text);
-border-bottom:1px solid rgba(255,255,255,.05);
-line-height:1.05;
-}
+.estratos-tabla th{padding:.5rem .75rem;text-align:left;font-size:.68rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(231,195,107,.2);line-height:1;}
+.estratos-tabla td{padding:.45rem .75rem;font-size:.84rem;color:var(--text);border-bottom:1px solid rgba(255,255,255,.05);line-height:1.05;}
 .estratos-tabla tr:last-child td{border-bottom:none;}
 .estratos-tabla .dcto{color:var(--gold);font-weight:600;}
 
 .lista-aplicar{list-style:none;padding:0;margin:0;}
-.lista-aplicar li{
-padding:.35rem 0;
-font-size:.85rem;
-color:var(--text);
-display:flex;
-gap:.5rem;
-align-items:flex-start;
-border-bottom:1px solid rgba(255,255,255,.05);
-line-height:1.05;
-}
+.lista-aplicar li{padding:.35rem 0;font-size:.85rem;color:var(--text);display:flex;gap:.5rem;align-items:flex-start;border-bottom:1px solid rgba(255,255,255,.05);line-height:1.05;}
 .lista-aplicar li:last-child{border-bottom:none;}
 .lista-aplicar li::before{content:'—';color:var(--gold);flex-shrink:0;}
 
-.nota-inclusion{
-background:rgba(231,195,107,.06);
-border-left:2px solid var(--gold);
-border-radius:10px;
-padding:.7rem .85rem;
-font-size:.82rem;
-color:var(--muted);
-line-height:1.05;
-margin-top:.85rem;
-}
+.nota-inclusion{background:rgba(231,195,107,.06);border-left:2px solid var(--gold);border-radius:10px;padding:.7rem .85rem;font-size:.82rem;color:var(--muted);line-height:1.05;margin-top:.85rem;}
 .nota-inclusion strong{color:var(--gold);}
 
-/* ============ PLATAFORMAS ============ */
-.revistas-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-max-width:1000px;
-margin:0 auto;
-}
-.revista-card{
-background:var(--card);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.08);
-border-radius:var(--radius);
-padding:26px 24px;
-transition:.35s;
-position:relative;
-overflow:hidden;
-display:flex;
-flex-direction:column;
-line-height:1.05;
-}
-.revista-card::before{
-content:'';
-position:absolute;
-top:0;left:0;right:0;
-height:2px;
-background:linear-gradient(90deg,transparent,var(--gold),transparent);
-opacity:.6;
-}
-.revista-card:hover{
-transform:translateY(-8px);
-border-color:rgba(231,195,107,.4);
-box-shadow:0 20px 50px rgba(0,0,0,.4);
-}
-.revista-card .r-tag{
-display:inline-block;
-font-size:.66rem;
-font-weight:600;
-letter-spacing:2px;
-text-transform:uppercase;
-color:var(--gold);
-border:1px solid rgba(231,195,107,.35);
-padding:.25rem .75rem;
-border-radius:50px;
-margin-bottom:.6rem;
-align-self:flex-start;
-line-height:1;
-}
-.revista-card h3{
-font-family:"Cormorant Garamond",serif;
-font-size:1.6rem;
-margin-bottom:.3rem;
-color:var(--gold);
-line-height:1;
-text-shadow:0 0 15px rgba(231,195,107,.35);
-}
-.revista-card p{
-font-size:.9rem;
-color:var(--muted);
-line-height:1.05;
-margin-bottom:1rem;
-}
+.revistas-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1000px;margin:0 auto;}
+.revista-card{background:var(--card);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:26px 24px;transition:.35s;position:relative;overflow:hidden;display:flex;flex-direction:column;line-height:1.05;}
+.revista-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.6;}
+.revista-card:hover{transform:translateY(-8px);border-color:rgba(231,195,107,.4);box-shadow:0 20px 50px rgba(0,0,0,.4);}
+.revista-card .r-tag{display:inline-block;font-size:.66rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(231,195,107,.35);padding:.25rem .75rem;border-radius:50px;margin-bottom:.6rem;align-self:flex-start;line-height:1;}
+.revista-card h3{font-family:"Cormorant Garamond",serif;font-size:1.6rem;margin-bottom:.3rem;color:var(--gold);line-height:1;text-shadow:0 0 15px rgba(231,195,107,.35);}
+.revista-card p{font-size:.9rem;color:var(--muted);line-height:1.05;margin-bottom:1rem;}
 .revista-card ul{list-style:none;padding:0;margin:0 0 1.1rem;}
-.revista-card ul li{
-padding:.25rem 0;
-font-size:.84rem;
-color:var(--text);
-display:flex;
-gap:.5rem;
-align-items:flex-start;
-line-height:1.05;
-}
+.revista-card ul li{padding:.25rem 0;font-size:.84rem;color:var(--text);display:flex;gap:.5rem;align-items:flex-start;line-height:1.05;}
 .revista-card ul li::before{content:'—';color:var(--gold);flex-shrink:0;}
 .revista-card .btn{margin-top:auto;width:100%;text-align:center;}
 
-/* ============ CTA ============ */
-.cta{
-background:linear-gradient(135deg,#0a0a0a,#000000);
-border-radius:26px;
-padding:40px 26px;
-text-align:center;
-border:1px solid rgba(231,195,107,.25);
-line-height:1.05;
-position:relative;
-overflow:hidden;
-}
-.cta::before{
-content:'';
-position:absolute;
-top:0;left:0;right:0;
-height:2px;
-background:linear-gradient(90deg,transparent,var(--gold),transparent);
-opacity:.6;
-}
-.cta h2{
-font-family:"Cormorant Garamond",serif;
-font-size:2.3rem;
-margin-bottom:4px;
-line-height:1;
-color:var(--gold);
-text-shadow:0 0 20px rgba(231,195,107,.4);
-}
-.cta .cta-info{
-display:flex;
-flex-direction:column;
-gap:5px;
-align-items:center;
-margin-bottom:6px;
-font-size:.95rem;
-color:var(--muted);
-line-height:1.05;
-}
+.cta{background:linear-gradient(135deg,#0a0a0a,#000000);border-radius:26px;padding:40px 26px;text-align:center;border:1px solid rgba(231,195,107,.25);line-height:1.05;position:relative;overflow:hidden;}
+.cta::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.6;}
+.cta h2{font-family:"Cormorant Garamond",serif;font-size:2.3rem;margin-bottom:4px;line-height:1;color:var(--gold);text-shadow:0 0 20px rgba(231,195,107,.4);}
+.cta .cta-info{display:flex;flex-direction:column;gap:5px;align-items:center;margin-bottom:6px;font-size:.95rem;color:var(--muted);line-height:1.05;}
 .cta .cta-info p{margin:0;}
-.cta .cta-info a{
-color:var(--gold-bright);
-text-decoration:none;
-transition:.3s;
-}
-.cta .cta-info a:hover{
-color:#fff4d8;
-text-shadow:0 0 12px rgba(231,195,107,.8);
-}
+.cta .cta-info a{color:var(--gold-bright);text-decoration:none;transition:.3s;}
+.cta .cta-info a:hover{color:#fff4d8;text-shadow:0 0 12px rgba(231,195,107,.8);}
 
-/* ============ FOOTER ============ */
-footer{
-padding:10px 20px 30px;
-text-align:center;
-color:var(--muted);
-font-size:.85rem;
-line-height:1.05;
-position:relative;
-overflow:hidden;
-background:#000000;
-}
-footer::before{
-content:'';
-position:absolute;
-top:50%;left:50%;
-transform:translate(-50%,-50%);
-width:80%;height:80%;
-background:radial-gradient(ellipse,rgba(231,195,107,.12) 0%,transparent 70%);
-pointer-events:none;
-filter:blur(40px);
-}
-.footer-logos{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:50px;
-margin-bottom:1.4rem;
-position:relative;
-z-index:2;
-flex-wrap:wrap;
-}
-.footer-logo{
-height:110px;
-width:auto;
-object-fit:contain;
-filter:
-  brightness(1.35)
-  contrast(1.15)
-  saturate(1.4)
-  drop-shadow(0 0 20px rgba(231,195,107,.8))
-  drop-shadow(0 0 45px rgba(231,195,107,.5))
-  drop-shadow(0 0 80px rgba(231,195,107,.25));
-transition:filter .4s, transform .4s;
-}
-.footer-logo:hover{
-filter:
-  brightness(1.5)
-  contrast(1.2)
-  saturate(1.5)
-  drop-shadow(0 0 25px rgba(231,195,107,1))
-  drop-shadow(0 0 60px rgba(231,195,107,.8))
-  drop-shadow(0 0 100px rgba(231,195,107,.5));
-transform:scale(1.03);
-}
-.footer-divider{
-width:60%;
-max-width:400px;
-height:1px;
-margin:0 auto 16px;
-background:linear-gradient(90deg,transparent,rgba(231,195,107,.5),transparent);
-position:relative;
-z-index:2;
-box-shadow:0 0 15px rgba(231,195,107,.4);
-}
-footer .footer-tagline{
-position:relative;
-z-index:2;
-font-family:"Cormorant Garamond",serif;
-font-style:italic;
-font-size:1rem;
-color:var(--gold-bright);
-letter-spacing:.5px;
-margin-bottom:6px;
-text-shadow:0 0 12px rgba(231,195,107,.4);
-text-align:center;
-line-height:1.05;
-}
-footer .footer-copy{
-position:relative;
-z-index:2;
-font-size:.8rem;
-color:rgba(185,193,217,.8);
-text-align:center;
-line-height:1.05;
-}
+footer{padding:10px 20px 30px;text-align:center;color:var(--muted);font-size:.85rem;line-height:1.05;position:relative;overflow:hidden;background:#000000;}
+footer::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80%;height:80%;background:radial-gradient(ellipse,rgba(231,195,107,.12) 0%,transparent 70%);pointer-events:none;filter:blur(40px);}
+.footer-logos{display:flex;justify-content:center;align-items:center;gap:50px;margin-bottom:1.4rem;position:relative;z-index:2;flex-wrap:wrap;}
+.footer-logo{height:110px;width:auto;object-fit:contain;filter:brightness(1.35) contrast(1.15) saturate(1.4) drop-shadow(0 0 20px rgba(231,195,107,.8)) drop-shadow(0 0 45px rgba(231,195,107,.5)) drop-shadow(0 0 80px rgba(231,195,107,.25));transition:filter .4s, transform .4s;}
+.footer-logo:hover{filter:brightness(1.5) contrast(1.2) saturate(1.5) drop-shadow(0 0 25px rgba(231,195,107,1)) drop-shadow(0 0 60px rgba(231,195,107,.8)) drop-shadow(0 0 100px rgba(231,195,107,.5));transform:scale(1.03);}
+.footer-divider{width:60%;max-width:400px;height:1px;margin:0 auto 16px;background:linear-gradient(90deg,transparent,rgba(231,195,107,.5),transparent);position:relative;z-index:2;box-shadow:0 0 15px rgba(231,195,107,.4);}
+footer .footer-tagline{position:relative;z-index:2;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1rem;color:var(--gold-bright);letter-spacing:.5px;margin-bottom:6px;text-shadow:0 0 12px rgba(231,195,107,.4);text-align:center;line-height:1.05;}
+footer .footer-copy{position:relative;z-index:2;font-size:.8rem;color:rgba(185,193,217,.8);text-align:center;line-height:1.05;}
+.footer-social{display:flex;justify-content:center;gap:20px;margin:0 0 20px;position:relative;z-index:2;}
+.footer-social a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(231,195,107,.3);background:rgba(231,195,107,.05);transition:all .4s ease;}
+.footer-social a svg{width:20px;height:20px;fill:var(--gold);transition:all .4s ease;filter:drop-shadow(0 0 4px rgba(231,195,107,.4));}
+.footer-social a:hover{background:rgba(231,195,107,.2);border-color:var(--gold-bright);transform:translateY(-3px);box-shadow:0 0 25px rgba(231,195,107,.5);}
+.footer-social a:hover svg{fill:var(--gold-bright);filter:drop-shadow(0 0 8px rgba(231,195,107,.9));}
 
-.footer-social{
-display:flex;
-justify-content:center;
-gap:20px;
-margin:0 0 20px;
-position:relative;
-z-index:2;
-}
-.footer-social a{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-width:44px;height:44px;
-border-radius:50%;
-border:1px solid rgba(231,195,107,.3);
-background:rgba(231,195,107,.05);
-transition:all .4s ease;
-}
-.footer-social a svg{
-width:20px;height:20px;
-fill:var(--gold);
-transition:all .4s ease;
-filter:drop-shadow(0 0 4px rgba(231,195,107,.4));
-}
-.footer-social a:hover{
-background:rgba(231,195,107,.2);
-border-color:var(--gold-bright);
-transform:translateY(-3px);
-box-shadow:0 0 25px rgba(231,195,107,.5);
-}
-.footer-social a:hover svg{
-fill:var(--gold-bright);
-filter:drop-shadow(0 0 8px rgba(231,195,107,.9));
-}
-
-/* ============ ANIMACIONES ============ */
 .fade{opacity:0;transform:translateY(40px);transition:1s;}
 .fade.show{opacity:1;transform:translateY(0);}
 
-/* ============ WHATSAPP ============ */
-.wa-float{
-position:fixed;
-bottom:22px;right:22px;
-z-index:999;
-width:56px;height:56px;
-border-radius:50%;
-background:var(--wa);
-display:flex;align-items:center;justify-content:center;
-box-shadow:0 0 20px rgba(37,211,102,.5),0 0 40px rgba(37,211,102,.25);
-transition:transform .3s;
-animation:waPulse 2.5s infinite;
-}
-.wa-float:hover{
-transform:scale(1.1);
-box-shadow:0 0 30px rgba(37,211,102,.8),0 0 60px rgba(37,211,102,.4);
-}
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:999;width:56px;height:56px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px rgba(37,211,102,.5),0 0 40px rgba(37,211,102,.25);transition:transform .3s;animation:waPulse 2.5s infinite;}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 0 30px rgba(37,211,102,.8),0 0 60px rgba(37,211,102,.4);}
 .wa-float svg{width:28px;height:28px;fill:white;}
+@keyframes waPulse{0%,100%{box-shadow:0 0 20px rgba(37,211,102,.5),0 0 40px rgba(37,211,102,.25);}50%{box-shadow:0 0 30px rgba(37,211,102,.8),0 0 60px rgba(37,211,102,.4);}}
 
-@keyframes waPulse{
-0%,100%{box-shadow:0 0 20px rgba(37,211,102,.5),0 0 40px rgba(37,211,102,.25);}
-50%{box-shadow:0 0 30px rgba(37,211,102,.8),0 0 60px rgba(37,211,102,.4);}
-}
-
-/* ============ RESPONSIVE ============ */
-@media(min-width:1400px){
-section{max-width:1280px;}
-.hero-content{max-width:1280px;}
-nav{max-width:1350px;}
-.hero h1{font-size:3.8rem;}
-.hero-image{height:360px;}
-}
-@media(max-width:1200px){
-.hero h1{font-size:3rem;}
-.hero-image{height:300px;}
-section{padding:26px 20px;}
-.title h2{font-size:2.2rem;}
-}
+@media(min-width:1400px){section{max-width:1280px;}.hero-content{max-width:1280px;}nav{max-width:1350px;}.hero h1{font-size:3.2rem;}.hero-image{height:360px;}}
+@media(max-width:1200px){.hero h1{font-size:2.4rem;}.hero-image{height:300px;}section{padding:26px 20px;}.title h2{font-size:2.2rem;}}
 @media(max-width:900px){
-nav{padding:8px 15px;gap:8px;}
-.logo-img{height:70px;}
-nav ul{gap:6px;}
-nav ul li a{padding:6px 11px;font-size:.7rem;}
-.hero{padding:180px 20px 25px;min-height:auto;}
-.hero-content{grid-template-columns:1fr;gap:35px;}
-.hero h1{font-size:2.5rem;}
-.hero-image{height:260px;}
-.paquetes-grid{grid-template-columns:1fr;}
-.revistas-grid{grid-template-columns:1fr;}
-.inclusion-grid{grid-template-columns:1fr;}
-.conv-grid{grid-template-columns:1fr;gap:14px;}
-.conv-col{gap:14px;}
-section{padding:24px 20px;}
-.title h2{font-size:2rem;}
-.convocatoria-hero h3{font-size:1.9rem;}
-.footer-logos{gap:35px;}
-.footer-logo{height:95px;}
+nav{padding:8px 15px;gap:8px;}.logo-img{height:70px;}nav ul{gap:6px;}nav ul li a{padding:6px 11px;font-size:.7rem;}
+.hero{padding:230px 20px 30px;min-height:auto;}.hero-content{grid-template-columns:1fr;gap:35px;}.hero h1{font-size:2rem;}.hero p{font-size:.95rem;}.hero-image{height:260px;}
+.paquetes-grid{grid-template-columns:1fr;}.revistas-grid{grid-template-columns:1fr;}.inclusion-grid{grid-template-columns:1fr;}
+.conv-grid{grid-template-columns:1fr;gap:14px;}.conv-col{gap:14px;}section{padding:24px 20px;}.title h2{font-size:2rem;}
+.convocatoria-hero h3{font-size:1.9rem;}.footer-logos{gap:35px;}.footer-logo{height:95px;}
 }
 @media(max-width:767px){
 body{font-size:14.5px;line-height:1;}
-.tamanos-tabla th,.tamanos-tabla td{padding:.55rem .55rem;font-size:.8rem;}
-.tamanos-tabla .tipo{font-size:.95rem;}
-.title h2{font-size:1.9rem;}
-.title p{font-size:.9rem;}
-.paquete-card{padding:20px 18px;}
-.revista-card{padding:22px 18px;}
-.inclusion-card{padding:20px 18px;}
-.cotizador{padding:18px 16px;}
-.cotizador-resultado .precio{font-size:1.8rem;}
-.cta{padding:30px 22px;}
-.cta h2{font-size:1.9rem;}
-.cta .cta-info{font-size:.9rem;}
-.convocatoria-hero{padding:24px 20px;}
-.convocatoria-hero h3{font-size:1.7rem;}
-.convocatoria-hero .conv-lema{font-size:1.05rem;}
-.conv-block{padding:18px 16px;}
-.conv-block h3{font-size:1.3rem;}
-.conv-cronograma li{grid-template-columns:1fr;gap:2px;padding:.45rem .6rem;}
-.conv-cronograma .fecha{text-align:left;}
-footer{padding:8px 18px 25px;}
-.footer-logo{height:80px;}
-.footer-logos{gap:25px;}
+.tamanos-tabla th,.tamanos-tabla td{padding:.55rem .55rem;font-size:.8rem;}.tamanos-tabla .tipo{font-size:.95rem;}
+.title h2{font-size:1.9rem;}.title p{font-size:.9rem;}
+.paquete-card{padding:20px 18px;}.revista-card{padding:22px 18px;}.inclusion-card{padding:20px 18px;}
+.cotizador{padding:18px 16px;}.cotizador-resultado .precio{font-size:1.8rem;}
+.cta{padding:30px 22px;}.cta h2{font-size:1.9rem;}.cta .cta-info{font-size:.9rem;}
+.convocatoria-hero{padding:24px 20px;}.convocatoria-hero h3{font-size:1.7rem;}.convocatoria-hero .conv-lema{font-size:1.05rem;}
+.conv-block{padding:18px 16px;}.conv-block h3{font-size:1.3rem;}
+.conv-cronograma li{grid-template-columns:1fr;gap:2px;padding:.45rem .6rem;}.conv-cronograma .fecha{text-align:left;}
+footer{padding:8px 18px 25px;}.footer-logo{height:80px;}.footer-logos{gap:25px;}
 }
 @media(max-width:600px){
-body{line-height:1;}
-#lang-bar{gap:8px;padding:6px 8px;}
-#lang-bar button{padding:4px 7px;font-size:.6rem;gap:4px;}
-#lang-bar img{width:18px;height:13px;}
-header{top:38px;}
-nav{padding:8px 12px;flex-wrap:wrap;justify-content:center;}
-.logo-img{height:60px;}
+body{line-height:1;}#lang-bar{gap:8px;padding:6px 8px;}#lang-bar button{padding:4px 7px;font-size:.6rem;gap:4px;}#lang-bar img{width:18px;height:13px;}
+header{top:38px;}nav{padding:8px 12px;flex-wrap:wrap;justify-content:center;}.logo-img{height:60px;}
 nav ul{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;width:100%;margin-top:6px;}
 nav ul li a{padding:5px 10px;font-size:.65rem;letter-spacing:.3px;}
-.hero{padding:170px 15px 20px;}
-.hero h1{font-size:1.95rem;}
-.hero p{font-size:.92rem;margin-bottom:16px;}
-.hero-image{height:220px;}
-.btn{padding:10px 20px;font-size:.82rem;}
-section{padding:20px 15px;}
-.title{margin-bottom:16px;}
-.title h2{font-size:1.7rem;}
-.title p{font-size:.87rem;}
-.convocatoria-hero{padding:20px 16px;border-radius:18px;}
-.convocatoria-hero h3{font-size:1.5rem;}
-.convocatoria-hero .conv-lema{font-size:.95rem;}
-.convocatoria-hero p{font-size:.86rem;}
-.conv-block{padding:16px 14px;border-radius:16px;}
-.conv-block h3{font-size:1.2rem;}
-.conv-block h4{font-size:1rem;}
-.conv-block p{font-size:.83rem;}
+.hero{padding:215px 15px 25px;}.hero h1{font-size:1.6rem;}.hero p{font-size:.9rem;}.hero-image{height:220px;}
+.btn{padding:10px 20px;font-size:.82rem;}section{padding:20px 15px;}.title{margin-bottom:16px;}.title h2{font-size:1.7rem;}.title p{font-size:.87rem;}
+.convocatoria-hero{padding:20px 16px;border-radius:18px;}.convocatoria-hero h3{font-size:1.5rem;}.convocatoria-hero .conv-lema{font-size:.95rem;}.convocatoria-hero p{font-size:.86rem;}
+.conv-block{padding:16px 14px;border-radius:16px;}.conv-block h3{font-size:1.2rem;}.conv-block h4{font-size:1rem;}.conv-block p{font-size:.83rem;}
 .conv-list li{font-size:.82rem;}
-.conv-premio-item{padding:.6rem .75rem;}
-.conv-premio-item h4{font-size:.95rem;}
-.conv-premio-item p{font-size:.8rem;}
-.conv-premio-item .conv-list li{font-size:.79rem;}
-.conv-paso{padding:10px 12px;gap:10px;}
-.conv-paso .paso-num{min-width:30px;height:30px;font-size:.82rem;}
-.conv-paso .paso-content h4{font-size:.98rem;}
-.conv-paso .paso-content p{font-size:.78rem;}
-.ia-paso{padding:8px 10px;}
-.ia-paso h5{font-size:.88rem;}
-.ia-paso p{font-size:.76rem;}
+.conv-premio-item{padding:.6rem .75rem;}.conv-premio-item h4{font-size:.95rem;}.conv-premio-item p{font-size:.8rem;}.conv-premio-item .conv-list li{font-size:.79rem;}
+.conv-paso{padding:10px 12px;gap:10px;}.conv-paso .paso-num{min-width:30px;height:30px;font-size:.82rem;}
+.conv-paso .paso-content h4{font-size:.98rem;}.conv-paso .paso-content p{font-size:.78rem;}
+.ia-paso{padding:8px 10px;}.ia-paso h5{font-size:.88rem;}.ia-paso p{font-size:.76rem;}
 .conv-cronograma li{font-size:.82rem;padding:.4rem .55rem;}
-.tamanos-tabla{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
-.tamanos-tabla th{padding:.45rem .45rem;font-size:.62rem;}
-.tamanos-tabla td{padding:.45rem .45rem;font-size:.76rem;}
-.tamanos-tabla .tipo{font-size:.85rem;}
+.tamanos-tabla{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}.tamanos-tabla th{padding:.45rem .45rem;font-size:.62rem;}.tamanos-tabla td{padding:.45rem .45rem;font-size:.76rem;}.tamanos-tabla .tipo{font-size:.85rem;}
 .nota-tamanos{font-size:.82rem;padding:.8rem .9rem;}
-.paquete-card{padding:18px 16px;}
-.paquete-card h3{font-size:1.5rem;}
-.inclusion-card{padding:18px 16px;}
-.inclusion-card h3{font-size:1.3rem;}
-.estratos-tabla th{padding:.45rem .55rem;font-size:.62rem;}
-.estratos-tabla td{padding:.4rem .55rem;font-size:.78rem;}
-.revista-card{padding:20px 16px;}
-.revista-card h3{font-size:1.4rem;}
-.cotizador{padding:16px 14px;}
-.cotizador-resultado .precio{font-size:1.6rem;}
-.cta{padding:26px 18px;border-radius:20px;}
-.cta h2{font-size:1.6rem;}
-footer{padding:6px 15px 22px;font-size:.8rem;}
-.footer-logo{height:65px;}
-.footer-logos{gap:20px;}
-footer .footer-tagline{font-size:.9rem;}
-.wa-float{width:50px;height:50px;bottom:16px;right:16px;}
-.wa-float svg{width:26px;height:26px;}
-.footer-social a{width:38px;height:38px;}
-.footer-social a svg{width:18px;height:18px;}
+.paquete-card{padding:18px 16px;}.paquete-card h3{font-size:1.5rem;}
+.inclusion-card{padding:18px 16px;}.inclusion-card h3{font-size:1.3rem;}
+.estratos-tabla th{padding:.45rem .55rem;font-size:.62rem;}.estratos-tabla td{padding:.4rem .55rem;font-size:.78rem;}
+.revista-card{padding:20px 16px;}.revista-card h3{font-size:1.4rem;}
+.cotizador{padding:16px 14px;}.cotizador-resultado .precio{font-size:1.6rem;}
+.cta{padding:26px 18px;border-radius:20px;}.cta h2{font-size:1.6rem;}
+footer{padding:6px 15px 22px;font-size:.8rem;}.footer-logo{height:65px;}.footer-logos{gap:20px;}footer .footer-tagline{font-size:.9rem;}
+.wa-float{width:50px;height:50px;bottom:16px;right:16px;}.wa-float svg{width:26px;height:26px;}
+.footer-social a{width:38px;height:38px;}.footer-social a svg{width:18px;height:18px;}
 }
 @media(max-width:400px){
-body{font-size:14px;line-height:1;}
-#lang-bar button{padding:3px 5px;font-size:.55rem;}
-#lang-bar img{width:16px;height:11px;}
-nav{padding:6px 10px;}
-.logo-img{height:52px;}
-nav ul li a{padding:4px 8px;font-size:.6rem;}
-.hero{padding:160px 12px 18px;}
-.hero h1{font-size:1.7rem;}
-.hero p{font-size:.88rem;}
-.hero-image{height:190px;}
-section{padding:16px 12px;}
-.title h2{font-size:1.5rem;}
-.title p{font-size:.84rem;}
-.btn{padding:9px 18px;font-size:.78rem;}
-.buttons{flex-direction:column;width:100%;}
-.buttons .btn{width:100%;}
-.convocatoria-hero h3{font-size:1.3rem;}
-.conv-block h3{font-size:1.15rem;}
-.conv-block h4{font-size:.98rem;}
-.tamanos-tabla th{font-size:.58rem;padding:.4rem .4rem;}
-.tamanos-tabla td{font-size:.72rem;padding:.4rem .4rem;}
-.tamanos-tabla .tipo{font-size:.8rem;}
-.paquete-card h3{font-size:1.35rem;}
-.inclusion-card h3{font-size:1.2rem;}
-.revista-card h3{font-size:1.25rem;}
-.cotizador-resultado .precio{font-size:1.5rem;}
-.cta h2{font-size:1.4rem;}
-.footer-logo{height:55px;}
-footer .footer-tagline{font-size:.85rem;}
-footer .footer-copy{font-size:.75rem;}
-.wa-float{width:46px;height:46px;bottom:14px;right:14px;}
-.wa-float svg{width:24px;height:24px;}
-.footer-social a{width:34px;height:34px;}
-.footer-social a svg{width:16px;height:16px;}
+body{font-size:14px;line-height:1;}#lang-bar button{padding:3px 5px;font-size:.55rem;}#lang-bar img{width:16px;height:11px;}
+nav{padding:6px 10px;}.logo-img{height:52px;}nav ul li a{padding:4px 8px;font-size:.6rem;}
+.hero{padding:205px 12px 22px;}.hero h1{font-size:1.4rem;}.hero p{font-size:.85rem;}.hero-image{height:190px;}
+section{padding:16px 12px;}.title h2{font-size:1.5rem;}.title p{font-size:.84rem;}
+.btn{padding:9px 18px;font-size:.78rem;}.buttons{flex-direction:column;width:100%;}.buttons .btn{width:100%;}
+.convocatoria-hero h3{font-size:1.3rem;}.conv-block h3{font-size:1.15rem;}.conv-block h4{font-size:.98rem;}
+.tamanos-tabla th{font-size:.58rem;padding:.4rem .4rem;}.tamanos-tabla td{font-size:.72rem;padding:.4rem .4rem;}.tamanos-tabla .tipo{font-size:.8rem;}
+.paquete-card h3{font-size:1.35rem;}.inclusion-card h3{font-size:1.2rem;}.revista-card h3{font-size:1.25rem;}
+.cotizador-resultado .precio{font-size:1.5rem;}.cta h2{font-size:1.4rem;}
+.footer-logo{height:55px;}footer .footer-tagline{font-size:.85rem;}footer .footer-copy{font-size:.75rem;}
+.wa-float{width:46px;height:46px;bottom:14px;right:14px;}.wa-float svg{width:24px;height:24px;}
+.footer-social a{width:34px;height:34px;}.footer-social a svg{width:16px;height:16px;}
 }
 @media(max-width:340px){
-body{font-size:13.5px;line-height:1;}
-.logo-img{height:46px;}
-.hero h1{font-size:1.55rem;}
-.hero-image{height:170px;}
-.title h2{font-size:1.4rem;}
-.convocatoria-hero h3{font-size:1.2rem;}
-.conv-block h3{font-size:1.05rem;}
+body{font-size:13.5px;line-height:1;}.logo-img{height:46px;}.hero{padding:200px 10px 20px;}.hero h1{font-size:1.25rem;}.hero p{font-size:.82rem;}.hero-image{height:170px;}
+.title h2{font-size:1.4rem;}.convocatoria-hero h3{font-size:1.2rem;}.conv-block h3{font-size:1.05rem;}
 }
 @media(max-width:900px) and (orientation:landscape){
-.hero{min-height:auto;padding:170px 20px 25px;}
-.hero-content{grid-template-columns:1fr 1fr;gap:30px;}
-.hero-image{height:220px;}
+.hero{min-height:auto;padding:220px 20px 25px;}.hero-content{grid-template-columns:1fr 1fr;gap:30px;}.hero-image{height:220px;}
 }
-@media print{
-header,footer,.wa-float,.btn,#lang-bar{display:none;}
-body{background:white;color:black;}
-section{padding:20px 0;}
+@media print{header,footer,.wa-float,.btn,#lang-bar{display:none;}body{background:white;color:black;}section{padding:20px 0;}}
+
+#voiceStatus{
+position:fixed;bottom:22px;left:22px;z-index:9998;
+display:none;align-items:center;gap:9px;
+background:rgba(0,0,0,.94);color:var(--gold-bright);
+border:1.5px solid rgba(231,195,107,.75);border-radius:999px;
+padding:9px 16px;font-family:'Inter',sans-serif;
+font-size:.75rem;font-weight:600;backdrop-filter:blur(10px);
+box-shadow:0 0 28px rgba(231,195,107,.55);
+white-space:nowrap;pointer-events:none;
+max-width:calc(100vw - 110px);overflow:hidden;text-overflow:ellipsis;line-height:1;
+}
+#voiceStatus.active{display:flex;}
+#voiceStatus .vdot{width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;flex-shrink:0;animation:vdotPulse 1.3s infinite ease-in-out;}
+@keyframes vdotPulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(.85);}}
+#voiceFallback{
+position:fixed;bottom:22px;left:22px;z-index:9998;
+display:flex;align-items:center;justify-content:center;
+width:56px;height:56px;border-radius:50%;
+background:linear-gradient(135deg,var(--gold),#b8941f);
+border:none;cursor:pointer;color:#000;
+box-shadow:0 6px 25px rgba(231,195,107,.75);
+animation:vPulse 2.5s ease-in-out infinite;transition:transform .3s;
+}
+#voiceFallback:hover{transform:scale(1.1);}
+#voiceFallback svg{width:26px;height:26px;}
+@keyframes vPulse{
+0%,100%{box-shadow:0 6px 25px rgba(231,195,107,.75),0 0 0 0 rgba(231,195,107,.5);}
+50%{box-shadow:0 6px 25px rgba(231,195,107,.75),0 0 0 12px rgba(231,195,107,0);}
+}
+body.voice-active #voiceFallback{display:none;}
+
+#chatbotBtn{
+position:fixed;bottom:22px;right:92px;z-index:9997;
+width:64px;height:64px;border-radius:50%;
+background:linear-gradient(135deg,#7c3aed,#5b21b6);
+border:3px solid var(--gold);cursor:pointer;color:#fff;
+display:flex;align-items:center;justify-content:center;
+box-shadow:0 6px 30px rgba(124,58,237,.8),0 0 0 0 rgba(231,195,107,.7);
+animation:rFloat 3s ease-in-out infinite,rGlow 2.5s ease-in-out infinite;
+padding:0;overflow:visible;transition:transform .3s;
+}
+#chatbotBtn:hover{transform:scale(1.1) rotate(-5deg);}
+#chatbotBtn svg{width:100%;height:100%;display:block;pointer-events:none;}
+#chatbotBtn .chat-badge{position:absolute;top:-4px;right:-4px;background:#ef4444;color:#fff;font-size:.7rem;font-weight:800;min-width:22px;height:22px;border-radius:999px;display:flex;align-items:center;justify-content:center;padding:0 5px;box-shadow:0 0 0 3px #000;animation:vdotPulse 1.5s infinite ease-in-out;}
+@keyframes rFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+@keyframes rGlow{0%,100%{box-shadow:0 6px 30px rgba(124,58,237,.8),0 0 0 0 rgba(231,195,107,.7);}50%{box-shadow:0 6px 30px rgba(124,58,237,.8),0 0 0 14px rgba(231,195,107,0);}}
+
+#chatbotPanel{
+position:fixed;bottom:22px;right:22px;z-index:9999;
+width:min(94vw,400px);height:min(88vh,640px);
+max-height:calc(100vh - 20px);
+background:#0a0a0a;border:2px solid var(--gold);border-radius:22px;
+display:none;flex-direction:column;overflow:hidden;
+box-shadow:0 25px 70px rgba(0,0,0,.9),0 0 45px rgba(124,58,237,.4);
+font-family:'Inter',sans-serif;
+}
+#chatbotPanel.show{display:flex;}
+.chat-header{background:linear-gradient(135deg,#7c3aed,#5b21b6);padding:.9rem 1rem;display:flex;align-items:center;gap:.7rem;color:#fff;flex-shrink:0;border-bottom:2px solid var(--gold);}
+.chat-header .chat-avatar{width:48px;height:48px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 0 0 3px rgba(231,195,107,.8);overflow:hidden;padding:2px;}
+.chat-header .chat-avatar svg{width:100%;height:100%;}
+.chat-header .chat-title{flex:1;min-width:0;line-height:1.2;text-align:left;}
+.chat-header .chat-title strong{display:block;font-size:.95rem;font-weight:800;}
+.chat-header .chat-title span{font-size:.72rem;opacity:.9;display:flex;align-items:center;gap:5px;margin-top:2px;}
+.chat-header .chat-title span::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;}
+.chat-header #chatbotClose{background:rgba(255,255,255,.18);border:none;color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;flex-shrink:0;}
+.chat-header #chatbotClose:hover{background:rgba(255,255,255,.32);transform:rotate(90deg);}
+.chat-header #chatbotClose svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;}
+
+.chat-body{flex:1;overflow-y:auto;padding:1rem;background:#000;display:flex;flex-direction:column;gap:.65rem;scrollbar-width:thin;scrollbar-color:var(--gold) #111;min-height:100px;}
+.chat-body::-webkit-scrollbar{width:6px;}
+.chat-body::-webkit-scrollbar-track{background:#111;}
+.chat-body::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px;}
+
+.chat-msg{max-width:88%;padding:.7rem .9rem;border-radius:15px;font-size:.87rem;line-height:1.45;word-wrap:break-word;animation:cMsgIn .3s ease;text-align:left;}
+@keyframes cMsgIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.chat-msg.bot{align-self:flex-start;background:#1a1a1a;border:1px solid rgba(231,195,107,.35);color:#e5e7eb;border-bottom-left-radius:4px;}
+.chat-msg.user{align-self:flex-end;background:linear-gradient(135deg,var(--gold),#b8941f);color:#111;font-weight:600;border-bottom-right-radius:4px;}
+.chat-msg a{color:var(--gold-bright);text-decoration:underline;font-weight:700;}
+.chat-msg strong{color:var(--gold-bright);}
+
+.chat-typing{align-self:flex-start;background:#1a1a1a;border:1px solid rgba(231,195,107,.35);padding:.75rem 1rem;border-radius:15px;border-bottom-left-radius:4px;display:flex;gap:5px;}
+.chat-typing span{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:typingDot 1.2s infinite ease-in-out;}
+.chat-typing span:nth-child(2){animation-delay:.2s;}
+.chat-typing span:nth-child(3){animation-delay:.4s;}
+@keyframes typingDot{0%,60%,100%{transform:translateY(0);opacity:.5;}30%{transform:translateY(-5px);opacity:1;}}
+
+.chat-quick{display:flex;flex-wrap:wrap;gap:5px;padding:.55rem .75rem .5rem;background:#000;border-top:1px solid rgba(231,195,107,.18);flex-shrink:0;max-height:96px;overflow-y:auto;}
+.chat-quick button{background:transparent;border:1px solid rgba(231,195,107,.55);color:var(--gold-bright);border-radius:999px;padding:.32rem .68rem;font-family:inherit;font-size:.73rem;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.chat-quick button:hover{background:var(--gold);color:#111;}
+
+.chat-input-row{display:flex;gap:.5rem;padding:.7rem;background:#0a0a0a;border-top:1px solid rgba(231,195,107,.28);flex-shrink:0;}
+.chat-input-row input{flex:1;min-width:0;background:#111 !important;border:1px solid rgba(231,195,107,.45);color:#fff !important;border-radius:12px;padding:.62rem .85rem;font-family:inherit;font-size:.86rem;outline:none;}
+.chat-input-row input:focus{border-color:var(--gold);box-shadow:0 0 0 2px rgba(231,195,107,.2);}
+.chat-input-row input::placeholder{color:#6b7280;}
+.chat-input-row button{background:linear-gradient(135deg,var(--gold),#b8941f);border:none;color:#000;width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:transform .2s;}
+.chat-input-row button:hover{transform:scale(1.06);}
+.chat-input-row button svg{width:18px;height:18px;fill:#000;}
+
+.chat-wa-row{padding:0 .7rem .7rem;background:#0a0a0a;flex-shrink:0;}
+.chat-wa-btn{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;background:var(--wa);color:#fff;border:none;border-radius:12px;padding:.68rem 1rem;font-family:inherit;font-weight:700;font-size:.86rem;cursor:pointer;text-decoration:none;transition:all .2s;}
+.chat-wa-btn:hover{background:#1eb355;}
+.chat-wa-btn svg{width:18px;height:18px;}
+
+@media(max-width:600px){
+#chatbotBtn{width:56px;height:56px;bottom:16px;right:80px;}
+#chatbotPanel{bottom:0;right:0;left:0;width:100%;height:92vh;border-radius:22px 22px 0 0;border-left:none;border-right:none;border-bottom:none;}
+#voiceStatus,#voiceFallback{bottom:16px;left:16px;}
+#voiceFallback{width:50px;height:50px;}
+#voiceFallback svg{width:22px;height:22px;}
+.chat-quick button{padding:.28rem .55rem;font-size:.68rem;}
 }
 </style>
 </head>
 <body>
 
-<!-- BARRA DE IDIOMAS -->
 <div id="lang-bar">
   <button id="lang-es" class="active" onclick="setLang('es')">
     <img src="https://flagcdn.com/w40/es.png" alt="ES"><span>Español</span>
@@ -1566,8 +554,8 @@ section{padding:20px 0;}
 <section class="hero">
 <div class="hero-content">
 <div>
-<h1 data-i18n="hero.title">Tu historia merece llegar al mundo.</h1>
-<p data-i18n="hero.desc">Transformamos tu manuscrito en un libro profesional y te acompañamos desde la edición hasta la publicación internacional en español e inglés.</p>
+<h1 data-i18n="hero.title">Hay libros que todavía no han encontrado el camino para existir.</h1>
+<p data-i18n-html="hero.desc">Hay personas que sueñan con escribir un libro, pero no saben cómo comenzar. Otras ya tienen un manuscrito, pero no saben qué sigue; y algunas han terminado su obra, pero sus posibilidades económicas les han impedido dar el siguiente paso.<br><br>En Artes Multicap Editorial acompañamos cada proyecto desde su propia realidad: te orientamos para desarrollar tu idea, trabajar tu manuscrito y explorar las posibilidades de publicación en diferentes formatos y en español e inglés.<br><br>Además, la Fundación Artes Multicap cuenta con un Programa de Inclusión Editorial, con descuentos según el estrato socioeconómico del autor, porque creemos que las posibilidades económicas no deberían impedir que una obra encuentre su camino hacia la publicación.</p>
 <div class="buttons">
 <a href="#cotizador" class="btn primary" data-i18n="hero.btn.cotizar">Cotizar mi libro</a>
 <a href="https://wa.me/573113555949?text=Hola%2C%20quiero%20informaci%C3%B3n" class="btn secondary" target="_blank" data-i18n="hero.btn.whatsapp">Hablar por WhatsApp</a>
@@ -1579,7 +567,6 @@ section{padding:20px 0;}
 </div>
 </section>
 
-<!-- SERVICIOS -->
 <section id="servicios" class="fade">
 <div class="title">
 <h2 data-i18n="serv.title">Nuestros servicios</h2>
@@ -1590,7 +577,6 @@ section{padding:20px 0;}
 </div>
 </section>
 
-<!-- TAMAÑOS -->
 <section id="tamanos" class="fade">
 <div class="title">
 <h2 data-i18n="tam.title">Tamaños de libro que manejamos</h2>
@@ -1632,7 +618,6 @@ section{padding:20px 0;}
 </div>
 </section>
 
-<!-- PAQUETES -->
 <section id="paquetes" class="fade">
 <div class="title">
 <h2 data-i18n="paq.title">Paquetes integrales</h2>
@@ -1687,7 +672,6 @@ section{padding:20px 0;}
 </div>
 </section>
 
-<!-- PROCESO -->
 <section id="proceso" class="fade">
 <div class="title">
 <h2 data-i18n="proc.title">Cómo iniciamos tu proyecto</h2>
@@ -1702,7 +686,6 @@ section{padding:20px 0;}
 </div>
 </section>
 
-<!-- INCLUSIÓN -->
 <section id="inclusion" class="fade">
 <div class="title">
 <h2 data-i18n="inc.title">Programa de Inclusión Editorial</h2>
@@ -1746,7 +729,6 @@ section{padding:20px 0;}
 </div>
 </section>
 
-<!-- COTIZADOR -->
 <section id="cotizador" class="fade">
 <div class="title">
 <h2 data-i18n="cot.title">Cotiza tu libro en segundos</h2>
@@ -1786,7 +768,6 @@ section{padding:20px 0;}
 </div>
 </section>
 
-<!-- PLATAFORMAS -->
 <section id="revistas" class="fade">
 <div class="title">
 <h2 data-i18n="plat.title">Nuestras plataformas</h2>
@@ -1823,7 +804,6 @@ section{padding:20px 0;}
 </div>
 </section>
 
-<!-- CONVOCATORIA -->
 <section id="convocatoria" class="fade">
 <div class="title">
 <h2 data-i18n="conv.title">Convocatoria Oficial</h2>
@@ -1838,7 +818,6 @@ section{padding:20px 0;}
 
 <div class="conv-grid">
 
-<!-- COLUMNA 1 -->
 <div class="conv-col">
 
 <div class="conv-block">
@@ -1935,9 +914,7 @@ section{padding:20px 0;}
 </div>
 
 </div>
-<!-- FIN COLUMNA 1 -->
 
-<!-- COLUMNA 2 -->
 <div class="conv-col">
 
 <div class="conv-block">
@@ -2083,7 +1060,6 @@ section{padding:20px 0;}
 </div>
 
 </div>
-<!-- FIN COLUMNA 2 -->
 
 </div>
 
@@ -2093,7 +1069,6 @@ section{padding:20px 0;}
 </div>
 </section>
 
-<!-- CONTACTO -->
 <section id="contacto" class="fade">
 <div class="title">
 <h2 data-i18n="cont.title">¿Listo para publicar tu libro?</h2>
@@ -2138,6 +1113,96 @@ section{padding:20px 0;}
 <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
+<div id="voiceStatus" role="status" aria-live="polite">
+  <span class="vdot"></span>
+  <span id="voiceText">Escuchando...</span>
+</div>
+
+<button id="voiceFallback" type="button" aria-label="Activar lector de voz" title="Activar lector de voz">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M11 5 6 9H3v6h3l5 4V5z"/>
+    <path d="M15.5 8.5a5 5 0 0 1 0 7"/>
+    <path d="M18.5 5.5a9 9 0 0 1 0 13"/>
+  </svg>
+</button>
+
+<button id="chatbotBtn" type="button" aria-label="Chatear con MULTI" title="¡Hola! Soy MULTI">
+  <svg viewBox="0 0 80 80" aria-hidden="true">
+    <defs><linearGradient id="botGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient></defs>
+    <line x1="40" y1="14" x2="40" y2="7" stroke="#e7c36b" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="40" cy="5" r="3.5" fill="#e7c36b"/>
+    <rect x="9" y="26" width="8" height="16" rx="4" fill="#e7c36b"/>
+    <rect x="63" y="26" width="8" height="16" rx="4" fill="#e7c36b"/>
+    <rect x="16" y="14" width="48" height="40" rx="14" fill="url(#botGrad)" stroke="#e7c36b" stroke-width="2"/>
+    <rect x="22" y="20" width="36" height="28" rx="10" fill="#fff"/>
+    <circle cx="33" cy="31" r="3.8" fill="#1a1a1a"/>
+    <circle cx="47" cy="31" r="3.8" fill="#1a1a1a"/>
+    <circle cx="34.2" cy="30" r="1.2" fill="#fff"/>
+    <circle cx="48.2" cy="30" r="1.2" fill="#fff"/>
+    <path d="M32 40 Q40 46 48 40" stroke="#1a1a1a" stroke-width="2.3" fill="none" stroke-linecap="round"/>
+    <rect x="35" y="54" width="10" height="6" fill="#5b21b6"/>
+    <rect x="22" y="58" width="36" height="18" rx="9" fill="url(#botGrad)" stroke="#e7c36b" stroke-width="1.8"/>
+    <circle cx="40" cy="67" r="3" fill="#e7c36b"/>
+  </svg>
+  <span class="chat-badge">1</span>
+</button>
+
+<div id="chatbotPanel" role="dialog" aria-label="Chat de ayuda">
+  <div class="chat-header">
+    <div class="chat-avatar">
+      <svg viewBox="0 0 80 80" aria-hidden="true">
+        <line x1="40" y1="14" x2="40" y2="7" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="40" cy="5" r="3.5" fill="#e7c36b"/>
+        <rect x="9" y="26" width="8" height="16" rx="4" fill="#e7c36b"/>
+        <rect x="63" y="26" width="8" height="16" rx="4" fill="#e7c36b"/>
+        <rect x="16" y="14" width="48" height="40" rx="14" fill="#a78bfa" stroke="#7c3aed" stroke-width="2"/>
+        <rect x="22" y="20" width="36" height="28" rx="10" fill="#fff"/>
+        <circle cx="33" cy="31" r="3.8" fill="#1a1a1a"/>
+        <circle cx="47" cy="31" r="3.8" fill="#1a1a1a"/>
+        <path d="M32 40 Q40 46 48 40" stroke="#1a1a1a" stroke-width="2.3" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="chat-title">
+      <strong>MULTI · Editorial</strong>
+      <span>En línea · Responde al instante</span>
+    </div>
+    <button type="button" id="chatbotClose" aria-label="Cerrar chat">
+      <svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <div class="chat-body" id="chatBody"></div>
+
+  <div class="chat-quick" id="chatQuick">
+    <button type="button" data-q="precios">Precios</button>
+    <button type="button" data-q="plan profesional">Plan Profesional</button>
+    <button type="button" data-q="plan premium">Plan Premium</button>
+    <button type="button" data-q="descuentos">Descuentos</button>
+    <button type="button" data-q="tamaños">Tamaños</button>
+    <button type="button" data-q="proceso">Proceso</button>
+    <button type="button" data-q="traducción">Traducción</button>
+    <button type="button" data-q="isbn">ISBN</button>
+    <button type="button" data-q="regalías">Regalías</button>
+    <button type="button" data-q="convocatoria">Convocatoria</button>
+    <button type="button" data-q="uso de IA">Uso de IA</button>
+    <button type="button" data-q="contacto">Contacto</button>
+  </div>
+
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Escribe tu pregunta..." aria-label="Escribe tu pregunta" />
+    <button type="button" id="chatSend" aria-label="Enviar mensaje">
+      <svg viewBox="0 0 24 24"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+
+  <div class="chat-wa-row">
+    <a href="https://wa.me/573113555949?text=Hola%2C%20tengo%20una%20consulta%20sobre%20la%20Editorial" target="_blank" class="chat-wa-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Escribir por WhatsApp
+    </a>
+  </div>
+</div>
+
 <script>
 /* ============ TRADUCCIONES ============ */
 const i18n = {
@@ -2145,8 +1210,8 @@ const i18n = {
     "nav.servicios":"Servicios","nav.tamanos":"Tamaños","nav.paquetes":"Paquetes","nav.proceso":"Proceso",
     "nav.inclusion":"Inclusión","nav.cotiza":"Cotiza","nav.plataformas":"Plataformas","nav.convocatorias":"Convocatorias",
     "nav.politicas":"Políticas","nav.contacto":"Contacto",
-    "hero.title":"Tu historia merece llegar al mundo.",
-    "hero.desc":"Transformamos tu manuscrito en un libro profesional y te acompañamos desde la edición hasta la publicación internacional en español e inglés.",
+    "hero.title":"Hay libros que todavía no han encontrado el camino para existir.",
+    "hero.desc":"Hay personas que sueñan con escribir un libro, pero no saben cómo comenzar. Otras ya tienen un manuscrito, pero no saben qué sigue; y algunas han terminado su obra, pero sus posibilidades económicas les han impedido dar el siguiente paso.<br><br>En Artes Multicap Editorial acompañamos cada proyecto desde su propia realidad: te orientamos para desarrollar tu idea, trabajar tu manuscrito y explorar las posibilidades de publicación en diferentes formatos y en español e inglés.<br><br>Además, la Fundación Artes Multicap cuenta con un Programa de Inclusión Editorial, con descuentos según el estrato socioeconómico del autor, porque creemos que las posibilidades económicas no deberían impedir que una obra encuentre su camino hacia la publicación.",
     "hero.btn.cotizar":"Cotizar mi libro","hero.btn.whatsapp":"Hablar por WhatsApp",
     "serv.title":"Nuestros servicios","serv.desc":"Puedes contratar servicios individuales o un acompañamiento editorial completo.",
     "tam.title":"Tamaños de libro que manejamos",
@@ -2262,8 +1327,8 @@ const i18n = {
     "nav.servicios":"Services","nav.tamanos":"Sizes","nav.paquetes":"Packages","nav.proceso":"Process",
     "nav.inclusion":"Inclusion","nav.cotiza":"Quote","nav.plataformas":"Platforms","nav.convocatorias":"Calls",
     "nav.politicas":"Policies","nav.contacto":"Contact",
-    "hero.title":"Your story deserves to reach the world.",
-    "hero.desc":"We transform your manuscript into a professional book and support you from editing to international publication in Spanish and English.",
+    "hero.title":"There are books that have not yet found the path to exist.",
+    "hero.desc":"There are people who dream of writing a book, but don't know how to start. Others already have a manuscript, but don't know what comes next; and some have finished their work, but their economic possibilities have prevented them from taking the next step.<br><br>At Artes Multicap Editorial we accompany each project from its own reality: we guide you to develop your idea, work on your manuscript and explore publication possibilities in different formats and in Spanish and English.<br><br>In addition, the Artes Multicap Foundation has an Editorial Inclusion Program, with discounts based on the author's socioeconomic stratum, because we believe that economic possibilities should not prevent a work from finding its way to publication.",
     "hero.btn.cotizar":"Quote my book","hero.btn.whatsapp":"Chat on WhatsApp",
     "serv.title":"Our services","serv.desc":"You can hire individual services or full editorial support.",
     "tam.title":"Book sizes we handle",
@@ -2379,8 +1444,8 @@ const i18n = {
     "nav.servicios":"Services","nav.tamanos":"Formats","nav.paquetes":"Forfaits","nav.proceso":"Processus",
     "nav.inclusion":"Inclusion","nav.cotiza":"Devis","nav.plataformas":"Plateformes","nav.convocatorias":"Appels",
     "nav.politicas":"Politiques","nav.contacto":"Contact",
-    "hero.title":"Votre histoire mérite d'atteindre le monde.",
-    "hero.desc":"Nous transformons votre manuscrit en un livre professionnel et vous accompagnons de l'édition à la publication internationale en espagnol et en anglais.",
+    "hero.title":"Il y a des livres qui n'ont pas encore trouvé le chemin d'exister.",
+    "hero.desc":"Il y a des personnes qui rêvent d'écrire un livre, mais ne savent pas comment commencer. D'autres ont déjà un manuscrit, mais ne savent pas ce qui suit ; et certaines ont terminé leur œuvre, mais leurs possibilités économiques les ont empêchées de passer à l'étape suivante.<br><br>Chez Artes Multicap Editorial, nous accompagnons chaque projet depuis sa propre réalité : nous vous orientons pour développer votre idée, travailler votre manuscrit et explorer les possibilités de publication dans différents formats et en espagnol et en anglais.<br><br>De plus, la Fondation Artes Multicap dispose d'un Programme d'Inclusion Éditoriale, avec des réductions selon la strate socio-économique de l'auteur, car nous croyons que les possibilités économiques ne devraient pas empêcher une œuvre de trouver son chemin vers la publication.",
     "hero.btn.cotizar":"Devis pour mon livre","hero.btn.whatsapp":"Parler sur WhatsApp",
     "serv.title":"Nos services","serv.desc":"Vous pouvez souscrire des services individuels ou un accompagnement éditorial complet.",
     "tam.title":"Formats de livre que nous gérons",
@@ -2496,8 +1561,8 @@ const i18n = {
     "nav.servicios":"Serviços","nav.tamanos":"Formatos","nav.paquetes":"Pacotes","nav.proceso":"Processo",
     "nav.inclusion":"Inclusão","nav.cotiza":"Cotação","nav.plataformas":"Plataformas","nav.convocatorias":"Convocações",
     "nav.politicas":"Políticas","nav.contacto":"Contato",
-    "hero.title":"Sua história merece alcançar o mundo.",
-    "hero.desc":"Transformamos seu manuscrito em um livro profissional e acompanhamos você da edição à publicação internacional em espanhol e inglês.",
+    "hero.title":"Há livros que ainda não encontraram o caminho para existir.",
+    "hero.desc":"Há pessoas que sonham em escrever um livro, mas não sabem como começar. Outras já têm um manuscrito, mas não sabem o que vem a seguir; e algumas terminaram sua obra, mas suas possibilidades econômicas as impediram de dar o próximo passo.<br><br>Na Artes Multicap Editorial acompanhamos cada projeto a partir de sua própria realidade: orientamos você a desenvolver sua ideia, trabalhar seu manuscrito e explorar as possibilidades de publicação em diferentes formatos e em espanhol e inglês.<br><br>Além disso, a Fundação Artes Multicap conta com um Programa de Inclusão Editorial, com descontos de acordo com o estrato socioeconômico do autor, porque acreditamos que as possibilidades econômicas não devem impedir que uma obra encontre seu caminho para a publicação.",
     "hero.btn.cotizar":"Cotar meu livro","hero.btn.whatsapp":"Falar no WhatsApp",
     "serv.title":"Nossos serviços","serv.desc":"Você pode contratar serviços individuais ou um acompanhamento editorial completo.",
     "tam.title":"Formatos de livro que trabalhamos",
@@ -2611,7 +1676,6 @@ const i18n = {
   }
 };
 
-/* ============ FUNCIÓN DE TRADUCCIÓN ============ */
 function setLang(lang){
   const t = i18n[lang];
   if(!t) return;
@@ -2658,9 +1722,12 @@ function setLang(lang){
 
   try{ localStorage.setItem("preferred-lang", lang); }catch(e){}
   actualizarResultado();
+
+  if (window.__voiceSystem && typeof window.__voiceSystem.refreshLanguage === 'function'){
+    window.__voiceSystem.refreshLanguage(lang);
+  }
 }
 
-/* ============ INICIALIZACIÓN ============ */
 document.addEventListener("DOMContentLoaded", ()=>{
   let saved = "es";
   try{ saved = localStorage.getItem("preferred-lang") || "es"; }catch(e){}
@@ -2682,7 +1749,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
   if(se) se.addEventListener("change", actualizarResultado);
 });
 
-/* ============ COTIZADOR ============ */
 const precios = {
   profesional: { 1: 540000, 2: 540000, 3: 1080000, 4: 1080000, 5: 1800000, 6: 1800000 },
   premium:     { 1: 1230000, 2: 1230000, 3: 2460000, 4: 2460000, 5: 4100000, 6: 4100000 }
@@ -2737,6 +1803,733 @@ function seleccionarPlan(plan){
     if(cotizador) window.scrollTo({ top: cotizador.offsetTop - 100, behavior:"smooth" });
   }, 100);
 }
+
+/* =========================================================
+   SISTEMA DE VOZ MULTI-IDIOMA
+   ========================================================= */
+window.__voiceSystem = (function(){
+  'use strict';
+  const voiceStatus = document.getElementById('voiceStatus');
+  const voiceText   = document.getElementById('voiceText');
+  const voiceFallback = document.getElementById('voiceFallback');
+  if (!voiceStatus || !voiceFallback) return null;
+
+  const synth = window.speechSynthesis;
+  const supportsSpeech = !!synth && typeof window.SpeechSynthesisUtterance === 'function';
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const supportsRecog = !!SR;
+
+  const WHATSAPP_NUMBER = "573113555949";
+
+  const LANG_CONFIG = {
+    es: { speech: 'es-CO', voices: [/^es[-_]CO/i, /^es[-_]MX/i, /^es[-_]US/i, /^es[-_]ES/i, /^es/i], currency: 'pesos colombianos', statusListening: 'Escuchando... di "audio" o un tema', statusReading: 'Leyendo... di "detener" para parar', statusPaused: 'Pausado... di "continuar"', statusWhatsapp: 'Modo WhatsApp: dicta tu mensaje y di "enviar"', statusChatbot: 'Modo chatbot: haz tu pregunta', statusCapturing: 'Capturando', saySend: 'di "enviar"', whatsappWelcome: 'Modo WhatsApp. Dicta tu mensaje y di enviar. Para cancelar di cancelar.', chatbotWelcome: 'Modo chatbot. Hazme tu pregunta. Di cancelar para salir.', openingWhatsapp: 'Abriendo WhatsApp.', noMessageCaptured: 'No capté ningún mensaje.', messageDeleted: 'Mensaje borrado.', whatsappCancelled: 'Modo WhatsApp cancelado.', chatbotCancelled: 'Modo chatbot cancelado.', noContent: 'No se encontró contenido.', sectionNoContent: 'Esta sección no tiene contenido.', notFoundSection: 'No encontré esa sección.', response: 'Respuesta: ', noAnswer: 'No tengo una respuesta exacta. Escríbenos por WhatsApp.', chatbotUnavailable: 'El chatbot no está disponible.', noSpeechSupport: 'Tu navegador no permite lectura en voz alta.', welcome: 'Editorial Artes Multicap. Di "audio" para leer toda la página. O di el nombre de una sección: servicios, tamaños, paquetes, proceso, inclusión, cotizador, plataformas, convocatoria o contacto. Para enviar un mensaje por WhatsApp, di "enviar mensaje por WhatsApp". Para preguntar al chatbot, di "quiero preguntar". Para detener la lectura, di "detener".' },
+    en: { speech: 'en-US', voices: [/^en[-_]US/i, /^en[-_]GB/i, /^en[-_]AU/i, /^en/i], currency: 'Colombian pesos', statusListening: 'Listening... say "audio" or a topic', statusReading: 'Reading... say "stop" to halt', statusPaused: 'Paused... say "continue"', statusWhatsapp: 'WhatsApp mode: dictate your message and say "send"', statusChatbot: 'Chatbot mode: ask your question', statusCapturing: 'Capturing', saySend: 'say "send"', whatsappWelcome: 'WhatsApp mode. Dictate your message and say send. To cancel, say cancel.', chatbotWelcome: 'Chatbot mode. Ask me your question. Say cancel to exit.', openingWhatsapp: 'Opening WhatsApp.', noMessageCaptured: 'No message captured.', messageDeleted: 'Message deleted.', whatsappCancelled: 'WhatsApp mode cancelled.', chatbotCancelled: 'Chatbot mode cancelled.', noContent: 'No content found.', sectionNoContent: 'This section has no content.', notFoundSection: 'Section not found.', response: 'Answer: ', noAnswer: 'I do not have an exact answer. Write us on WhatsApp.', chatbotUnavailable: 'Chatbot is not available.', noSpeechSupport: 'Your browser does not support voice reading.', welcome: 'Artes Multicap Editorial. Say "audio" to read the whole page. Or say the name of a section: services, sizes, packages, process, inclusion, quote, platforms, calls, or contact. To send a WhatsApp message, say "send WhatsApp message". To ask the chatbot, say "I want to ask". To stop reading, say "stop".' },
+    fr: { speech: 'fr-FR', voices: [/^fr[-_]FR/i, /^fr[-_]CA/i, /^fr[-_]BE/i, /^fr/i], currency: 'pesos colombiens', statusListening: 'Écoute... dites "audio" ou un sujet', statusReading: 'Lecture... dites "arrêter" pour stopper', statusPaused: 'En pause... dites "continuer"', statusWhatsapp: 'Mode WhatsApp : dictez votre message et dites "envoyer"', statusChatbot: 'Mode chatbot : posez votre question', statusCapturing: 'Capture', saySend: 'dites "envoyer"', whatsappWelcome: 'Mode WhatsApp. Dictez votre message et dites envoyer. Pour annuler, dites annuler.', chatbotWelcome: 'Mode chatbot. Posez votre question. Dites annuler pour sortir.', openingWhatsapp: 'Ouverture de WhatsApp.', noMessageCaptured: 'Aucun message capturé.', messageDeleted: 'Message supprimé.', whatsappCancelled: 'Mode WhatsApp annulé.', chatbotCancelled: 'Mode chatbot annulé.', noContent: 'Aucun contenu trouvé.', sectionNoContent: 'Cette section n\'a pas de contenu.', notFoundSection: 'Section non trouvée.', response: 'Réponse : ', noAnswer: 'Je n\'ai pas de réponse exacte. Écrivez-nous sur WhatsApp.', chatbotUnavailable: 'Le chatbot n\'est pas disponible.', noSpeechSupport: 'Votre navigateur ne prend pas en charge la lecture vocale.', welcome: 'Éditions Artes Multicap. Dites "audio" pour lire toute la page. Ou dites le nom d\'une section : services, formats, forfaits, processus, inclusion, devis, plateformes, appels ou contact. Pour envoyer un message WhatsApp, dites "envoyer un message WhatsApp". Pour interroger le chatbot, dites "je veux demander". Pour arrêter la lecture, dites "arrêter".' },
+    pt: { speech: 'pt-BR', voices: [/^pt[-_]BR/i, /^pt[-_]PT/i, /^pt/i], currency: 'pesos colombianos', statusListening: 'Ouvindo... diga "áudio" ou um tema', statusReading: 'Lendo... diga "parar" para interromper', statusPaused: 'Pausado... diga "continuar"', statusWhatsapp: 'Modo WhatsApp: dite sua mensagem e diga "enviar"', statusChatbot: 'Modo chatbot: faça sua pergunta', statusCapturing: 'Capturando', saySend: 'diga "enviar"', whatsappWelcome: 'Modo WhatsApp. Dite sua mensagem e diga enviar. Para cancelar, diga cancelar.', chatbotWelcome: 'Modo chatbot. Faça sua pergunta. Diga cancelar para sair.', openingWhatsapp: 'Abrindo WhatsApp.', noMessageCaptured: 'Nenhuma mensagem capturada.', messageDeleted: 'Mensagem apagada.', whatsappCancelled: 'Modo WhatsApp cancelado.', chatbotCancelled: 'Modo chatbot cancelado.', noContent: 'Nenhum conteúdo encontrado.', sectionNoContent: 'Esta seção não tem conteúdo.', notFoundSection: 'Seção não encontrada.', response: 'Resposta: ', noAnswer: 'Não tenho uma resposta exata. Escreva-nos no WhatsApp.', chatbotUnavailable: 'O chatbot não está disponível.', noSpeechSupport: 'Seu navegador não suporta leitura em voz alta.', welcome: 'Editorial Artes Multicap. Diga "áudio" para ler toda a página. Ou diga o nome de uma seção: serviços, formatos, pacotes, processo, inclusão, cotação, plataformas, convocações ou contato. Para enviar uma mensagem no WhatsApp, diga "enviar mensagem pelo WhatsApp". Para perguntar ao chatbot, diga "quero perguntar". Para parar a leitura, diga "parar".' }
+  };
+
+  const STOP_REGEX = /\b(detener|detente|parar|párate|stop|basta|arrêter|arreter|halte|pare|parada|stoppen|beenden)\b/;
+  const PAUSE_REGEX = /\b(pausa|pausar|pause|pausieren)\b/;
+  const RESUME_REGEX = /\b(continuar|continúa|sigue|reanudar|reanuda|continue|reprendre|fortsetzen)\b/;
+  const WHATSAPP_TRIGGER_REGEX = /\b(whatsapp|wasap|wpp|whats\s*app|escribir\s*(un\s*)?mensaje|mandar\s*(un\s*)?mensaje|enviar\s*(un\s*)?mensaje|quiero\s*(enviar|mandar|escribir)\s*(un\s*)?(mensaje|whatsapp)?|send\s*(a\s*)?message|write\s*(a\s*)?message|send\s*whatsapp|envoyer\s*(un\s*)?message|écrire\s*(un\s*)?message|envoyer\s*whatsapp|enviar\s*(uma\s*)?mensagem|escrever\s*(uma\s*)?mensagem)\b/;
+  const CHATBOT_TRIGGER_REGEX = /\b(chatbot|chat\s*bot|pregunta\s*al\s*chatbot|preguntar|quiero\s*preguntar|tengo\s*una\s*(pregunta|duda|consulta)|ask\s*the\s*chatbot|i\s*want\s*to\s*ask|demander\s*au\s*chatbot|je\s*veux\s*demander|perguntar\s*ao\s*chatbot|quero\s*perguntar)\b/;
+  const AUDIO_TRIGGER_REGEX = /\b(audio|escuchar|escúchame|leer|lectura|leeme|léeme|reproducir|reproduce|comenzar|empezar|listen|read|play|start|écouter|lire|commencer|ouvir|ler|começar)\b/;
+  const RESTART_REGEX = /\b(reiniciar|comenzar\s*de\s*nuevo|desde\s*el\s*principio|repetir|restart|start\s*over|recommencer|recomeçar)\b/;
+
+  const NAV_COMMANDS = [
+    { rx: /\b(servicios?|services|service|serviços?|serviço)\b/, section: '#servicios', labels: { es: 'Servicios', en: 'Services', fr: 'Services', pt: 'Serviços' } },
+    { rx: /\b(tamaños?|tamanos?|formato[s]?\s*de\s*libro|sizes?|book\s*sizes?|formats?|formatos?\s*de\s*livro)\b/, section: '#tamanos', labels: { es: 'Tamaños de libro', en: 'Book sizes', fr: 'Formats de livre', pt: 'Formatos de livro' } },
+    { rx: /\b(paquetes?|planes?|plan\s*profesional|plan\s*premium|packages?|plans?|professional\s*plan|premium\s*plan|forfaits?|pacotes?|planos?)\b/, section: '#paquetes', labels: { es: 'Paquetes', en: 'Packages', fr: 'Forfaits', pt: 'Pacotes' } },
+    { rx: /\b(proceso|cómo\s*iniciamos|iniciar\s*proyecto|process|how\s*we\s*start|processus|démarrer|processo|começar)\b/, section: '#proceso', labels: { es: 'Proceso', en: 'Process', fr: 'Processus', pt: 'Processo' } },
+    { rx: /\b(inclusi[oó]n|descuentos?|estratos?|inclusion|discounts?|stratum|réduction|inclusão|descontos?)\b/, section: '#inclusion', labels: { es: 'Inclusión y descuentos', en: 'Inclusion and discounts', fr: 'Inclusion et réductions', pt: 'Inclusão e descontos' } },
+    { rx: /\b(cotizador|cotizar|cotizaci[oó]n|precios?|quote|quotation|prices?|devis|prix|cotação|preços?)\b/, section: '#cotizador', labels: { es: 'Cotizador', en: 'Quote', fr: 'Devis', pt: 'Cotação' } },
+    { rx: /\b(plataformas?|revistas?|explorando\s*museos|platforms?|magazines?|plateformes?|revues?|plataformas?|revistas?)\b/, section: '#revistas', labels: { es: 'Plataformas', en: 'Platforms', fr: 'Plateformes', pt: 'Plataformas' } },
+    { rx: /\b(convocatorias?|concurso|latinoam[eé]rica\s*escribe|calls?|contest|appels?|concours|convocações?|concurso)\b/, section: '#convocatoria', labels: { es: 'Convocatoria', en: 'Call', fr: 'Appel', pt: 'Convocação' } },
+    { rx: /\b(contacto|contactar|escr[ií]benos|contact|contacte|contato|contatar)\b/, section: '#contacto', labels: { es: 'Contacto', en: 'Contact', fr: 'Contact', pt: 'Contato' } }
+  ];
+
+  function getLang(){ try{ return localStorage.getItem('preferred-lang') || 'es'; }catch(e){ return 'es'; } }
+  function getConfig(){ return LANG_CONFIG[getLang()] || LANG_CONFIG.es; }
+  function getLabel(labels){ return labels[getLang()] || labels.es; }
+
+  const READ_SELECTORS = 'h1,h2,h3,h4,h5,p,li,summary,label,blockquote,figcaption,cite,td,th';
+  const SKIP_TEXT = /^(—|✕|✓|✦|⚠)$/;
+
+  const S = {
+    items: [], index: 0, playing: false, paused: false, rate: 1, gen: 0,
+    voices: [], watchdog: null, highlighted: null,
+    recognition: null, recognitionRunning: false, micActive: false,
+    welcomePlayed: false, interactionDone: false, lastCmd: 0,
+    userScrolling: false, scrollTimer: null,
+    mode: 'normal', capturedText: '', triggerPhrase: '',
+    stopping: false, lastDetenerTime: 0, modeEnterTime: 0,
+    recentTTSWords: [], recentTTSTimestamp: 0
+  };
+
+  function normalizeWord(w){ return (w||'').toLowerCase().replace(/[^\wáéíóúñüàâçèéêëîïôùûüÿ]/g,'').trim(); }
+
+  function recordTTSWords(text){
+    const words = (text||'').toLowerCase().split(/\s+/).map(normalizeWord).filter(w=>w.length>=3);
+    S.recentTTSWords = [...words, ...S.recentTTSWords].slice(0, 80);
+    S.recentTTSTimestamp = Date.now();
+  }
+  function isEcho(text){
+    if (!S.recentTTSWords.length) return false;
+    if (Date.now() - S.recentTTSTimestamp > 8000) return false;
+    const t = (text||'').toLowerCase().trim();
+    if (!t) return false;
+    const words = t.split(/\s+/).map(normalizeWord).filter(w=>w.length>=3);
+    if (!words.length) return false;
+    let m = 0;
+    for (const w of words) if (S.recentTTSWords.includes(w)) m++;
+    return m >= Math.max(2, Math.ceil(words.length*0.5));
+  }
+
+  function formatPricesForSpeech(text){
+    if (!text) return text;
+    const currency = getConfig().currency;
+    let out = text;
+    out = out.replace(/\$\s*([\d]{1,3}(?:[.,]\d{3})+|\d{3,})/g,function(m,num){
+      return num.replace(/[.,]/g,'') + ' ' + currency;
+    });
+    out = out.replace(/\bCOP\b/g, currency);
+    return out;
+  }
+
+  function markUserScrolling(){
+    S.userScrolling = true;
+    clearTimeout(S.scrollTimer);
+    S.scrollTimer = setTimeout(()=>S.userScrolling=false,4500);
+  }
+  window.addEventListener('wheel',markUserScrolling,{passive:true});
+  window.addEventListener('touchmove',markUserScrolling,{passive:true});
+
+  function loadVoices(){
+    if (!supportsSpeech) return;
+    try{ S.voices = synth.getVoices()||[]; }catch(e){ S.voices = []; }
+  }
+  if (supportsSpeech){
+    loadVoices();
+    if (typeof synth.addEventListener === 'function') synth.addEventListener('voiceschanged',loadVoices);
+    else synth.onvoiceschanged = loadVoices;
+  }
+  function pickVoice(){
+    if (!S.voices.length) loadVoices();
+    const vs = S.voices;
+    if (!vs.length) return null;
+    const config = getConfig();
+    for (const rx of config.voices){
+      const v = vs.find(voice => rx.test(voice.lang));
+      if (v) return v;
+    }
+    return null;
+  }
+
+  function cleanText(t){ return (t||'').replace(/\s+/g,' ').trim(); }
+  function splitText(text,max){
+    max = max||250;
+    if (text.length <= max) return [text];
+    const parts = text.match(/[^.!?¡¿;:]+[.!?]*\s*/g) || [text];
+    const out = []; let cur = '';
+    parts.forEach(p=>{
+      if ((cur+p).length > max && cur){ out.push(cur.trim()); cur = p; }
+      else { cur += p; }
+    });
+    if (cur.trim()) out.push(cur.trim());
+    return out.filter(Boolean);
+  }
+
+  function collectItems(root){
+    const container = root || document.body;
+    const els = container.querySelectorAll(READ_SELECTORS);
+    const collected = new Set();
+    const list = [];
+    els.forEach(el=>{
+      if (el.closest('#voiceStatus') || el.closest('#voiceFallback')) return;
+      if (el.closest('#chatbotPanel') || el.closest('#chatbotBtn')) return;
+      if (el.closest('script,style,noscript,header,footer')) return;
+      if (el.closest('#lang-bar')) return;
+      if (el.getAttribute('aria-hidden') === 'true') return;
+      if (el.hasAttribute('hidden')) return;
+      if (el.tagName === 'IMG') return;
+      if (el.querySelector('img') && (el.textContent||'').trim().length < 3) return;
+
+      let p = el.parentElement, nested = false;
+      while (p && p !== document.body){
+        if (collected.has(p)){ nested = true; break; }
+        p = p.parentElement;
+      }
+      if (nested) return;
+      const text = cleanText(el.textContent||'');
+      if (!text || text.length < 2) return;
+      if (SKIP_TEXT.test(text)) return;
+      collected.add(el);
+      splitText(text).forEach(t=>list.push({ el: el, text: t }));
+    });
+    return list;
+  }
+
+  function clearHighlight(){
+    if (S.highlighted){ S.highlighted.style.outline=''; S.highlighted.style.background=''; S.highlighted.style.outlineOffset=''; S.highlighted.style.borderRadius=''; S.highlighted = null; }
+  }
+  function highlight(el){
+    if (!el || el === S.highlighted) return;
+    clearHighlight();
+    S.highlighted = el;
+    el.style.outline = '3px solid #e7c36b';
+    el.style.outlineOffset = '3px';
+    el.style.borderRadius = '6px';
+    el.style.background = 'rgba(231,195,107,.12)';
+    if (!S.userScrolling){
+      try{
+        const r = el.getBoundingClientRect();
+        const vh = window.innerHeight||document.documentElement.clientHeight;
+        if (r.top < 0 || r.bottom > vh){
+          el.scrollIntoView({behavior:'smooth',block:'center'});
+        }
+      }catch(e){}
+    }
+  }
+
+  function showStatus(txt,color){
+    if (!voiceStatus) return;
+    voiceStatus.classList.add('active');
+    if (voiceText) voiceText.textContent = txt;
+    document.body.classList.add('voice-active');
+  }
+  function hideStatus(){
+    if (voiceStatus) voiceStatus.classList.remove('active');
+    document.body.classList.remove('voice-active');
+  }
+  function setListening(){ showStatus(getConfig().statusListening,'#22c55e'); }
+  function setReading(){ showStatus(getConfig().statusReading,'#e7c36b'); }
+  function setCapturing(l,c){ showStatus(l,c||'#e7c36b'); }
+
+  function cancelImmediate(){
+    S.gen++;
+    try{ synth.cancel(); }catch(e){}
+    S.playing = false; S.paused = false; S.index = 0;
+    S.recentTTSWords = [];
+    clearHighlight(); stopWatchdog();
+    if (S.micActive) setListening(); else hideStatus();
+  }
+
+  function speakFrom(i){
+    if (i >= S.items.length){ finishReading(); return; }
+    S.index = i;
+    const item = S.items[i];
+    highlight(item.el);
+    const spoken = formatPricesForSpeech(item.text);
+    recordTTSWords(spoken);
+    const u = new SpeechSynthesisUtterance(spoken);
+    u.lang = getConfig().speech;
+    u.rate = S.rate; u.pitch = 1; u.volume = 1;
+    const v = pickVoice(); if (v) u.voice = v;
+    const myGen = S.gen;
+    u.onend = function(){
+      if (myGen !== S.gen) return;
+      speakFrom(i+1);
+    };
+    u.onerror = function(ev){
+      if (myGen !== S.gen) return;
+      if (ev && (ev.error === 'interrupted' || ev.error === 'canceled')) return;
+      speakFrom(i+1);
+    };
+    try{ synth.speak(u); }catch(e){}
+  }
+
+  function startWatchdog(){
+    stopWatchdog();
+    S.watchdog = setInterval(function(){
+      if (!S.playing || S.paused) return;
+      try{ if (synth.paused) synth.resume(); }catch(e){}
+    },5000);
+  }
+  function stopWatchdog(){ if (S.watchdog){ clearInterval(S.watchdog); S.watchdog = null; } }
+
+  function resetReader(){
+    S.gen++; try{ synth.cancel(); }catch(e){}
+    S.playing = false; S.paused = false; S.index = 0;
+    S.recentTTSWords = [];
+    clearHighlight(); stopWatchdog();
+  }
+
+  function startReading(){
+    if (!supportsSpeech){ speakText(getConfig().noSpeechSupport); return; }
+    resetReader();
+    S.items = collectItems(null);
+    if (!S.items.length){ speakText(getConfig().noContent); return; }
+    S.gen++; S.playing = true; S.paused = false;
+    setReading(); speakFrom(0); startWatchdog();
+  }
+
+  function readSection(selector,label){
+    if (!supportsSpeech){ speakText(getConfig().noSpeechSupport); return; }
+    const section = document.querySelector(selector);
+    if (!section){ speakText(getConfig().notFoundSection); return; }
+    S.gen++; try{ synth.cancel(); }catch(e){}
+    S.playing = false; S.paused = false; S.index = 0;
+    S.recentTTSWords = [];
+    clearHighlight(); stopWatchdog();
+    try{ section.scrollIntoView({behavior:'smooth',block:'start'}); }catch(e){}
+    S.items = collectItems(section);
+    if (!S.items.length){ speakText(getConfig().sectionNoContent); return; }
+    S.gen++; S.playing = true; S.paused = false;
+    setReading();
+    setTimeout(function(){ speakFrom(0); },180);
+    startWatchdog();
+  }
+
+  function togglePause(){
+    if (!S.playing || !supportsSpeech) return;
+    if (S.paused){
+      try{ synth.resume(); }catch(e){}
+      S.paused = false; setReading();
+    } else {
+      try{ synth.pause(); }catch(e){}
+      S.paused = true;
+      showStatus(getConfig().statusPaused,'#e7c36b');
+    }
+  }
+
+  function finishReading(){
+    S.playing = false; S.paused = false;
+    S.recentTTSWords = [];
+    clearHighlight(); stopWatchdog();
+    if (S.micActive) setListening(); else hideStatus();
+  }
+
+  function speakText(text,onDone){
+    if (!supportsSpeech){ if (onDone) onDone(); return; }
+    const u = new SpeechSynthesisUtterance(formatPricesForSpeech(text));
+    u.lang = getConfig().speech;
+    u.rate = S.rate || 1; u.pitch = 1;
+    const v = pickVoice(); if (v) u.voice = v;
+    u.onend = function(){ if (onDone) onDone(); };
+    u.onerror = function(){ if (onDone) onDone(); };
+    try{ synth.speak(u); }catch(e){ if (onDone) onDone(); }
+  }
+
+  function enterWhatsappMode(trigger){
+    S.mode = 'whatsapp-capture';
+    S.capturedText = '';
+    S.triggerPhrase = (trigger||'').toLowerCase().trim();
+    S.modeEnterTime = Date.now();
+    speakText(getConfig().whatsappWelcome);
+    setCapturing(getConfig().statusWhatsapp,'#25D366');
+  }
+  function sendWhatsappMessage(msg){
+    const url = 'https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(msg);
+    try{ const w = window.open(url,'_blank'); if (!w) window.location.href = url; }
+    catch(e){ window.location.href = url; }
+    speakText(getConfig().openingWhatsapp);
+    S.mode = 'normal'; S.capturedText = ''; S.triggerPhrase = '';
+    if (S.micActive) setListening();
+  }
+
+  function enterChatbotMode(trigger){
+    S.mode = 'chatbot-capture';
+    S.capturedText = '';
+    S.triggerPhrase = (trigger||'').toLowerCase().trim();
+    S.modeEnterTime = Date.now();
+    speakText(getConfig().chatbotWelcome);
+    setCapturing(getConfig().statusChatbot,'#7c3aed');
+  }
+  function askChatbot(q){
+    if (typeof window.chatbotOpen === 'function') window.chatbotOpen();
+    if (typeof window.chatbotSendMessage !== 'function'){
+      speakText(getConfig().chatbotUnavailable);
+      S.mode = 'normal'; S.capturedText = ''; S.triggerPhrase = '';
+      return;
+    }
+    const plain = (typeof window.chatbotGetPlainAnswer === 'function') ? window.chatbotGetPlainAnswer(q) : null;
+    window.chatbotSendMessage(q);
+    S.mode = 'normal'; S.capturedText = ''; S.triggerPhrase = '';
+    setTimeout(function(){
+      if (plain) speakText(getConfig().response + plain);
+      else speakText(getConfig().noAnswer);
+      if (S.micActive) setListening();
+    },300);
+  }
+
+  function initRecognition(){
+    if (!supportsRecog) return null;
+    const r = new SR();
+    r.lang = getConfig().speech;
+    r.continuous = true; r.interimResults = true; r.maxAlternatives = 3;
+    r.onresult = function(event){
+      let fin = ''; let interim = '';
+      for (let i = event.resultIndex; i < event.results.length; i++){
+        const tr = event.results[i][0].transcript;
+        if (event.results[i].isFinal) fin += ' ' + tr;
+        else interim += ' ' + tr;
+      }
+      const interimClean = interim.toLowerCase().trim();
+      const finClean = fin.toLowerCase().trim();
+
+      if (STOP_REGEX.test(interimClean) || STOP_REGEX.test(finClean)){
+        const now = Date.now();
+        if (now - S.lastDetenerTime > 700){
+          S.lastDetenerTime = now;
+          if (S.playing || S.paused){
+            cancelImmediate();
+            return;
+          }
+        }
+      }
+
+      if ((PAUSE_REGEX.test(interimClean) || PAUSE_REGEX.test(finClean)) && S.playing && !S.paused){
+        togglePause(); return;
+      }
+      if ((RESUME_REGEX.test(interimClean) || RESUME_REGEX.test(finClean)) && S.playing && S.paused){
+        togglePause(); return;
+      }
+
+      if (S.playing) return;
+
+      if (finClean){
+        if (isEcho(finClean)) return;
+        handleVoiceInput(finClean);
+      }
+    };
+    r.onerror = function(ev){
+      if (ev.error === 'not-allowed' || ev.error === 'service-not-allowed'){
+        S.micActive = false;
+        showStatus('Micrófono no disponible / Microphone not available','#ef4444');
+      }
+    };
+    r.onend = function(){
+      S.recognitionRunning = false;
+      if (S.micActive && !S.playing){
+        setTimeout(function(){
+          if (S.micActive && !S.recognitionRunning) startRecognition();
+        },150);
+      }
+    };
+    return r;
+  }
+  function startRecognition(){
+    if (!supportsRecog || !S.recognition || S.recognitionRunning) return;
+    try{
+      S.recognition.start();
+      S.recognitionRunning = true; S.micActive = true;
+      if (S.mode === 'normal') setListening();
+    }catch(e){}
+  }
+
+  function handleWhatsappInput(t){
+    if (S.triggerPhrase && t === S.triggerPhrase) return;
+    if (Date.now() - S.modeEnterTime < 400 && t.length < 10) return;
+    if (t.length < 50 && /\b(enviar|env[ií]a|env[ií]alo|manda|m[aá]ndalo|mandar|ya\s*est[aá]|listo|ya|send|sent|envoie|envoyer|envie|enviar)\b/.test(t)){
+      if (S.capturedText.trim()){
+        sendWhatsappMessage(S.capturedText.trim());
+      } else {
+        speakText(getConfig().noMessageCaptured);
+        setCapturing(getConfig().statusWhatsapp,'#25D366');
+      }
+      return;
+    }
+    if (t.length < 40 && /\b(cancelar|cancela|salir\s*del\s*modo|abortar|olv[ií]dalo|cancel|quit|exit|annuler|quitter|sair)\b/.test(t)){
+      S.mode = 'normal'; S.capturedText = ''; S.triggerPhrase = '';
+      speakText(getConfig().whatsappCancelled);
+      if (S.micActive) setListening();
+      return;
+    }
+    if (t.length < 50 && /\b(borrar|borra|empezar\s*de\s*nuevo|delete|clear|effacer|recomeçar|apagar)\b/.test(t)){
+      S.capturedText = '';
+      speakText(getConfig().messageDeleted);
+      setCapturing(getConfig().statusWhatsapp,'#25D366');
+      return;
+    }
+    const clean = t.replace(/\bpunto\b/g,'.').replace(/\bcoma\b/g,',');
+    S.capturedText += (S.capturedText?' ':'') + clean;
+    const preview = S.capturedText.length > 50 ? '...' + S.capturedText.slice(-50) : S.capturedText;
+    showStatus(getConfig().statusCapturing + ': "'+preview+'" · ' + getConfig().saySend,'#25D366');
+  }
+
+  function handleChatbotInput(t){
+    if (S.triggerPhrase && t === S.triggerPhrase) return;
+    if (Date.now() - S.modeEnterTime < 400 && t.length < 10) return;
+    if (t.length < 40 && /\b(cancelar|cancela|salir\s*del\s*modo|abortar|cancel|quit|exit|annuler|quitter|sair)\b/.test(t)){
+      S.mode = 'normal'; S.capturedText = ''; S.triggerPhrase = '';
+      speakText(getConfig().chatbotCancelled);
+      if (S.micActive) setListening();
+      return;
+    }
+    if (t.length < 3) return;
+    askChatbot(t);
+  }
+
+  function handleVoiceInput(t){
+    if (!t) return;
+    const now = Date.now();
+    if (S.mode === 'whatsapp-capture'){ handleWhatsappInput(t); return; }
+    if (S.mode === 'chatbot-capture'){ handleChatbotInput(t); return; }
+
+    if (STOP_REGEX.test(t) && !isEcho(t)){
+      S.lastCmd = now;
+      if (S.playing || S.paused) cancelImmediate();
+      return;
+    }
+    if (now - S.lastCmd < 200) return;
+
+    if (PAUSE_REGEX.test(t) && S.playing && !S.paused){ S.lastCmd = now; togglePause(); return; }
+    if (RESUME_REGEX.test(t) && S.playing && S.paused){ S.lastCmd = now; togglePause(); return; }
+
+    if (WHATSAPP_TRIGGER_REGEX.test(t)){ S.lastCmd = now; enterWhatsappMode(t); return; }
+    if (CHATBOT_TRIGGER_REGEX.test(t)){ S.lastCmd = now; enterChatbotMode(t); return; }
+
+    for (let i = 0; i < NAV_COMMANDS.length; i++){
+      const nav = NAV_COMMANDS[i];
+      if (nav.rx.test(t)){
+        S.lastCmd = now;
+        readSection(nav.section, getLabel(nav.labels));
+        return;
+      }
+    }
+
+    if (AUDIO_TRIGGER_REGEX.test(t)){
+      if (!S.playing){ S.lastCmd = now; startReading(); }
+      return;
+    }
+    if (RESTART_REGEX.test(t)){
+      S.lastCmd = now; startReading(); return;
+    }
+  }
+
+  function playWelcome(onDone){
+    if (!supportsSpeech){ if (onDone) onDone(); return; }
+    const u = new SpeechSynthesisUtterance(getConfig().welcome);
+    u.lang = getConfig().speech;
+    u.rate = 1; u.pitch = 1; u.volume = 1;
+    const v = pickVoice(); if (v) u.voice = v;
+    u.onend = function(){ if (onDone) onDone(); };
+    u.onerror = function(){ if (onDone) onDone(); };
+    try{ synth.speak(u); }catch(e){ if (onDone) onDone(); }
+  }
+
+  function activateSystem(){
+    if (supportsRecog && !S.recognition) S.recognition = initRecognition();
+    startRecognition();
+    if (!S.welcomePlayed && supportsSpeech){
+      S.welcomePlayed = true;
+      setTimeout(function(){
+        playWelcome(function(){ if (S.micActive) setListening(); });
+      },200);
+    }
+  }
+
+  function refreshLanguage(lang){
+    if (!supportsRecog || !S.recognition) return;
+    try{ S.recognition.stop(); }catch(e){}
+    setTimeout(function(){
+      try{
+        S.recognition.lang = (LANG_CONFIG[lang] || LANG_CONFIG.es).speech;
+        if (S.micActive) S.recognition.start();
+      }catch(e){}
+    },300);
+    if (S.mode === 'normal'){
+      if (S.playing) setReading();
+      else if (S.micActive) setListening();
+    }
+  }
+
+  function onFirstInteraction(){
+    if (S.interactionDone) return;
+    S.interactionDone = true;
+    activateSystem();
+  }
+
+  ['click','touchstart','keydown','pointerdown','scroll','mousedown'].forEach(evt=>{
+    document.addEventListener(evt,onFirstInteraction,{capture:true,passive:true,once:false});
+  });
+
+  voiceFallback.addEventListener('click',function(e){
+    e.stopPropagation();
+    if (!S.welcomePlayed){
+      S.welcomePlayed = true;
+      playWelcome(function(){ activateSystem(); });
+    } else {
+      activateSystem();
+    }
+  });
+
+  window.addEventListener('load',function(){
+    setTimeout(function(){
+      if (!S.welcomePlayed){
+        S.welcomePlayed = true;
+        playWelcome(function(){
+          if (!S.recognition) S.recognition = initRecognition();
+          startRecognition();
+        });
+      }
+    },200);
+  });
+
+  window.addEventListener('beforeunload',function(){
+    try{ synth.cancel(); }catch(e){}
+    try{ if (S.recognition) S.recognition.abort(); }catch(e){}
+  });
+
+  return { refreshLanguage: refreshLanguage };
+})();
+
+/* =========================================================
+   CHATBOT MULTI — EDITORIAL
+   ========================================================= */
+(function(){
+  'use strict';
+  const chatbotBtn = document.getElementById('chatbotBtn');
+  const chatbotPanel = document.getElementById('chatbotPanel');
+  const chatbotCloseBtn = document.getElementById('chatbotClose');
+  const chatBody = document.getElementById('chatBody');
+  const chatInput = document.getElementById('chatInput');
+  const chatSend = document.getElementById('chatSend');
+  const chatQuick = document.getElementById('chatQuick');
+  if (!chatbotBtn || !chatbotPanel) return;
+
+  const WA_NUMBER = '573113555949';
+  const WA_GENERAL = 'https://wa.me/' + WA_NUMBER + '?text=Hola%2C%20tengo%20una%20consulta%20sobre%20la%20Editorial';
+
+  const KB = [
+    { keys: ['hola','buenas','buenos días','buenos dias','buenas tardes','buenas noches','hey','saludos','qué tal','que tal','hello','hi','bonjour','salut','olá','oi'],
+      reply: '¡Hola! 👋 Soy <strong>MULTI</strong>, el asistente de la Editorial Artes Multicap. Puedo ayudarte con información sobre <strong>planes de publicación</strong>, <strong>precios</strong>, <strong>descuentos por estrato</strong>, <strong>convocatorias</strong>, <strong>proceso editorial</strong> y más. ¿Qué necesitas saber?' },
+    { keys: ['gracias','ok','perfecto','listo','genial','excelente','thanks','thank you','merci','obrigado'],
+      reply: '¡Con gusto! 😊 Si necesitas más ayuda, escríbenos por <a href="'+WA_GENERAL+'" target="_blank">WhatsApp</a>.' },
+    { keys: ['adios','adiós','chao','nos vemos','hasta luego','bye','goodbye','au revoir','adeus'],
+      reply: '¡Hasta luego! 👋 <a href="'+WA_GENERAL+'" target="_blank">WhatsApp aquí</a> cuando quieras.' },
+    { keys: ['precio','precios','cuánto','cuanto','vale','costo','costos','tarifas','cotización','cotizacion','price','prices','cost','devis','prix','coût','preço','preços','custo'],
+      reply: '💰 <strong>Precios en pesos colombianos (COP):</strong><br><br>• <strong>Plan Profesional</strong> (edición en español · 2 formatos): desde <strong>$1.800.000 COP</strong> (estrato 5/6). Con descuentos puede bajar a <strong>$540.000 COP</strong>.<br><br>• <strong>Plan Premium Global</strong> (edición bilingüe · 6 formatos): desde <strong>$4.100.000 COP</strong>. Con descuentos puede bajar a <strong>$1.230.000 COP</strong>.<br><br>Usa el <a href="#cotizador">cotizador</a> para ver tu valor exacto según tu estrato.' },
+    { keys: ['plan profesional','profesional','paquete profesional','paquete básico','paquete basico','professional plan','plan professionnel','plano profissional'],
+      reply: '📘 <strong>Plan Profesional</strong> — Edición en español · 2 formatos<br><br><strong>Incluye:</strong><br>• Corrección ortotipográfica y de estilo<br>• Maquetación interior profesional<br>• Diseño profesional de portada<br>• Gestión del ISBN<br>• Publicación internacional<br>• eBook en español<br>• Tapa blanda en español<br>• Promoción inicial<br><br>🎁 <strong>Beneficio:</strong> te obsequiamos el primer ejemplar impreso.<br><br><strong>Ideal para:</strong> novelas, tesis, ensayos, textos profesionales y journals.<br><br><a href="#paquetes">Ver detalles</a> · <a href="#cotizador">Cotizar</a>' },
+    { keys: ['plan premium','premium','paquete premium','plan premium global','bilingüe','bilingue','global premium plan','plano premium global'],
+      reply: '📕 <strong>Plan Premium Global</strong> — Edición bilingüe · 6 formatos<br><br><strong>Incluye:</strong><br>• Todo lo del Plan Profesional<br>• Traducción completa al inglés<br>• eBook en español e inglés<br>• Tapa blanda en español e inglés<br>• Tapa dura en español e inglés<br>• Kit de comunicación y lanzamiento<br>• Promoción ampliada<br><br>🎁 <strong>Beneficio:</strong> 3 ejemplares impresos de cortesía.<br><br><strong>Ideal para:</strong> autores que buscan alcance internacional.<br><br><a href="#paquetes">Ver detalles</a> · <a href="#cotizador">Cotizar</a>' },
+    { keys: ['descuento','descuentos','estrato','estratos','inclusión','inclusion','rebaja','discount','stratum','réduction','inclusão','descontos'],
+      reply: '🎯 <strong>Programa de Inclusión Editorial — Descuentos por estrato:</strong><br><br>• <strong>Estrato 1:</strong> 70% dto → pagas 30%<br>• <strong>Estrato 2:</strong> 70% dto → pagas 30%<br>• <strong>Estrato 3:</strong> 40% dto → pagas 60%<br>• <strong>Estrato 4:</strong> 40% dto → pagas 60%<br>• <strong>Estrato 5:</strong> sin descuento<br>• <strong>Estrato 6:</strong> sin descuento<br><br>Debes adjuntar: formulario de registro, recibo de servicios y cédula.<br><br><a href="#inclusion">Ver más</a>' },
+    { keys: ['tamaño','tamaños','tamanos','formato','medidas','bolsillo','comercial','ilustrado','técnico','tecnico','size','format','book size','taille','tamanho'],
+      reply: '📐 <strong>Tamaños de libro:</strong><br><br>• <strong>Bolsillo:</strong> novelas, poemarios, viajes. Se cotiza aparte.<br>• <strong>Comercial/Estándar (15×23 cm):</strong> formato base de los paquetes.<br>• <strong>Grande:</strong> recetarios, infantiles, arte. Se cotiza aparte.<br>• <strong>Técnico/Ilustrado:</strong> con gráficas, tablas, color. Se cotiza aparte.<br><br><a href="#tamanos">Ver tabla completa</a>' },
+    { keys: ['proceso','cómo funciona','como funciona','etapas','iniciar','empezar','process','how does it work','stages','processus','comment ça marche','processo'],
+      reply: '📋 <strong>Proceso editorial:</strong><br><br>1. Contacto y definición del tamaño<br>2. Cotización personalizada<br>3. Firma del contrato<br>4. Registro del autor y aplicación de descuentos<br>5. Corrección y maquetación<br>6. Diseño de portada<br>7. Traducción (si aplica Premium)<br>8. Publicación y distribución<br><br><a href="#proceso">Ver proceso completo</a>' },
+    { keys: ['traducción','traduccion','inglés','ingles','english','translation','traduction','tradução'],
+      reply: '🌐 <strong>Traducción al inglés:</strong> Incluida únicamente en el <strong>Plan Premium Global</strong>. Traducimos la obra completa al inglés profesional.<br><br><a href="#paquetes">Ver Plan Premium</a>' },
+    { keys: ['isbn','registro','código','codigo','registration','code'],
+      reply: '📖 <strong>ISBN:</strong> Gestionamos el ISBN correspondiente a cada formato publicado. Está incluido en ambos planes (Profesional y Premium).' },
+    { keys: ['regalía','regalia','regalías','regalias','ventas','ganancia','ganancias','royalties','sales','profit','redevances'],
+      reply: '💵 <strong>Regalías:</strong> recibes el <strong>50% de las regalías netas</strong> por ventas con reporte semestral. Aplica para libros publicados a través de nuestros paquetes.' },
+    { keys: ['convocatoria','convocatorias','concurso','latinoamérica escribe','latinoamerica escribe','call','contest','appel','concours','convocação'],
+      reply: '🏆 <strong>Convocatoria "Latinoamérica Escribe":</strong><br><br>• Concurso internacional de creación literaria<br>• Una obra ganadora<br>• Premio: <strong>Plan Premium Global valorado en $4.100.000 COP</strong><br>• Tema y género libres<br>• <strong>Participación GRATIS</strong><br>• Mayores de 18 años<br>• De 20.000 a 30.000 palabras<br>• Seudónimo obligatorio<br><br><a href="#convocatoria">Ver bases completas</a>' },
+    { keys: ['uso de ia','inteligencia artificial','ia','chatgpt','artificial intelligence','ai','intelligence artificielle','inteligência artificial'],
+      reply: '⚠️ <strong>Uso de IA en la convocatoria:</strong><br><br>• Es <strong>obligatorio declarar</strong> cualquier uso de IA<br>• Se permite como herramienta de apoyo con revisión del autor<br>• No se aceptan obras generadas íntegramente por IA<br>• El incumplimiento implica descalificación<br><br><a href="#convocatoria">Ver más</a>' },
+    { keys: ['derechos','autor','autoría','autoria','propiedad intelectual','copyright','in dubio','author rights','intellectual property','droits','auteur','direitos'],
+      reply: '⚖️ <strong>Derechos de autor:</strong> TÚ SIGUES SIENDO EL DUEÑO DE TU OBRA. El contrato de edición no transfiere el derecho de autor (artículo 119, Ley 23 de 1982). Se aplica el principio <strong>«in dubio pro auctore»</strong> — siempre a favor del autor.' },
+    { keys: ['servicios','servicios individuales','corrección','correccion','maquetación','maquetacion','portada','diseño','diseno','services','correction','layout','cover','design','mise en page','serviços','correção'],
+      reply: '🛠️ <strong>Servicios editoriales individuales:</strong><br><br>• Corrección ortotipográfica y de estilo<br>• Maquetación interior<br>• Diseño de portada y contraportada<br>• Gestión de ISBN<br>• Publicación internacional<br>• eBook<br>• Distribución en Amazon<br><br>Puedes contratar el servicio que necesites por separado o el paquete completo.<br><br><a href="#servicios">Ver servicios</a>' },
+    { keys: ['cotizador','cotizar','cotiza','estimado','valor','quote','quotation','devis','cotação','cotar'],
+      reply: '💡 Usa nuestro <a href="#cotizador">cotizador</a>: elige tu plan y tu estrato y te mostramos el valor estimado al instante. También puedes pedir una cotización personalizada por <a href="'+WA_GENERAL+'" target="_blank">WhatsApp</a>.' },
+    { keys: ['pago','pagar','nequi','paypal','mercado pago','cuotas','financiación','financiacion','payment','pay','installments','paiement','payer','pagamento'],
+      reply: '💳 <strong>Formas de pago:</strong> Nequi, PayPal, Mercado Pago, Western Union. También podemos revisar un plan de pagos por cuotas según tu caso. Escríbenos por <a href="'+WA_GENERAL+'" target="_blank">WhatsApp</a>.' },
+    { keys: ['contacto','contactar','correo','email','teléfono','telefono','comunicar','contact','phone','contato','telefone'],
+      reply: '📞 <strong>Contacto:</strong><br>📧 artesmulticap2024@gmail.com<br>📱 <a href="'+WA_GENERAL+'" target="_blank">WhatsApp: +57 311 355 5949</a><br>🌐 Colombia' },
+    { keys: ['whatsapp','wasap','wpp','escribir','mensaje','message','write','envoyer','mensagem'],
+      reply: '📲 <a href="'+WA_GENERAL+'" target="_blank">Haz clic aquí para abrir WhatsApp</a>.' },
+    { keys: ['plataforma','plataformas','revista','revistas','museos','explorando','platform','magazine','plateforme','revue','plataforma','revista'],
+      reply: '🌐 <strong>Nuestras plataformas:</strong><br><br>• <strong>Explorando Museos y Arte Latinoamericano</strong> — revistas digitales de arte y cultura<br>• <strong>Fundación Artes Multicap</strong> — talleres gratuitos, cursos y proyectos sociales<br><br><a href="#revistas">Ver plataformas</a>' },
+    { keys: ['quiénes somos','quienes somos','editorial','sobre la editorial','artes multicap','about us','about the publisher','à propos','sobre nós'],
+      reply: '🏛️ Somos <strong>Artes Multicap Editorial</strong>, brazo editorial de la Fundación Artes Multicap (Colombia). Publicamos libros en español e inglés, con distribución internacional y un programa de inclusión por estrato socioeconómico.' },
+    { keys: ['ebook','libro digital','digital','livre numérique','livro digital'],
+      reply: '📱 <strong>eBook:</strong> incluido en ambos planes. Se entrega en formatos compatibles con Amazon Kindle y otras plataformas.' },
+    { keys: ['duración','duracion','tiempo','cuánto tarda','cuanto tarda','meses','duration','how long','time','durée','temps','duração','tempo'],
+      reply: '⏱️ <strong>Duración:</strong><br>• Plan Profesional: 2 a 3 meses<br>• Plan Premium (con traducción): 3 a 4 meses<br><br>Los tiempos varían según la complejidad del manuscrito.' }
+  ];
+
+  const FALLBACKS = [
+    'No tengo esa respuesta exacta. 🤔 Prueba con: <strong>precios</strong>, <strong>plan profesional</strong>, <strong>plan premium</strong>, <strong>descuentos</strong>, <strong>convocatoria</strong>. O escríbenos por <a href="'+WA_GENERAL+'" target="_blank">WhatsApp</a>.',
+    'No encontré info. 😅 Prueba con el nombre del plan o sección. O <a href="'+WA_GENERAL+'" target="_blank">WhatsApp aquí</a>.'
+  ];
+  let fallbackIdx = 0;
+
+  function scrollBottom(){ setTimeout(()=>chatBody.scrollTop=chatBody.scrollHeight,60); }
+  function addMsg(html,who){
+    const div = document.createElement('div');
+    div.className = 'chat-msg ' + (who === 'user' ? 'user' : 'bot');
+    div.innerHTML = html;
+    chatBody.appendChild(div);
+    scrollBottom();
+  }
+  function addTyping(){
+    const div = document.createElement('div');
+    div.className = 'chat-typing'; div.id = 'chatTypingIndicator';
+    div.innerHTML = '<span></span><span></span><span></span>';
+    chatBody.appendChild(div); scrollBottom();
+  }
+  function removeTyping(){
+    const el = document.getElementById('chatTypingIndicator');
+    if (el) el.remove();
+  }
+  function findAnswer(text){
+    const t = (text||'').toLowerCase().trim();
+    if (!t) return null;
+    let best = null, bestScore = 0;
+    KB.forEach(item=>{
+      let score = 0;
+      item.keys.forEach(k=>{ if (t.includes(k)) score += k.length + 5; });
+      if (score > bestScore){ bestScore = score; best = item; }
+    });
+    return best ? best.reply : null;
+  }
+  function stripHtml(html){
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    return (tmp.textContent || tmp.innerText || '').replace(/\s+/g,' ').trim();
+  }
+  function sendMessage(text){
+    if (!text || !text.trim()) return null;
+    addMsg(text.replace(/</g,'&lt;').replace(/>/g,'&gt;'),'user');
+    chatInput.value = '';
+    addTyping();
+    const answer = findAnswer(text);
+    const finalAnswer = answer || FALLBACKS[fallbackIdx % FALLBACKS.length];
+    if (!answer) fallbackIdx++;
+    setTimeout(()=>{ removeTyping(); addMsg(finalAnswer,'bot'); },500);
+    return { answer: finalAnswer, plain: stripHtml(finalAnswer) };
+  }
+  function openChat(){
+    chatbotPanel.classList.add('show');
+    const badge = chatbotBtn.querySelector('.chat-badge');
+    if (badge) badge.style.display = 'none';
+    if (!chatBody.dataset.welcomed){
+      chatBody.dataset.welcomed = '1';
+      setTimeout(()=>addMsg('¡Hola! 👋 Soy <strong>MULTI</strong>, asistente de la Editorial. Pregúntame por: <strong>planes</strong>, <strong>precios</strong>, <strong>descuentos por estrato</strong>, <strong>convocatoria</strong>, <strong>proceso editorial</strong> o cualquier otro tema.','bot'),200);
+    }
+    setTimeout(()=>chatInput.focus(),250);
+  }
+  function closeChat(){ chatbotPanel.classList.remove('show'); }
+
+  chatbotBtn.addEventListener('click',()=>{
+    if (chatbotPanel.classList.contains('show')) closeChat(); else openChat();
+  });
+  chatbotCloseBtn.addEventListener('click',closeChat);
+  chatSend.addEventListener('click',()=>sendMessage(chatInput.value));
+  chatInput.addEventListener('keydown',(e)=>{
+    if (e.key === 'Enter'){ e.preventDefault(); sendMessage(chatInput.value); }
+  });
+  chatQuick.addEventListener('click',(e)=>{
+    const btn = e.target.closest('button[data-q]');
+    if (!btn) return;
+    sendMessage(btn.getAttribute('data-q'));
+  });
+  document.addEventListener('keydown',(e)=>{
+    if (e.key === 'Escape' && chatbotPanel.classList.contains('show')) closeChat();
+  });
+
+  window.chatbotOpen = openChat;
+  window.chatbotSendMessage = sendMessage;
+  window.chatbotGetPlainAnswer = function(text){
+    const ans = findAnswer(text);
+    return ans ? stripHtml(ans) : null;
+  };
+  window.chatbotFindAnswer = findAnswer;
+})();
 </script>
 
 </body>
