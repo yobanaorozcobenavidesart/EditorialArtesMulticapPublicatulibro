@@ -38,7 +38,7 @@ font-size:15px;
 -webkit-font-smoothing:antialiased;
 }
 
-html{scroll-behavior:smooth;scroll-padding-top:170px;}
+html{scroll-behavior:smooth;scroll-padding-top:230px;}
 img{max-width:100%;display:block;}
 
 #lang-bar{
@@ -111,7 +111,7 @@ text-shadow:0 0 10px rgba(255,217,140,1),0 0 22px rgba(231,195,107,.8),0 0 40px 
 box-shadow:0 0 20px rgba(231,195,107,.5),inset 0 0 15px rgba(231,195,107,.15);
 }
 
-.hero{min-height:85vh;display:flex;align-items:center;justify-content:center;padding:250px 20px 40px;position:relative;overflow:hidden;}
+.hero{min-height:85vh;display:flex;align-items:center;justify-content:center;padding:310px 20px 40px;position:relative;overflow:hidden;}
 .hero::before{content:"";position:absolute;width:700px;height:700px;background:radial-gradient(circle,var(--blue),transparent 70%);opacity:.12;top:-150px;right:-150px;pointer-events:none;}
 .hero::after{content:"";position:absolute;width:600px;height:600px;background:radial-gradient(circle,var(--gold),transparent 70%);opacity:.08;bottom:-200px;left:-200px;pointer-events:none;}
 .hero-content{max-width:1200px;width:100%;display:grid;grid-template-columns:1.3fr 1fr;gap:50px;align-items:center;position:relative;z-index:2;}
@@ -329,11 +329,25 @@ footer .footer-copy{position:relative;z-index:2;font-size:.8rem;color:rgba(185,1
 .wa-float svg{width:28px;height:28px;fill:white;}
 @keyframes waPulse{0%,100%{box-shadow:0 0 20px rgba(37,211,102,.5),0 0 40px rgba(37,211,102,.25);}50%{box-shadow:0 0 30px rgba(37,211,102,.8),0 0 60px rgba(37,211,102,.4);}}
 
+/* ============ CORREO FLOTANTE ============ */
+.email-float{
+position:fixed;bottom:92px;right:22px;z-index:9995;
+width:56px;height:56px;border-radius:50%;
+background:linear-gradient(135deg,#3b82f6,#1d4ed8);
+display:flex;align-items:center;justify-content:center;
+box-shadow:0 0 20px rgba(59,130,246,.5),0 0 40px rgba(59,130,246,.25);
+transition:transform .3s;animation:emailPulse 2.5s infinite;
+text-decoration:none;
+}
+.email-float:hover{transform:scale(1.1);box-shadow:0 0 30px rgba(59,130,246,.8),0 0 60px rgba(59,130,246,.4);}
+.email-float svg{width:26px;height:26px;fill:white;}
+@keyframes emailPulse{0%,100%{box-shadow:0 0 20px rgba(59,130,246,.5),0 0 40px rgba(59,130,246,.25);}50%{box-shadow:0 0 30px rgba(59,130,246,.8),0 0 60px rgba(59,130,246,.4);}}
+
 @media(min-width:1400px){section{max-width:1280px;}.hero-content{max-width:1280px;}nav{max-width:1350px;}.hero h1{font-size:3.2rem;}.hero-image{height:360px;}}
 @media(max-width:1200px){.hero h1{font-size:2.4rem;}.hero-image{height:300px;}section{padding:26px 20px;}.title h2{font-size:2.2rem;}}
 @media(max-width:900px){
 nav{padding:8px 15px;gap:8px;}.logo-img{height:70px;}nav ul{gap:6px;}nav ul li a{padding:6px 11px;font-size:.7rem;}
-.hero{padding:230px 20px 30px;min-height:auto;}.hero-content{grid-template-columns:1fr;gap:35px;}.hero h1{font-size:2rem;}.hero p{font-size:.95rem;}.hero-image{height:260px;}
+.hero{padding:290px 20px 30px;min-height:auto;}.hero-content{grid-template-columns:1fr;gap:35px;}.hero h1{font-size:2rem;}.hero p{font-size:.95rem;}.hero-image{height:260px;}
 .paquetes-grid{grid-template-columns:1fr;}.revistas-grid{grid-template-columns:1fr;}.inclusion-grid{grid-template-columns:1fr;}
 .conv-grid{grid-template-columns:1fr;gap:14px;}.conv-col{gap:14px;}section{padding:24px 20px;}.title h2{font-size:2rem;}
 .convocatoria-hero h3{font-size:1.9rem;}.footer-logos{gap:35px;}.footer-logo{height:95px;}
@@ -355,7 +369,7 @@ body{line-height:1;}#lang-bar{gap:8px;padding:6px 8px;}#lang-bar button{padding:
 header{top:38px;}nav{padding:8px 12px;flex-wrap:wrap;justify-content:center;}.logo-img{height:60px;}
 nav ul{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;width:100%;margin-top:6px;}
 nav ul li a{padding:5px 10px;font-size:.65rem;letter-spacing:.3px;}
-.hero{padding:215px 15px 25px;}.hero h1{font-size:1.6rem;}.hero p{font-size:.9rem;}.hero-image{height:220px;}
+.hero{padding:275px 15px 25px;}.hero h1{font-size:1.6rem;}.hero p{font-size:.9rem;}.hero-image{height:220px;}
 .btn{padding:10px 20px;font-size:.82rem;}section{padding:20px 15px;}.title{margin-bottom:16px;}.title h2{font-size:1.7rem;}.title p{font-size:.87rem;}
 .convocatoria-hero{padding:20px 16px;border-radius:18px;}.convocatoria-hero h3{font-size:1.5rem;}.convocatoria-hero .conv-lema{font-size:.95rem;}.convocatoria-hero p{font-size:.86rem;}
 .conv-block{padding:16px 14px;border-radius:16px;}.conv-block h3{font-size:1.2rem;}.conv-block h4{font-size:1rem;}.conv-block p{font-size:.83rem;}
@@ -376,11 +390,13 @@ nav ul li a{padding:5px 10px;font-size:.65rem;letter-spacing:.3px;}
 footer{padding:6px 15px 22px;font-size:.8rem;}.footer-logo{height:65px;}.footer-logos{gap:20px;}footer .footer-tagline{font-size:.9rem;}
 .wa-float{width:50px;height:50px;bottom:16px;right:16px;}.wa-float svg{width:26px;height:26px;}
 .footer-social a{width:38px;height:38px;}.footer-social a svg{width:18px;height:18px;}
+.email-float{width:50px;height:50px;bottom:80px;right:16px;}
+.email-float svg{width:24px;height:24px;}
 }
 @media(max-width:400px){
 body{font-size:14px;line-height:1;}#lang-bar button{padding:3px 5px;font-size:.55rem;}#lang-bar img{width:16px;height:11px;}
 nav{padding:6px 10px;}.logo-img{height:52px;}nav ul li a{padding:4px 8px;font-size:.6rem;}
-.hero{padding:205px 12px 22px;}.hero h1{font-size:1.4rem;}.hero p{font-size:.85rem;}.hero-image{height:190px;}
+.hero{padding:265px 12px 22px;}.hero h1{font-size:1.4rem;}.hero p{font-size:.85rem;}.hero-image{height:190px;}
 section{padding:16px 12px;}.title h2{font-size:1.5rem;}.title p{font-size:.84rem;}
 .btn{padding:9px 18px;font-size:.78rem;}.buttons{flex-direction:column;width:100%;}.buttons .btn{width:100%;}
 .convocatoria-hero h3{font-size:1.3rem;}.conv-block h3{font-size:1.15rem;}.conv-block h4{font-size:.98rem;}
@@ -390,15 +406,17 @@ section{padding:16px 12px;}.title h2{font-size:1.5rem;}.title p{font-size:.84rem
 .footer-logo{height:55px;}footer .footer-tagline{font-size:.85rem;}footer .footer-copy{font-size:.75rem;}
 .wa-float{width:46px;height:46px;bottom:14px;right:14px;}.wa-float svg{width:24px;height:24px;}
 .footer-social a{width:34px;height:34px;}.footer-social a svg{width:16px;height:16px;}
+.email-float{width:46px;height:46px;bottom:72px;right:14px;}
+.email-float svg{width:22px;height:22px;}
 }
 @media(max-width:340px){
-body{font-size:13.5px;line-height:1;}.logo-img{height:46px;}.hero{padding:200px 10px 20px;}.hero h1{font-size:1.25rem;}.hero p{font-size:.82rem;}.hero-image{height:170px;}
+body{font-size:13.5px;line-height:1;}.logo-img{height:46px;}.hero{padding:260px 10px 20px;}.hero h1{font-size:1.25rem;}.hero p{font-size:.82rem;}.hero-image{height:170px;}
 .title h2{font-size:1.4rem;}.convocatoria-hero h3{font-size:1.2rem;}.conv-block h3{font-size:1.05rem;}
 }
 @media(max-width:900px) and (orientation:landscape){
-.hero{min-height:auto;padding:220px 20px 25px;}.hero-content{grid-template-columns:1fr 1fr;gap:30px;}.hero-image{height:220px;}
+.hero{min-height:auto;padding:280px 20px 25px;}.hero-content{grid-template-columns:1fr 1fr;gap:30px;}.hero-image{height:220px;}
 }
-@media print{header,footer,.wa-float,.btn,#lang-bar{display:none;}body{background:white;color:black;}section{padding:20px 0;}}
+@media print{header,footer,.wa-float,.btn,#lang-bar,.email-float{display:none;}body{background:white;color:black;}section{padding:20px 0;}}
 
 #voiceStatus{
 position:fixed;bottom:22px;left:22px;z-index:9998;
@@ -542,7 +560,8 @@ font-family:'Inter',sans-serif;
 <li><a href="#proceso" data-i18n="nav.proceso">Proceso</a></li>
 <li><a href="#inclusion" data-i18n="nav.inclusion">Inclusión</a></li>
 <li><a href="#cotizador" data-i18n="nav.cotiza">Cotiza</a></li>
-<li><a href="#revistas" data-i18n="nav.plataformas">Plataformas</a></li>
+<li><a href="https://explorandomuseosyartelatinoamericano.netlify.app/" target="_blank" rel="noopener" data-i18n="nav.revistas">Revistas Gratis</a></li>
+<li><a href="https://fundacion-artes-multicap.netlify.app/" target="_blank" rel="noopener" data-i18n="nav.fundacion">Fundación</a></li>
 <li><a href="#convocatoria" data-i18n="nav.convocatorias">Convocatorias</a></li>
 <li><a href="https://pol-ticaseditoriales.netlify.app/" target="_blank" rel="noopener" data-i18n="nav.politicas">Políticas</a></li>
 <li><a href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
@@ -1092,13 +1111,13 @@ font-family:'Inter',sans-serif;
 </a>
 </div>
 <div class="cta-info">
-<p><a href="mailto:artesmulticap2024@gmail.com">artesmulticap2024@gmail.com</a></p>
+<p><a href="mailto:artesmulticapeditorial@gmail.com">artesmulticapeditorial@gmail.com</a></p>
 <p data-i18n-html="cont.wa">WhatsApp: <a href="https://wa.me/573113555949" target="_blank">311 355 5949</a></p>
 <p data-i18n="cont.country">Colombia</p>
 </div>
 <div class="buttons" style="justify-content:center;margin-top:20px;">
 <a href="https://wa.me/573113555949?text=Hola" class="btn primary" target="_blank" data-i18n="cont.btn1">Escríbenos por WhatsApp</a>
-<a href="mailto:artesmulticap2024@gmail.com" class="btn secondary" data-i18n="cont.btn2">Enviar correo</a>
+<a href="mailto:artesmulticapeditorial@gmail.com" class="btn secondary" data-i18n="cont.btn2">Enviar correo</a>
 </div>
 </div>
 </section>
@@ -1111,6 +1130,17 @@ font-family:'Inter',sans-serif;
 
 <a href="https://wa.me/573113555949" class="wa-float" target="_blank" aria-label="WhatsApp">
 <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ============ CORREO FLOTANTE ============ -->
+<a href="mailto:artesmulticapeditorial@gmail.com?subject=Consulta%20-%20Artes%20Multicap%20Editorial"
+   class="email-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Enviar correo">
+  <svg viewBox="0 0 24 24">
+    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+  </svg>
 </a>
 
 <div id="voiceStatus" role="status" aria-live="polite">
@@ -1208,8 +1238,8 @@ font-family:'Inter',sans-serif;
 const i18n = {
   es: {
     "nav.servicios":"Servicios","nav.tamanos":"Tamaños","nav.paquetes":"Paquetes","nav.proceso":"Proceso",
-    "nav.inclusion":"Inclusión","nav.cotiza":"Cotiza","nav.plataformas":"Plataformas","nav.convocatorias":"Convocatorias",
-    "nav.politicas":"Políticas","nav.contacto":"Contacto",
+    "nav.inclusion":"Inclusión","nav.cotiza":"Cotiza","nav.revistas":"Revistas Gratis","nav.fundacion":"Fundación",
+    "nav.convocatorias":"Convocatorias","nav.politicas":"Políticas","nav.contacto":"Contacto",
     "hero.title":"Hay libros que todavía no han encontrado el camino para existir.",
     "hero.desc":"Hay personas que sueñan con escribir un libro, pero no saben cómo comenzar. Otras ya tienen un manuscrito, pero no saben qué sigue; y algunas han terminado su obra, pero sus posibilidades económicas les han impedido dar el siguiente paso.<br><br>En Artes Multicap Editorial acompañamos cada proyecto desde su propia realidad: te orientamos para desarrollar tu idea, trabajar tu manuscrito y explorar las posibilidades de publicación en diferentes formatos y en español e inglés.<br><br>Además, la Fundación Artes Multicap cuenta con un Programa de Inclusión Editorial, con descuentos según el estrato socioeconómico del autor, porque creemos que las posibilidades económicas no deberían impedir que una obra encuentre su camino hacia la publicación.",
     "hero.btn.cotizar":"Cotizar mi libro","hero.btn.whatsapp":"Hablar por WhatsApp",
@@ -1325,8 +1355,8 @@ const i18n = {
   },
   en: {
     "nav.servicios":"Services","nav.tamanos":"Sizes","nav.paquetes":"Packages","nav.proceso":"Process",
-    "nav.inclusion":"Inclusion","nav.cotiza":"Quote","nav.plataformas":"Platforms","nav.convocatorias":"Calls",
-    "nav.politicas":"Policies","nav.contacto":"Contact",
+    "nav.inclusion":"Inclusion","nav.cotiza":"Quote","nav.revistas":"Free Magazines","nav.fundacion":"Foundation",
+    "nav.convocatorias":"Calls","nav.politicas":"Policies","nav.contacto":"Contact",
     "hero.title":"There are books that have not yet found the path to exist.",
     "hero.desc":"There are people who dream of writing a book, but don't know how to start. Others already have a manuscript, but don't know what comes next; and some have finished their work, but their economic possibilities have prevented them from taking the next step.<br><br>At Artes Multicap Editorial we accompany each project from its own reality: we guide you to develop your idea, work on your manuscript and explore publication possibilities in different formats and in Spanish and English.<br><br>In addition, the Artes Multicap Foundation has an Editorial Inclusion Program, with discounts based on the author's socioeconomic stratum, because we believe that economic possibilities should not prevent a work from finding its way to publication.",
     "hero.btn.cotizar":"Quote my book","hero.btn.whatsapp":"Chat on WhatsApp",
@@ -1442,8 +1472,8 @@ const i18n = {
   },
   fr: {
     "nav.servicios":"Services","nav.tamanos":"Formats","nav.paquetes":"Forfaits","nav.proceso":"Processus",
-    "nav.inclusion":"Inclusion","nav.cotiza":"Devis","nav.plataformas":"Plateformes","nav.convocatorias":"Appels",
-    "nav.politicas":"Politiques","nav.contacto":"Contact",
+    "nav.inclusion":"Inclusion","nav.cotiza":"Devis","nav.revistas":"Revues Gratuites","nav.fundacion":"Fondation",
+    "nav.convocatorias":"Appels","nav.politicas":"Politiques","nav.contacto":"Contact",
     "hero.title":"Il y a des livres qui n'ont pas encore trouvé le chemin d'exister.",
     "hero.desc":"Il y a des personnes qui rêvent d'écrire un livre, mais ne savent pas comment commencer. D'autres ont déjà un manuscrit, mais ne savent pas ce qui suit ; et certaines ont terminé leur œuvre, mais leurs possibilités économiques les ont empêchées de passer à l'étape suivante.<br><br>Chez Artes Multicap Editorial, nous accompagnons chaque projet depuis sa propre réalité : nous vous orientons pour développer votre idée, travailler votre manuscrit et explorer les possibilités de publication dans différents formats et en espagnol et en anglais.<br><br>De plus, la Fondation Artes Multicap dispose d'un Programme d'Inclusion Éditoriale, avec des réductions selon la strate socio-économique de l'auteur, car nous croyons que les possibilités économiques ne devraient pas empêcher une œuvre de trouver son chemin vers la publication.",
     "hero.btn.cotizar":"Devis pour mon livre","hero.btn.whatsapp":"Parler sur WhatsApp",
@@ -1559,8 +1589,8 @@ const i18n = {
   },
   pt: {
     "nav.servicios":"Serviços","nav.tamanos":"Formatos","nav.paquetes":"Pacotes","nav.proceso":"Processo",
-    "nav.inclusion":"Inclusão","nav.cotiza":"Cotação","nav.plataformas":"Plataformas","nav.convocatorias":"Convocações",
-    "nav.politicas":"Políticas","nav.contacto":"Contato",
+    "nav.inclusion":"Inclusão","nav.cotiza":"Cotação","nav.revistas":"Revistas Grátis","nav.fundacion":"Fundação",
+    "nav.convocatorias":"Convocações","nav.politicas":"Políticas","nav.contacto":"Contato",
     "hero.title":"Há livros que ainda não encontraram o caminho para existir.",
     "hero.desc":"Há pessoas que sonham em escrever um livro, mas não sabem como começar. Outras já têm um manuscrito, mas não sabem o que vem a seguir; e algumas terminaram sua obra, mas suas possibilidades econômicas as impediram de dar o próximo passo.<br><br>Na Artes Multicap Editorial acompanhamos cada projeto a partir de sua própria realidade: orientamos você a desenvolver sua ideia, trabalhar seu manuscrito e explorar as possibilidades de publicação em diferentes formatos e em espanhol e inglês.<br><br>Além disso, a Fundação Artes Multicap conta com um Programa de Inclusão Editorial, com descontos de acordo com o estrato socioeconômico do autor, porque acreditamos que as possibilidades econômicas não devem impedir que uma obra encontre seu caminho para a publicação.",
     "hero.btn.cotizar":"Cotar meu livro","hero.btn.whatsapp":"Falar no WhatsApp",
@@ -1805,7 +1835,7 @@ function seleccionarPlan(plan){
 }
 
 /* =========================================================
-   SISTEMA DE VOZ MULTI-IDIOMA
+   SISTEMA DE VOZ MULTI-IDIOMA (CON APERTURA DE LINKS)
    ========================================================= */
 window.__voiceSystem = (function(){
   'use strict';
@@ -1820,21 +1850,23 @@ window.__voiceSystem = (function(){
   const supportsRecog = !!SR;
 
   const WHATSAPP_NUMBER = "573113555949";
+  const EDITORIAL_EMAIL = "artesmulticapeditorial@gmail.com";
 
   const LANG_CONFIG = {
-    es: { speech: 'es-CO', voices: [/^es[-_]CO/i, /^es[-_]MX/i, /^es[-_]US/i, /^es[-_]ES/i, /^es/i], currency: 'pesos colombianos', statusListening: 'Escuchando... di "audio" o un tema', statusReading: 'Leyendo... di "detener" para parar', statusPaused: 'Pausado... di "continuar"', statusWhatsapp: 'Modo WhatsApp: dicta tu mensaje y di "enviar"', statusChatbot: 'Modo chatbot: haz tu pregunta', statusCapturing: 'Capturando', saySend: 'di "enviar"', whatsappWelcome: 'Modo WhatsApp. Dicta tu mensaje y di enviar. Para cancelar di cancelar.', chatbotWelcome: 'Modo chatbot. Hazme tu pregunta. Di cancelar para salir.', openingWhatsapp: 'Abriendo WhatsApp.', noMessageCaptured: 'No capté ningún mensaje.', messageDeleted: 'Mensaje borrado.', whatsappCancelled: 'Modo WhatsApp cancelado.', chatbotCancelled: 'Modo chatbot cancelado.', noContent: 'No se encontró contenido.', sectionNoContent: 'Esta sección no tiene contenido.', notFoundSection: 'No encontré esa sección.', response: 'Respuesta: ', noAnswer: 'No tengo una respuesta exacta. Escríbenos por WhatsApp.', chatbotUnavailable: 'El chatbot no está disponible.', noSpeechSupport: 'Tu navegador no permite lectura en voz alta.', welcome: 'Editorial Artes Multicap. Di "audio" para leer toda la página. O di el nombre de una sección: servicios, tamaños, paquetes, proceso, inclusión, cotizador, plataformas, convocatoria o contacto. Para enviar un mensaje por WhatsApp, di "enviar mensaje por WhatsApp". Para preguntar al chatbot, di "quiero preguntar". Para detener la lectura, di "detener".' },
-    en: { speech: 'en-US', voices: [/^en[-_]US/i, /^en[-_]GB/i, /^en[-_]AU/i, /^en/i], currency: 'Colombian pesos', statusListening: 'Listening... say "audio" or a topic', statusReading: 'Reading... say "stop" to halt', statusPaused: 'Paused... say "continue"', statusWhatsapp: 'WhatsApp mode: dictate your message and say "send"', statusChatbot: 'Chatbot mode: ask your question', statusCapturing: 'Capturing', saySend: 'say "send"', whatsappWelcome: 'WhatsApp mode. Dictate your message and say send. To cancel, say cancel.', chatbotWelcome: 'Chatbot mode. Ask me your question. Say cancel to exit.', openingWhatsapp: 'Opening WhatsApp.', noMessageCaptured: 'No message captured.', messageDeleted: 'Message deleted.', whatsappCancelled: 'WhatsApp mode cancelled.', chatbotCancelled: 'Chatbot mode cancelled.', noContent: 'No content found.', sectionNoContent: 'This section has no content.', notFoundSection: 'Section not found.', response: 'Answer: ', noAnswer: 'I do not have an exact answer. Write us on WhatsApp.', chatbotUnavailable: 'Chatbot is not available.', noSpeechSupport: 'Your browser does not support voice reading.', welcome: 'Artes Multicap Editorial. Say "audio" to read the whole page. Or say the name of a section: services, sizes, packages, process, inclusion, quote, platforms, calls, or contact. To send a WhatsApp message, say "send WhatsApp message". To ask the chatbot, say "I want to ask". To stop reading, say "stop".' },
-    fr: { speech: 'fr-FR', voices: [/^fr[-_]FR/i, /^fr[-_]CA/i, /^fr[-_]BE/i, /^fr/i], currency: 'pesos colombiens', statusListening: 'Écoute... dites "audio" ou un sujet', statusReading: 'Lecture... dites "arrêter" pour stopper', statusPaused: 'En pause... dites "continuer"', statusWhatsapp: 'Mode WhatsApp : dictez votre message et dites "envoyer"', statusChatbot: 'Mode chatbot : posez votre question', statusCapturing: 'Capture', saySend: 'dites "envoyer"', whatsappWelcome: 'Mode WhatsApp. Dictez votre message et dites envoyer. Pour annuler, dites annuler.', chatbotWelcome: 'Mode chatbot. Posez votre question. Dites annuler pour sortir.', openingWhatsapp: 'Ouverture de WhatsApp.', noMessageCaptured: 'Aucun message capturé.', messageDeleted: 'Message supprimé.', whatsappCancelled: 'Mode WhatsApp annulé.', chatbotCancelled: 'Mode chatbot annulé.', noContent: 'Aucun contenu trouvé.', sectionNoContent: 'Cette section n\'a pas de contenu.', notFoundSection: 'Section non trouvée.', response: 'Réponse : ', noAnswer: 'Je n\'ai pas de réponse exacte. Écrivez-nous sur WhatsApp.', chatbotUnavailable: 'Le chatbot n\'est pas disponible.', noSpeechSupport: 'Votre navigateur ne prend pas en charge la lecture vocale.', welcome: 'Éditions Artes Multicap. Dites "audio" pour lire toute la page. Ou dites le nom d\'une section : services, formats, forfaits, processus, inclusion, devis, plateformes, appels ou contact. Pour envoyer un message WhatsApp, dites "envoyer un message WhatsApp". Pour interroger le chatbot, dites "je veux demander". Pour arrêter la lecture, dites "arrêter".' },
-    pt: { speech: 'pt-BR', voices: [/^pt[-_]BR/i, /^pt[-_]PT/i, /^pt/i], currency: 'pesos colombianos', statusListening: 'Ouvindo... diga "áudio" ou um tema', statusReading: 'Lendo... diga "parar" para interromper', statusPaused: 'Pausado... diga "continuar"', statusWhatsapp: 'Modo WhatsApp: dite sua mensagem e diga "enviar"', statusChatbot: 'Modo chatbot: faça sua pergunta', statusCapturing: 'Capturando', saySend: 'diga "enviar"', whatsappWelcome: 'Modo WhatsApp. Dite sua mensagem e diga enviar. Para cancelar, diga cancelar.', chatbotWelcome: 'Modo chatbot. Faça sua pergunta. Diga cancelar para sair.', openingWhatsapp: 'Abrindo WhatsApp.', noMessageCaptured: 'Nenhuma mensagem capturada.', messageDeleted: 'Mensagem apagada.', whatsappCancelled: 'Modo WhatsApp cancelado.', chatbotCancelled: 'Modo chatbot cancelado.', noContent: 'Nenhum conteúdo encontrado.', sectionNoContent: 'Esta seção não tem conteúdo.', notFoundSection: 'Seção não encontrada.', response: 'Resposta: ', noAnswer: 'Não tenho uma resposta exata. Escreva-nos no WhatsApp.', chatbotUnavailable: 'O chatbot não está disponível.', noSpeechSupport: 'Seu navegador não suporta leitura em voz alta.', welcome: 'Editorial Artes Multicap. Diga "áudio" para ler toda a página. Ou diga o nome de uma seção: serviços, formatos, pacotes, processo, inclusão, cotação, plataformas, convocações ou contato. Para enviar uma mensagem no WhatsApp, diga "enviar mensagem pelo WhatsApp". Para perguntar ao chatbot, diga "quero perguntar". Para parar a leitura, diga "parar".' }
+    es: { speech: 'es-CO', voices: [/^es[-_]CO/i, /^es[-_]MX/i, /^es[-_]US/i, /^es[-_]ES/i, /^es/i], currency: 'pesos colombianos', statusListening: 'Escuchando... di "audio" o "detener"', statusReading: 'Leyendo... di "detener" para parar', statusPaused: 'Pausado... di "continuar"', statusWhatsapp: 'Modo WhatsApp: dicta tu mensaje y di "enviar"', statusChatbot: 'Modo chatbot: haz tu pregunta', statusCapturing: 'Capturando', saySend: 'di "enviar"', whatsappWelcome: 'Modo WhatsApp. Dicta tu mensaje y di enviar. Para cancelar di cancelar.', chatbotWelcome: 'Modo chatbot. Hazme tu pregunta. Di cancelar para salir.', openingWhatsapp: 'Abriendo WhatsApp.', openingEmail: 'Abriendo correo editorial.', noMessageCaptured: 'No capté ningún mensaje.', messageDeleted: 'Mensaje borrado.', whatsappCancelled: 'Modo WhatsApp cancelado.', chatbotCancelled: 'Modo chatbot cancelado.', noContent: 'No se encontró contenido.', sectionNoContent: 'Esta sección no tiene contenido.', notFoundSection: 'No encontré esa sección.', response: 'Respuesta: ', noAnswer: 'No tengo una respuesta exacta. Escríbenos por WhatsApp.', chatbotUnavailable: 'El chatbot no está disponible.', noSpeechSupport: 'Tu navegador no permite lectura en voz alta.', openingLink: 'Abriendo enlace: ', welcome: 'Editorial Artes Multicap. Di "audio" para leer toda la página. Para detener la lectura en cualquier momento di "detener". Puedes decir el nombre de una sección: servicios, tamaños, paquetes, proceso, inclusión, cotizador, convocatoria o contacto. También puedes decir "abrir políticas", "abrir revistas gratis", "abrir fundación", "abrir correo", "abrir facebook", "abrir instagram", "abrir tiktok" o "abrir whatsapp" para abrir esos enlaces.' },
+    en: { speech: 'en-US', voices: [/^en[-_]US/i, /^en[-_]GB/i, /^en[-_]AU/i, /^en/i], currency: 'Colombian pesos', statusListening: 'Listening... say "audio" or "stop"', statusReading: 'Reading... say "stop" to halt', statusPaused: 'Paused... say "continue"', statusWhatsapp: 'WhatsApp mode: dictate your message and say "send"', statusChatbot: 'Chatbot mode: ask your question', statusCapturing: 'Capturing', saySend: 'say "send"', whatsappWelcome: 'WhatsApp mode. Dictate your message and say send. To cancel, say cancel.', chatbotWelcome: 'Chatbot mode. Ask me your question. Say cancel to exit.', openingWhatsapp: 'Opening WhatsApp.', openingEmail: 'Opening editorial email.', noMessageCaptured: 'No message captured.', messageDeleted: 'Message deleted.', whatsappCancelled: 'WhatsApp mode cancelled.', chatbotCancelled: 'Chatbot mode cancelled.', noContent: 'No content found.', sectionNoContent: 'This section has no content.', notFoundSection: 'Section not found.', response: 'Answer: ', noAnswer: 'I do not have an exact answer. Write us on WhatsApp.', chatbotUnavailable: 'Chatbot is not available.', noSpeechSupport: 'Your browser does not support voice reading.', openingLink: 'Opening link: ', welcome: 'Artes Multicap Editorial. Say "audio" to read the whole page. To stop reading at any time say "stop". You can say the name of a section: services, sizes, packages, process, inclusion, quote, calls, or contact. You can also say "open policies", "open free magazines", "open foundation", "open email", "open facebook", "open instagram", "open tiktok" or "open whatsapp" to open those links.' },
+    fr: { speech: 'fr-FR', voices: [/^fr[-_]FR/i, /^fr[-_]CA/i, /^fr[-_]BE/i, /^fr/i], currency: 'pesos colombiens', statusListening: 'Écoute... dites "audio" ou "arrêter"', statusReading: 'Lecture... dites "arrêter" pour stopper', statusPaused: 'En pause... dites "continuer"', statusWhatsapp: 'Mode WhatsApp : dictez votre message et dites "envoyer"', statusChatbot: 'Mode chatbot : posez votre question', statusCapturing: 'Capture', saySend: 'dites "envoyer"', whatsappWelcome: 'Mode WhatsApp. Dictez votre message et dites envoyer. Pour annuler, dites annuler.', chatbotWelcome: 'Mode chatbot. Posez votre question. Dites annuler pour sortir.', openingWhatsapp: 'Ouverture de WhatsApp.', openingEmail: 'Ouverture de l\'e-mail éditorial.', noMessageCaptured: 'Aucun message capturé.', messageDeleted: 'Message supprimé.', whatsappCancelled: 'Mode WhatsApp annulé.', chatbotCancelled: 'Mode chatbot annulé.', noContent: 'Aucun contenu trouvé.', sectionNoContent: 'Cette section n\'a pas de contenu.', notFoundSection: 'Section non trouvée.', response: 'Réponse : ', noAnswer: 'Je n\'ai pas de réponse exacte. Écrivez-nous sur WhatsApp.', chatbotUnavailable: 'Le chatbot n\'est pas disponible.', noSpeechSupport: 'Votre navigateur ne prend pas en charge la lecture vocale.', openingLink: 'Ouverture du lien : ', welcome: 'Éditions Artes Multicap. Dites "audio" pour lire toute la page. Pour arrêter la lecture à tout moment dites "arrêter". Vous pouvez dire le nom d\'une section : services, formats, forfaits, processus, inclusion, devis, appels ou contact. Vous pouvez aussi dire "ouvrir politiques", "ouvrir revues gratuites", "ouvrir fondation", "ouvrir email", "ouvrir facebook", "ouvrir instagram", "ouvrir tiktok" ou "ouvrir whatsapp" pour ouvrir ces liens.' },
+    pt: { speech: 'pt-BR', voices: [/^pt[-_]BR/i, /^pt[-_]PT/i, /^pt/i], currency: 'pesos colombianos', statusListening: 'Ouvindo... diga "áudio" ou "parar"', statusReading: 'Lendo... diga "parar" para interromper', statusPaused: 'Pausado... diga "continuar"', statusWhatsapp: 'Modo WhatsApp: dite sua mensagem e diga "enviar"', statusChatbot: 'Modo chatbot: faça sua pergunta', statusCapturing: 'Capturando', saySend: 'diga "enviar"', whatsappWelcome: 'Modo WhatsApp. Dite sua mensagem e diga enviar. Para cancelar, diga cancelar.', chatbotWelcome: 'Modo chatbot. Faça sua pergunta. Diga cancelar para sair.', openingWhatsapp: 'Abrindo WhatsApp.', openingEmail: 'Abrindo e-mail editorial.', noMessageCaptured: 'Nenhuma mensagem capturada.', messageDeleted: 'Mensagem apagada.', whatsappCancelled: 'Modo WhatsApp cancelado.', chatbotCancelled: 'Modo chatbot cancelado.', noContent: 'Nenhum conteúdo encontrado.', sectionNoContent: 'Esta seção não tem conteúdo.', notFoundSection: 'Seção não encontrada.', response: 'Resposta: ', noAnswer: 'Não tenho uma resposta exata. Escreva-nos no WhatsApp.', chatbotUnavailable: 'O chatbot não está disponível.', noSpeechSupport: 'Seu navegador não suporta leitura em voz alta.', openingLink: 'Abrindo link: ', welcome: 'Editorial Artes Multicap. Diga "áudio" para ler toda a página. Para parar a leitura a qualquer momento diga "parar". Você pode dizer o nome de uma seção: serviços, formatos, pacotes, processo, inclusão, cotação, convocações ou contato. Você também pode dizer "abrir políticas", "abrir revistas grátis", "abrir fundação", "abrir email", "abrir facebook", "abrir instagram", "abrir tiktok" ou "abrir whatsapp" para abrir esses links.' }
   };
 
-  const STOP_REGEX = /\b(detener|detente|parar|párate|stop|basta|arrêter|arreter|halte|pare|parada|stoppen|beenden)\b/;
+  const STOP_REGEX = /(detener|deten|detente|deténgase|detenga|parar|párate|parate|pare|paren|parada|alto|silencio|basta|cállate|callate|stop|stopped|halt|arrêter|arreter|arrête|arrete|halte|stoppen|beenden|stopp|paraí|parei|silêncio)/i;
   const PAUSE_REGEX = /\b(pausa|pausar|pause|pausieren)\b/;
   const RESUME_REGEX = /\b(continuar|continúa|sigue|reanudar|reanuda|continue|reprendre|fortsetzen)\b/;
-  const WHATSAPP_TRIGGER_REGEX = /\b(whatsapp|wasap|wpp|whats\s*app|escribir\s*(un\s*)?mensaje|mandar\s*(un\s*)?mensaje|enviar\s*(un\s*)?mensaje|quiero\s*(enviar|mandar|escribir)\s*(un\s*)?(mensaje|whatsapp)?|send\s*(a\s*)?message|write\s*(a\s*)?message|send\s*whatsapp|envoyer\s*(un\s*)?message|écrire\s*(un\s*)?message|envoyer\s*whatsapp|enviar\s*(uma\s*)?mensagem|escrever\s*(uma\s*)?mensagem)\b/;
-  const CHATBOT_TRIGGER_REGEX = /\b(chatbot|chat\s*bot|pregunta\s*al\s*chatbot|preguntar|quiero\s*preguntar|tengo\s*una\s*(pregunta|duda|consulta)|ask\s*the\s*chatbot|i\s*want\s*to\s*ask|demander\s*au\s*chatbot|je\s*veux\s*demander|perguntar\s*ao\s*chatbot|quero\s*perguntar)\b/;
-  const AUDIO_TRIGGER_REGEX = /\b(audio|escuchar|escúchame|leer|lectura|leeme|léeme|reproducir|reproduce|comenzar|empezar|listen|read|play|start|écouter|lire|commencer|ouvir|ler|começar)\b/;
+  const WHATSAPP_TRIGGER_REGEX = /\b(whatsapp|wasap|wpp|escribir\s*(un\s*)?mensaje|mandar\s*(un\s*)?mensaje|enviar\s*(un\s*)?mensaje|send\s*whatsapp|envoyer\s*whatsapp|enviar\s*(uma\s*)?mensagem)\b/;
+  const CHATBOT_TRIGGER_REGEX = /\b(chatbot|chat\s*bot|pregunta\s*al\s*chatbot|preguntar|quiero\s*preguntar|ask\s*the\s*chatbot|i\s*want\s*to\s*ask|demander\s*au\s*chatbot|perguntar\s*ao\s*chatbot)\b/;
+  const AUDIO_TRIGGER_REGEX = /\b(audio|escuchar|leer|lectura|leeme|léeme|reproducir|reproduce|listen|read|play|start|écouter|lire|commencer|ouvir|ler|começar)\b/;
   const RESTART_REGEX = /\b(reiniciar|comenzar\s*de\s*nuevo|desde\s*el\s*principio|repetir|restart|start\s*over|recommencer|recomeçar)\b/;
+  const EMAIL_TRIGGER_REGEX = /\b(correo|email|e-?mail|escribir\s*(un\s*)?correo|enviar\s*(un\s*)?correo|manda\s*(un\s*)?correo|mandar\s*(un\s*)?correo|mail|write\s*(an\s*)?email|send\s*(an\s*)?email|envoyer\s*(un\s*)?email|manda\s*(um\s*)?email|enviar\s*(um\s*)?email|escrever\s*(um\s*)?email)\b/;
 
   const NAV_COMMANDS = [
     { rx: /\b(servicios?|services|service|serviços?|serviço)\b/, section: '#servicios', labels: { es: 'Servicios', en: 'Services', fr: 'Services', pt: 'Serviços' } },
@@ -1843,9 +1875,19 @@ window.__voiceSystem = (function(){
     { rx: /\b(proceso|cómo\s*iniciamos|iniciar\s*proyecto|process|how\s*we\s*start|processus|démarrer|processo|começar)\b/, section: '#proceso', labels: { es: 'Proceso', en: 'Process', fr: 'Processus', pt: 'Processo' } },
     { rx: /\b(inclusi[oó]n|descuentos?|estratos?|inclusion|discounts?|stratum|réduction|inclusão|descontos?)\b/, section: '#inclusion', labels: { es: 'Inclusión y descuentos', en: 'Inclusion and discounts', fr: 'Inclusion et réductions', pt: 'Inclusão e descontos' } },
     { rx: /\b(cotizador|cotizar|cotizaci[oó]n|precios?|quote|quotation|prices?|devis|prix|cotação|preços?)\b/, section: '#cotizador', labels: { es: 'Cotizador', en: 'Quote', fr: 'Devis', pt: 'Cotação' } },
-    { rx: /\b(plataformas?|revistas?|explorando\s*museos|platforms?|magazines?|plateformes?|revues?|plataformas?|revistas?)\b/, section: '#revistas', labels: { es: 'Plataformas', en: 'Platforms', fr: 'Plateformes', pt: 'Plataformas' } },
     { rx: /\b(convocatorias?|concurso|latinoam[eé]rica\s*escribe|calls?|contest|appels?|concours|convocações?|concurso)\b/, section: '#convocatoria', labels: { es: 'Convocatoria', en: 'Call', fr: 'Appel', pt: 'Convocação' } },
     { rx: /\b(contacto|contactar|escr[ií]benos|contact|contacte|contato|contatar)\b/, section: '#contacto', labels: { es: 'Contacto', en: 'Contact', fr: 'Contact', pt: 'Contato' } }
+  ];
+
+  const NAV_LINKS = [
+    { rx:/\b(pol[íi]ticas?\s*editoriales?|editorial\s*policies|politiques\s*éditoriales|políticas\s*editoriais)\b/, url:'https://pol-ticaseditoriales.netlify.app/', labels:{es:'Políticas Editoriales',en:'Editorial Policies',fr:'Politiques Éditoriales',pt:'Políticas Editoriais'} },
+    { rx:/\b(revistas?\s*gratis|revistas?\s*gr[áa]tis|revistas?\s*gratuitas?|free\s*magazines?|magazines?\s*gratuits?|revues?\s*gratuites?|explorando\s*museos?|plataforma\s*cultural|museos?\s*y\s*arte|exploring\s*museums|musées\s*et\s*art|museus?\s*e\s*arte)\b/, url:'https://explorandomuseosyartelatinoamericano.netlify.app/', labels:{es:'Revistas Gratis',en:'Free Magazines',fr:'Revues Gratuites',pt:'Revistas Grátis'} },
+    { rx:/\b(fundaci[oó]n|la\s*fundaci[oó]n|abrir\s*fundaci[oó]n|foundation|fondation|fundação)\b/, url:'https://fundacion-artes-multicap.netlify.app/', labels:{es:'Fundación Artes Multicap',en:'Artes Multicap Foundation',fr:'Fondation Artes Multicap',pt:'Fundação Artes Multicap'} },
+    { rx:/\b(facebook|face\s*book)\b/, url:'https://www.facebook.com/ArtesMulticap/', labels:{es:'Facebook',en:'Facebook',fr:'Facebook',pt:'Facebook'} },
+    { rx:/\b(instagram|insta)\b/, url:'https://www.instagram.com/artesmulticap/', labels:{es:'Instagram',en:'Instagram',fr:'Instagram',pt:'Instagram'} },
+    { rx:/\b(tik\s*tok|tiktok)\b/, url:'https://www.tiktok.com/@fundacionartesmulticap', labels:{es:'TikTok',en:'TikTok',fr:'TikTok',pt:'TikTok'} },
+    { rx:/\b(whatsapp|wasap|wpp)\b/, url:'https://wa.me/573113555949', labels:{es:'WhatsApp',en:'WhatsApp',fr:'WhatsApp',pt:'WhatsApp'} },
+    { rx:/\b(bio\s*link|bio\s*autora|link\s*bio)\b/, url:'https://yobanaorozcoartista.bio.link', labels:{es:'Bio de la autora',en:'Author Bio',fr:'Bio de l\'auteure',pt:'Bio da autora'} }
   ];
 
   function getLang(){ try{ return localStorage.getItem('preferred-lang') || 'es'; }catch(e){ return 'es'; } }
@@ -1862,12 +1904,11 @@ window.__voiceSystem = (function(){
     welcomePlayed: false, interactionDone: false, lastCmd: 0,
     userScrolling: false, scrollTimer: null,
     mode: 'normal', capturedText: '', triggerPhrase: '',
-    stopping: false, lastDetenerTime: 0, modeEnterTime: 0,
+    lastDetenerTime: 0, modeEnterTime: 0,
     recentTTSWords: [], recentTTSTimestamp: 0
   };
 
   function normalizeWord(w){ return (w||'').toLowerCase().replace(/[^\wáéíóúñüàâçèéêëîïôùûüÿ]/g,'').trim(); }
-
   function recordTTSWords(text){
     const words = (text||'').toLowerCase().split(/\s+/).map(normalizeWord).filter(w=>w.length>=3);
     S.recentTTSWords = [...words, ...S.recentTTSWords].slice(0, 80);
@@ -1884,18 +1925,14 @@ window.__voiceSystem = (function(){
     for (const w of words) if (S.recentTTSWords.includes(w)) m++;
     return m >= Math.max(2, Math.ceil(words.length*0.5));
   }
-
   function formatPricesForSpeech(text){
     if (!text) return text;
     const currency = getConfig().currency;
     let out = text;
-    out = out.replace(/\$\s*([\d]{1,3}(?:[.,]\d{3})+|\d{3,})/g,function(m,num){
-      return num.replace(/[.,]/g,'') + ' ' + currency;
-    });
+    out = out.replace(/\$\s*([\d]{1,3}(?:[.,]\d{3})+|\d{3,})/g,function(m,num){ return num.replace(/[.,]/g,'') + ' ' + currency; });
     out = out.replace(/\bCOP\b/g, currency);
     return out;
   }
-
   function markUserScrolling(){
     S.userScrolling = true;
     clearTimeout(S.scrollTimer);
@@ -2043,7 +2080,10 @@ window.__voiceSystem = (function(){
     S.watchdog = setInterval(function(){
       if (!S.playing || S.paused) return;
       try{ if (synth.paused) synth.resume(); }catch(e){}
-    },5000);
+      if (S.micActive && !S.recognitionRunning){
+        try{ startRecognition(); }catch(e){}
+      }
+    },1200);
   }
   function stopWatchdog(){ if (S.watchdog){ clearInterval(S.watchdog); S.watchdog = null; } }
 
@@ -2169,7 +2209,7 @@ window.__voiceSystem = (function(){
 
       if (STOP_REGEX.test(interimClean) || STOP_REGEX.test(finClean)){
         const now = Date.now();
-        if (now - S.lastDetenerTime > 700){
+        if (now - S.lastDetenerTime > 500){
           S.lastDetenerTime = now;
           if (S.playing || S.paused){
             cancelImmediate();
@@ -2200,10 +2240,10 @@ window.__voiceSystem = (function(){
     };
     r.onend = function(){
       S.recognitionRunning = false;
-      if (S.micActive && !S.playing){
+      if (S.micActive){
         setTimeout(function(){
           if (S.micActive && !S.recognitionRunning) startRecognition();
-        },150);
+        },120);
       }
     };
     return r;
@@ -2220,13 +2260,9 @@ window.__voiceSystem = (function(){
   function handleWhatsappInput(t){
     if (S.triggerPhrase && t === S.triggerPhrase) return;
     if (Date.now() - S.modeEnterTime < 400 && t.length < 10) return;
-    if (t.length < 50 && /\b(enviar|env[ií]a|env[ií]alo|manda|m[aá]ndalo|mandar|ya\s*est[aá]|listo|ya|send|sent|envoie|envoyer|envie|enviar)\b/.test(t)){
-      if (S.capturedText.trim()){
-        sendWhatsappMessage(S.capturedText.trim());
-      } else {
-        speakText(getConfig().noMessageCaptured);
-        setCapturing(getConfig().statusWhatsapp,'#25D366');
-      }
+    if (t.length < 50 && /\b(enviar|env[ií]a|env[ií]alo|manda|m[aá]ndalo|mandar|ya\s*est[aá]|listo|ya|send|sent|envoie|envoyer|envie)\b/.test(t)){
+      if (S.capturedText.trim()){ sendWhatsappMessage(S.capturedText.trim()); }
+      else { speakText(getConfig().noMessageCaptured); setCapturing(getConfig().statusWhatsapp,'#25D366'); }
       return;
     }
     if (t.length < 40 && /\b(cancelar|cancela|salir\s*del\s*modo|abortar|olv[ií]dalo|cancel|quit|exit|annuler|quitter|sair)\b/.test(t)){
@@ -2260,6 +2296,22 @@ window.__voiceSystem = (function(){
     askChatbot(t);
   }
 
+  function openExternal(url,label){
+    speakText(getConfig().openingLink + label);
+    setTimeout(function(){
+      try{ const w = window.open(url,'_blank'); if (!w) window.location.href = url; }
+      catch(e){ window.location.href = url; }
+    },700);
+  }
+
+  function openEmail(){
+    const url = 'mailto:' + EDITORIAL_EMAIL + '?subject=' + encodeURIComponent('Consulta - Artes Multicap Editorial');
+    speakText(getConfig().openingEmail);
+    setTimeout(function(){
+      try{ window.location.href = url; }catch(e){}
+    },700);
+  }
+
   function handleVoiceInput(t){
     if (!t) return;
     const now = Date.now();
@@ -2276,8 +2328,18 @@ window.__voiceSystem = (function(){
     if (PAUSE_REGEX.test(t) && S.playing && !S.paused){ S.lastCmd = now; togglePause(); return; }
     if (RESUME_REGEX.test(t) && S.playing && S.paused){ S.lastCmd = now; togglePause(); return; }
 
+    if (EMAIL_TRIGGER_REGEX.test(t)){ S.lastCmd = now; openEmail(); return; }
     if (WHATSAPP_TRIGGER_REGEX.test(t)){ S.lastCmd = now; enterWhatsappMode(t); return; }
     if (CHATBOT_TRIGGER_REGEX.test(t)){ S.lastCmd = now; enterChatbotMode(t); return; }
+
+    for (let i = 0; i < NAV_LINKS.length; i++){
+      const nav = NAV_LINKS[i];
+      if (nav.rx.test(t)){
+        S.lastCmd = now;
+        openExternal(nav.url, getLabel(nav.labels));
+        return;
+      }
+    }
 
     for (let i = 0; i < NAV_COMMANDS.length; i++){
       const nav = NAV_COMMANDS[i];
@@ -2390,14 +2452,15 @@ window.__voiceSystem = (function(){
 
   const WA_NUMBER = '573113555949';
   const WA_GENERAL = 'https://wa.me/' + WA_NUMBER + '?text=Hola%2C%20tengo%20una%20consulta%20sobre%20la%20Editorial';
+  const EMAIL_GENERAL = 'artesmulticapeditorial@gmail.com';
 
   const KB = [
     { keys: ['hola','buenas','buenos días','buenos dias','buenas tardes','buenas noches','hey','saludos','qué tal','que tal','hello','hi','bonjour','salut','olá','oi'],
       reply: '¡Hola! 👋 Soy <strong>MULTI</strong>, el asistente de la Editorial Artes Multicap. Puedo ayudarte con información sobre <strong>planes de publicación</strong>, <strong>precios</strong>, <strong>descuentos por estrato</strong>, <strong>convocatorias</strong>, <strong>proceso editorial</strong> y más. ¿Qué necesitas saber?' },
     { keys: ['gracias','ok','perfecto','listo','genial','excelente','thanks','thank you','merci','obrigado'],
-      reply: '¡Con gusto! 😊 Si necesitas más ayuda, escríbenos por <a href="'+WA_GENERAL+'" target="_blank">WhatsApp</a>.' },
+      reply: '¡Con gusto! 😊 Si necesitas más ayuda, escríbenos por <a href="'+WA_GENERAL+'" target="_blank">WhatsApp</a> o por correo a <a href="mailto:'+EMAIL_GENERAL+'">'+EMAIL_GENERAL+'</a>.' },
     { keys: ['adios','adiós','chao','nos vemos','hasta luego','bye','goodbye','au revoir','adeus'],
-      reply: '¡Hasta luego! 👋 <a href="'+WA_GENERAL+'" target="_blank">WhatsApp aquí</a> cuando quieras.' },
+      reply: '¡Hasta luego! 👋 <a href="'+WA_GENERAL+'" target="_blank">WhatsApp aquí</a> o <a href="mailto:'+EMAIL_GENERAL+'">envíanos un correo</a> cuando quieras.' },
     { keys: ['precio','precios','cuánto','cuanto','vale','costo','costos','tarifas','cotización','cotizacion','price','prices','cost','devis','prix','coût','preço','preços','custo'],
       reply: '💰 <strong>Precios en pesos colombianos (COP):</strong><br><br>• <strong>Plan Profesional</strong> (edición en español · 2 formatos): desde <strong>$1.800.000 COP</strong> (estrato 5/6). Con descuentos puede bajar a <strong>$540.000 COP</strong>.<br><br>• <strong>Plan Premium Global</strong> (edición bilingüe · 6 formatos): desde <strong>$4.100.000 COP</strong>. Con descuentos puede bajar a <strong>$1.230.000 COP</strong>.<br><br>Usa el <a href="#cotizador">cotizador</a> para ver tu valor exacto según tu estrato.' },
     { keys: ['plan profesional','profesional','paquete profesional','paquete básico','paquete basico','professional plan','plan professionnel','plano profissional'],
@@ -2425,11 +2488,11 @@ window.__voiceSystem = (function(){
     { keys: ['servicios','servicios individuales','corrección','correccion','maquetación','maquetacion','portada','diseño','diseno','services','correction','layout','cover','design','mise en page','serviços','correção'],
       reply: '🛠️ <strong>Servicios editoriales individuales:</strong><br><br>• Corrección ortotipográfica y de estilo<br>• Maquetación interior<br>• Diseño de portada y contraportada<br>• Gestión de ISBN<br>• Publicación internacional<br>• eBook<br>• Distribución en Amazon<br><br>Puedes contratar el servicio que necesites por separado o el paquete completo.<br><br><a href="#servicios">Ver servicios</a>' },
     { keys: ['cotizador','cotizar','cotiza','estimado','valor','quote','quotation','devis','cotação','cotar'],
-      reply: '💡 Usa nuestro <a href="#cotizador">cotizador</a>: elige tu plan y tu estrato y te mostramos el valor estimado al instante. También puedes pedir una cotización personalizada por <a href="'+WA_GENERAL+'" target="_blank">WhatsApp</a>.' },
+      reply: '💡 Usa nuestro <a href="#cotizador">cotizador</a>: elige tu plan y tu estrato y te mostramos el valor estimado al instante. También puedes pedir una cotización personalizada por <a href="'+WA_GENERAL+'" target="_blank">WhatsApp</a> o por <a href="mailto:'+EMAIL_GENERAL+'">correo</a>.' },
     { keys: ['pago','pagar','nequi','paypal','mercado pago','cuotas','financiación','financiacion','payment','pay','installments','paiement','payer','pagamento'],
       reply: '💳 <strong>Formas de pago:</strong> Nequi, PayPal, Mercado Pago, Western Union. También podemos revisar un plan de pagos por cuotas según tu caso. Escríbenos por <a href="'+WA_GENERAL+'" target="_blank">WhatsApp</a>.' },
     { keys: ['contacto','contactar','correo','email','teléfono','telefono','comunicar','contact','phone','contato','telefone'],
-      reply: '📞 <strong>Contacto:</strong><br>📧 artesmulticap2024@gmail.com<br>📱 <a href="'+WA_GENERAL+'" target="_blank">WhatsApp: +57 311 355 5949</a><br>🌐 Colombia' },
+      reply: '📞 <strong>Contacto:</strong><br>📧 <a href="mailto:'+EMAIL_GENERAL+'">'+EMAIL_GENERAL+'</a><br>📱 <a href="'+WA_GENERAL+'" target="_blank">WhatsApp: +57 311 355 5949</a><br>🌐 Colombia' },
     { keys: ['whatsapp','wasap','wpp','escribir','mensaje','message','write','envoyer','mensagem'],
       reply: '📲 <a href="'+WA_GENERAL+'" target="_blank">Haz clic aquí para abrir WhatsApp</a>.' },
     { keys: ['plataforma','plataformas','revista','revistas','museos','explorando','platform','magazine','plateforme','revue','plataforma','revista'],
@@ -2443,7 +2506,7 @@ window.__voiceSystem = (function(){
   ];
 
   const FALLBACKS = [
-    'No tengo esa respuesta exacta. 🤔 Prueba con: <strong>precios</strong>, <strong>plan profesional</strong>, <strong>plan premium</strong>, <strong>descuentos</strong>, <strong>convocatoria</strong>. O escríbenos por <a href="'+WA_GENERAL+'" target="_blank">WhatsApp</a>.',
+    'No tengo esa respuesta exacta. 🤔 Prueba con: <strong>precios</strong>, <strong>plan profesional</strong>, <strong>plan premium</strong>, <strong>descuentos</strong>, <strong>convocatoria</strong>. O escríbenos por <a href="'+WA_GENERAL+'" target="_blank">WhatsApp</a> o a <a href="mailto:'+EMAIL_GENERAL+'">'+EMAIL_GENERAL+'</a>.',
     'No encontré info. 😅 Prueba con el nombre del plan o sección. O <a href="'+WA_GENERAL+'" target="_blank">WhatsApp aquí</a>.'
   ];
   let fallbackIdx = 0;
