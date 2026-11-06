@@ -153,71 +153,6 @@ section{max-width:1200px;width:100%;margin:auto;padding:30px 20px;line-height:1.
 .servicios-imagen:hover{border-color:rgba(231,195,107,.6);box-shadow:0 25px 80px rgba(0,0,0,.6),0 0 100px rgba(231,195,107,.3),inset 0 0 50px rgba(231,195,107,.08);transform:translateY(-3px);}
 .servicios-imagen img{width:100%;height:auto;display:block;}
 
-.convocatoria-hero{background:linear-gradient(160deg,rgba(231,195,107,.08),rgba(255,255,255,.03));border:1.5px solid rgba(231,195,107,.35);border-radius:var(--radius);padding:30px 26px;text-align:center;margin-bottom:18px;position:relative;overflow:hidden;}
-.convocatoria-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.7;box-shadow:0 0 20px rgba(231,195,107,.6);}
-.convocatoria-hero .conv-badge{display:inline-block;font-size:.68rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(231,195,107,.45);padding:.35rem 1rem;border-radius:50px;margin-bottom:.9rem;line-height:1;background:rgba(231,195,107,.05);text-shadow:0 0 10px rgba(231,195,107,.5);}
-.convocatoria-hero h3{font-family:"Cormorant Garamond",serif;font-size:2.2rem;color:var(--gold);line-height:1;margin-bottom:8px;text-shadow:0 0 20px rgba(231,195,107,.5);}
-.convocatoria-hero .conv-lema{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.15rem;color:var(--gold-bright);letter-spacing:.5px;margin-bottom:12px;line-height:1.05;text-shadow:0 0 12px rgba(231,195,107,.4);}
-.convocatoria-hero p{color:var(--muted);font-size:.95rem;max-width:780px;margin:0 auto 8px;line-height:1.05;}
-.convocatoria-hero p:last-child{margin-bottom:0;}
-.convocatoria-hero p strong{color:var(--gold-bright);font-weight:600;}
-
-.conv-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;align-items:start;}
-.conv-col{display:flex;flex-direction:column;gap:16px;}
-.conv-block{background:var(--card);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:20px 18px;position:relative;overflow:hidden;line-height:1.05;}
-.conv-block::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.55;}
-.conv-block h3{font-family:"Cormorant Garamond",serif;font-size:1.4rem;color:var(--gold);margin-bottom:10px;line-height:1;text-shadow:0 0 15px rgba(231,195,107,.35);padding-bottom:.4rem;border-bottom:1px solid rgba(231,195,107,.2);}
-.conv-block h3::before{content:'✦ ';color:var(--gold-bright);font-size:.9rem;text-shadow:0 0 12px rgba(231,195,107,.8);}
-.conv-block h4{font-family:"Cormorant Garamond",serif;font-size:1.05rem;color:var(--gold-bright);margin:.7rem 0 .4rem;line-height:1;text-shadow:0 0 10px rgba(231,195,107,.4);}
-.conv-block p{color:var(--muted);font-size:.86rem;line-height:1.05;margin-bottom:.5rem;}
-.conv-block p:last-child{margin-bottom:0;}
-.conv-block p strong{color:var(--gold-bright);font-weight:600;}
-
-.conv-list{list-style:none;padding:0;margin:0 0 .4rem;}
-.conv-list li{padding:.25rem 0;font-size:.84rem;color:var(--text);display:flex;gap:.5rem;align-items:flex-start;border-bottom:1px solid rgba(255,255,255,.05);line-height:1.05;}
-.conv-list li:last-child{border-bottom:none;}
-.conv-list li::before{content:'—';color:var(--gold);flex-shrink:0;font-weight:700;}
-.conv-list.check li::before{content:'✓';color:var(--gold-bright);font-weight:700;text-shadow:0 0 8px rgba(231,195,107,.6);}
-.conv-list.cross li::before{content:'✕';color:#c98b8b;font-weight:700;}
-
-.conv-premio-item{background:rgba(231,195,107,.05);border-left:2px solid var(--gold);border-radius:10px;padding:.65rem .8rem;margin-bottom:.5rem;line-height:1.05;}
-.conv-premio-item:last-child{margin-bottom:0;}
-.conv-premio-item h4{margin-top:0;font-size:.98rem;color:var(--gold);}
-.conv-premio-item p{font-size:.83rem;margin-bottom:.3rem;}
-.conv-premio-item .conv-list li{font-size:.82rem;}
-
-.conv-cronograma{list-style:none;padding:0;margin:0;}
-.conv-cronograma li{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:baseline;padding:.45rem .65rem;border-bottom:1px solid rgba(255,255,255,.05);line-height:1.05;font-size:.85rem;}
-.conv-cronograma li:last-child{border-bottom:none;}
-.conv-cronograma li:nth-child(odd){background:rgba(231,195,107,.03);border-radius:8px;}
-.conv-cronograma .etapa{color:var(--text);}
-.conv-cronograma .fecha{color:var(--gold-bright);font-weight:600;text-align:right;white-space:nowrap;text-shadow:0 0 8px rgba(231,195,107,.4);}
-
-.conv-paso{display:flex;gap:12px;background:rgba(231,195,107,.04);border:1px solid rgba(231,195,107,.18);border-radius:14px;padding:12px 13px;margin-bottom:10px;align-items:flex-start;line-height:1.05;transition:.3s;}
-.conv-paso:last-child{margin-bottom:0;}
-.conv-paso:hover{border-color:rgba(231,195,107,.4);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.35);}
-.conv-paso .paso-num{min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--gold),#ffd98c);color:#111;font-weight:700;font-size:.88rem;flex-shrink:0;box-shadow:0 0 18px rgba(231,195,107,.5);line-height:1;}
-.conv-paso .paso-content{flex:1;min-width:0;}
-.conv-paso .paso-content h4{font-family:"Cormorant Garamond",serif;font-size:1rem;color:var(--gold-bright);margin-bottom:.3rem;line-height:1;text-shadow:0 0 10px rgba(231,195,107,.4);}
-.conv-paso .paso-content p{font-size:.82rem;color:var(--muted);line-height:1.05;margin-bottom:.4rem;}
-.conv-paso .paso-content p:last-child{margin-bottom:0;}
-
-.ia-paso{background:rgba(231,195,107,.08);border:1.5px solid rgba(231,195,107,.4);border-radius:12px;padding:10px 12px;margin-top:.5rem;line-height:1.05;}
-.ia-paso h5{font-family:"Cormorant Garamond",serif;font-size:.95rem;color:var(--gold-bright);margin-bottom:.35rem;line-height:1;text-shadow:0 0 10px rgba(231,195,107,.4);display:flex;align-items:center;gap:.35rem;}
-.ia-paso h5::before{content:'⚠';font-size:1rem;}
-.ia-paso p{font-size:.8rem;color:var(--text);line-height:1.05;margin-bottom:.3rem;}
-.ia-paso p:last-child{margin-bottom:0;}
-.ia-paso strong{color:var(--gold-bright);}
-
-.conv-archivo{background:rgba(0,0,0,.4);border:1px dashed rgba(231,195,107,.35);border-radius:12px;padding:.65rem .85rem;margin-top:.4rem;line-height:1.05;}
-.conv-archivo .archivo-tag{display:inline-block;font-size:.62rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(231,195,107,.4);padding:.15rem .55rem;border-radius:50px;margin-bottom:.35rem;line-height:1;}
-.conv-archivo .archivo-nombre{display:block;font-family:'Courier New',monospace;font-size:.76rem;color:var(--gold-bright);background:rgba(231,195,107,.08);padding:.3rem .6rem;border-radius:8px;margin-top:.4rem;word-break:break-all;line-height:1.05;}
-
-.conv-aviso{background:rgba(231,195,107,.06);border-left:3px solid var(--gold);border-radius:12px;padding:.75rem .9rem;font-size:.82rem;color:var(--muted);line-height:1.05;margin-top:10px;}
-.conv-aviso strong{color:var(--gold);text-shadow:0 0 10px rgba(231,195,107,.4);}
-
-.conv-cta{text-align:center;margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
-
 .tamanos-tabla{width:100%;border-collapse:collapse;background:rgba(255,255,255,.02);border-radius:14px;overflow:hidden;border:1px solid rgba(231,195,107,.2);box-shadow:0 10px 40px rgba(0,0,0,.3);line-height:1.05;}
 .tamanos-tabla thead{background:linear-gradient(90deg,rgba(231,195,107,.15),rgba(231,195,107,.08));}
 .tamanos-tabla th{padding:.6rem .8rem;text-align:left;font-size:.7rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-bright);border-bottom:1px solid rgba(231,195,107,.25);text-shadow:0 0 10px rgba(231,195,107,.4);line-height:1;}
@@ -336,8 +271,8 @@ footer .footer-copy{position:relative;z-index:2;font-size:.8rem;color:rgba(185,1
 nav{padding:8px 15px;gap:8px;}.logo-img{height:70px;}nav ul{gap:6px;}nav ul li a{padding:6px 11px;font-size:.7rem;}
 .hero{padding:290px 20px 30px;min-height:auto;}.hero-content{grid-template-columns:1fr;gap:35px;}.hero h1{font-size:2rem;}.hero p{font-size:.95rem;}.hero-image{height:260px;}
 .paquetes-grid{grid-template-columns:1fr;}.revistas-grid{grid-template-columns:1fr;}.inclusion-grid{grid-template-columns:1fr;}
-.conv-grid{grid-template-columns:1fr;gap:14px;}.conv-col{gap:14px;}section{padding:24px 20px;}.title h2{font-size:2rem;}
-.convocatoria-hero h3{font-size:1.9rem;}.footer-logos{gap:35px;}.footer-logo{height:95px;}
+section{padding:24px 20px;}.title h2{font-size:2rem;}
+.footer-logos{gap:35px;}.footer-logo{height:95px;}
 }
 @media(max-width:767px){
 body{font-size:14.5px;line-height:1;}
@@ -346,9 +281,6 @@ body{font-size:14.5px;line-height:1;}
 .paquete-card{padding:20px 18px;}.revista-card{padding:22px 18px;}.inclusion-card{padding:20px 18px;}
 .cotizador{padding:18px 16px;}.cotizador-resultado .precio{font-size:1.8rem;}
 .cta{padding:30px 22px;}.cta h2{font-size:1.9rem;}.cta .cta-info{font-size:.9rem;}
-.convocatoria-hero{padding:24px 20px;}.convocatoria-hero h3{font-size:1.7rem;}.convocatoria-hero .conv-lema{font-size:1.05rem;}
-.conv-block{padding:18px 16px;}.conv-block h3{font-size:1.3rem;}
-.conv-cronograma li{grid-template-columns:1fr;gap:2px;padding:.45rem .6rem;}.conv-cronograma .fecha{text-align:left;}
 footer{padding:8px 18px 25px;}.footer-logo{height:80px;}.footer-logos{gap:25px;}
 }
 @media(max-width:600px){
@@ -358,14 +290,6 @@ nav ul{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;width:100%;mar
 nav ul li a{padding:5px 10px;font-size:.65rem;letter-spacing:.3px;}
 .hero{padding:275px 15px 25px;}.hero h1{font-size:1.6rem;}.hero p{font-size:.9rem;}.hero-image{height:220px;}
 .btn{padding:10px 20px;font-size:.82rem;}section{padding:20px 15px;}.title{margin-bottom:16px;}.title h2{font-size:1.7rem;}.title p{font-size:.87rem;}
-.convocatoria-hero{padding:20px 16px;border-radius:18px;}.convocatoria-hero h3{font-size:1.5rem;}.convocatoria-hero .conv-lema{font-size:.95rem;}.convocatoria-hero p{font-size:.86rem;}
-.conv-block{padding:16px 14px;border-radius:16px;}.conv-block h3{font-size:1.2rem;}.conv-block h4{font-size:1rem;}.conv-block p{font-size:.83rem;}
-.conv-list li{font-size:.82rem;}
-.conv-premio-item{padding:.6rem .75rem;}.conv-premio-item h4{font-size:.95rem;}.conv-premio-item p{font-size:.8rem;}.conv-premio-item .conv-list li{font-size:.79rem;}
-.conv-paso{padding:10px 12px;gap:10px;}.conv-paso .paso-num{min-width:30px;height:30px;font-size:.82rem;}
-.conv-paso .paso-content h4{font-size:.98rem;}.conv-paso .paso-content p{font-size:.78rem;}
-.ia-paso{padding:8px 10px;}.ia-paso h5{font-size:.88rem;}.ia-paso p{font-size:.76rem;}
-.conv-cronograma li{font-size:.82rem;padding:.4rem .55rem;}
 .tamanos-tabla{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}.tamanos-tabla th{padding:.45rem .45rem;font-size:.62rem;}.tamanos-tabla td{padding:.45rem .45rem;font-size:.76rem;}.tamanos-tabla .tipo{font-size:.85rem;}
 .nota-tamanos{font-size:.82rem;padding:.8rem .9rem;}
 .paquete-card{padding:18px 16px;}.paquete-card h3{font-size:1.5rem;}
@@ -384,7 +308,6 @@ nav{padding:6px 10px;}.logo-img{height:52px;}nav ul li a{padding:4px 8px;font-si
 .hero{padding:265px 12px 22px;}.hero h1{font-size:1.4rem;}.hero p{font-size:.85rem;}.hero-image{height:190px;}
 section{padding:16px 12px;}.title h2{font-size:1.5rem;}.title p{font-size:.84rem;}
 .btn{padding:9px 18px;font-size:.78rem;}.buttons{flex-direction:column;width:100%;}.buttons .btn{width:100%;}
-.convocatoria-hero h3{font-size:1.3rem;}.conv-block h3{font-size:1.15rem;}.conv-block h4{font-size:.98rem;}
 .tamanos-tabla th{font-size:.58rem;padding:.4rem .4rem;}.tamanos-tabla td{font-size:.72rem;padding:.4rem .4rem;}.tamanos-tabla .tipo{font-size:.8rem;}
 .paquete-card h3{font-size:1.35rem;}.inclusion-card h3{font-size:1.2rem;}.revista-card h3{font-size:1.25rem;}
 .cotizador-resultado .precio{font-size:1.5rem;}.cta h2{font-size:1.4rem;}
@@ -394,43 +317,47 @@ section{padding:16px 12px;}.title h2{font-size:1.5rem;}.title p{font-size:.84rem
 }
 @media(max-width:340px){
 body{font-size:13.5px;line-height:1;}.logo-img{height:46px;}.hero{padding:260px 10px 20px;}.hero h1{font-size:1.25rem;}.hero p{font-size:.82rem;}.hero-image{height:170px;}
-.title h2{font-size:1.4rem;}.convocatoria-hero h3{font-size:1.2rem;}.conv-block h3{font-size:1.05rem;}
+.title h2{font-size:1.4rem;}
 }
 @media(max-width:900px) and (orientation:landscape){
 .hero{min-height:auto;padding:280px 20px 25px;}.hero-content{grid-template-columns:1fr 1fr;gap:30px;}.hero-image{height:220px;}
 }
-@media print{header,footer,.wa-float,.btn,#lang-bar{display:none;}body{background:white;color:black;}section{padding:20px 0;}}
+@media print{header,footer,.wa-float,.btn,#lang-bar,#audioDock{display:none;}body{background:white;color:black;}section{padding:20px 0;}}
 
-#voiceStatus{
-position:fixed;bottom:22px;left:22px;z-index:9998;
-display:none;align-items:center;gap:9px;
+/* ===== CONTROLES DE AUDIO ===== */
+#audioDock{position:fixed;bottom:22px;left:22px;z-index:9998;display:flex;align-items:center;gap:8px;}
+#audioDock .dock-btn{
+height:52px;min-width:52px;border-radius:999px;
+border:1.5px solid rgba(231,195,107,.85);
 background:rgba(0,0,0,.94);color:var(--gold-bright);
-border:1.5px solid rgba(231,195,107,.75);border-radius:999px;
-padding:9px 16px;font-family:'Inter',sans-serif;
-font-size:.75rem;font-weight:600;backdrop-filter:blur(10px);
-box-shadow:0 0 28px rgba(231,195,107,.55);
-white-space:nowrap;pointer-events:none;
-max-width:calc(100vw - 110px);overflow:hidden;text-overflow:ellipsis;line-height:1;
+display:flex;align-items:center;justify-content:center;gap:8px;
+padding:0 16px;cursor:pointer;font-family:'Inter',sans-serif;
+font-weight:600;font-size:.78rem;line-height:1;
+box-shadow:0 0 22px rgba(231,195,107,.5);
+transition:transform .25s,background .25s;
+-webkit-tap-highlight-color:transparent;
 }
-#voiceStatus.active{display:flex;}
-#voiceStatus .vdot{width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;flex-shrink:0;animation:vdotPulse 1.3s infinite ease-in-out;}
-@keyframes vdotPulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(.85);}}
-#voiceFallback{
-position:fixed;bottom:22px;left:22px;z-index:9998;
-display:flex;align-items:center;justify-content:center;
-width:56px;height:56px;border-radius:50%;
-background:linear-gradient(135deg,var(--gold),#b8941f);
-border:none;cursor:pointer;color:#000;
-box-shadow:0 6px 25px rgba(231,195,107,.75);
-animation:vPulse 2.5s ease-in-out infinite;transition:transform .3s;
+#audioDock .dock-btn:hover{transform:scale(1.06);}
+#audioDock .dock-btn svg{width:22px;height:22px;flex-shrink:0;}
+#btnAudio{background:linear-gradient(135deg,var(--gold),#b8941f)!important;color:#111!important;}
+#btnAudio.on{background:#b91c1c!important;color:#fff!important;border-color:#fecaca;}
+#btnPause{display:none!important;}
+#audioDock.reading #btnPause{display:flex!important;}
+#btnMic.on{background:#15803d;color:#fff;border-color:#bbf7d0;}
+#audioMsg{
+position:absolute;bottom:62px;left:0;display:none;
+background:rgba(0,0,0,.95);color:var(--gold-bright);
+border:1.5px solid rgba(231,195,107,.75);border-radius:14px;
+padding:9px 14px;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;
+line-height:1.3;max-width:min(78vw,320px);box-shadow:0 0 22px rgba(231,195,107,.45);
+pointer-events:none;
 }
-#voiceFallback:hover{transform:scale(1.1);}
-#voiceFallback svg{width:26px;height:26px;}
-@keyframes vPulse{
-0%,100%{box-shadow:0 6px 25px rgba(231,195,107,.75),0 0 0 0 rgba(231,195,107,.5);}
-50%{box-shadow:0 6px 25px rgba(231,195,107,.75),0 0 0 12px rgba(231,195,107,0);}
+#audioMsg.show{display:block;}
+@media(max-width:600px){
+#audioDock{bottom:16px;left:16px;gap:6px;}
+#audioDock .dock-btn{height:46px;min-width:46px;padding:0 13px;font-size:.7rem;}
+#btnPause span,#btnMic span{display:none;}
 }
-body.voice-active #voiceFallback{display:none;}
 
 #chatbotBtn{
 position:fixed;bottom:22px;right:92px;z-index:9997;
@@ -444,7 +371,7 @@ padding:0;overflow:visible;transition:transform .3s;
 }
 #chatbotBtn:hover{transform:scale(1.1) rotate(-5deg);}
 #chatbotBtn svg{width:100%;height:100%;display:block;pointer-events:none;}
-#chatbotBtn .chat-badge{position:absolute;top:-4px;right:-4px;background:#ef4444;color:#fff;font-size:.7rem;font-weight:800;min-width:22px;height:22px;border-radius:999px;display:flex;align-items:center;justify-content:center;padding:0 5px;box-shadow:0 0 0 3px #000;animation:vdotPulse 1.5s infinite ease-in-out;}
+#chatbotBtn .chat-badge{position:absolute;top:-4px;right:-4px;background:#ef4444;color:#fff;font-size:.7rem;font-weight:800;min-width:22px;height:22px;border-radius:999px;display:flex;align-items:center;justify-content:center;padding:0 5px;box-shadow:0 0 0 3px #000;}
 @keyframes rFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
 @keyframes rGlow{0%,100%{box-shadow:0 6px 30px rgba(124,58,237,.8),0 0 0 0 rgba(231,195,107,.7);}50%{box-shadow:0 6px 30px rgba(124,58,237,.8),0 0 0 14px rgba(231,195,107,0);}}
 
@@ -507,9 +434,6 @@ font-family:'Inter',sans-serif;
 @media(max-width:600px){
 #chatbotBtn{width:56px;height:56px;bottom:16px;right:80px;}
 #chatbotPanel{bottom:0;right:0;left:0;width:100%;height:92vh;border-radius:22px 22px 0 0;border-left:none;border-right:none;border-bottom:none;}
-#voiceStatus,#voiceFallback{bottom:16px;left:16px;}
-#voiceFallback{width:50px;height:50px;}
-#voiceFallback svg{width:22px;height:22px;}
 .chat-quick button{padding:.28rem .55rem;font-size:.68rem;}
 }
 </style>
@@ -545,7 +469,7 @@ font-family:'Inter',sans-serif;
 <li><a href="#cotizador" data-i18n="nav.cotiza">Cotiza</a></li>
 <li><a href="https://explorandomuseosyartelatinoamericano.netlify.app/" target="_blank" rel="noopener" data-i18n="nav.revistas">Revistas Gratis</a></li>
 <li><a href="https://fundacion-artes-multicap.netlify.app/" target="_blank" rel="noopener" data-i18n="nav.fundacion">Fundación</a></li>
-<li><a href="#convocatoria" data-i18n="nav.convocatorias">Convocatorias</a></li>
+<li><a href="https://convocatorialatinoamericaescribe.netlify.app/" target="_blank" rel="noopener" data-i18n="nav.convocatorias">Convocatoria</a></li>
 <li><a href="https://pol-ticaseditoriales.netlify.app/" target="_blank" rel="noopener" data-i18n="nav.politicas">Políticas</a></li>
 <li><a href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
 </ul>
@@ -806,271 +730,6 @@ font-family:'Inter',sans-serif;
 </div>
 </section>
 
-<section id="convocatoria" class="fade">
-<div class="title">
-<h2 data-i18n="conv.title">Convocatoria Oficial</h2>
-<p data-i18n="conv.desc">Concurso Internacional de Creación Literaria y Publicación "Latinoamérica Escribe"</p>
-</div>
-<div class="convocatoria-hero">
-<span class="conv-badge" data-i18n="conv.badge">Convocatoria abierta 2026</span>
-<h3 data-i18n="conv.h3">LATINOAMÉRICA ESCRIBE</h3>
-<p class="conv-lema" data-i18n="conv.lema">Una obra. Un ganador. Un libro para el mundo.</p>
-<p data-i18n-html="conv.sub"><em>Una historia. Dos idiomas. Una oportunidad para publicar y llevar tu voz más allá de las fronteras.</em></p>
-</div>
-
-<div class="conv-grid">
-
-<div class="conv-col">
-
-<div class="conv-block">
-<h3 data-i18n="conv.c1.h">¿Qué es "Latinoamérica Escribe"?</h3>
-<p data-i18n-html="conv.c1.p1">Es un concurso internacional de creación literaria y publicación organizado por la <strong>Fundación Artes Multicap (Colombia)</strong>.</p>
-<p data-i18n-html="conv.c1.p2">Se seleccionará <strong>una única obra ganadora</strong>, de <strong>tema y género libres</strong>. El ganador recibirá gratuitamente el <strong>Plan Premium Global</strong>, valorado en <strong>$4.100.000 COP</strong>.</p>
-<p data-i18n-html="conv.c1.p3"><strong>Participar es completamente GRATIS.</strong></p>
-</div>
-
-<div class="conv-block">
-<h3 data-i18n="conv.c2.h">¿Quién puede participar?</h3>
-<ul class="conv-list check" data-i18n-list="conv.c2.list1">
-<li>Personas naturales mayores de 18 años.</li>
-<li>Autores de cualquier país de Latinoamérica.</li>
-<li>Personas de cualquier nacionalidad que residan en un país latinoamericano.</li>
-<li>Autores que presenten una obra original, inédita y de su autoría.</li>
-<li>Participantes que presenten su obra en idioma español.</li>
-</ul>
-<p data-i18n-html="conv.c2.paises"><strong>Países convocados:</strong> Colombia, México, Argentina, Chile, Perú, Ecuador, Bolivia, Paraguay, Uruguay, Brasil, Venezuela, Costa Rica, Panamá, Nicaragua, Honduras, Guatemala, El Salvador, República Dominicana, Cuba y Puerto Rico.</p>
-<h4 data-i18n="conv.c2.np">No podrán participar</h4>
-<ul class="conv-list cross" data-i18n-list="conv.c2.list2">
-<li>Obras publicadas comercialmente con anterioridad.</li>
-<li>Obras ganadoras de otro concurso cuando comprometan derechos necesarios.</li>
-<li>Personas vinculadas directamente con la organización.</li>
-<li>Integrantes del jurado.</li>
-<li>Personas que intervengan directamente en la evaluación.</li>
-</ul>
-</div>
-
-<div class="conv-block">
-<h3 data-i18n="conv.c3.h">Tema y género: libres</h3>
-<p data-i18n="conv.c3.p1">La convocatoria no establece un tema específico. La obra puede pertenecer a cualquier género literario, narrativo, artístico, cultural, académico o de no ficción, siempre que pueda constituirse editorialmente como un proyecto de libro.</p>
-<p data-i18n="conv.c3.p2">Entre otros, podrán presentarse:</p>
-<ul class="conv-list" data-i18n-list="conv.c3.list">
-<li>Novela, novela corta, cuento y relatos</li>
-<li>Poesía</li>
-<li>Ensayo, investigación y crónica</li>
-<li>Memorias, biografía y testimonio</li>
-<li>Literatura infantil, juvenil o para adultos</li>
-<li>Obras de carácter cultural, artístico, académico o científico</li>
-<li>Otros géneros narrativos, literarios o expositivos</li>
-</ul>
-<p data-i18n-html="conv.c3.p4">La obra deberá ser <strong>original, inédita y de autoría del participante</strong>.</p>
-</div>
-
-<div class="conv-block">
-<h3 data-i18n="conv.c4.h">Requisitos de formato</h3>
-<ul class="conv-list check" data-i18n-list="conv.c4.list">
-<li>Tamaño carta, con márgenes de 2,5 cm por los cuatro lados</li>
-<li>Times New Roman 12, interlineado 1,5</li>
-<li>Título en Times New Roman 14</li>
-<li>Tabla de contenido obligatoria</li>
-<li>Extensión: 20.000 a 30.000 palabras</li>
-<li>Idioma: español</li>
-<li>Formato de envío: Word (.docx) únicamente</li>
-<li>Seudónimo obligatorio</li>
-</ul>
-</div>
-
-<div class="conv-block">
-<h3 data-i18n="conv.c5.h">Valor referencial del premio</h3>
-<p data-i18n-html="conv.c5.p1">El Plan Premium Global otorgado a la obra ganadora representa una inversión editorial estimada de <strong>$4.100.000 COP</strong>.</p>
-<p data-i18n="conv.c5.p2">Este valor es referencial y corresponde al conjunto de servicios editoriales que recibe gratuitamente la persona ganadora.</p>
-<p data-i18n-html="conv.c5.p3">El ganador <strong>no recibe este valor en dinero</strong>. Recibe gratuitamente los servicios editoriales descritos en las bases, más el 50% de las regalías netas por ventas.</p>
-</div>
-
-<div class="conv-block">
-<h3 data-i18n="conv.c6.h">Lo que conservas como autor</h3>
-<p data-i18n-html="conv.c6.p1"><strong>TÚ SIGUES SIENDO EL DUEÑO DE TU OBRA.</strong></p>
-<p data-i18n-html="conv.c6.p2">El contrato de edición no transfiere en ningún momento el derecho de autor, conforme al <strong>artículo 119 de la Ley 23 de 1982</strong>. Conservas todos tus derechos morales y patrimoniales.</p>
-<p data-i18n-html="conv.c6.p3">En caso de cualquier duda, se aplicará el principio <strong>«in dubio pro auctore»</strong>, que ordena interpretar siempre a favor del autor.</p>
-</div>
-
-<div class="conv-block">
-<h3 data-i18n="conv.c7.h">Cronograma</h3>
-<ul class="conv-cronograma" data-i18n-cron="conv.c7.list">
-<li><span class="etapa">Lanzamiento de la convocatoria</span><span class="fecha">25 de septiembre de 2026</span></li>
-<li><span class="etapa">Recepción de obras</span><span class="fecha">25 sep — 26 oct 2026</span></li>
-<li><span class="etapa">Verificación de requisitos formales</span><span class="fecha">27 oct — 5 nov 2026</span></li>
-<li><span class="etapa">Evaluación del jurado</span><span class="fecha">6 — 20 nov 2026</span></li>
-<li><span class="etapa">Anuncio del ganador</span><span class="fecha">27 de noviembre de 2026</span></li>
-<li><span class="etapa">Firma del acuerdo editorial</span><span class="fecha">30 nov — 10 dic 2026</span></li>
-<li><span class="etapa">Proceso editorial y traducción</span><span class="fecha">Dic 2026 — Ene 2027</span></li>
-<li><span class="etapa">Publicación oficial del libro</span><span class="fecha">Enero de 2027</span></li>
-</ul>
-<div class="conv-aviso" data-i18n-html="conv.c7.nota">
-<strong>Nota de transparencia:</strong> El proceso editorial bilingüe completo requiere entre 3 y 4 meses por obra para garantizar la calidad.
-</div>
-</div>
-
-<div class="conv-block">
-<h3 data-i18n="conv.c8.h">Compromiso del ganador</h3>
-<p data-i18n-html="conv.c8.p">El ganador tendrá un plazo de <strong>3 días calendario</strong> para entregar la documentación solicitada. Si no cumple, será descalificado y se seleccionará al siguiente participante.</p>
-</div>
-
-</div>
-
-<div class="conv-col">
-
-<div class="conv-block">
-<h3 data-i18n="conv.d1.h">El gran premio: Plan Premium Global</h3>
-<p data-i18n-html="conv.d1.p">El ganador recibirá el <strong>Plan Premium Global</strong>, <strong>sin pagar absolutamente nada por estos servicios</strong>.</p>
-
-<div class="conv-premio-item">
-<h4 data-i18n="conv.d1.i1.h">Proceso editorial completo</h4>
-<ul class="conv-list" data-i18n-list="conv.d1.i1.list">
-<li>Lectura y valoración editorial</li>
-<li>Corrección ortotipográfica y de estilo</li>
-<li>Preparación del manuscrito</li>
-<li>Diagramación y maquetación interior</li>
-<li>Diseño profesional de portada</li>
-<li>Diseño de contraportada y mockups</li>
-</ul>
-</div>
-
-<div class="conv-premio-item">
-<h4 data-i18n="conv.d1.i2.h">Ilustraciones</h4>
-<p data-i18n="conv.d1.i2.p">Si la obra lo requiere, la organización diseña las ilustraciones como parte del premio.</p>
-</div>
-
-<div class="conv-premio-item">
-<h4 data-i18n="conv.d1.i3.h">Traducción al inglés</h4>
-<p data-i18n="conv.d1.i3.p">Traducción profesional de la obra completa al inglés.</p>
-</div>
-
-<div class="conv-premio-item">
-<h4 data-i18n="conv.d1.i4.h">Publicación en seis formatos bilingües</h4>
-<ul class="conv-list" data-i18n-list="conv.d1.i4.list">
-<li>eBook en español</li>
-<li>eBook en inglés</li>
-<li>Tapa blanda en español</li>
-<li>Tapa blanda en inglés</li>
-<li>Tapa dura en español</li>
-<li>Tapa dura en inglés</li>
-</ul>
-</div>
-
-<div class="conv-premio-item">
-<h4 data-i18n="conv.d1.i5.h">Gestión de ISBN</h4>
-<p data-i18n="conv.d1.i5.p">Solicitud y gestión de los ISBN correspondientes a cada formato.</p>
-</div>
-
-<div class="conv-premio-item">
-<h4 data-i18n="conv.d1.i6.h">Distribución internacional</h4>
-<p data-i18n="conv.d1.i6.p">Disponible a nivel mundial.</p>
-</div>
-
-<div class="conv-premio-item">
-<h4 data-i18n="conv.d1.i7.h">Ejemplares del autor</h4>
-<p data-i18n-html="conv.d1.i7.p"><strong>3 ejemplares impresos de cortesía en tapa blanda.</strong></p>
-</div>
-
-<div class="conv-premio-item">
-<h4 data-i18n="conv.d1.i8.h">Promoción y difusión ampliada</h4>
-<ul class="conv-list" data-i18n-list="conv.d1.i8.list">
-<li>Publicaciones en redes sociales</li>
-<li>Presentación del autor</li>
-<li>Entrevista publicada</li>
-<li>Difusión nacional e internacional</li>
-<li>Enlaces de venta y promoción</li>
-<li>Kit de comunicación y lanzamiento</li>
-<li>Posicionamiento en Amazon</li>
-</ul>
-</div>
-
-<div class="conv-premio-item">
-<h4 data-i18n="conv.d1.i9.h">Regalías por ventas</h4>
-<ul class="conv-list" data-i18n-list="conv.d1.i9.list">
-<li>50% de las regalías netas</li>
-<li>Reporte semestral de ventas</li>
-</ul>
-</div>
-
-<div class="conv-premio-item">
-<h4 data-i18n="conv.d1.i10.h">Diploma digital</h4>
-<p data-i18n="conv.d1.i10.p">Diploma digital oficial de ganador.</p>
-</div>
-</div>
-
-<div class="conv-block">
-<h3 data-i18n="conv.pasos.h">Cómo participar</h3>
-
-<div class="conv-paso">
-<div class="paso-num">1</div>
-<div class="paso-content">
-<h4 data-i18n="conv.p1.h">Prepara tu obra</h4>
-<p data-i18n-html="conv.p1.p">Debe ser <strong>original, inédita y de tu autoría</strong>. Debes presentarla <strong>bajo seudónimo</strong> (obligatorio para garantizar la imparcialidad del jurado).</p>
-
-<div class="ia-paso">
-<h5 data-i18n="conv.ia.h">Uso de Inteligencia Artificial</h5>
-<p data-i18n-html="conv.ia.p1">Es <strong>obligatorio declarar</strong> cualquier uso de IA. Se permite como herramienta de apoyo con revisión del autor. No se aceptan obras generadas íntegramente por IA.</p>
-<p data-i18n-html="conv.ia.p4">El incumplimiento implica <strong>descalificación automática</strong>.</p>
-</div>
-</div>
-</div>
-
-<div class="conv-paso">
-<div class="paso-num">2</div>
-<div class="paso-content">
-<h4 data-i18n="conv.p2.h">Prepara tus dos archivos Word</h4>
-
-<div class="conv-archivo">
-<span class="archivo-tag" data-i18n="conv.p2.a1.tag">Archivo 1</span>
-<strong style="color:var(--gold-bright);font-size:.85rem;" data-i18n="conv.p2.a1.n">Manuscrito</strong>
-<ul class="conv-list" style="margin-top:.4rem;" data-i18n-list="conv.p2.a1.list">
-<li>Formato: Word (.docx) únicamente</li>
-<li>Bajo seudónimo, sin datos personales</li>
-<li>Tamaño carta, márgenes de 2,5 cm</li>
-<li>Tabla de contenido obligatoria</li>
-</ul>
-<span class="archivo-nombre">MANUSCRITO_SEUDONIMO_TITULO.docx</span>
-</div>
-
-<div class="conv-archivo" style="margin-top:.5rem;">
-<span class="archivo-tag" data-i18n="conv.p2.a2.tag">Archivo 2</span>
-<strong style="color:var(--gold-bright);font-size:.85rem;" data-i18n="conv.p2.a2.n">Presentación</strong>
-<ul class="conv-list" style="margin-top:.4rem;" data-i18n-list="conv.p2.a2.list">
-<li>Formato: Word (.docx) únicamente</li>
-<li>Con tus datos personales completos</li>
-<li>Declaración expresa de uso de IA</li>
-</ul>
-<span class="archivo-nombre">PRESENTACION_SEUDONIMO.docx</span>
-</div>
-</div>
-</div>
-
-<div class="conv-paso">
-<div class="paso-num">3</div>
-<div class="paso-content">
-<h4 data-i18n="conv.p3.h">Envía tus archivos</h4>
-<p data-i18n-html="conv.p3.p1"><strong>Correo:</strong> artesmulticap2024@gmail.com</p>
-<p data-i18n-html="conv.p3.p2"><strong>Asunto del correo:</strong></p>
-<span class="archivo-nombre">CONCURSO LATINOAMÉRICA ESCRIBE - SEUDONIMO</span>
-</div>
-</div>
-
-<div class="conv-aviso" data-i18n-html="conv.p3.aviso">
-<strong>Importante:</strong> No se aceptan archivos PDF. Solo Word (.docx). <strong>Toda obra que use IA debe declararlo expresamente</strong>. Obras sin declaración podrán ser descalificadas.
-</div>
-</div>
-
-</div>
-
-</div>
-
-<div class="conv-cta">
-<a href="https://wa.me/573113555949?text=Hola%2C%20quiero%20participar" class="btn primary" target="_blank" data-i18n="conv.cta1">Participar por WhatsApp</a>
-<a href="mailto:artesmulticap2024@gmail.com?subject=CONCURSO%20LATINOAM%C3%89RICA%20ESCRIBE" class="btn secondary" data-i18n="conv.cta2">Enviar mi obra por correo</a>
-</div>
-</section>
-
 <section id="contacto" class="fade">
 <div class="title">
 <h2 data-i18n="cont.title">¿Listo para publicar tu libro?</h2>
@@ -1116,18 +775,24 @@ font-family:'Inter',sans-serif;
 <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
-<div id="voiceStatus" role="status" aria-live="polite">
-  <span class="vdot"></span>
-  <span id="voiceText">Escuchando...</span>
+<!-- CONTROLES DE AUDIO -->
+<div id="audioDock">
+  <div id="audioMsg" role="status" aria-live="polite"></div>
+  <button id="btnAudio" class="dock-btn" type="button" aria-label="Escuchar la página" title="Escuchar la página">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" id="icoPlay"><path d="M8 5v14l11-7z"/></svg>
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" id="icoStop" style="display:none"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>
+    <span id="lblAudio">Escuchar</span>
+  </button>
+  <button id="btnPause" class="dock-btn" type="button" aria-label="Pausar" title="Pausar">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" id="icoPause"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" id="icoResume" style="display:none"><path d="M8 5v14l11-7z"/></svg>
+    <span id="lblPause">Pausa</span>
+  </button>
+  <button id="btnMic" class="dock-btn" type="button" aria-label="Activar voz" title="Activar comandos de voz">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+    <span id="lblMic">Voz</span>
+  </button>
 </div>
-
-<button id="voiceFallback" type="button" aria-label="Activar lector de voz" title="Activar lector de voz">
-  <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <path d="M11 5 6 9H3v6h3l5 4V5z"/>
-    <path d="M15.5 8.5a5 5 0 0 1 0 7"/>
-    <path d="M18.5 5.5a9 9 0 0 1 0 13"/>
-  </svg>
-</button>
 
 <button id="chatbotBtn" type="button" aria-label="Chatear con MULTI" title="¡Hola! Soy MULTI">
   <svg viewBox="0 0 80 80" aria-hidden="true">
@@ -1212,7 +877,7 @@ const i18n = {
   es: {
     "nav.servicios":"Servicios","nav.tamanos":"Tamaños","nav.paquetes":"Paquetes","nav.proceso":"Proceso",
     "nav.inclusion":"Inclusión","nav.cotiza":"Cotiza","nav.revistas":"Revistas Gratis","nav.fundacion":"Fundación",
-    "nav.convocatorias":"Convocatorias","nav.politicas":"Políticas","nav.contacto":"Contacto",
+    "nav.convocatorias":"Convocatoria","nav.politicas":"Políticas","nav.contacto":"Contacto",
     "hero.title":"Hay libros que todavía no han encontrado el camino para existir.",
     "hero.desc":"Hay personas que sueñan con escribir un libro, pero no saben cómo comenzar. Otras ya tienen un manuscrito, pero no saben qué sigue; y algunas han terminado su obra, pero sus posibilidades económicas les han impedido dar el siguiente paso.<br><br>En Artes Multicap Editorial acompañamos cada proyecto desde su propia realidad: te orientamos para desarrollar tu idea, trabajar tu manuscrito y explorar las posibilidades de publicación en diferentes formatos y en español e inglés.<br><br>Además, la Fundación Artes Multicap cuenta con un Programa de Inclusión Editorial, con descuentos según el estrato socioeconómico del autor, porque creemos que las posibilidades económicas no deberían impedir que una obra encuentre su camino hacia la publicación.",
     "hero.btn.cotizar":"Cotizar mi libro","hero.btn.whatsapp":"Hablar por WhatsApp",
@@ -1259,68 +924,6 @@ const i18n = {
     "plat.c2.desc":"Conoce nuestra misión, visión y proyectos de transformación social a través del arte, la cultura, la literatura y la educación emocional.",
     "plat.c2.list":["Talleres básicos gratuitos","Talleres intermedios y avanzados","Proyectos editoriales y culturales","Impacto social en Latinoamérica"],
     "plat.c2.btn":"Visitar la Fundación",
-    "conv.title":"Convocatoria Oficial","conv.desc":"Concurso Internacional de Creación Literaria y Publicación \"Latinoamérica Escribe\"",
-    "conv.badge":"Convocatoria abierta 2026","conv.h3":"LATINOAMÉRICA ESCRIBE","conv.lema":"Una obra. Un ganador. Un libro para el mundo.",
-    "conv.sub":"<em>Una historia. Dos idiomas. Una oportunidad para publicar y llevar tu voz más allá de las fronteras.</em>",
-    "conv.c1.h":"¿Qué es \"Latinoamérica Escribe\"?",
-    "conv.c1.p1":"Es un concurso internacional de creación literaria y publicación organizado por la <strong>Fundación Artes Multicap (Colombia)</strong>.",
-    "conv.c1.p2":"Se seleccionará <strong>una única obra ganadora</strong>, de <strong>tema y género libres</strong>. El ganador recibirá gratuitamente el <strong>Plan Premium Global</strong>, valorado en <strong>$4.100.000 COP</strong>.",
-    "conv.c1.p3":"<strong>Participar es completamente GRATIS.</strong>",
-    "conv.c2.h":"¿Quién puede participar?",
-    "conv.c2.list1":["Personas naturales mayores de 18 años.","Autores de cualquier país de Latinoamérica.","Personas de cualquier nacionalidad que residan en un país latinoamericano.","Autores que presenten una obra original, inédita y de su autoría.","Participantes que presenten su obra en idioma español."],
-    "conv.c2.paises":"<strong>Países convocados:</strong> Colombia, México, Argentina, Chile, Perú, Ecuador, Bolivia, Paraguay, Uruguay, Brasil, Venezuela, Costa Rica, Panamá, Nicaragua, Honduras, Guatemala, El Salvador, República Dominicana, Cuba y Puerto Rico.",
-    "conv.c2.np":"No podrán participar",
-    "conv.c2.list2":["Obras publicadas comercialmente con anterioridad.","Obras ganadoras de otro concurso cuando comprometan derechos necesarios.","Personas vinculadas directamente con la organización.","Integrantes del jurado.","Personas que intervengan directamente en la evaluación."],
-    "conv.c3.h":"Tema y género: libres",
-    "conv.c3.p1":"La convocatoria no establece un tema específico. La obra puede pertenecer a cualquier género literario, narrativo, artístico, cultural, académico o de no ficción, siempre que pueda constituirse editorialmente como un proyecto de libro.",
-    "conv.c3.p2":"Entre otros, podrán presentarse:",
-    "conv.c3.list":["Novela, novela corta, cuento y relatos","Poesía","Ensayo, investigación y crónica","Memorias, biografía y testimonio","Literatura infantil, juvenil o para adultos","Obras de carácter cultural, artístico, académico o científico","Otros géneros narrativos, literarios o expositivos"],
-    "conv.c3.p4":"La obra deberá ser <strong>original, inédita y de autoría del participante</strong>.",
-    "conv.c4.h":"Requisitos de formato",
-    "conv.c4.list":["Tamaño carta, con márgenes de 2,5 cm por los cuatro lados","Times New Roman 12, interlineado 1,5","Título en Times New Roman 14","Tabla de contenido obligatoria","Extensión: 20.000 a 30.000 palabras","Idioma: español","Formato de envío: Word (.docx) únicamente","Seudónimo obligatorio"],
-    "conv.c5.h":"Valor referencial del premio",
-    "conv.c5.p1":"El Plan Premium Global otorgado a la obra ganadora representa una inversión editorial estimada de <strong>$4.100.000 COP</strong>.",
-    "conv.c5.p2":"Este valor es referencial y corresponde al conjunto de servicios editoriales que recibe gratuitamente la persona ganadora.",
-    "conv.c5.p3":"El ganador <strong>no recibe este valor en dinero</strong>. Recibe gratuitamente los servicios editoriales descritos en las bases, más el 50% de las regalías netas por ventas.",
-    "conv.c6.h":"Lo que conservas como autor",
-    "conv.c6.p1":"<strong>TÚ SIGUES SIENDO EL DUEÑO DE TU OBRA.</strong>",
-    "conv.c6.p2":"El contrato de edición no transfiere en ningún momento el derecho de autor, conforme al <strong>artículo 119 de la Ley 23 de 1982</strong>. Conservas todos tus derechos morales y patrimoniales.",
-    "conv.c6.p3":"En caso de cualquier duda, se aplicará el principio <strong>«in dubio pro auctore»</strong>, que ordena interpretar siempre a favor del autor.",
-    "conv.c7.h":"Cronograma",
-    "conv.c7.list":[["Lanzamiento de la convocatoria","25 de septiembre de 2026"],["Recepción de obras","25 sep — 26 oct 2026"],["Verificación de requisitos formales","27 oct — 5 nov 2026"],["Evaluación del jurado","6 — 20 nov 2026"],["Anuncio del ganador","27 de noviembre de 2026"],["Firma del acuerdo editorial","30 nov — 10 dic 2026"],["Proceso editorial y traducción","Dic 2026 — Ene 2027"],["Publicación oficial del libro","Enero de 2027"]],
-    "conv.c7.nota":"<strong>Nota de transparencia:</strong> El proceso editorial bilingüe completo requiere entre 3 y 4 meses por obra para garantizar la calidad.",
-    "conv.c8.h":"Compromiso del ganador",
-    "conv.c8.p":"El ganador tendrá un plazo de <strong>3 días calendario</strong> para entregar la documentación solicitada. Si no cumple, será descalificado y se seleccionará al siguiente participante.",
-    "conv.d1.h":"El gran premio: Plan Premium Global",
-    "conv.d1.p":"El ganador recibirá el <strong>Plan Premium Global</strong>, <strong>sin pagar absolutamente nada por estos servicios</strong>.",
-    "conv.d1.i1.h":"Proceso editorial completo",
-    "conv.d1.i1.list":["Lectura y valoración editorial","Corrección ortotipográfica y de estilo","Preparación del manuscrito","Diagramación y maquetación interior","Diseño profesional de portada","Diseño de contraportada y mockups"],
-    "conv.d1.i2.h":"Ilustraciones","conv.d1.i2.p":"Si la obra lo requiere, la organización diseña las ilustraciones como parte del premio.",
-    "conv.d1.i3.h":"Traducción al inglés","conv.d1.i3.p":"Traducción profesional de la obra completa al inglés.",
-    "conv.d1.i4.h":"Publicación en seis formatos bilingües",
-    "conv.d1.i4.list":["eBook en español","eBook en inglés","Tapa blanda en español","Tapa blanda en inglés","Tapa dura en español","Tapa dura en inglés"],
-    "conv.d1.i5.h":"Gestión de ISBN","conv.d1.i5.p":"Solicitud y gestión de los ISBN correspondientes a cada formato.",
-    "conv.d1.i6.h":"Distribución internacional","conv.d1.i6.p":"Disponible a nivel mundial.",
-    "conv.d1.i7.h":"Ejemplares del autor","conv.d1.i7.p":"<strong>3 ejemplares impresos de cortesía en tapa blanda.</strong>",
-    "conv.d1.i8.h":"Promoción y difusión ampliada",
-    "conv.d1.i8.list":["Publicaciones en redes sociales","Presentación del autor","Entrevista publicada","Difusión nacional e internacional","Enlaces de venta y promoción","Kit de comunicación y lanzamiento","Posicionamiento en Amazon"],
-    "conv.d1.i9.h":"Regalías por ventas",
-    "conv.d1.i9.list":["50% de las regalías netas","Reporte semestral de ventas"],
-    "conv.d1.i10.h":"Diploma digital","conv.d1.i10.p":"Diploma digital oficial de ganador.",
-    "conv.pasos.h":"Cómo participar",
-    "conv.p1.h":"Prepara tu obra",
-    "conv.p1.p":"Debe ser <strong>original, inédita y de tu autoría</strong>. Debes presentarla <strong>bajo seudónimo</strong> (obligatorio para garantizar la imparcialidad del jurado).",
-    "conv.ia.h":"Uso de Inteligencia Artificial",
-    "conv.ia.p1":"Es <strong>obligatorio declarar</strong> cualquier uso de IA. Se permite como herramienta de apoyo con revisión del autor. No se aceptan obras generadas íntegramente por IA.",
-    "conv.ia.p4":"El incumplimiento implica <strong>descalificación automática</strong>.",
-    "conv.p2.h":"Prepara tus dos archivos Word",
-    "conv.p2.a1.tag":"Archivo 1","conv.p2.a1.n":"Manuscrito",
-    "conv.p2.a1.list":["Formato: Word (.docx) únicamente","Bajo seudónimo, sin datos personales","Tamaño carta, márgenes de 2,5 cm","Tabla de contenido obligatoria"],
-    "conv.p2.a2.tag":"Archivo 2","conv.p2.a2.n":"Presentación",
-    "conv.p2.a2.list":["Formato: Word (.docx) únicamente","Con tus datos personales completos","Declaración expresa de uso de IA"],
-    "conv.p3.h":"Envía tus archivos","conv.p3.p1":"<strong>Correo:</strong> artesmulticap2024@gmail.com","conv.p3.p2":"<strong>Asunto del correo:</strong>",
-    "conv.p3.aviso":"<strong>Importante:</strong> No se aceptan archivos PDF. Solo Word (.docx). <strong>Toda obra que use IA debe declararlo expresamente</strong>. Obras sin declaración podrán ser descalificadas.",
-    "conv.cta1":"Participar por WhatsApp","conv.cta2":"Enviar mi obra por correo",
     "cont.title":"¿Listo para publicar tu libro?","cont.desc":"Estamos listos para acompañarte en cada página de tu proyecto.",
     "cont.email_editorial":"Correo editorial:","cont.email_fundacion":"Correo fundación:",
     "cont.wa":"WhatsApp: <a href=\"https://wa.me/573113555949\" target=\"_blank\">311 355 5949</a>","cont.country":"Colombia",
@@ -1330,7 +933,7 @@ const i18n = {
   en: {
     "nav.servicios":"Services","nav.tamanos":"Sizes","nav.paquetes":"Packages","nav.proceso":"Process",
     "nav.inclusion":"Inclusion","nav.cotiza":"Quote","nav.revistas":"Free Magazines","nav.fundacion":"Foundation",
-    "nav.convocatorias":"Calls","nav.politicas":"Policies","nav.contacto":"Contact",
+    "nav.convocatorias":"Open Call","nav.politicas":"Policies","nav.contacto":"Contact",
     "hero.title":"There are books that have not yet found the path to exist.",
     "hero.desc":"There are people who dream of writing a book, but don't know how to start. Others already have a manuscript, but don't know what comes next; and some have finished their work, but their economic possibilities have prevented them from taking the next step.<br><br>At Artes Multicap Editorial we accompany each project from its own reality: we guide you to develop your idea, work on your manuscript and explore publication possibilities in different formats and in Spanish and English.<br><br>In addition, the Artes Multicap Foundation has an Editorial Inclusion Program, with discounts based on the author's socioeconomic stratum, because we believe that economic possibilities should not prevent a work from finding its way to publication.",
     "hero.btn.cotizar":"Quote my book","hero.btn.whatsapp":"Chat on WhatsApp",
@@ -1377,68 +980,6 @@ const i18n = {
     "plat.c2.desc":"Discover our mission, vision and social transformation projects through art, culture, literature and emotional education.",
     "plat.c2.list":["Free basic workshops","Intermediate and advanced workshops","Editorial and cultural projects","Social impact in Latin America"],
     "plat.c2.btn":"Visit the Foundation",
-    "conv.title":"Official Call","conv.desc":"International Literary Creation and Publication Contest \"Latin America Writes\"",
-    "conv.badge":"Open call 2026","conv.h3":"LATIN AMERICA WRITES","conv.lema":"One work. One winner. One book for the world.",
-    "conv.sub":"<em>One story. Two languages. An opportunity to publish and take your voice beyond borders.</em>",
-    "conv.c1.h":"What is \"Latin America Writes\"?",
-    "conv.c1.p1":"It is an international literary creation and publication contest organized by the <strong>Artes Multicap Foundation (Colombia)</strong>.",
-    "conv.c1.p2":"<strong>One single winning work</strong> will be selected, with <strong>free theme and genre</strong>. The winning author will receive free of charge the <strong>Global Premium Plan</strong>, valued at <strong>$4,100,000 COP</strong>.",
-    "conv.c1.p3":"<strong>Participation is completely FREE.</strong>",
-    "conv.c2.h":"Who can participate?",
-    "conv.c2.list1":["Natural persons over 18 years of age.","Authors from any Latin American country.","People of any nationality residing in a Latin American country.","Authors presenting an original, unpublished work of their authorship.","Participants presenting their work in Spanish."],
-    "conv.c2.paises":"<strong>Invited countries:</strong> Colombia, Mexico, Argentina, Chile, Peru, Ecuador, Bolivia, Paraguay, Uruguay, Brazil, Venezuela, Costa Rica, Panama, Nicaragua, Honduras, Guatemala, El Salvador, Dominican Republic, Cuba and Puerto Rico.",
-    "conv.c2.np":"Cannot participate",
-    "conv.c2.list2":["Works previously published commercially.","Works that have won another contest when the conditions of that contest compromise the rights necessary to participate.","Persons directly linked to the organization of the contest.","Members of the jury.","Persons directly involved in the evaluation of the works."],
-    "conv.c3.h":"Theme and genre: free",
-    "conv.c3.p1":"The call does not establish a specific theme. The work may belong to any literary, narrative, artistic, cultural, academic or non-fiction genre, as long as it can be editorially constituted as a book project.",
-    "conv.c3.p2":"Among others, the following may be submitted:",
-    "conv.c3.list":["Novel, short novel, short story and tales","Poetry","Essay, research and chronicle","Memoirs, biography and testimony","Children's, youth or adult literature","Works of cultural, artistic, academic or scientific nature","Other narrative, literary or expository genres"],
-    "conv.c3.p4":"The work must be <strong>original, unpublished and of the participant's authorship</strong>.",
-    "conv.c4.h":"Format requirements",
-    "conv.c4.list":["Letter size, with 2.5 cm margins on all four sides","Times New Roman 12, line spacing 1.5","Title in Times New Roman 14","Mandatory table of contents","Length: 20,000 to 30,000 words","Language: Spanish","Submission format: Word (.docx) only","Mandatory pseudonym"],
-    "conv.c5.h":"Referential value of the prize",
-    "conv.c5.p1":"The Global Premium Plan awarded to the winning work represents an estimated editorial investment of <strong>$4,100,000 COP</strong>.",
-    "conv.c5.p2":"This value is referential and corresponds to the set of editorial services that the winning person receives free of charge.",
-    "conv.c5.p3":"The winner <strong>does not receive this value in money</strong>. They receive free of charge the editorial services described in the rules, plus 50% of net royalties from sales.",
-    "conv.c6.h":"What you keep as an author",
-    "conv.c6.p1":"<strong>YOU REMAIN THE OWNER OF YOUR WORK.</strong>",
-    "conv.c6.p2":"The publishing contract does not transfer copyright at any time, in accordance with <strong>article 119 of Law 23 of 1982</strong>. You keep all your moral and economic rights.",
-    "conv.c6.p3":"In case of any doubt, the principle <strong>«in dubio pro auctore»</strong> will apply, which orders to always interpret in favor of the author.",
-    "conv.c7.h":"Schedule",
-    "conv.c7.list":[["Call launch","September 25, 2026"],["Submission of works","Sep 25 — Oct 26, 2026"],["Verification of formal requirements","Oct 27 — Nov 5, 2026"],["Jury evaluation","Nov 6 — 20, 2026"],["Winner announcement","November 27, 2026"],["Editorial agreement signing","Nov 30 — Dec 10, 2026"],["Editorial process and translation","Dec 2026 — Jan 2027"],["Official book publication","January 2027"]],
-    "conv.c7.nota":"<strong>Transparency note:</strong> The complete bilingual editorial process requires between 3 and 4 months per work to guarantee quality.",
-    "conv.c8.h":"Winner's commitment",
-    "conv.c8.p":"The winner will have a period of <strong>3 calendar days</strong> to deliver the requested documentation. If they do not meet the deadline, they will be disqualified and the next participant will be selected.",
-    "conv.d1.h":"The grand prize: Global Premium Plan",
-    "conv.d1.p":"The winner will receive the <strong>Global Premium Plan</strong>, <strong>without paying absolutely anything for these services</strong>.",
-    "conv.d1.i1.h":"Complete editorial process",
-    "conv.d1.i1.list":["Editorial reading and evaluation","Orthotypographic and style correction","Manuscript preparation","Interior layout and design","Professional cover design","Back cover design and mockups"],
-    "conv.d1.i2.h":"Illustrations","conv.d1.i2.p":"If the work requires it, the organization designs the illustrations as part of the prize.",
-    "conv.d1.i3.h":"English translation","conv.d1.i3.p":"Professional translation of the entire work into English.",
-    "conv.d1.i4.h":"Publication in six bilingual formats",
-    "conv.d1.i4.list":["eBook in Spanish","eBook in English","Paperback in Spanish","Paperback in English","Hardcover in Spanish","Hardcover in English"],
-    "conv.d1.i5.h":"ISBN management","conv.d1.i5.p":"Application and management of the ISBNs corresponding to each format.",
-    "conv.d1.i6.h":"International distribution","conv.d1.i6.p":"Available worldwide.",
-    "conv.d1.i7.h":"Author copies","conv.d1.i7.p":"<strong>3 complimentary printed paperback copies.</strong>",
-    "conv.d1.i8.h":"Expanded promotion and dissemination",
-    "conv.d1.i8.list":["Publications on social media","Author presentation","Published interview","National and international dissemination","Sales links and promotion","Communication and launch kit","Amazon positioning"],
-    "conv.d1.i9.h":"Sales royalties",
-    "conv.d1.i9.list":["50% of net royalties","Semi-annual sales report"],
-    "conv.d1.i10.h":"Digital diploma","conv.d1.i10.p":"Official digital diploma of winner.",
-    "conv.pasos.h":"How to participate",
-    "conv.p1.h":"Prepare your work",
-    "conv.p1.p":"It must be <strong>original, unpublished and of your authorship</strong>. You must present it <strong>under a pseudonym</strong> (mandatory to guarantee the jury's impartiality).",
-    "conv.ia.h":"Use of Artificial Intelligence",
-    "conv.ia.p1":"It is <strong>mandatory to declare</strong> any use of AI. It is allowed as a support tool with the author's review. Works generated entirely by AI are not accepted.",
-    "conv.ia.p4":"Failure to comply implies <strong>automatic disqualification</strong>.",
-    "conv.p2.h":"Prepare your two Word files",
-    "conv.p2.a1.tag":"File 1","conv.p2.a1.n":"Manuscript",
-    "conv.p2.a1.list":["Format: Word (.docx) only","Under pseudonym, without personal data","Letter size, 2.5 cm margins","Mandatory table of contents"],
-    "conv.p2.a2.tag":"File 2","conv.p2.a2.n":"Presentation",
-    "conv.p2.a2.list":["Format: Word (.docx) only","With your complete personal data","Express declaration of AI use"],
-    "conv.p3.h":"Send your files","conv.p3.p1":"<strong>Email:</strong> artesmulticap2024@gmail.com","conv.p3.p2":"<strong>Email subject:</strong>",
-    "conv.p3.aviso":"<strong>Important:</strong> PDF files are not accepted. Only Word (.docx). <strong>Any work that uses AI must expressly declare it</strong>. Works without declaration may be disqualified.",
-    "conv.cta1":"Participate via WhatsApp","conv.cta2":"Send my work by email",
     "cont.title":"Ready to publish your book?","cont.desc":"We are ready to accompany you on every page of your project.",
     "cont.email_editorial":"Editorial email:","cont.email_fundacion":"Foundation email:",
     "cont.wa":"WhatsApp: <a href=\"https://wa.me/573113555949\" target=\"_blank\">311 355 5949</a>","cont.country":"Colombia",
@@ -1448,7 +989,7 @@ const i18n = {
   fr: {
     "nav.servicios":"Services","nav.tamanos":"Formats","nav.paquetes":"Forfaits","nav.proceso":"Processus",
     "nav.inclusion":"Inclusion","nav.cotiza":"Devis","nav.revistas":"Revues Gratuites","nav.fundacion":"Fondation",
-    "nav.convocatorias":"Appels","nav.politicas":"Politiques","nav.contacto":"Contact",
+    "nav.convocatorias":"Appel","nav.politicas":"Politiques","nav.contacto":"Contact",
     "hero.title":"Il y a des livres qui n'ont pas encore trouvé le chemin d'exister.",
     "hero.desc":"Il y a des personnes qui rêvent d'écrire un livre, mais ne savent pas comment commencer. D'autres ont déjà un manuscrit, mais ne savent pas ce qui suit ; et certaines ont terminé leur œuvre, mais leurs possibilités économiques les ont empêchées de passer à l'étape suivante.<br><br>Chez Artes Multicap Editorial, nous accompagnons chaque projet depuis sa propre réalité : nous vous orientons pour développer votre idée, travailler votre manuscrit et explorer les possibilités de publication dans différents formats et en espagnol et en anglais.<br><br>De plus, la Fondation Artes Multicap dispose d'un Programme d'Inclusion Éditoriale, avec des réductions selon la strate socio-économique de l'auteur, car nous croyons que les possibilités économiques ne devraient pas empêcher une œuvre de trouver son chemin vers la publication.",
     "hero.btn.cotizar":"Devis pour mon livre","hero.btn.whatsapp":"Parler sur WhatsApp",
@@ -1495,68 +1036,6 @@ const i18n = {
     "plat.c2.desc":"Découvrez notre mission, notre vision et nos projets de transformation sociale à travers l'art, la culture, la littérature et l'éducation émotionnelle.",
     "plat.c2.list":["Ateliers de base gratuits","Ateliers intermédiaires et avancés","Projets éditoriaux et culturels","Impact social en Amérique latine"],
     "plat.c2.btn":"Visiter la Fondation",
-    "conv.title":"Appel Officiel","conv.desc":"Concours International de Création Littéraire et de Publication \"L'Amérique Latine Écrit\"",
-    "conv.badge":"Appel ouvert 2026","conv.h3":"L'AMÉRIQUE LATINE ÉCRIT","conv.lema":"Une œuvre. Un gagnant. Un livre pour le monde.",
-    "conv.sub":"<em>Une histoire. Deux langues. Une opportunité de publier et de porter votre voix au-delà des frontières.</em>",
-    "conv.c1.h":"Qu'est-ce que \"L'Amérique Latine Écrit\" ?",
-    "conv.c1.p1":"C'est un concours international de création littéraire et de publication organisé par la <strong>Fondation Artes Multicap (Colombie)</strong>.",
-    "conv.c1.p2":"<strong>Une seule œuvre gagnante</strong> sera sélectionnée, avec <strong>thème et genre libres</strong>. L'auteur gagnant recevra gratuitement le <strong>Plan Premium Global</strong>, évalué à <strong>4 100 000 COP</strong>.",
-    "conv.c1.p3":"<strong>La participation est totalement GRATUITE.</strong>",
-    "conv.c2.h":"Qui peut participer ?",
-    "conv.c2.list1":["Personnes physiques âgées de plus de 18 ans.","Auteurs de tout pays d'Amérique latine.","Personnes de toute nationalité résidant dans un pays d'Amérique latine.","Auteurs présentant une œuvre originale, inédite et de leur paternité.","Participants présentant leur œuvre en espagnol."],
-    "conv.c2.paises":"<strong>Pays invités :</strong> Colombie, Mexique, Argentine, Chili, Pérou, Équateur, Bolivie, Paraguay, Uruguay, Brésil, Venezuela, Costa Rica, Panama, Nicaragua, Honduras, Guatemala, El Salvador, République Dominicaine, Cuba et Porto Rico.",
-    "conv.c2.np":"Ne peuvent pas participer",
-    "conv.c2.list2":["Œuvres publiées commercialement auparavant.","Œuvres ayant remporté un autre concours lorsque les conditions de ce concours compromettent les droits nécessaires pour participer.","Personnes directement liées à l'organisation du concours.","Membres du jury.","Personnes intervenant directement dans l'évaluation des œuvres."],
-    "conv.c3.h":"Thème et genre : libres",
-    "conv.c3.p1":"L'appel ne fixe pas de thème spécifique. L'œuvre peut appartenir à n'importe quel genre littéraire, narratif, artistique, culturel, académique ou non-fictionnel, dès lors qu'elle peut être constituée éditorialement comme un projet de livre.",
-    "conv.c3.p2":"Entre autres, pourront être présentés :",
-    "conv.c3.list":["Roman, roman court, nouvelle et récits","Poésie","Essai, recherche et chronique","Mémoires, biographie et témoignage","Littérature pour enfants, jeunes ou adultes","Œuvres de nature culturelle, artistique, académique ou scientifique","Autres genres narratifs, littéraires ou exposatifs"],
-    "conv.c3.p4":"L'œuvre devra être <strong>originale, inédite et de la paternité du participant</strong>.",
-    "conv.c4.h":"Exigences de format",
-    "conv.c4.list":["Format lettre, avec des marges de 2,5 cm sur les quatre côtés","Times New Roman 12, interligne 1,5","Titre en Times New Roman 14","Table des matières obligatoire","Longueur : 20 000 à 30 000 mots","Langue : espagnol","Format d'envoi : Word (.docx) uniquement","Pseudonyme obligatoire"],
-    "conv.c5.h":"Valeur référentielle du prix",
-    "conv.c5.p1":"Le Plan Premium Global attribué à l'œuvre gagnante représente un investissement éditorial estimé à <strong>4 100 000 COP</strong>.",
-    "conv.c5.p2":"Cette valeur est référentielle et correspond à l'ensemble des services éditoriaux que la personne gagnante reçoit gratuitement.",
-    "conv.c5.p3":"Le gagnant <strong>ne reçoit pas cette valeur en argent</strong>. Il reçoit gratuitement les services éditoriaux décrits dans les règles, plus 50 % des redevances nettes sur les ventes.",
-    "conv.c6.h":"Ce que vous conservez en tant qu'auteur",
-    "conv.c6.p1":"<strong>VOUS RESTEZ LE PROPRIÉTAIRE DE VOTRE ŒUVRE.</strong>",
-    "conv.c6.p2":"Le contrat d'édition ne transfère à aucun moment le droit d'auteur, conformément à l'<strong>article 119 de la loi 23 de 1982</strong>. Vous conservez tous vos droits moraux et patrimoniaux.",
-    "conv.c6.p3":"En cas de doute, le principe <strong>« in dubio pro auctore »</strong> s'appliquera, qui ordonne d'interpréter toujours en faveur de l'auteur.",
-    "conv.c7.h":"Calendrier",
-    "conv.c7.list":[["Lancement de l'appel","25 septembre 2026"],["Réception des œuvres","25 sept — 26 oct 2026"],["Vérification des exigences formelles","27 oct — 5 nov 2026"],["Évaluation du jury","6 — 20 nov 2026"],["Annonce du gagnant","27 novembre 2026"],["Signature du contrat éditorial","30 nov — 10 déc 2026"],["Processus éditorial et traduction","Déc 2026 — Jan 2027"],["Publication officielle du livre","Janvier 2027"]],
-    "conv.c7.nota":"<strong>Note de transparence :</strong> Le processus éditorial bilingue complet nécessite entre 3 et 4 mois par œuvre pour garantir la qualité.",
-    "conv.c8.h":"Engagement du gagnant",
-    "conv.c8.p":"Le gagnant disposera d'un délai de <strong>3 jours calendaires</strong> pour remettre la documentation demandée. S'il ne respecte pas le délai, il sera disqualifié.",
-    "conv.d1.h":"Le grand prix : Plan Premium Global",
-    "conv.d1.p":"Le gagnant recevra le <strong>Plan Premium Global</strong>, <strong>sans payer absolument rien pour ces services</strong>.",
-    "conv.d1.i1.h":"Processus éditorial complet",
-    "conv.d1.i1.list":["Lecture et évaluation éditoriale","Correction orthotypographique et stylistique","Préparation du manuscrit","Mise en page et maquette intérieure","Conception professionnelle de couverture","Conception de la quatrième de couverture et maquettes"],
-    "conv.d1.i2.h":"Illustrations","conv.d1.i2.p":"Si l'œuvre le nécessite, l'organisation conçoit les illustrations dans le cadre du prix.",
-    "conv.d1.i3.h":"Traduction en anglais","conv.d1.i3.p":"Traduction professionnelle de toute l'œuvre en anglais.",
-    "conv.d1.i4.h":"Publication en six formats bilingues",
-    "conv.d1.i4.list":["eBook en espagnol","eBook en anglais","Livre broché en espagnol","Livre broché en anglais","Livre relié en espagnol","Livre relié en anglais"],
-    "conv.d1.i5.h":"Gestion de l'ISBN","conv.d1.i5.p":"Demande et gestion des ISBN correspondant à chaque format.",
-    "conv.d1.i6.h":"Distribution internationale","conv.d1.i6.p":"Disponible dans le monde entier.",
-    "conv.d1.i7.h":"Exemplaires de l'auteur","conv.d1.i7.p":"<strong>3 exemplaires imprimés offerts en livre broché.</strong>",
-    "conv.d1.i8.h":"Promotion et diffusion élargies",
-    "conv.d1.i8.list":["Publications sur les réseaux sociaux","Présentation de l'auteur","Interview publiée","Diffusion nationale et internationale","Liens de vente et promotion","Kit de communication et de lancement","Positionnement sur Amazon"],
-    "conv.d1.i9.h":"Redevances sur les ventes",
-    "conv.d1.i9.list":["50 % des redevances nettes","Rapport semestriel des ventes"],
-    "conv.d1.i10.h":"Diplôme numérique","conv.d1.i10.p":"Diplôme numérique officiel de gagnant.",
-    "conv.pasos.h":"Comment participer",
-    "conv.p1.h":"Préparez votre œuvre",
-    "conv.p1.p":"Elle doit être <strong>originale, inédite et de votre paternité</strong>. Vous devez la présenter <strong>sous pseudonyme</strong> (obligatoire pour garantir l'impartialité du jury).",
-    "conv.ia.h":"Utilisation de l'Intelligence Artificielle",
-    "conv.ia.p1":"Il est <strong>obligatoire de déclarer</strong> toute utilisation d'IA. Elle est autorisée comme outil d'appui avec révision de l'auteur. Les œuvres générées entièrement par IA ne sont pas acceptées.",
-    "conv.ia.p4":"Le non-respect implique une <strong>disqualification automatique</strong>.",
-    "conv.p2.h":"Préparez vos deux fichiers Word",
-    "conv.p2.a1.tag":"Fichier 1","conv.p2.a1.n":"Manuscrit",
-    "conv.p2.a1.list":["Format : Word (.docx) uniquement","Sous pseudonyme, sans données personnelles","Format lettre, marges de 2,5 cm","Table des matières obligatoire"],
-    "conv.p2.a2.tag":"Fichier 2","conv.p2.a2.n":"Présentation",
-    "conv.p2.a2.list":["Format : Word (.docx) uniquement","Avec vos données personnelles complètes","Déclaration expresse d'utilisation de l'IA"],
-    "conv.p3.h":"Envoyez vos fichiers","conv.p3.p1":"<strong>E-mail :</strong> artesmulticap2024@gmail.com","conv.p3.p2":"<strong>Objet de l'e-mail :</strong>",
-    "conv.p3.aviso":"<strong>Important :</strong> Les fichiers PDF ne sont pas acceptés. Uniquement Word (.docx). <strong>Toute œuvre utilisant l'IA doit le déclarer expressément</strong>. Les œuvres sans déclaration pourront être disqualifiées.",
-    "conv.cta1":"Participer via WhatsApp","conv.cta2":"Envoyer mon œuvre par e-mail",
     "cont.title":"Prêt à publier votre livre ?","cont.desc":"Nous sommes prêts à vous accompagner à chaque page de votre projet.",
     "cont.email_editorial":"E-mail éditorial :","cont.email_fundacion":"E-mail fondation :",
     "cont.wa":"WhatsApp : <a href=\"https://wa.me/573113555949\" target=\"_blank\">311 355 5949</a>","cont.country":"Colombie",
@@ -1566,7 +1045,7 @@ const i18n = {
   pt: {
     "nav.servicios":"Serviços","nav.tamanos":"Formatos","nav.paquetes":"Pacotes","nav.proceso":"Processo",
     "nav.inclusion":"Inclusão","nav.cotiza":"Cotação","nav.revistas":"Revistas Grátis","nav.fundacion":"Fundação",
-    "nav.convocatorias":"Convocações","nav.politicas":"Políticas","nav.contacto":"Contato",
+    "nav.convocatorias":"Convocatória","nav.politicas":"Políticas","nav.contacto":"Contato",
     "hero.title":"Há livros que ainda não encontraram o caminho para existir.",
     "hero.desc":"Há pessoas que sonham em escrever um livro, mas não sabem como começar. Outras já têm um manuscrito, mas não sabem o que vem a seguir; e algumas terminaram sua obra, mas suas possibilidades econômicas as impediram de dar o próximo passo.<br><br>Na Artes Multicap Editorial acompanhamos cada projeto a partir de sua própria realidade: orientamos você a desenvolver sua ideia, trabalhar seu manuscrito e explorar as possibilidades de publicação em diferentes formatos e em espanhol e inglês.<br><br>Além disso, a Fundação Artes Multicap conta com um Programa de Inclusão Editorial, com descontos de acordo com o estrato socioeconômico do autor, porque acreditamos que as possibilidades econômicas não devem impedir que uma obra encontre seu caminho para a publicação.",
     "hero.btn.cotizar":"Cotar meu livro","hero.btn.whatsapp":"Falar no WhatsApp",
@@ -1613,68 +1092,6 @@ const i18n = {
     "plat.c2.desc":"Conheça nossa missão, visão e projetos de transformação social por meio da arte, cultura, literatura e educação emocional.",
     "plat.c2.list":["Oficinas básicas gratuitas","Oficinas intermediárias e avançadas","Projetos editoriais e culturais","Impacto social na América Latina"],
     "plat.c2.btn":"Visitar a Fundação",
-    "conv.title":"Convocação Oficial","conv.desc":"Concurso Internacional de Criação Literária e Publicação \"A América Latina Escreve\"",
-    "conv.badge":"Convocação aberta 2026","conv.h3":"A AMÉRICA LATINA ESCREVE","conv.lema":"Uma obra. Um vencedor. Um livro para o mundo.",
-    "conv.sub":"<em>Uma história. Dois idiomas. Uma oportunidade de publicar e levar sua voz além das fronteiras.</em>",
-    "conv.c1.h":"O que é \"A América Latina Escreve\"?",
-    "conv.c1.p1":"É um concurso internacional de criação literária e publicação organizado pela <strong>Fundação Artes Multicap (Colômbia)</strong>.",
-    "conv.c1.p2":"Será selecionada <strong>uma única obra vencedora</strong>, de <strong>tema e gênero livres</strong>. O autor vencedor receberá gratuitamente o <strong>Plano Premium Global</strong>, avaliado em <strong>$4.100.000 COP</strong>.",
-    "conv.c1.p3":"<strong>A participação é completamente GRÁTIS.</strong>",
-    "conv.c2.h":"Quem pode participar?",
-    "conv.c2.list1":["Pessoas naturais maiores de 18 anos.","Autores de qualquer país da América Latina.","Pessoas de qualquer nacionalidade que residam em um país latino-americano.","Autores que apresentem uma obra original, inédita e de sua autoria.","Participantes que apresentem sua obra em espanhol."],
-    "conv.c2.paises":"<strong>Países convidados:</strong> Colômbia, México, Argentina, Chile, Peru, Equador, Bolívia, Paraguai, Uruguai, Brasil, Venezuela, Costa Rica, Panamá, Nicarágua, Honduras, Guatemala, El Salvador, República Dominicana, Cuba e Porto Rico.",
-    "conv.c2.np":"Não poderão participar",
-    "conv.c2.list2":["Obras publicadas comercialmente anteriormente.","Obras que tenham vencido outro concurso quando as condições desse concurso comprometerem os direitos necessários para participar.","Pessoas vinculadas diretamente à organização do concurso.","Integrantes do júri.","Pessoas que intervenham diretamente na avaliação das obras."],
-    "conv.c3.h":"Tema e gênero: livres",
-    "conv.c3.p1":"A convocação não estabelece um tema específico. A obra pode pertencer a qualquer gênero literário, narrativo, artístico, cultural, acadêmico ou de não ficção, desde que possa se constituir editorialmente como um projeto de livro.",
-    "conv.c3.p2":"Entre outros, poderão ser apresentados:",
-    "conv.c3.list":["Romance, novela curta, conto e relatos","Poesia","Ensaio, pesquisa e crônica","Memórias, biografia e testemunho","Literatura infantil, juvenil ou para adultos","Obras de caráter cultural, artístico, acadêmico ou científico","Outros gêneros narrativos, literários ou expositivos"],
-    "conv.c3.p4":"A obra deverá ser <strong>original, inédita e de autoria do participante</strong>.",
-    "conv.c4.h":"Requisitos de formato",
-    "conv.c4.list":["Tamanho carta, com margens de 2,5 cm nos quatro lados","Times New Roman 12, espaçamento 1,5","Título em Times New Roman 14","Sumário obrigatório","Extensão: 20.000 a 30.000 palavras","Idioma: espanhol","Formato de envio: Word (.docx) apenas","Pseudônimo obrigatório"],
-    "conv.c5.h":"Valor referencial do prêmio",
-    "conv.c5.p1":"O Plano Premium Global concedido à obra vencedora representa um investimento editorial estimado de <strong>$4.100.000 COP</strong>.",
-    "conv.c5.p2":"Este valor é referencial e corresponde ao conjunto de serviços editoriais que a pessoa vencedora recebe gratuitamente.",
-    "conv.c5.p3":"O vencedor <strong>não recebe este valor em dinheiro</strong>. Recebe gratuitamente os serviços editoriais descritos nas bases, mais 50% dos royalties líquidos pelas vendas.",
-    "conv.c6.h":"O que você mantém como autor",
-    "conv.c6.p1":"<strong>VOCÊ CONTINUA SENDO O DONO DA SUA OBRA.</strong>",
-    "conv.c6.p2":"O contrato de edição não transfere em nenhum momento o direito autoral, conforme o <strong>artigo 119 da Lei 23 de 1982</strong>. Você mantém todos os seus direitos morais e patrimoniais.",
-    "conv.c6.p3":"Em caso de dúvida, será aplicado o princípio <strong>«in dubio pro auctore»</strong>, que ordena interpretar sempre em favor do autor.",
-    "conv.c7.h":"Cronograma",
-    "conv.c7.list":[["Lançamento da convocação","25 de setembro de 2026"],["Recepção das obras","25 set — 26 out 2026"],["Verificação dos requisitos formais","27 out — 5 nov 2026"],["Avaliação do júri","6 — 20 nov 2026"],["Anúncio do vencedor","27 de novembro de 2026"],["Assinatura do acordo editorial","30 nov — 10 dez 2026"],["Processo editorial e tradução","Dez 2026 — Jan 2027"],["Publicação oficial do livro","Janeiro de 2027"]],
-    "conv.c7.nota":"<strong>Nota de transparência:</strong> O processo editorial bilíngue completo requer entre 3 e 4 meses por obra para garantir a qualidade.",
-    "conv.c8.h":"Compromisso do vencedor",
-    "conv.c8.p":"O vencedor terá um prazo de <strong>3 dias corridos</strong> para entregar a documentação solicitada. Se não cumprir o prazo, será desclassificado.",
-    "conv.d1.h":"O grande prêmio: Plano Premium Global",
-    "conv.d1.p":"O vencedor receberá o <strong>Plano Premium Global</strong>, <strong>sem pagar absolutamente nada por esses serviços</strong>.",
-    "conv.d1.i1.h":"Processo editorial completo",
-    "conv.d1.i1.list":["Leitura e avaliação editorial","Correção ortotipográfica e de estilo","Preparação do manuscrito","Diagramação e montagem interior","Design profissional de capa","Design de contracapa e mockups"],
-    "conv.d1.i2.h":"Ilustrações","conv.d1.i2.p":"Se a obra exigir, a organização elabora as ilustrações como parte do prêmio.",
-    "conv.d1.i3.h":"Tradução para o inglês","conv.d1.i3.p":"Tradução profissional da obra completa para o inglês.",
-    "conv.d1.i4.h":"Publicação em seis formatos bilíngues",
-    "conv.d1.i4.list":["eBook em espanhol","eBook em inglês","Capa brochura em espanhol","Capa brochura em inglês","Capa dura em espanhol","Capa dura em inglês"],
-    "conv.d1.i5.h":"Gestão do ISBN","conv.d1.i5.p":"Solicitação e gestão dos ISBN correspondentes a cada formato.",
-    "conv.d1.i6.h":"Distribuição internacional","conv.d1.i6.p":"Disponível em todo o mundo.",
-    "conv.d1.i7.h":"Exemplares do autor","conv.d1.i7.p":"<strong>3 exemplares impressos de cortesia em capa brochura.</strong>",
-    "conv.d1.i8.h":"Promoção e divulgação ampliadas",
-    "conv.d1.i8.list":["Publicações em redes sociais","Apresentação do autor","Entrevista publicada","Divulgação nacional e internacional","Links de venda e promoção","Kit de comunicação e lançamento","Posicionamento na Amazon"],
-    "conv.d1.i9.h":"Royalties por vendas",
-    "conv.d1.i9.list":["50% dos royalties líquidos","Relatório semestral de vendas"],
-    "conv.d1.i10.h":"Diploma digital","conv.d1.i10.p":"Diploma digital oficial de vencedor.",
-    "conv.pasos.h":"Como participar",
-    "conv.p1.h":"Prepare sua obra",
-    "conv.p1.p":"Deve ser <strong>original, inédita e de sua autoria</strong>. Você deve apresentá-la <strong>sob pseudônimo</strong> (obrigatório para garantir a imparcialidade do júri).",
-    "conv.ia.h":"Uso de Inteligência Artificial",
-    "conv.ia.p1":"É <strong>obrigatório declarar</strong> qualquer uso de IA. É permitida como ferramenta de apoio com revisão do autor. Não são aceitas obras geradas integralmente por IA.",
-    "conv.ia.p4":"O descumprimento implica <strong>desclassificação automática</strong>.",
-    "conv.p2.h":"Prepare seus dois arquivos Word",
-    "conv.p2.a1.tag":"Arquivo 1","conv.p2.a1.n":"Manuscrito",
-    "conv.p2.a1.list":["Formato: Word (.docx) apenas","Sob pseudônimo, sem dados pessoais","Tamanho carta, margens de 2,5 cm","Sumário obrigatório"],
-    "conv.p2.a2.tag":"Arquivo 2","conv.p2.a2.n":"Apresentação",
-    "conv.p2.a2.list":["Formato: Word (.docx) apenas","Com seus dados pessoais completos","Declaração expressa de uso de IA"],
-    "conv.p3.h":"Envie seus arquivos","conv.p3.p1":"<strong>E-mail:</strong> artesmulticap2024@gmail.com","conv.p3.p2":"<strong>Assunto do e-mail:</strong>",
-    "conv.p3.aviso":"<strong>Importante:</strong> Não são aceitos arquivos PDF. Apenas Word (.docx). <strong>Toda obra que use IA deve declará-lo expressamente</strong>. Obras sem declaração poderão ser desclassificadas.",
-    "conv.cta1":"Participar pelo WhatsApp","conv.cta2":"Enviar minha obra por e-mail",
     "cont.title":"Pronto para publicar seu livro?","cont.desc":"Estamos prontos para acompanhar você em cada página do seu projeto.",
     "cont.email_editorial":"E-mail editorial:","cont.email_fundacion":"E-mail fundação:",
     "cont.wa":"WhatsApp: <a href=\"https://wa.me/573113555949\" target=\"_blank\">311 355 5949</a>","cont.country":"Colômbia",
@@ -1704,22 +1121,6 @@ function setLang(lang){
     if(Array.isArray(items)){
       const lis = ul.querySelectorAll("li");
       lis.forEach((li,i)=>{ if(items[i]!==undefined) li.textContent = items[i]; });
-    }
-  });
-
-  document.querySelectorAll("[data-i18n-cron]").forEach(ul=>{
-    const key = ul.getAttribute("data-i18n-cron");
-    const items = t[key];
-    if(Array.isArray(items)){
-      const lis = ul.querySelectorAll("li");
-      lis.forEach((li,i)=>{
-        if(items[i]){
-          const e = li.querySelector(".etapa");
-          const f = li.querySelector(".fecha");
-          if(e) e.textContent = items[i][0];
-          if(f) f.textContent = items[i][1];
-        }
-      });
     }
   });
 
@@ -1810,596 +1211,421 @@ function seleccionarPlan(plan){
     if(cotizador) window.scrollTo({ top: cotizador.offsetTop - 100, behavior:"smooth" });
   }, 100);
 }
-
+</script>
+<script>
 /* =========================================================
-   SISTEMA DE VOZ MULTI-IDIOMA
+   AUDIO: BOTONES VISIBLES (ESCUCHAR / DETENER / PAUSA / VOZ)
+   - No se activa nada solo: la lectura empieza únicamente al pulsar "Escuchar".
+   - El botón "Detener" corta la lectura al instante.
+   - Los comandos de voz son opcionales (botón "Voz").
    ========================================================= */
 window.__voiceSystem = (function(){
   'use strict';
-  const voiceStatus = document.getElementById('voiceStatus');
-  const voiceText   = document.getElementById('voiceText');
-  const voiceFallback = document.getElementById('voiceFallback');
-  if (!voiceStatus || !voiceFallback) return null;
+  const $ = id => document.getElementById(id);
+  const dock = $('audioDock'), btnAudio = $('btnAudio'), btnPause = $('btnPause'), btnMic = $('btnMic'), msgBox = $('audioMsg');
+  if (!dock || !btnAudio) return null;
 
   const synth = window.speechSynthesis;
   const supportsSpeech = !!synth && typeof window.SpeechSynthesisUtterance === 'function';
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  const supportsRecog = !!SR;
+  const WA = '573113555949';
+  const CONV_URL = 'https://convocatorialatinoamericaescribe.netlify.app/';
 
-  const WHATSAPP_NUMBER = "573113555949";
-
-  const LANG_CONFIG = {
-    es: { speech: 'es-CO', voices: [/^es[-_]CO/i, /^es[-_]MX/i, /^es[-_]US/i, /^es[-_]ES/i, /^es/i], currency: 'pesos colombianos', statusListening: 'Escuchando... di "audio" o "detener"', statusReading: 'Leyendo... di "detener" para parar', statusPaused: 'Pausado... di "continuar"', statusWhatsapp: 'Modo WhatsApp: dicta tu mensaje y di "enviar"', statusChatbot: 'Modo chatbot: haz tu pregunta', statusCapturing: 'Capturando', saySend: 'di "enviar"', whatsappWelcome: 'Modo WhatsApp. Dicta tu mensaje y di enviar. Para cancelar di cancelar.', chatbotWelcome: 'Modo chatbot. Hazme tu pregunta. Di cancelar para salir.', openingWhatsapp: 'Abriendo WhatsApp.', noMessageCaptured: 'No capté ningún mensaje.', messageDeleted: 'Mensaje borrado.', whatsappCancelled: 'Modo WhatsApp cancelado.', chatbotCancelled: 'Modo chatbot cancelado.', noContent: 'No se encontró contenido.', sectionNoContent: 'Esta sección no tiene contenido.', notFoundSection: 'No encontré esa sección.', response: 'Respuesta: ', noAnswer: 'No tengo una respuesta exacta. Escríbenos por WhatsApp.', chatbotUnavailable: 'El chatbot no está disponible.', noSpeechSupport: 'Tu navegador no permite lectura en voz alta.', openingLink: 'Abriendo enlace: ', welcome: 'Editorial Artes Multicap. Di "audio" para leer toda la página. Para detener la lectura en cualquier momento di "detener". Puedes decir el nombre de una sección: servicios, tamaños, paquetes, proceso, inclusión, cotizador, convocatoria o contacto. También puedes decir "abrir políticas", "abrir revistas gratis", "abrir fundación", "abrir facebook", "abrir instagram", "abrir tiktok" o "abrir whatsapp" para abrir esos enlaces.' },
-    en: { speech: 'en-US', voices: [/^en[-_]US/i, /^en[-_]GB/i, /^en[-_]AU/i, /^en/i], currency: 'Colombian pesos', statusListening: 'Listening... say "audio" or "stop"', statusReading: 'Reading... say "stop" to halt', statusPaused: 'Paused... say "continue"', statusWhatsapp: 'WhatsApp mode: dictate your message and say "send"', statusChatbot: 'Chatbot mode: ask your question', statusCapturing: 'Capturing', saySend: 'say "send"', whatsappWelcome: 'WhatsApp mode. Dictate your message and say send. To cancel, say cancel.', chatbotWelcome: 'Chatbot mode. Ask me your question. Say cancel to exit.', openingWhatsapp: 'Opening WhatsApp.', noMessageCaptured: 'No message captured.', messageDeleted: 'Message deleted.', whatsappCancelled: 'WhatsApp mode cancelled.', chatbotCancelled: 'Chatbot mode cancelled.', noContent: 'No content found.', sectionNoContent: 'This section has no content.', notFoundSection: 'Section not found.', response: 'Answer: ', noAnswer: 'I do not have an exact answer. Write us on WhatsApp.', chatbotUnavailable: 'Chatbot is not available.', noSpeechSupport: 'Your browser does not support voice reading.', openingLink: 'Opening link: ', welcome: 'Artes Multicap Editorial. Say "audio" to read the whole page. To stop reading at any time say "stop". You can say the name of a section: services, sizes, packages, process, inclusion, quote, calls, or contact. You can also say "open policies", "open free magazines", "open foundation", "open facebook", "open instagram", "open tiktok" or "open whatsapp" to open those links.' },
-    fr: { speech: 'fr-FR', voices: [/^fr[-_]FR/i, /^fr[-_]CA/i, /^fr[-_]BE/i, /^fr/i], currency: 'pesos colombiens', statusListening: 'Écoute... dites "audio" ou "arrêter"', statusReading: 'Lecture... dites "arrêter" pour stopper', statusPaused: 'En pause... dites "continuer"', statusWhatsapp: 'Mode WhatsApp : dictez votre message et dites "envoyer"', statusChatbot: 'Mode chatbot : posez votre question', statusCapturing: 'Capture', saySend: 'dites "envoyer"', whatsappWelcome: 'Mode WhatsApp. Dictez votre message et dites envoyer. Pour annuler, dites annuler.', chatbotWelcome: 'Mode chatbot. Posez votre question. Dites annuler pour sortir.', openingWhatsapp: 'Ouverture de WhatsApp.', noMessageCaptured: 'Aucun message capturé.', messageDeleted: 'Message supprimé.', whatsappCancelled: 'Mode WhatsApp annulé.', chatbotCancelled: 'Mode chatbot annulé.', noContent: 'Aucun contenu trouvé.', sectionNoContent: 'Cette section n\'a pas de contenu.', notFoundSection: 'Section non trouvée.', response: 'Réponse : ', noAnswer: 'Je n\'ai pas de réponse exacte. Écrivez-nous sur WhatsApp.', chatbotUnavailable: 'Le chatbot n\'est pas disponible.', noSpeechSupport: 'Votre navigateur ne prend pas en charge la lecture vocale.', openingLink: 'Ouverture du lien : ', welcome: 'Éditions Artes Multicap. Dites "audio" pour lire toute la page. Pour arrêter la lecture à tout moment dites "arrêter". Vous pouvez dire le nom d\'une section : services, formats, forfaits, processus, inclusion, devis, appels ou contact. Vous pouvez aussi dire "ouvrir politiques", "ouvrir revues gratuites", "ouvrir fondation", "ouvrir facebook", "ouvrir instagram", "ouvrir tiktok" ou "ouvrir whatsapp" pour ouvrir ces liens.' },
-    pt: { speech: 'pt-BR', voices: [/^pt[-_]BR/i, /^pt[-_]PT/i, /^pt/i], currency: 'pesos colombianos', statusListening: 'Ouvindo... diga "áudio" ou "parar"', statusReading: 'Lendo... diga "parar" para interromper', statusPaused: 'Pausado... diga "continuar"', statusWhatsapp: 'Modo WhatsApp: dite sua mensagem e diga "enviar"', statusChatbot: 'Modo chatbot: faça sua pergunta', statusCapturing: 'Capturando', saySend: 'diga "enviar"', whatsappWelcome: 'Modo WhatsApp. Dite sua mensagem e diga enviar. Para cancelar, diga cancelar.', chatbotWelcome: 'Modo chatbot. Faça sua pergunta. Diga cancelar para sair.', openingWhatsapp: 'Abrindo WhatsApp.', noMessageCaptured: 'Nenhuma mensagem capturada.', messageDeleted: 'Mensagem apagada.', whatsappCancelled: 'Modo WhatsApp cancelado.', chatbotCancelled: 'Modo chatbot cancelado.', noContent: 'Nenhum conteúdo encontrado.', sectionNoContent: 'Esta seção não tem conteúdo.', notFoundSection: 'Seção não encontrada.', response: 'Resposta: ', noAnswer: 'Não tenho uma resposta exata. Escreva-nos no WhatsApp.', chatbotUnavailable: 'O chatbot não está disponível.', noSpeechSupport: 'Seu navegador não suporta leitura em voz alta.', openingLink: 'Abrindo link: ', welcome: 'Editorial Artes Multicap. Diga "áudio" para ler toda a página. Para parar a leitura a qualquer momento diga "parar". Você pode dizer o nome de uma seção: serviços, formatos, pacotes, processo, inclusão, cotação, convocações ou contato. Você também pode dizer "abrir políticas", "abrir revistas grátis", "abrir fundação", "abrir facebook", "abrir instagram", "abrir tiktok" ou "abrir whatsapp" para abrir esses links.' }
+  const LANGS = {
+    es: { speech:'es-CO', voices:[/^es[-_]CO/i,/^es[-_]MX/i,/^es[-_]US/i,/^es[-_]ES/i,/^es/i], currency:'pesos colombianos',
+      play:'Escuchar', playAria:'Escuchar la página', stop:'Detener', stopAria:'Detener el audio', pause:'Pausa', resume:'Seguir', mic:'Voz', micAria:'Activar comandos de voz', micOnLbl:'Voz activa', micOnAria:'Desactivar comandos de voz',
+      hint:'Voz activada. Di "detener", "pausa" o el nombre de una sección.', micOffMsg:'Voz desactivada.', reading:'Leyendo la página...', paused:'En pausa',
+      noSpeech:'Tu navegador no permite lectura en voz alta.', noMic:'Micrófono no disponible.', noContent:'No se encontró contenido.', notFound:'No encontré esa sección.', opening:'Abriendo enlace: ',
+      waIntro:'Modo WhatsApp. Dicta tu mensaje y di enviar. Para cancelar di cancelar.', waStatus:'Dicta tu mensaje y di "enviar"', waCancel:'Modo WhatsApp cancelado.', waNoMsg:'No capté ningún mensaje.', waOpen:'Abriendo WhatsApp.', waDel:'Mensaje borrado.',
+      chatIntro:'Modo chatbot. Hazme tu pregunta. Di cancelar para salir.', chatStatus:'Haz tu pregunta al chatbot', chatCancel:'Modo chatbot cancelado.', noAnswer:'No tengo una respuesta exacta. Escríbenos por WhatsApp.', response:'Respuesta: ', chatNo:'El chatbot no está disponible.' },
+    en: { speech:'en-US', voices:[/^en[-_]US/i,/^en[-_]GB/i,/^en[-_]AU/i,/^en/i], currency:'Colombian pesos',
+      play:'Listen', playAria:'Listen to the page', stop:'Stop', stopAria:'Stop the audio', pause:'Pause', resume:'Resume', mic:'Voice', micAria:'Turn on voice commands', micOnLbl:'Voice on', micOnAria:'Turn off voice commands',
+      hint:'Voice on. Say "stop", "pause" or the name of a section.', micOffMsg:'Voice off.', reading:'Reading the page...', paused:'Paused',
+      noSpeech:'Your browser does not support voice reading.', noMic:'Microphone not available.', noContent:'No content found.', notFound:'Section not found.', opening:'Opening link: ',
+      waIntro:'WhatsApp mode. Dictate your message and say send. To cancel, say cancel.', waStatus:'Dictate your message and say "send"', waCancel:'WhatsApp mode cancelled.', waNoMsg:'No message captured.', waOpen:'Opening WhatsApp.', waDel:'Message deleted.',
+      chatIntro:'Chatbot mode. Ask me your question. Say cancel to exit.', chatStatus:'Ask the chatbot your question', chatCancel:'Chatbot mode cancelled.', noAnswer:'I do not have an exact answer. Write us on WhatsApp.', response:'Answer: ', chatNo:'Chatbot is not available.' },
+    fr: { speech:'fr-FR', voices:[/^fr[-_]FR/i,/^fr[-_]CA/i,/^fr[-_]BE/i,/^fr/i], currency:'pesos colombiens',
+      play:'Écouter', playAria:'Écouter la page', stop:'Arrêter', stopAria:'Arrêter l\'audio', pause:'Pause', resume:'Reprendre', mic:'Voix', micAria:'Activer les commandes vocales', micOnLbl:'Voix active', micOnAria:'Désactiver les commandes vocales',
+      hint:'Voix activée. Dites "arrêter", "pause" ou le nom d\'une section.', micOffMsg:'Voix désactivée.', reading:'Lecture de la page...', paused:'En pause',
+      noSpeech:'Votre navigateur ne prend pas en charge la lecture vocale.', noMic:'Microphone non disponible.', noContent:'Aucun contenu trouvé.', notFound:'Section non trouvée.', opening:'Ouverture du lien : ',
+      waIntro:'Mode WhatsApp. Dictez votre message et dites envoyer. Pour annuler, dites annuler.', waStatus:'Dictez votre message et dites "envoyer"', waCancel:'Mode WhatsApp annulé.', waNoMsg:'Aucun message capturé.', waOpen:'Ouverture de WhatsApp.', waDel:'Message supprimé.',
+      chatIntro:'Mode chatbot. Posez votre question. Dites annuler pour sortir.', chatStatus:'Posez votre question au chatbot', chatCancel:'Mode chatbot annulé.', noAnswer:'Je n\'ai pas de réponse exacte. Écrivez-nous sur WhatsApp.', response:'Réponse : ', chatNo:'Le chatbot n\'est pas disponible.' },
+    pt: { speech:'pt-BR', voices:[/^pt[-_]BR/i,/^pt[-_]PT/i,/^pt/i], currency:'pesos colombianos',
+      play:'Ouvir', playAria:'Ouvir a página', stop:'Parar', stopAria:'Parar o áudio', pause:'Pausa', resume:'Continuar', mic:'Voz', micAria:'Ativar comandos de voz', micOnLbl:'Voz ativa', micOnAria:'Desativar comandos de voz',
+      hint:'Voz ativada. Diga "parar", "pausa" ou o nome de uma seção.', micOffMsg:'Voz desativada.', reading:'Lendo a página...', paused:'Pausado',
+      noSpeech:'Seu navegador não suporta leitura em voz alta.', noMic:'Microfone não disponível.', noContent:'Nenhum conteúdo encontrado.', notFound:'Seção não encontrada.', opening:'Abrindo link: ',
+      waIntro:'Modo WhatsApp. Dite sua mensagem e diga enviar. Para cancelar, diga cancelar.', waStatus:'Dite sua mensagem e diga "enviar"', waCancel:'Modo WhatsApp cancelado.', waNoMsg:'Nenhuma mensagem capturada.', waOpen:'Abrindo WhatsApp.', waDel:'Mensagem apagada.',
+      chatIntro:'Modo chatbot. Faça sua pergunta. Diga cancelar para sair.', chatStatus:'Faça sua pergunta ao chatbot', chatCancel:'Modo chatbot cancelado.', noAnswer:'Não tenho uma resposta exata. Escreva-nos no WhatsApp.', response:'Resposta: ', chatNo:'O chatbot não está disponível.' }
   };
 
-  const STOP_REGEX = /(detener|deten|detente|deténgase|detenga|parar|párate|parate|pare|paren|parada|alto|silencio|basta|cállate|callate|stop|stopped|halt|arrêter|arreter|arrête|arrete|halte|stoppen|beenden|stopp|paraí|parei|silêncio)/i;
-  const PAUSE_REGEX = /\b(pausa|pausar|pause|pausieren)\b/;
-  const RESUME_REGEX = /\b(continuar|continúa|sigue|reanudar|reanuda|continue|reprendre|fortsetzen)\b/;
-  const WHATSAPP_TRIGGER_REGEX = /\b(whatsapp|wasap|wpp|escribir\s*(un\s*)?mensaje|mandar\s*(un\s*)?mensaje|enviar\s*(un\s*)?mensaje|send\s*whatsapp|envoyer\s*whatsapp|enviar\s*(uma\s*)?mensagem)\b/;
-  const CHATBOT_TRIGGER_REGEX = /\b(chatbot|chat\s*bot|pregunta\s*al\s*chatbot|preguntar|quiero\s*preguntar|ask\s*the\s*chatbot|i\s*want\s*to\s*ask|demander\s*au\s*chatbot|perguntar\s*ao\s*chatbot)\b/;
-  const AUDIO_TRIGGER_REGEX = /\b(audio|escuchar|leer|lectura|leeme|léeme|reproducir|reproduce|listen|read|play|start|écouter|lire|commencer|ouvir|ler|começar)\b/;
-  const RESTART_REGEX = /\b(reiniciar|comenzar\s*de\s*nuevo|desde\s*el\s*principio|repetir|restart|start\s*over|recommencer|recomeçar)\b/;
-
-  const NAV_COMMANDS = [
-    { rx: /\b(servicios?|services|service|serviços?|serviço)\b/, section: '#servicios', labels: { es: 'Servicios', en: 'Services', fr: 'Services', pt: 'Serviços' } },
-    { rx: /\b(tamaños?|tamanos?|formato[s]?\s*de\s*libro|sizes?|book\s*sizes?|formats?|formatos?\s*de\s*livro)\b/, section: '#tamanos', labels: { es: 'Tamaños de libro', en: 'Book sizes', fr: 'Formats de livre', pt: 'Formatos de livro' } },
-    { rx: /\b(paquetes?|planes?|plan\s*profesional|plan\s*premium|packages?|plans?|professional\s*plan|premium\s*plan|forfaits?|pacotes?|planos?)\b/, section: '#paquetes', labels: { es: 'Paquetes', en: 'Packages', fr: 'Forfaits', pt: 'Pacotes' } },
-    { rx: /\b(proceso|cómo\s*iniciamos|iniciar\s*proyecto|process|how\s*we\s*start|processus|démarrer|processo|começar)\b/, section: '#proceso', labels: { es: 'Proceso', en: 'Process', fr: 'Processus', pt: 'Processo' } },
-    { rx: /\b(inclusi[oó]n|descuentos?|estratos?|inclusion|discounts?|stratum|réduction|inclusão|descontos?)\b/, section: '#inclusion', labels: { es: 'Inclusión y descuentos', en: 'Inclusion and discounts', fr: 'Inclusion et réductions', pt: 'Inclusão e descontos' } },
-    { rx: /\b(cotizador|cotizar|cotizaci[oó]n|precios?|quote|quotation|prices?|devis|prix|cotação|preços?)\b/, section: '#cotizador', labels: { es: 'Cotizador', en: 'Quote', fr: 'Devis', pt: 'Cotação' } },
-    { rx: /\b(convocatorias?|concurso|latinoam[eé]rica\s*escribe|calls?|contest|appels?|concours|convocações?|concurso)\b/, section: '#convocatoria', labels: { es: 'Convocatoria', en: 'Call', fr: 'Appel', pt: 'Convocação' } },
-    { rx: /\b(contacto|contactar|escr[ií]benos|contact|contacte|contato|contatar)\b/, section: '#contacto', labels: { es: 'Contacto', en: 'Contact', fr: 'Contact', pt: 'Contato' } }
-  ];
+  const WELCOME = {
+    es:'Te damos la bienvenida a Artes Multicap Editorial. Para activar el audio, di audio. Para detener el audio, di detener o parar.',
+    en:'Welcome to Artes Multicap Editorial. To activate the audio, say audio. To stop the audio, say stop.',
+    fr:'Bienvenue chez Artes Multicap Editorial. Pour activer l\'audio, dites audio. Pour l\'arrêter, dites arrêter.',
+    pt:'Boas-vindas à Artes Multicap Editorial. Para ativar o áudio, diga áudio. Para parar o áudio, diga parar.'
+  };
+  const STOP_RX   = /(detener|detente|detén|\bdeten\b|parar|\bparar\b|silencio|basta|\bstop\b|\bhalt\b|arrêter|arrête|arreter|silêncio)/;
+  const PAUSE_RX  = /\b(pausa|pausar|pause)\b/;
+  const RESUME_RX = /\b(continuar|continúa|sigue|seguir|reanudar|continue|resume|reprendre|continuar)\b/;
+  const WA_RX     = /\b(whatsapp|wasap|wpp|escribir\s*(un\s*)?mensaje|mandar\s*(un\s*)?mensaje|enviar\s*(un\s*)?mensaje|enviar\s*(uma\s*)?mensagem)\b/;
+  const CHAT_RX   = /\b(chatbot|chat\s*bot|quiero\s*preguntar|preguntar|ask\s*the\s*chatbot|demander\s*au\s*chatbot|perguntar\s*ao\s*chatbot)\b/;
+  const AUDIO_RX  = /\b(audio|áudio|escuchar|leer|lectura|léeme|leeme|reproducir|listen|read|play|écouter|lire|ouvir|ler)\b/;
 
   const NAV_LINKS = [
-    { rx:/\b(pol[íi]ticas?\s*editoriales?|editorial\s*policies|politiques\s*éditoriales|políticas\s*editoriais)\b/, url:'https://pol-ticaseditoriales.netlify.app/', labels:{es:'Políticas Editoriales',en:'Editorial Policies',fr:'Politiques Éditoriales',pt:'Políticas Editoriais'} },
-    { rx:/\b(revistas?\s*gratis|revistas?\s*gr[áa]tis|revistas?\s*gratuitas?|free\s*magazines?|magazines?\s*gratuits?|revues?\s*gratuites?|explorando\s*museos?|plataforma\s*cultural|museos?\s*y\s*arte|exploring\s*museums|musées\s*et\s*art|museus?\s*e\s*arte)\b/, url:'https://explorandomuseosyartelatinoamericano.netlify.app/', labels:{es:'Revistas Gratis',en:'Free Magazines',fr:'Revues Gratuites',pt:'Revistas Grátis'} },
-    { rx:/\b(fundaci[oó]n|la\s*fundaci[oó]n|abrir\s*fundaci[oó]n|foundation|fondation|fundação)\b/, url:'https://fundacion-artes-multicap.netlify.app/', labels:{es:'Fundación Artes Multicap',en:'Artes Multicap Foundation',fr:'Fondation Artes Multicap',pt:'Fundação Artes Multicap'} },
-    { rx:/\b(facebook|face\s*book)\b/, url:'https://www.facebook.com/ArtesMulticap/', labels:{es:'Facebook',en:'Facebook',fr:'Facebook',pt:'Facebook'} },
-    { rx:/\b(instagram|insta)\b/, url:'https://www.instagram.com/artesmulticap/', labels:{es:'Instagram',en:'Instagram',fr:'Instagram',pt:'Instagram'} },
-    { rx:/\b(tik\s*tok|tiktok)\b/, url:'https://www.tiktok.com/@fundacionartesmulticap', labels:{es:'TikTok',en:'TikTok',fr:'TikTok',pt:'TikTok'} },
-    { rx:/\b(whatsapp|wasap|wpp)\b/, url:'https://wa.me/573113555949', labels:{es:'WhatsApp',en:'WhatsApp',fr:'WhatsApp',pt:'WhatsApp'} },
-    { rx:/\b(bio\s*link|bio\s*autora|link\s*bio)\b/, url:'https://yobanaorozcoartista.bio.link', labels:{es:'Bio de la autora',en:'Author Bio',fr:'Bio de l\'auteure',pt:'Bio da autora'} }
+    { rx:/(convocatoria|convocatorias|concurso|latinoam[eé]rica\s*escribe|open\s*call|appel|convocat[oó]ria)/, url:CONV_URL, label:{es:'Convocatoria',en:'Open Call',fr:'Appel',pt:'Convocatória'} },
+    { rx:/(pol[íi]ticas?|policies|politiques|pol[íi]ticas\s*editoriais)/, url:'https://pol-ticaseditoriales.netlify.app/', label:{es:'Políticas Editoriales',en:'Editorial Policies',fr:'Politiques Éditoriales',pt:'Políticas Editoriais'} },
+    { rx:/(revistas?\s*gr[áa]tis|revistas?\s*gratuitas?|free\s*magazines?|revues?\s*gratuites?|explorando\s*museos?)/, url:'https://explorandomuseosyartelatinoamericano.netlify.app/', label:{es:'Revistas Gratis',en:'Free Magazines',fr:'Revues Gratuites',pt:'Revistas Grátis'} },
+    { rx:/(fundaci[oó]n|foundation|fondation|fundação)/, url:'https://fundacion-artes-multicap.netlify.app/', label:{es:'Fundación Artes Multicap',en:'Artes Multicap Foundation',fr:'Fondation Artes Multicap',pt:'Fundação Artes Multicap'} },
+    { rx:/(facebook|face\s*book)/, url:'https://www.facebook.com/ArtesMulticap/', label:{es:'Facebook',en:'Facebook',fr:'Facebook',pt:'Facebook'} },
+    { rx:/(instagram|insta)/, url:'https://www.instagram.com/artesmulticap/', label:{es:'Instagram',en:'Instagram',fr:'Instagram',pt:'Instagram'} },
+    { rx:/(tik\s*tok|tiktok)/, url:'https://www.tiktok.com/@fundacionartesmulticap', label:{es:'TikTok',en:'TikTok',fr:'TikTok',pt:'TikTok'} }
+  ];
+  const NAV_SECTIONS = [
+    { rx:/\b(servicios?|services?|serviços?)\b/, sel:'#servicios' },
+    { rx:/\b(tamaños?|tamanos?|sizes?|formats?|formatos?)\b/, sel:'#tamanos' },
+    { rx:/\b(paquetes?|planes?|packages?|plans?|forfaits?|pacotes?|planos?)\b/, sel:'#paquetes' },
+    { rx:/\b(proceso|process|processus|processo)\b/, sel:'#proceso' },
+    { rx:/\b(inclusi[oó]n|descuentos?|estratos?|inclusion|discounts?|inclusão|descontos?)\b/, sel:'#inclusion' },
+    { rx:/\b(cotizador|cotizar|cotizaci[oó]n|precios?|quote|prices?|devis|prix|cotação|preços?)\b/, sel:'#cotizador' },
+    { rx:/\b(contacto|contactar|contact|contato)\b/, sel:'#contacto' }
   ];
 
-  function getLang(){ try{ return localStorage.getItem('preferred-lang') || 'es'; }catch(e){ return 'es'; } }
-  function getConfig(){ return LANG_CONFIG[getLang()] || LANG_CONFIG.es; }
-  function getLabel(labels){ return labels[getLang()] || labels.es; }
+  const S = { items:[], gen:0, playing:false, paused:false, speakingMsg:false, hl:null, u:null,
+    rec:null, recRunning:false, micOn:false, mode:'normal', captured:'', trigger:'', modeTime:0,
+    welcomed:false, micManualOff:false, micDenied:0, lastSpoken:'', lastSpokenTime:0, msgTimer:null, userScroll:false, scrollTimer:null, voices:[] };
 
-  const READ_SELECTORS = 'h1,h2,h3,h4,h5,p,li,summary,label,blockquote,figcaption,cite,td,th';
-  const SKIP_TEXT = /^(—|✕|✓|✦|⚠)$/;
+  function lang(){ try{ return localStorage.getItem('preferred-lang') || 'es'; }catch(e){ return 'es'; } }
+  function L(){ return LANGS[lang()] || LANGS.es; }
 
-  const S = {
-    items: [], index: 0, playing: false, paused: false, rate: 1, gen: 0,
-    voices: [], watchdog: null, highlighted: null,
-    recognition: null, recognitionRunning: false, micActive: false,
-    welcomePlayed: false, interactionDone: false, lastCmd: 0,
-    userScrolling: false, scrollTimer: null,
-    mode: 'normal', capturedText: '', triggerPhrase: '',
-    lastDetenerTime: 0, modeEnterTime: 0,
-    recentTTSWords: [], recentTTSTimestamp: 0
-  };
+  /* ---------- Mensajes visibles ---------- */
+  function showMsg(txt, ms){
+    msgBox.textContent = txt; msgBox.classList.add('show');
+    clearTimeout(S.msgTimer);
+    if (ms) S.msgTimer = setTimeout(()=>msgBox.classList.remove('show'), ms);
+  }
+  function hideMsg(){ clearTimeout(S.msgTimer); msgBox.classList.remove('show'); }
 
-  function normalizeWord(w){ return (w||'').toLowerCase().replace(/[^\wáéíóúñüàâçèéêëîïôùûüÿ]/g,'').trim(); }
-  function recordTTSWords(text){
-    const words = (text||'').toLowerCase().split(/\s+/).map(normalizeWord).filter(w=>w.length>=3);
-    S.recentTTSWords = [...words, ...S.recentTTSWords].slice(0, 80);
-    S.recentTTSTimestamp = Date.now();
+  /* ---------- Interfaz de botones ---------- */
+  function updateUI(){
+    const l = L();
+    const active = S.playing || S.speakingMsg;
+    btnAudio.classList.toggle('on', active);
+    $('lblAudio').textContent = active ? l.stop : l.play;
+    btnAudio.setAttribute('aria-label', active ? l.stopAria : l.playAria);
+    btnAudio.title = active ? l.stopAria : l.playAria;
+    $('icoPlay').style.display = active ? 'none' : '';
+    $('icoStop').style.display = active ? '' : 'none';
+    dock.classList.toggle('reading', S.playing);
+    $('lblPause').textContent = S.paused ? l.resume : l.pause;
+    $('icoPause').style.display = S.paused ? 'none' : '';
+    $('icoResume').style.display = S.paused ? '' : 'none';
+    btnPause.setAttribute('aria-label', S.paused ? l.resume : l.pause);
+    btnMic.classList.toggle('on', S.micOn);
+    $('lblMic').textContent = S.micOn ? l.micOnLbl : l.mic;
+    btnMic.setAttribute('aria-label', S.micOn ? l.micOnAria : l.micAria);
+    btnMic.title = S.micOn ? l.micOnAria : l.micAria;
   }
-  function isEcho(text){
-    if (!S.recentTTSWords.length) return false;
-    if (Date.now() - S.recentTTSTimestamp > 8000) return false;
-    const t = (text||'').toLowerCase().trim();
-    if (!t) return false;
-    const words = t.split(/\s+/).map(normalizeWord).filter(w=>w.length>=3);
-    if (!words.length) return false;
-    let m = 0;
-    for (const w of words) if (S.recentTTSWords.includes(w)) m++;
-    return m >= Math.max(2, Math.ceil(words.length*0.5));
-  }
-  function formatPricesForSpeech(text){
-    if (!text) return text;
-    const currency = getConfig().currency;
-    let out = text;
-    out = out.replace(/\$\s*([\d]{1,3}(?:[.,]\d{3})+|\d{3,})/g,function(m,num){ return num.replace(/[.,]/g,'') + ' ' + currency; });
-    out = out.replace(/\bCOP\b/g, currency);
-    return out;
-  }
-  function markUserScrolling(){
-    S.userScrolling = true;
-    clearTimeout(S.scrollTimer);
-    S.scrollTimer = setTimeout(()=>S.userScrolling=false,4500);
-  }
-  window.addEventListener('wheel',markUserScrolling,{passive:true});
-  window.addEventListener('touchmove',markUserScrolling,{passive:true});
 
-  function loadVoices(){
-    if (!supportsSpeech) return;
-    try{ S.voices = synth.getVoices()||[]; }catch(e){ S.voices = []; }
-  }
+  /* ---------- Voces ---------- */
+  function loadVoices(){ try{ S.voices = synth.getVoices() || []; }catch(e){ S.voices = []; } }
   if (supportsSpeech){
     loadVoices();
-    if (typeof synth.addEventListener === 'function') synth.addEventListener('voiceschanged',loadVoices);
+    if (typeof synth.addEventListener === 'function') synth.addEventListener('voiceschanged', loadVoices);
     else synth.onvoiceschanged = loadVoices;
   }
   function pickVoice(){
     if (!S.voices.length) loadVoices();
-    const vs = S.voices;
-    if (!vs.length) return null;
-    const config = getConfig();
-    for (const rx of config.voices){
-      const v = vs.find(voice => rx.test(voice.lang));
-      if (v) return v;
-    }
+    for (const rx of L().voices){ const v = S.voices.find(x => rx.test(x.lang)); if (v) return v; }
     return null;
   }
 
-  function cleanText(t){ return (t||'').replace(/\s+/g,' ').trim(); }
-  function splitText(text,max){
-    max = max||250;
+  window.addEventListener('wheel', markScroll, {passive:true});
+  window.addEventListener('touchmove', markScroll, {passive:true});
+  function markScroll(){ S.userScroll = true; clearTimeout(S.scrollTimer); S.scrollTimer = setTimeout(()=>S.userScroll=false, 4000); }
+
+  /* ---------- Texto a leer ---------- */
+  const READ_SEL = 'h1,h2,h3,h4,h5,p,li,summary,label,blockquote,figcaption,td,th';
+  function clean(t){ return (t||'').replace(/\s+/g,' ').trim(); }
+  function splitText(text, max){
+    max = max || 180;
     if (text.length <= max) return [text];
     const parts = text.match(/[^.!?¡¿;:]+[.!?]*\s*/g) || [text];
     const out = []; let cur = '';
     parts.forEach(p=>{
-      if ((cur+p).length > max && cur){ out.push(cur.trim()); cur = p; }
-      else { cur += p; }
+      if ((cur+p).length > max && cur){ out.push(cur.trim()); cur = p; } else cur += p;
     });
     if (cur.trim()) out.push(cur.trim());
     return out.filter(Boolean);
   }
-
   function collectItems(root){
-    const container = root || document.body;
-    const els = container.querySelectorAll(READ_SELECTORS);
-    const collected = new Set();
-    const list = [];
-    els.forEach(el=>{
-      if (el.closest('#voiceStatus') || el.closest('#voiceFallback')) return;
-      if (el.closest('#chatbotPanel') || el.closest('#chatbotBtn')) return;
-      if (el.closest('script,style,noscript,header,footer')) return;
-      if (el.closest('#lang-bar')) return;
-      if (el.getAttribute('aria-hidden') === 'true') return;
-      if (el.hasAttribute('hidden')) return;
-      if (el.tagName === 'IMG') return;
-      if (el.querySelector('img') && (el.textContent||'').trim().length < 3) return;
-
+    const list = []; const seen = new Set();
+    (root || document.body).querySelectorAll(READ_SEL).forEach(el=>{
+      if (el.closest('#audioDock,#chatbotPanel,#chatbotBtn,#lang-bar,header,footer,script,style,noscript')) return;
+      if (el.getAttribute('aria-hidden') === 'true' || el.hasAttribute('hidden')) return;
       let p = el.parentElement, nested = false;
-      while (p && p !== document.body){
-        if (collected.has(p)){ nested = true; break; }
-        p = p.parentElement;
-      }
+      while (p && p !== document.body){ if (seen.has(p)){ nested = true; break; } p = p.parentElement; }
       if (nested) return;
-      const text = cleanText(el.textContent||'');
-      if (!text || text.length < 2) return;
-      if (SKIP_TEXT.test(text)) return;
-      collected.add(el);
-      splitText(text).forEach(t=>list.push({ el: el, text: t }));
+      const text = clean(el.textContent);
+      if (!text || text.length < 2 || /^(—|✕|✓|✦|⚠)$/.test(text)) return;
+      seen.add(el);
+      splitText(text).forEach(t => list.push({el:el, text:t}));
     });
     return list;
   }
-
-  function clearHighlight(){
-    if (S.highlighted){ S.highlighted.style.outline=''; S.highlighted.style.background=''; S.highlighted.style.outlineOffset=''; S.highlighted.style.borderRadius=''; S.highlighted = null; }
+  function formatPrices(text){
+    const cur = L().currency;
+    return (text||'').replace(/\$\s*(\d{1,3}(?:[.,]\d{3})+|\d{3,})/g,(m,n)=>n.replace(/[.,]/g,'')+' '+cur).replace(/\bCOP\b/g, cur);
   }
+
+  function clearHL(){ if (S.hl){ S.hl.style.outline=''; S.hl.style.background=''; S.hl.style.outlineOffset=''; S.hl.style.borderRadius=''; S.hl=null; } }
   function highlight(el){
-    if (!el || el === S.highlighted) return;
-    clearHighlight();
-    S.highlighted = el;
-    el.style.outline = '3px solid #e7c36b';
-    el.style.outlineOffset = '3px';
-    el.style.borderRadius = '6px';
-    el.style.background = 'rgba(231,195,107,.12)';
-    if (!S.userScrolling){
+    if (!el || el === S.hl) return;
+    clearHL(); S.hl = el;
+    el.style.outline = '3px solid #e7c36b'; el.style.outlineOffset = '3px';
+    el.style.borderRadius = '6px'; el.style.background = 'rgba(231,195,107,.12)';
+    if (!S.userScroll){
       try{
-        const r = el.getBoundingClientRect();
-        const vh = window.innerHeight||document.documentElement.clientHeight;
-        if (r.top < 0 || r.bottom > vh){
-          el.scrollIntoView({behavior:'smooth',block:'center'});
-        }
+        const r = el.getBoundingClientRect(), vh = window.innerHeight || document.documentElement.clientHeight;
+        if (r.top < 0 || r.bottom > vh) el.scrollIntoView({behavior:'smooth', block:'center'});
       }catch(e){}
     }
   }
 
-  function showStatus(txt,color){
-    if (!voiceStatus) return;
-    voiceStatus.classList.add('active');
-    if (voiceText) voiceText.textContent = txt;
-    document.body.classList.add('voice-active');
-  }
-  function hideStatus(){
-    if (voiceStatus) voiceStatus.classList.remove('active');
-    document.body.classList.remove('voice-active');
-  }
-  function setListening(){ showStatus(getConfig().statusListening,'#22c55e'); }
-  function setReading(){ showStatus(getConfig().statusReading,'#e7c36b'); }
-  function setCapturing(l,c){ showStatus(l,c||'#e7c36b'); }
+  /* ---------- Lectura ---------- */
+  function hardCancel(){ try{ synth.cancel(); }catch(e){} }
 
-  function cancelImmediate(){
+  function stopAll(){
     S.gen++;
-    try{ synth.cancel(); }catch(e){}
-    S.playing = false; S.paused = false; S.index = 0;
-    S.recentTTSWords = [];
-    clearHighlight(); stopWatchdog();
-    if (S.micActive) setListening(); else hideStatus();
+    hardCancel();
+    S.playing = false; S.paused = false; S.speakingMsg = false;
+    S.items = [];
+    clearHL(); hideMsg(); updateUI();
+    setTimeout(()=>{ if (!S.playing && !S.speakingMsg) hardCancel(); }, 80);
+    autoMic();
   }
 
-  function speakFrom(i){
-    if (i >= S.items.length){ finishReading(); return; }
-    S.index = i;
-    const item = S.items[i];
-    highlight(item.el);
-    const spoken = formatPricesForSpeech(item.text);
-    recordTTSWords(spoken);
-    const u = new SpeechSynthesisUtterance(spoken);
-    u.lang = getConfig().speech;
-    u.rate = S.rate; u.pitch = 1; u.volume = 1;
+  function speakFrom(i, g){
+    if (g !== S.gen) return;
+    if (i >= S.items.length){ stopAll(); return; }
+    const it = S.items[i];
+    highlight(it.el);
+    const text = formatPrices(it.text);
+    S.lastSpoken = text.toLowerCase(); S.lastSpokenTime = Date.now();
+    const u = new SpeechSynthesisUtterance(text);
+    S.u = u;
+    u.lang = L().speech; u.rate = 1; u.pitch = 1; u.volume = 1;
     const v = pickVoice(); if (v) u.voice = v;
-    const myGen = S.gen;
-    u.onend = function(){
-      if (myGen !== S.gen) return;
-      speakFrom(i+1);
-    };
-    u.onerror = function(ev){
-      if (myGen !== S.gen) return;
+    u.onend = ()=>{ if (g === S.gen) speakFrom(i+1, g); };
+    u.onerror = ev=>{
+      if (g !== S.gen) return;
       if (ev && (ev.error === 'interrupted' || ev.error === 'canceled')) return;
-      speakFrom(i+1);
+      speakFrom(i+1, g);
     };
     try{ synth.speak(u); }catch(e){}
   }
 
-  function startWatchdog(){
-    stopWatchdog();
-    S.watchdog = setInterval(function(){
-      if (!S.playing || S.paused) return;
-      try{ if (synth.paused) synth.resume(); }catch(e){}
-      if (S.micActive && !S.recognitionRunning){
-        try{ startRecognition(); }catch(e){}
-      }
-    },1200);
+  function beginReading(items, scrollTo){
+    if (!supportsSpeech){ showMsg(L().noSpeech, 4000); return; }
+    stopAll();
+    if (!items.length){ showMsg(L().noContent, 3000); return; }
+    S.items = items; S.playing = true; S.paused = false;
+    if (scrollTo){ try{ scrollTo.scrollIntoView({behavior:'smooth', block:'start'}); }catch(e){} }
+    updateUI(); showMsg(L().reading, 2500);
+    const g = ++S.gen;
+    setTimeout(()=>{ if (g === S.gen && S.playing) speakFrom(0, g); }, 150);
   }
-  function stopWatchdog(){ if (S.watchdog){ clearInterval(S.watchdog); S.watchdog = null; } }
-
-  function resetReader(){
-    S.gen++; try{ synth.cancel(); }catch(e){}
-    S.playing = false; S.paused = false; S.index = 0;
-    S.recentTTSWords = [];
-    clearHighlight(); stopWatchdog();
-  }
-
-  function startReading(){
-    if (!supportsSpeech){ speakText(getConfig().noSpeechSupport); return; }
-    resetReader();
-    S.items = collectItems(null);
-    if (!S.items.length){ speakText(getConfig().noContent); return; }
-    S.gen++; S.playing = true; S.paused = false;
-    setReading(); speakFrom(0); startWatchdog();
-  }
-
-  function readSection(selector,label){
-    if (!supportsSpeech){ speakText(getConfig().noSpeechSupport); return; }
-    const section = document.querySelector(selector);
-    if (!section){ speakText(getConfig().notFoundSection); return; }
-    S.gen++; try{ synth.cancel(); }catch(e){}
-    S.playing = false; S.paused = false; S.index = 0;
-    S.recentTTSWords = [];
-    clearHighlight(); stopWatchdog();
-    try{ section.scrollIntoView({behavior:'smooth',block:'start'}); }catch(e){}
-    S.items = collectItems(section);
-    if (!S.items.length){ speakText(getConfig().sectionNoContent); return; }
-    S.gen++; S.playing = true; S.paused = false;
-    setReading();
-    setTimeout(function(){ speakFrom(0); },180);
-    startWatchdog();
+  function startReading(){ beginReading(collectItems(document.body), null); }
+  function readSection(sel){
+    const sec = document.querySelector(sel);
+    if (!sec){ showMsg(L().notFound, 3000); return; }
+    beginReading(collectItems(sec), sec);
   }
 
   function togglePause(){
-    if (!S.playing || !supportsSpeech) return;
-    if (S.paused){
-      try{ synth.resume(); }catch(e){}
-      S.paused = false; setReading();
-    } else {
-      try{ synth.pause(); }catch(e){}
-      S.paused = true;
-      showStatus(getConfig().statusPaused,'#e7c36b');
-    }
+    if (!S.playing) return;
+    if (S.paused){ try{ synth.resume(); }catch(e){} S.paused = false; showMsg(L().reading, 2000); }
+    else { try{ synth.pause(); }catch(e){} S.paused = true; showMsg(L().paused, 0); }
+    updateUI();
   }
 
-  function finishReading(){
-    S.playing = false; S.paused = false;
-    S.recentTTSWords = [];
-    clearHighlight(); stopWatchdog();
-    if (S.micActive) setListening(); else hideStatus();
-  }
-
-  function speakText(text,onDone){
+  function speakText(text, onDone){
     if (!supportsSpeech){ if (onDone) onDone(); return; }
-    const u = new SpeechSynthesisUtterance(formatPricesForSpeech(text));
-    u.lang = getConfig().speech;
-    u.rate = S.rate || 1; u.pitch = 1;
+    const g = ++S.gen;
+    hardCancel();
+    S.speakingMsg = true; S.lastSpoken = (text||'').toLowerCase(); S.lastSpokenTime = Date.now(); updateUI();
+    const u = new SpeechSynthesisUtterance(formatPrices(text));
+    S.u = u; u.lang = L().speech; u.rate = 1;
     const v = pickVoice(); if (v) u.voice = v;
-    u.onend = function(){ if (onDone) onDone(); };
-    u.onerror = function(){ if (onDone) onDone(); };
-    try{ synth.speak(u); }catch(e){ if (onDone) onDone(); }
+    const done = ()=>{ if (g !== S.gen) return; S.speakingMsg = false; updateUI(); if (onDone) onDone(); };
+    u.onend = done; u.onerror = done;
+    setTimeout(()=>{ if (g === S.gen) { try{ synth.speak(u); }catch(e){ done(); } } }, 100);
   }
 
-  function enterWhatsappMode(trigger){
-    S.mode = 'whatsapp-capture';
-    S.capturedText = '';
-    S.triggerPhrase = (trigger||'').toLowerCase().trim();
-    S.modeEnterTime = Date.now();
-    speakText(getConfig().whatsappWelcome);
-    setCapturing(getConfig().statusWhatsapp,'#25D366');
-  }
-  function sendWhatsappMessage(msg){
-    const url = 'https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(msg);
-    try{ const w = window.open(url,'_blank'); if (!w) window.location.href = url; }
-    catch(e){ window.location.href = url; }
-    speakText(getConfig().openingWhatsapp);
-    S.mode = 'normal'; S.capturedText = ''; S.triggerPhrase = '';
-    if (S.micActive) setListening();
+  /* ---------- Reconocimiento de voz (opcional) ---------- */
+  function isEcho(t){
+    if (Date.now() - S.lastSpokenTime > 6000) return false;
+    const w = t.split(/\s+/).filter(x=>x.length>=3);
+    if (!w.length) return false;
+    let m = 0; w.forEach(x=>{ if (S.lastSpoken.includes(x)) m++; });
+    return m >= Math.max(2, Math.ceil(w.length * 0.5));
   }
 
-  function enterChatbotMode(trigger){
-    S.mode = 'chatbot-capture';
-    S.capturedText = '';
-    S.triggerPhrase = (trigger||'').toLowerCase().trim();
-    S.modeEnterTime = Date.now();
-    speakText(getConfig().chatbotWelcome);
-    setCapturing(getConfig().statusChatbot,'#7c3aed');
-  }
-  function askChatbot(q){
-    if (typeof window.chatbotOpen === 'function') window.chatbotOpen();
-    if (typeof window.chatbotSendMessage !== 'function'){
-      speakText(getConfig().chatbotUnavailable);
-      S.mode = 'normal'; S.capturedText = ''; S.triggerPhrase = '';
-      return;
-    }
-    const plain = (typeof window.chatbotGetPlainAnswer === 'function') ? window.chatbotGetPlainAnswer(q) : null;
-    window.chatbotSendMessage(q);
-    S.mode = 'normal'; S.capturedText = ''; S.triggerPhrase = '';
-    setTimeout(function(){
-      if (plain) speakText(getConfig().response + plain);
-      else speakText(getConfig().noAnswer);
-      if (S.micActive) setListening();
-    },300);
-  }
-
-  function initRecognition(){
-    if (!supportsRecog) return null;
+  function initRec(){
     const r = new SR();
-    r.lang = getConfig().speech;
-    r.continuous = true; r.interimResults = true; r.maxAlternatives = 3;
-    r.onresult = function(event){
-      let fin = ''; let interim = '';
-      for (let i = event.resultIndex; i < event.results.length; i++){
-        const tr = event.results[i][0].transcript;
-        if (event.results[i].isFinal) fin += ' ' + tr;
-        else interim += ' ' + tr;
+    r.lang = L().speech; r.continuous = true; r.interimResults = true; r.maxAlternatives = 1;
+    r.onresult = ev=>{
+      let fin = '', interim = '';
+      for (let i = ev.resultIndex; i < ev.results.length; i++){
+        const tr = ev.results[i][0].transcript;
+        if (ev.results[i].isFinal) fin += ' ' + tr; else interim += ' ' + tr;
       }
-      const interimClean = interim.toLowerCase().trim();
-      const finClean = fin.toLowerCase().trim();
-
-      if (STOP_REGEX.test(interimClean) || STOP_REGEX.test(finClean)){
-        const now = Date.now();
-        if (now - S.lastDetenerTime > 500){
-          S.lastDetenerTime = now;
-          if (S.playing || S.paused){
-            cancelImmediate();
-            return;
+      const f = fin.toLowerCase().trim(), it = interim.toLowerCase().trim();
+      if (S.playing || S.speakingMsg){
+        const t = f || it;
+        if (t && t.length <= 28){
+          if (STOP_RX.test(t)){ stopAll(); return; }
+          if (S.playing){
+            if (PAUSE_RX.test(t) && !S.paused){ togglePause(); return; }
+            if (RESUME_RX.test(t) && S.paused){ togglePause(); return; }
           }
         }
+        return;
       }
-
-      if ((PAUSE_REGEX.test(interimClean) || PAUSE_REGEX.test(finClean)) && S.playing && !S.paused){
-        togglePause(); return;
-      }
-      if ((RESUME_REGEX.test(interimClean) || RESUME_REGEX.test(finClean)) && S.playing && S.paused){
-        togglePause(); return;
-      }
-
-      if (S.playing) return;
-
-      if (finClean){
-        if (isEcho(finClean)) return;
-        handleVoiceInput(finClean);
-      }
+      if (f && !isEcho(f)) handleVoice(f);
     };
-    r.onerror = function(ev){
+    r.onerror = ev=>{
       if (ev.error === 'not-allowed' || ev.error === 'service-not-allowed'){
-        S.micActive = false;
-        showStatus('Micrófono no disponible / Microphone not available','#ef4444');
+        S.micOn = false; S.recRunning = false; S.micDenied++; updateUI(); showMsg(L().noMic, 4000);
       }
     };
-    r.onend = function(){
-      S.recognitionRunning = false;
-      if (S.micActive){
-        setTimeout(function(){
-          if (S.micActive && !S.recognitionRunning) startRecognition();
-        },120);
-      }
+    r.onend = ()=>{
+      S.recRunning = false;
+      if (S.micOn) setTimeout(()=>{ if (S.micOn && !S.recRunning) startRec(); }, 150);
     };
     return r;
   }
-  function startRecognition(){
-    if (!supportsRecog || !S.recognition || S.recognitionRunning) return;
-    try{
-      S.recognition.start();
-      S.recognitionRunning = true; S.micActive = true;
-      if (S.mode === 'normal') setListening();
-    }catch(e){}
+  function startRec(){
+    if (!SR || S.recRunning) return;
+    if (!S.rec) S.rec = initRec();
+    try{ S.rec.lang = L().speech; S.rec.start(); S.recRunning = true; }catch(e){}
   }
+  function stopRec(){ S.micOn = false; try{ if (S.rec) S.rec.abort(); }catch(e){} S.recRunning = false; S.mode = 'normal'; }
 
-  function handleWhatsappInput(t){
-    if (S.triggerPhrase && t === S.triggerPhrase) return;
-    if (Date.now() - S.modeEnterTime < 400 && t.length < 10) return;
-    if (t.length < 50 && /\b(enviar|env[ií]a|env[ií]alo|manda|m[aá]ndalo|mandar|ya\s*est[aá]|listo|ya|send|sent|envoie|envoyer|envie)\b/.test(t)){
-      if (S.capturedText.trim()){ sendWhatsappMessage(S.capturedText.trim()); }
-      else { speakText(getConfig().noMessageCaptured); setCapturing(getConfig().statusWhatsapp,'#25D366'); }
-      return;
-    }
-    if (t.length < 40 && /\b(cancelar|cancela|salir\s*del\s*modo|abortar|olv[ií]dalo|cancel|quit|exit|annuler|quitter|sair)\b/.test(t)){
-      S.mode = 'normal'; S.capturedText = ''; S.triggerPhrase = '';
-      speakText(getConfig().whatsappCancelled);
-      if (S.micActive) setListening();
-      return;
-    }
-    if (t.length < 50 && /\b(borrar|borra|empezar\s*de\s*nuevo|delete|clear|effacer|recomeçar|apagar)\b/.test(t)){
-      S.capturedText = '';
-      speakText(getConfig().messageDeleted);
-      setCapturing(getConfig().statusWhatsapp,'#25D366');
-      return;
-    }
-    const clean = t.replace(/\bpunto\b/g,'.').replace(/\bcoma\b/g,',');
-    S.capturedText += (S.capturedText?' ':'') + clean;
-    const preview = S.capturedText.length > 50 ? '...' + S.capturedText.slice(-50) : S.capturedText;
-    showStatus(getConfig().statusCapturing + ': "'+preview+'" · ' + getConfig().saySend,'#25D366');
+  /* ---------- Modos: WhatsApp y chatbot ---------- */
+  function enterWa(t){ S.mode='wa'; S.captured=''; S.trigger=t; S.modeTime=Date.now(); showMsg(L().waStatus, 0); speakText(L().waIntro); }
+  function sendWa(msg){
+    const url = 'https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
+    try{ const w = window.open(url,'_blank'); if (!w) window.location.href = url; }catch(e){ window.location.href = url; }
+    S.mode='normal'; S.captured=''; hideMsg(); speakText(L().waOpen);
   }
-
-  function handleChatbotInput(t){
-    if (S.triggerPhrase && t === S.triggerPhrase) return;
-    if (Date.now() - S.modeEnterTime < 400 && t.length < 10) return;
-    if (t.length < 40 && /\b(cancelar|cancela|salir\s*del\s*modo|abortar|cancel|quit|exit|annuler|quitter|sair)\b/.test(t)){
-      S.mode = 'normal'; S.capturedText = ''; S.triggerPhrase = '';
-      speakText(getConfig().chatbotCancelled);
-      if (S.micActive) setListening();
+  function handleWa(t){
+    if (t === S.trigger) return;
+    if (Date.now() - S.modeTime < 500 && t.length < 12) return;
+    if (t.length < 50 && /\b(enviar|env[ií]a|env[ií]alo|manda|m[aá]ndalo|mandar|listo|send|envoyer|envoie|enviar)\b/.test(t)){
+      if (S.captured.trim()) sendWa(S.captured.trim()); else { showMsg(L().waNoMsg, 3000); speakText(L().waNoMsg); }
       return;
+    }
+    if (t.length < 40 && /\b(cancelar|cancela|abortar|cancel|annuler|quit|exit)\b/.test(t)){
+      S.mode='normal'; S.captured=''; hideMsg(); speakText(L().waCancel); return;
+    }
+    if (t.length < 40 && /\b(borrar|borra|delete|clear|effacer|apagar)\b/.test(t)){
+      S.captured=''; showMsg(L().waDel, 2500); return;
+    }
+    S.captured += (S.captured ? ' ' : '') + t.replace(/\bpunto\b/g,'.').replace(/\bcoma\b/g,',');
+    showMsg('"' + S.captured.slice(-60) + '"', 0);
+  }
+  function enterChat(t){ S.mode='chat'; S.trigger=t; S.modeTime=Date.now(); showMsg(L().chatStatus, 0); speakText(L().chatIntro); }
+  function handleChat(t){
+    if (t === S.trigger) return;
+    if (Date.now() - S.modeTime < 500 && t.length < 12) return;
+    if (t.length < 40 && /\b(cancelar|cancela|abortar|cancel|annuler|quit|exit)\b/.test(t)){
+      S.mode='normal'; hideMsg(); speakText(L().chatCancel); return;
     }
     if (t.length < 3) return;
-    askChatbot(t);
+    if (typeof window.chatbotOpen === 'function') window.chatbotOpen();
+    if (typeof window.chatbotSendMessage !== 'function'){ S.mode='normal'; speakText(L().chatNo); return; }
+    const plain = typeof window.chatbotGetPlainAnswer === 'function' ? window.chatbotGetPlainAnswer(t) : null;
+    window.chatbotSendMessage(t);
+    S.mode='normal'; hideMsg();
+    setTimeout(()=>speakText(plain ? L().response + plain : L().noAnswer), 400);
   }
 
-  function openExternal(url,label){
-    speakText(getConfig().openingLink + label);
-    setTimeout(function(){
-      try{ const w = window.open(url,'_blank'); if (!w) window.location.href = url; }
-      catch(e){ window.location.href = url; }
-    },700);
+  function openExternal(url, label){
+    showMsg(L().opening + label, 3000);
+    speakText(L().opening + label);
+    setTimeout(()=>{ try{ const w = window.open(url,'_blank'); if (!w) window.location.href = url; }catch(e){ window.location.href = url; } }, 900);
   }
 
-  function handleVoiceInput(t){
+  function handleVoice(t){
     if (!t) return;
-    const now = Date.now();
-    if (S.mode === 'whatsapp-capture'){ handleWhatsappInput(t); return; }
-    if (S.mode === 'chatbot-capture'){ handleChatbotInput(t); return; }
-
-    if (STOP_REGEX.test(t) && !isEcho(t)){
-      S.lastCmd = now;
-      if (S.playing || S.paused) cancelImmediate();
-      return;
-    }
-    if (now - S.lastCmd < 200) return;
-
-    if (PAUSE_REGEX.test(t) && S.playing && !S.paused){ S.lastCmd = now; togglePause(); return; }
-    if (RESUME_REGEX.test(t) && S.playing && S.paused){ S.lastCmd = now; togglePause(); return; }
-
-    if (WHATSAPP_TRIGGER_REGEX.test(t)){ S.lastCmd = now; enterWhatsappMode(t); return; }
-    if (CHATBOT_TRIGGER_REGEX.test(t)){ S.lastCmd = now; enterChatbotMode(t); return; }
-
-    for (let i = 0; i < NAV_LINKS.length; i++){
-      const nav = NAV_LINKS[i];
-      if (nav.rx.test(t)){
-        S.lastCmd = now;
-        openExternal(nav.url, getLabel(nav.labels));
-        return;
-      }
-    }
-
-    for (let i = 0; i < NAV_COMMANDS.length; i++){
-      const nav = NAV_COMMANDS[i];
-      if (nav.rx.test(t)){
-        S.lastCmd = now;
-        readSection(nav.section, getLabel(nav.labels));
-        return;
-      }
-    }
-
-    if (AUDIO_TRIGGER_REGEX.test(t)){
-      if (!S.playing){ S.lastCmd = now; startReading(); }
-      return;
-    }
-    if (RESTART_REGEX.test(t)){
-      S.lastCmd = now; startReading(); return;
-    }
+    if (S.mode === 'wa'){ handleWa(t); return; }
+    if (S.mode === 'chat'){ handleChat(t); return; }
+    if (STOP_RX.test(t)){ stopAll(); return; }
+    if (WA_RX.test(t)){ enterWa(t); return; }
+    if (CHAT_RX.test(t)){ enterChat(t); return; }
+    for (const n of NAV_LINKS){ if (n.rx.test(t)){ openExternal(n.url, n.label[lang()] || n.label.es); return; } }
+    for (const n of NAV_SECTIONS){ if (n.rx.test(t)){ readSection(n.sel); return; } }
+    if (AUDIO_RX.test(t)){ startReading(); return; }
   }
 
-  function playWelcome(onDone){
-    if (!supportsSpeech){ if (onDone) onDone(); return; }
-    const u = new SpeechSynthesisUtterance(getConfig().welcome);
-    u.lang = getConfig().speech;
-    u.rate = 1; u.pitch = 1; u.volume = 1;
+  /* ---------- Botones ---------- */
+  btnAudio.addEventListener('click', ()=>{
+    if (S.playing || S.speakingMsg || S.paused) stopAll(); else startReading();
+  });
+  btnPause.addEventListener('click', togglePause);
+  btnMic.addEventListener('click', ()=>{
+    if (!SR){ showMsg(L().noMic, 4000); return; }
+    if (S.micOn){ S.micManualOff = true; stopRec(); updateUI(); showMsg(L().micOffMsg, 2500); }
+    else { S.micManualOff = false; S.micDenied = 0; S.micOn = true; startRec(); updateUI(); showMsg(L().hint, 6000); }
+  });
+
+  function autoMic(){
+    if (!SR || S.micOn || S.micManualOff || S.micDenied >= 2 || S.speakingMsg || S.playing) return;
+    S.micOn = true; startRec(); updateUI(); showMsg(L().hint, 5000);
+  }
+  function playWelcome(){
+    if (S.welcomed) return;
+    if (!supportsSpeech){ autoMic(); return; }
+    S.welcomed = true;
+    const g = ++S.gen; hardCancel();
+    const text = WELCOME[lang()] || WELCOME.es;
+    S.speakingMsg = true; S.lastSpoken = text.toLowerCase(); S.lastSpokenTime = Date.now();
+    updateUI(); showMsg(text, 0);
+    const u = new SpeechSynthesisUtterance(text);
+    S.u = u; u.lang = L().speech; u.rate = 1;
     const v = pickVoice(); if (v) u.voice = v;
-    u.onend = function(){ if (onDone) onDone(); };
-    u.onerror = function(){ if (onDone) onDone(); };
-    try{ synth.speak(u); }catch(e){ if (onDone) onDone(); }
+    const finish = ()=>{ if (g !== S.gen) return; S.speakingMsg = false; hideMsg(); updateUI(); autoMic(); };
+    u.onend = finish;
+    u.onerror = ev=>{
+      if (g !== S.gen) return;
+      if (ev && ev.error === 'not-allowed'){ S.welcomed = false; S.speakingMsg = false; hideMsg(); updateUI(); return; }
+      finish();
+    };
+    setTimeout(()=>{ if (g === S.gen){ try{ synth.speak(u); }catch(e){ finish(); } } }, 150);
   }
-
-  function activateSystem(){
-    if (supportsRecog && !S.recognition) S.recognition = initRecognition();
-    startRecognition();
-    if (!S.welcomePlayed && supportsSpeech){
-      S.welcomePlayed = true;
-      setTimeout(function(){
-        playWelcome(function(){ if (S.micActive) setListening(); });
-      },200);
-    }
+  function firstInteraction(e){
+    if (e && e.target && e.target.closest && e.target.closest('#audioDock')) return;
+    if (!S.welcomed) playWelcome();
+    else if (!S.speakingMsg && !S.playing) autoMic();
   }
+  ['click','touchstart','keydown','pointerdown'].forEach(ev=>document.addEventListener(ev, firstInteraction, {capture:true, passive:true}));
+  window.addEventListener('load', ()=>setTimeout(playWelcome, 400));
 
-  function refreshLanguage(lang){
-    if (!supportsRecog || !S.recognition) return;
-    try{ S.recognition.stop(); }catch(e){}
-    setTimeout(function(){
-      try{
-        S.recognition.lang = (LANG_CONFIG[lang] || LANG_CONFIG.es).speech;
-        if (S.micActive) S.recognition.start();
-      }catch(e){}
-    },300);
-    if (S.mode === 'normal'){
-      if (S.playing) setReading();
-      else if (S.micActive) setListening();
-    }
-  }
+  window.addEventListener('beforeunload', ()=>{ hardCancel(); try{ if (S.rec) S.rec.abort(); }catch(e){} });
+  document.addEventListener('keydown', e=>{ if (e.key === 'Escape' && (S.playing || S.speakingMsg)) stopAll(); });
 
-  function onFirstInteraction(){
-    if (S.interactionDone) return;
-    S.interactionDone = true;
-    activateSystem();
-  }
+  updateUI();
 
-  ['click','touchstart','keydown','pointerdown','scroll','mousedown'].forEach(evt=>{
-    document.addEventListener(evt,onFirstInteraction,{capture:true,passive:true,once:false});
-  });
-
-  voiceFallback.addEventListener('click',function(e){
-    e.stopPropagation();
-    if (!S.welcomePlayed){
-      S.welcomePlayed = true;
-      playWelcome(function(){ activateSystem(); });
-    } else {
-      activateSystem();
-    }
-  });
-
-  window.addEventListener('load',function(){
-    setTimeout(function(){
-      if (!S.welcomePlayed){
-        S.welcomePlayed = true;
-        playWelcome(function(){
-          if (!S.recognition) S.recognition = initRecognition();
-          startRecognition();
-        });
+  return {
+    refreshLanguage: function(lg){
+      if (S.playing || S.speakingMsg) stopAll();
+      if (S.rec && S.recRunning){
+        try{ S.rec.abort(); }catch(e){}
+        setTimeout(()=>{ if (S.micOn) startRec(); }, 250);
       }
-    },200);
-  });
-
-  window.addEventListener('beforeunload',function(){
-    try{ synth.cancel(); }catch(e){}
-    try{ if (S.recognition) S.recognition.abort(); }catch(e){}
-  });
-
-  return { refreshLanguage: refreshLanguage };
+      updateUI();
+    }
+  };
 })();
 
 /* =========================================================
@@ -2419,6 +1645,7 @@ window.__voiceSystem = (function(){
   const WA_NUMBER = '573113555949';
   const WA_GENERAL = 'https://wa.me/' + WA_NUMBER + '?text=Hola%2C%20tengo%20una%20consulta%20sobre%20la%20Editorial';
   const EMAIL_GENERAL = 'artesmulticapeditorial@gmail.com';
+  const CONV_URL = 'https://convocatorialatinoamericaescribe.netlify.app/';
 
   const KB = [
     { keys: ['hola','buenas','buenos días','buenos dias','buenas tardes','buenas noches','hey','saludos','qué tal','que tal','hello','hi','bonjour','salut','olá','oi'],
@@ -2446,9 +1673,9 @@ window.__voiceSystem = (function(){
     { keys: ['regalía','regalia','regalías','regalias','ventas','ganancia','ganancias','royalties','sales','profit','redevances'],
       reply: '💵 <strong>Regalías:</strong> recibes el <strong>50% de las regalías netas</strong> por ventas con reporte semestral. Aplica para libros publicados a través de nuestros paquetes.' },
     { keys: ['convocatoria','convocatorias','concurso','latinoamérica escribe','latinoamerica escribe','call','contest','appel','concours','convocação'],
-      reply: '🏆 <strong>Convocatoria "Latinoamérica Escribe":</strong><br><br>• Concurso internacional de creación literaria<br>• Una obra ganadora<br>• Premio: <strong>Plan Premium Global valorado en $4.100.000 COP</strong><br>• Tema y género libres<br>• <strong>Participación GRATIS</strong><br>• Mayores de 18 años<br>• De 20.000 a 30.000 palabras<br>• Seudónimo obligatorio<br>• Envío de obras: <strong>artesmulticap2024@gmail.com</strong><br><br><a href="#convocatoria">Ver bases completas</a>' },
+      reply: '🏆 <strong>Convocatoria "Latinoamérica Escribe":</strong> concurso internacional de creación literaria con tema y género libres, participación gratuita y un premio editorial: el <strong>Plan Premium Global</strong>.<br><br>Consulta las bases completas, el cronograma y cómo participar aquí: <a href="'+CONV_URL+'" target="_blank">Ver la convocatoria</a>' },
     { keys: ['uso de ia','inteligencia artificial','ia','chatgpt','artificial intelligence','ai','intelligence artificielle','inteligência artificial'],
-      reply: '⚠️ <strong>Uso de IA en la convocatoria:</strong><br><br>• Es <strong>obligatorio declarar</strong> cualquier uso de IA<br>• Se permite como herramienta de apoyo con revisión del autor<br>• No se aceptan obras generadas íntegramente por IA<br>• El incumplimiento implica descalificación<br><br><a href="#convocatoria">Ver más</a>' },
+      reply: '⚠️ <strong>Uso de IA en la convocatoria:</strong> es obligatorio declarar cualquier uso de IA; se permite como herramienta de apoyo con revisión del autor y no se aceptan obras generadas íntegramente por IA.<br><br>Más detalles en <a href="'+CONV_URL+'" target="_blank">la página de la convocatoria</a>.' },
     { keys: ['derechos','autor','autoría','autoria','propiedad intelectual','copyright','in dubio','author rights','intellectual property','droits','auteur','direitos'],
       reply: '⚖️ <strong>Derechos de autor:</strong> TÚ SIGUES SIENDO EL DUEÑO DE TU OBRA. El contrato de edición no transfiere el derecho de autor (artículo 119, Ley 23 de 1982). Se aplica el principio <strong>«in dubio pro auctore»</strong> — siempre a favor del autor.' },
     { keys: ['servicios','servicios individuales','corrección','correccion','maquetación','maquetacion','portada','diseño','diseno','services','correction','layout','cover','design','mise en page','serviços','correção'],
@@ -2509,57 +1736,4 @@ window.__voiceSystem = (function(){
   function stripHtml(html){
     const tmp = document.createElement('div');
     tmp.innerHTML = html;
-    return (tmp.textContent || tmp.innerText || '').replace(/\s+/g,' ').trim();
-  }
-  function sendMessage(text){
-    if (!text || !text.trim()) return null;
-    addMsg(text.replace(/</g,'&lt;').replace(/>/g,'&gt;'),'user');
-    chatInput.value = '';
-    addTyping();
-    const answer = findAnswer(text);
-    const finalAnswer = answer || FALLBACKS[fallbackIdx % FALLBACKS.length];
-    if (!answer) fallbackIdx++;
-    setTimeout(()=>{ removeTyping(); addMsg(finalAnswer,'bot'); },500);
-    return { answer: finalAnswer, plain: stripHtml(finalAnswer) };
-  }
-  function openChat(){
-    chatbotPanel.classList.add('show');
-    const badge = chatbotBtn.querySelector('.chat-badge');
-    if (badge) badge.style.display = 'none';
-    if (!chatBody.dataset.welcomed){
-      chatBody.dataset.welcomed = '1';
-      setTimeout(()=>addMsg('¡Hola! 👋 Soy <strong>MULTI</strong>, asistente de la Editorial. Pregúntame por: <strong>planes</strong>, <strong>precios</strong>, <strong>descuentos por estrato</strong>, <strong>convocatoria</strong>, <strong>proceso editorial</strong> o cualquier otro tema.','bot'),200);
-    }
-    setTimeout(()=>chatInput.focus(),250);
-  }
-  function closeChat(){ chatbotPanel.classList.remove('show'); }
-
-  chatbotBtn.addEventListener('click',()=>{
-    if (chatbotPanel.classList.contains('show')) closeChat(); else openChat();
-  });
-  chatbotCloseBtn.addEventListener('click',closeChat);
-  chatSend.addEventListener('click',()=>sendMessage(chatInput.value));
-  chatInput.addEventListener('keydown',(e)=>{
-    if (e.key === 'Enter'){ e.preventDefault(); sendMessage(chatInput.value); }
-  });
-  chatQuick.addEventListener('click',(e)=>{
-    const btn = e.target.closest('button[data-q]');
-    if (!btn) return;
-    sendMessage(btn.getAttribute('data-q'));
-  });
-  document.addEventListener('keydown',(e)=>{
-    if (e.key === 'Escape' && chatbotPanel.classList.contains('show')) closeChat();
-  });
-
-  window.chatbotOpen = openChat;
-  window.chatbotSendMessage = sendMessage;
-  window.chatbotGetPlainAnswer = function(text){
-    const ans = findAnswer(text);
-    return ans ? stripHtml(ans) : null;
-  };
-  window.chatbotFindAnswer = findAnswer;
-})();
-</script>
-
-</body>
-</html>
+    return (tmp.textContent || tmp.inner
